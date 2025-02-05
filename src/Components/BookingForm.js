@@ -107,6 +107,7 @@
 //   );
 // }
 
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 
@@ -147,8 +148,10 @@ export default function BookingForm({
   //     toast.error("Booking failed. Please try again.");
   //   }
   // };
+  const [loading, setLoading] = useState(false);
   const onSubmit = async (data) => {
     try {
+      setLoading(true);
       // Now update the slot status to "booked"
       var date = new Date(datee).toISOString().split("T")[0];
       console.log(date);
@@ -182,6 +185,8 @@ export default function BookingForm({
       toast.success("Booking successful!");
     } catch (error) {
       toast.error("Booking failed. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -250,9 +255,10 @@ export default function BookingForm({
         </button>
         <button
           onClick={handleSubmit(onSubmit)}
+          disabled={loading}
           className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
         >
-          Confirm
+          {loading ? "loading" : "Confirm"}
         </button>
       </div>
     </div>

@@ -124,7 +124,11 @@ export default function BookingModal() {
                   }}
                   className="bg-gray-100 hover:bg-blue-100 p-2 rounded text-sm"
                 >
-                  {person.name}
+                  Name: {person.name}
+                  <br />
+                  Education: {person.educations}
+                  <br />
+                  Experience: {person.experience}
                 </button>
               ))}
             </div>
@@ -190,7 +194,7 @@ export default function BookingModal() {
         {step === 4 && appointmentDetails && (
           <ThankYouScreen
             appointment={appointmentDetails}
-            onClose={() => setStep(0)}
+            onClose={() => setIsOpen(false)}
           />
         )}
       </Modal>

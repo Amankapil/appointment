@@ -37,6 +37,7 @@ export default function Staff() {
 
       const { data: newStaff } = await response.json();
       setStaff([...staff, newStaff]);
+      alert("Staff adedd successfully");
       reset();
     } catch (error) {
       console.error("Error creating staff:", error);

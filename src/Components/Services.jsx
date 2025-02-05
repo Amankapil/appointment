@@ -30,6 +30,7 @@ export default function Services() {
       });
       const newService = await response.json();
       setServices([...servicess, newService]);
+      alert("service added successfully");
       reset();
     } catch (error) {
       console.error("Error creating service:", error);
@@ -83,7 +84,7 @@ export default function Services() {
         <div className="space-y-4 h-[599px] w-full">
           {servicess.map((servicse) => (
             <div
-              key={servicse._id}
+              key={servicse.id}
               className="bg-white p-6 rounded-lg shadow-sm"
             >
               <h3 className="text-lg font-semibold text-gray-900">
