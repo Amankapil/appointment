@@ -1,4 +1,4 @@
-import Blueprint from "@/Components/pagesComponent/Biololgical/blueprint";
+// import Blueprint from "@/Components/pagesComponent/Biololgical/blueprint";
 import Cosmic from "@/Components/pagesComponent/Biololgical/Cosmic";
 import Faq from "@/Components/pagesComponent/Biololgical/Faq";
 import HeroBio from "@/Components/pagesComponent/Biololgical/HeroBio";
@@ -16,7 +16,7 @@ const page = () => {
       <Karmic />
       <Faq />
       <Takeaways />
-      <Blueprint />
+      {/* <Blueprint /> */}
     </>
   );
 };
