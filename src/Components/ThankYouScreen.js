@@ -1,77 +1,90 @@
-"use client";
-import { useState, useEffect } from "react";
-import Confetti from "react-confetti";
-import { motion } from "framer-motion";
-// import { CheckCircleIcon } from "@heroicons/react/solid"; // Tailwind Hero Icons
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 
-export default function ThankYouScreen({ appointment, onClose }) {
-  const [showConfetti, setShowConfetti] = useState(true);
-
-  useEffect(() => {
-    // Stop confetti after 5 seconds
-    const timer = setTimeout(() => setShowConfetti(false), 5000);
-    return () => clearTimeout(timer);
-  }, []);
-
+export default function ThankYouScreen({
+  formData,
+  result,
+  selectedTime,
+  error,
+  svgUrl,
+}) {
+  console.log(result);
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-xl w-96">
-      {showConfetti && (
-        <Confetti width={window.innerWidth} height={window.innerHeight} />
-      )}
+    <div className="min-hscreen bg-gray-100 flex items-center justify-center p-6">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full">
+        {/* Title Section */}
+        <h2 className="text-2xl font-semibold">Confirmed your details </h2>
+        <p className="text-gray-600 mt-1">
+          Review your horoscope and appointment details before your consultation
+        </p>
 
-      <motion.div
-        initial={{ scale: 0.5, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        <CheckCircleIcon className="w-16 h-16 text-green-500" />
-      </motion.div>
+        {/* Main Content Section */}
+        <div className="flex items-center justify-between gap-6 mt-6">
+          {/* Consultation Overview */}
+          <div>
+            <h3 className="text-lg font-semibold">Consultation Overview</h3>
+            <p className="text-gray-700 mt-2">
+              <span className="font-semibold">Duration:</span> 1 hour
+            </p>
+            <p className="text-gray-700">
+              <span className="font-semibold">Time Slot:</span> {selectedTime}
+            </p>
+            <p className="text-gray-700">
+              <span className="font-semibold">Date:</span> {formData.dob}
+            </p>
+            {/* <p className="text-gray-700">
+              <span className="font-semibold">Astrologer:</span> [Astrologer’s
+              Name]
+            </p> */}
 
-      <motion.h2
-        className="text-2xl font-bold text-gray-800 mt-4"
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
-        Booking Confirmed!
-      </motion.h2>
+            {/* Booking Details */}
+            <h3 className="text-lg font-semibold mt-6">Booking Details</h3>
+            {/* <p className="text-gray-700 mt-2">
+              <span className="font-semibold">Meeting Platform:</span> Google
+              Meet / WhatsApp Call
+            </p> */}
+            <p className="text-gray-700">
+              <span className="font-semibold">WhatsApp Number:</span>{" "}
+              {formData.phone}
+            </p>
+            <p className="text-gray-700">
+              <span className="font-semibold">Payment Status:</span> UnPaid
+            </p>
+            {/* <p className="text-gray-700">
+              <span className="font-semibold">Booking Reference:</span> [Unique
+              Booking ID]
+            </p> */}
+          </div>
 
-      <p className="text-gray-600 mt-2">
-        Thank you for your appointment. Here are the details:
-      </p>
+          {/* Horoscope Preview */}
+          <div className="bgray-100 rounded-lg p-6 flex flex-col mt-10 items-center justify-center">
+            {/* <h3 className="text-lg font-semibold">
+              Your Personalized Horoscope
+            </h3> */}
+            <div className="bggray-200 w-full h40 flex items-center justify-center mt-4 rounded-lg">
+              {/* <span className="text-gray-500">Preview</span> */}
+              {svgUrl && (
+                <Image
+                  width={300}
+                  height={250}
+                  src={svgUrl}
+                  alt="Kundli Chart"
+                  className="mt-4 border rounded shadow"
+                />
+              )}
+            </div>
+            {/* <button className="mt-4 w-full bg-gray-300 text-gray-800 py-2 rounded-lg font-medium hover:bg-gray-400 transition">
+              Download
+            </button> */}
+          </div>
+        </div>
 
-      <div className="mt-4 p-4 bg-gray-100 rounded-lg w-full">
-        <p>
-          <strong>Service:</strong> {appointment.service}
-        </p>
-        <p>
-          <strong>Person:</strong> {appointment.person}
-        </p>
-        <p>
-          <strong>Date:</strong> {appointment.date}
-        </p>
-        <p>
-          <strong>Time Slot:</strong> {appointment.time}
-        </p>
-        <p>
-          <strong>Meeting Link:</strong>{" "}
-          <a
-            href={appointment.meetLink}
-            className="text-blue-500 underline"
-            target="_blank"
-          >
-            Join Now
-          </a>
-        </p>
+        {/* Done Button */}
+        <div className="flex justify-center mt-6">
+          {/* <button className="bg-gray-400 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-500 transition">
+            Done
+          </button> */}
+        </div>
       </div>
-
-      <button
-        onClick={onClose}
-        className="mt-6 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-all"
-      >
-        Done
-      </button>
     </div>
   );
 }

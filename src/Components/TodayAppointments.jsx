@@ -68,7 +68,7 @@ export default function TodayAppointments() {
       </h1>
 
       {/* Tab Navigation */}
-      <div className="flex space-x-4 border-b pb-2">
+      {/* <div className="flex space-x-4 border-b pb-2">
         {["today", "upcoming", "completed"].map((tab) => (
           <button
             key={tab}
@@ -82,10 +82,10 @@ export default function TodayAppointments() {
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>
         ))}
-      </div>
+      </div> */}
 
       {/* Tab Content */}
-      <div className="mt-4">
+      {/* <div className="mt-4">
         {filteredAppointments[activeTab].length > 0 ? (
           <ul className="space-y-3">
             {filteredAppointments[activeTab].map((appointment) => (
@@ -106,6 +106,35 @@ export default function TodayAppointments() {
         ) : (
           <p className="text-gray-500">No appointments found.</p>
         )}
+      </div> */}
+
+      <div className="p-4">
+        <h1 className="text-xl font-bold mb-4">
+          Total Bookings: 92{" "}
+          <span className="text-sm text-green-500">+12% from last month</span>
+        </h1>
+        <table className="min-w-full bg-white border border-gray-300">
+          <thead>
+            <tr>
+              <th className="py-2 px-4 border-b">Client Name</th>
+              <th className="py-2 px-4 border-b">Booking Date & Time</th>
+              <th className="py-2 px-4 border-b">Session Length</th>
+              <th className="py-2 px-4 border-b">Status</th>
+              <th className="py-2 px-4 border-b">Payment Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {appointments.map((booking, index) => (
+              <tr key={index} className="hover:bg-gray-50">
+                <td className="py-2 px-4 border-b">{booking.name}</td>
+                <td className="py-2 px-4 border-b">{booking.date}</td>
+                <td className="py-2 px-4 border-b">{booking.time}</td>
+                <td className="py-2 px-4 border-b">{booking.status}</td>
+                <td className="py-2 px-4 border-b">paid</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

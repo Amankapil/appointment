@@ -7,9 +7,9 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      fontFamily: {
+        salernomi: ["Salernomi J"],
+        inter: ["Inter Display", "sans-serif"],
       },
     },
   },
