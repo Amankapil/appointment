@@ -9,6 +9,7 @@ export default function Hero() {
           <h1 className="text-[64px] font-salernomi font-normal mb-6">
             Welcome to Prashna Siddhi
           </h1>
+          {/* ????chage somethingd */}
           <p className="text-xl font-inter text-[#4D4D4D] mb-8">
             If you have a devotional and spiritually inclined mind, you are in
             the right place. Prashna Siddhi offers astrological guidance in an
