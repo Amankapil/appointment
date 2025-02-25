@@ -10,14 +10,14 @@ export default function Precise() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] p-10 max-md:p-4">
       {/* <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] font-normal mb-6">
+        <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] max-lg:w-full font-normal mb-6">
           Take the First Step Toward Clarity & Peace
         </h1>
       </div> */}
 
       <div className="max-wxl ml-20 mx-auto flex-col text-left items-center justify-center flex gap-5">
         {/* <div className=""> */}
-        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[70%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[70%] max-lg:w-full font-normal mb-6">
           Want precise answers about your life? Experience the power of Prashna
           Jyotishya today! Click below to consult.
         </h1>

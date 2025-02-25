@@ -10,7 +10,7 @@ export default function HeroUn() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-5xl text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           What Makes PrashnaSiddhi Truly Unique?
         </h1>
         <svg
@@ -33,11 +33,11 @@ export default function HeroUn() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           A Divine & Dynamic Approach to Astrology
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             At Prashna Siddhi, we offer a unique and powerful method of Vedic
             Prashna Jyotishya, delivering precise answers without requiring your
@@ -53,11 +53,11 @@ export default function HeroUn() {
           </p>
         </div>
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Key Advantages of Prashna Kundali Analysis:
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}

@@ -3,17 +3,17 @@
 export default function Consultation() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
-      <div className="pr-4 max-md:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[30%] font-normal mb-6">
+      <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
+        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[30%] max-lg:w-full font-normal mb-6">
           How to Prepare for Your Consultation?
         </h1>
-        {/* <div className="w-1/2 max-md:w-full"> */}
+        {/* <div className="w-1/2 max-lg:w-full"> */}
         <div className="lis  max-lg:p-8  max-w-[986px] w-full mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -33,8 +33,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -50,9 +50,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -103,7 +103,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -123,8 +123,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -140,9 +140,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -193,7 +193,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -213,8 +213,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -230,9 +230,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -282,7 +282,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -302,8 +302,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -319,9 +319,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -375,7 +375,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -395,8 +395,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -412,9 +412,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -465,7 +465,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -485,8 +485,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -502,9 +502,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -553,7 +553,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -573,8 +573,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -590,9 +590,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -643,7 +643,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -663,8 +663,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -680,9 +680,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -733,7 +733,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -753,8 +753,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -770,9 +770,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
@@ -823,7 +823,7 @@ export default function Consultation() {
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
-            <div className="svg absolute -left-[50px]">
+            <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
                 width="100"
                 height="100"
@@ -843,8 +843,8 @@ export default function Consultation() {
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
                 </g>
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M48.8457 12L50.0004 10L51.1551 12L61.5475 30.0001L82.3324 30.0001H84.6418L83.4871 32.0001L73.0946 50.0004L83.4867 68L84.6414 70H82.332H61.5478L51.1555 88.0001L50.0008 90.0001L48.8461 88.0001L38.4537 70H17.6688H15.3594L16.5141 68L26.9065 49.9997L16.5145 32.0001L15.3598 30.0001H17.6692L38.4533 30.0001L48.8457 12ZM37.2986 32.0001L18.8239 32.0001L28.0612 47.9997L37.2986 32.0001ZM29.216 49.9997L39.608 32.0001L60.3927 32.0001L70.7852 50.0004L60.3931 68H39.6084L29.216 49.9997ZM28.0612 51.9997L18.8235 68H37.299L28.0612 51.9997ZM40.7631 70L50.0008 86.0001L59.2384 70H40.7631ZM62.7025 68H81.1773L71.9399 52.0004L62.7025 68ZM71.9399 48.0004L81.1777 32.0001L62.7022 32.0001L71.9399 48.0004ZM59.2381 30.0001L40.7627 30.0001L50.0004 14L59.2381 30.0001Z"
                   fill="#AC8C60"
                 />
@@ -860,9 +860,9 @@ export default function Consultation() {
                     width="80"
                     height="80"
                     filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
+                    colorInterpolationFilters="sRGB"
                   >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"

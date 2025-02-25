@@ -33,11 +33,11 @@ export default function HeroEn() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             This information is invaluable for anyone interested in astrology,
             whether as a seeker or a consultant. Take the time to read and
@@ -46,7 +46,7 @@ export default function HeroEn() {
           </p>
         </div>
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
@@ -54,7 +54,7 @@ export default function HeroEn() {
           {/* <Image src={} alt="j"/> */}
           imge
         </div>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             Every passing second, human life is impacted by the continuous
             transit of planets. This is a fundamental{" "}

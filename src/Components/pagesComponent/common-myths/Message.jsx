@@ -36,7 +36,7 @@ const Message = () => {
           </h1>
         </div>
         <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
-          <div className="left w-1/2 max-md:w-full">
+          <div className="left w-1/2 max-lg:w-full">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
               Have you ever wondered
               <span className="text-[#000]">

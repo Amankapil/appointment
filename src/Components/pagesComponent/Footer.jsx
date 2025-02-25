@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Center Section */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-serif font-medium mb-4">Site</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-2 text-left">
               <li>
                 <Link href="/" className="hover:underline">
                   Home

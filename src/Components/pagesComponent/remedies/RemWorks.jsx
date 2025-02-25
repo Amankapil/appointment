@@ -33,7 +33,7 @@ export default function RemWorks() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <div className="w-[50%] max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w-[80%] max-lg:w-full  text-center">
             If remedies alone could solve problems, why do so many people{" "}
@@ -49,7 +49,7 @@ export default function RemWorks() {
             </span>
           </p>
 
-          <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+          <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
             <svg
               width="24"
               height="76"

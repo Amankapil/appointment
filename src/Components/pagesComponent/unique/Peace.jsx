@@ -10,13 +10,13 @@ export default function Peace() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] font-normal mb-6">
+        <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] max-lg:w-full font-normal mb-6">
           Take the First Step Toward Clarity & Peace
         </h1>
       </div>
 
       <div className="max-wxl ml-20 mx-auto text-left items-start justify-center flex gap-20">
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="text-xl font-inter text-[#4D4D4D] mb-8">
             Seeking answers? Get a Prashna Kundali consultation today and
             receive divine guidance with clarity and confidence!

@@ -50,8 +50,8 @@ const Disclaimer = () => {
                 <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
               </g>
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                fillRule="evenodd"
+                clipRule="evenodd"
                 d="M29.3086 7.2L30.0014 6L30.6942 7.2L36.9296 18.0001H49.4006L50.7862 18.0001L50.0934 19.2001L43.8579 30.0002L50.0932 40.8L50.786 42H49.4004H36.9299L30.6945 52.8001L30.0016 54.0001L29.3088 52.8001L23.0734 42H10.6024H9.2168L9.90962 40.8L16.1451 29.9998L9.90985 19.2001L9.21703 18.0001L10.6027 18.0001H23.0732L29.3086 7.2ZM22.3804 19.2001H11.2955L16.8379 28.7998L22.3804 19.2001ZM17.5307 29.9998L23.766 19.2001H36.2368L42.4723 30.0002L36.2371 40.8H23.7662L17.5307 29.9998ZM16.8379 31.1998L11.2953 40.8H22.3806L16.8379 31.1998ZM24.459 42L30.0016 51.6001L35.5442 42H24.459ZM37.6227 40.8H48.7076L43.1651 31.2002L37.6227 40.8ZM43.1651 28.8002L48.7078 19.2001H37.6225L43.1651 28.8002ZM35.544 18.0001H24.4588L30.0014 8.4L35.544 18.0001Z"
                 fill="#AC8C60"
               />
@@ -67,9 +67,9 @@ const Disclaimer = () => {
                   width="48"
                   height="48"
                   filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feBlend
                     mode="normal"
                     in="SourceGraphic"
@@ -177,8 +177,8 @@ const Disclaimer = () => {
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
           </g>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M29.3086 7.2L30.0014 6L30.6942 7.2L36.9296 18.0001H49.4006L50.7862 18.0001L50.0934 19.2001L43.8579 30.0002L50.0932 40.8L50.786 42H49.4004H36.9299L30.6945 52.8001L30.0016 54.0001L29.3088 52.8001L23.0734 42H10.6024H9.2168L9.90962 40.8L16.1451 29.9998L9.90985 19.2001L9.21703 18.0001L10.6027 18.0001H23.0732L29.3086 7.2ZM22.3804 19.2001H11.2955L16.8379 28.7998L22.3804 19.2001ZM17.5307 29.9998L23.766 19.2001H36.2368L42.4723 30.0002L36.2371 40.8H23.7662L17.5307 29.9998ZM16.8379 31.1998L11.2953 40.8H22.3806L16.8379 31.1998ZM24.459 42L30.0016 51.6001L35.5442 42H24.459ZM37.6227 40.8H48.7076L43.1651 31.2002L37.6227 40.8ZM43.1651 28.8002L48.7078 19.2001H37.6225L43.1651 28.8002ZM35.544 18.0001H24.4588L30.0014 8.4L35.544 18.0001Z"
             fill="#AC8C60"
           />
@@ -194,9 +194,9 @@ const Disclaimer = () => {
               width="48"
               height="48"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -271,8 +271,8 @@ const Disclaimer = () => {
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
           </g>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M29.3086 7.2L30.0014 6L30.6942 7.2L36.9296 18.0001H49.4006L50.7862 18.0001L50.0934 19.2001L43.8579 30.0002L50.0932 40.8L50.786 42H49.4004H36.9299L30.6945 52.8001L30.0016 54.0001L29.3088 52.8001L23.0734 42H10.6024H9.2168L9.90962 40.8L16.1451 29.9998L9.90985 19.2001L9.21703 18.0001L10.6027 18.0001H23.0732L29.3086 7.2ZM22.3804 19.2001H11.2955L16.8379 28.7998L22.3804 19.2001ZM17.5307 29.9998L23.766 19.2001H36.2368L42.4723 30.0002L36.2371 40.8H23.7662L17.5307 29.9998ZM16.8379 31.1998L11.2953 40.8H22.3806L16.8379 31.1998ZM24.459 42L30.0016 51.6001L35.5442 42H24.459ZM37.6227 40.8H48.7076L43.1651 31.2002L37.6227 40.8ZM43.1651 28.8002L48.7078 19.2001H37.6225L43.1651 28.8002ZM35.544 18.0001H24.4588L30.0014 8.4L35.544 18.0001Z"
             fill="#AC8C60"
           />
@@ -288,9 +288,9 @@ const Disclaimer = () => {
               width="48"
               height="48"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -367,8 +367,8 @@ const Disclaimer = () => {
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
           </g>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M29.3086 7.2L30.0014 6L30.6942 7.2L36.9296 18.0001H49.4006L50.7862 18.0001L50.0934 19.2001L43.8579 30.0002L50.0932 40.8L50.786 42H49.4004H36.9299L30.6945 52.8001L30.0016 54.0001L29.3088 52.8001L23.0734 42H10.6024H9.2168L9.90962 40.8L16.1451 29.9998L9.90985 19.2001L9.21703 18.0001L10.6027 18.0001H23.0732L29.3086 7.2ZM22.3804 19.2001H11.2955L16.8379 28.7998L22.3804 19.2001ZM17.5307 29.9998L23.766 19.2001H36.2368L42.4723 30.0002L36.2371 40.8H23.7662L17.5307 29.9998ZM16.8379 31.1998L11.2953 40.8H22.3806L16.8379 31.1998ZM24.459 42L30.0016 51.6001L35.5442 42H24.459ZM37.6227 40.8H48.7076L43.1651 31.2002L37.6227 40.8ZM43.1651 28.8002L48.7078 19.2001H37.6225L43.1651 28.8002ZM35.544 18.0001H24.4588L30.0014 8.4L35.544 18.0001Z"
             fill="#AC8C60"
           />
@@ -384,9 +384,9 @@ const Disclaimer = () => {
               width="48"
               height="48"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"
@@ -463,8 +463,8 @@ const Disclaimer = () => {
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
           </g>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M29.3086 7.2L30.0014 6L30.6942 7.2L36.9296 18.0001H49.4006L50.7862 18.0001L50.0934 19.2001L43.8579 30.0002L50.0932 40.8L50.786 42H49.4004H36.9299L30.6945 52.8001L30.0016 54.0001L29.3088 52.8001L23.0734 42H10.6024H9.2168L9.90962 40.8L16.1451 29.9998L9.90985 19.2001L9.21703 18.0001L10.6027 18.0001H23.0732L29.3086 7.2ZM22.3804 19.2001H11.2955L16.8379 28.7998L22.3804 19.2001ZM17.5307 29.9998L23.766 19.2001H36.2368L42.4723 30.0002L36.2371 40.8H23.7662L17.5307 29.9998ZM16.8379 31.1998L11.2953 40.8H22.3806L16.8379 31.1998ZM24.459 42L30.0016 51.6001L35.5442 42H24.459ZM37.6227 40.8H48.7076L43.1651 31.2002L37.6227 40.8ZM43.1651 28.8002L48.7078 19.2001H37.6225L43.1651 28.8002ZM35.544 18.0001H24.4588L30.0014 8.4L35.544 18.0001Z"
             fill="#AC8C60"
           />
@@ -480,9 +480,9 @@ const Disclaimer = () => {
               width="48"
               height="48"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
-              <feFlood flood-opacity="0" result="BackgroundImageFix" />
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
               <feBlend
                 mode="normal"
                 in="SourceGraphic"

@@ -35,8 +35,8 @@ export default function HeroCommon() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flex-col font-inter justify-center items-center mt-4 ">
-        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-md:w-full  text-center">
+      <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter justify-center items-center mt-4 ">
+        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-lg:w-full  text-center">
           <span className="text-[#000]"></span> Astrology is often{" "}
           <span className="text-[#000]">
             misunderstood due to misinterpretations and fear-based beliefs.

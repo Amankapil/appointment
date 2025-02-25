@@ -33,11 +33,11 @@ export default function Rashi() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-center">
             The <span className="text-[#000]">Moon sign</span> is often
             overemphasized in mass-market astrology, leading to misconceptions.
@@ -93,8 +93,8 @@ export default function Rashi() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_292_522)">
-                  <g clip-path="url(#clip1_292_522)">
+                <g clipPath="url(#clip0_292_522)">
+                  <g clipPath="url(#clip1_292_522)">
                     <path
                       d="M16.6132 12.6697L0.00144005 12.6697V10.1434L16.612 10.1434C14.8612 8.52654 13.5501 6.05453 13.5501 2.52654H16.0764C16.0764 5.58338 17.2675 7.44401 18.6469 8.56569C20.0806 9.73032 21.7758 10.1434 22.7383 10.1434V12.6697C21.7758 12.6697 20.0806 13.0827 18.6456 14.2486C17.2688 15.3703 16.0764 17.231 16.0764 20.2891H13.5501C13.5501 16.7585 14.8612 14.2878 16.6132 12.6697Z"
                       fill="#AC8C60"
@@ -151,8 +151,8 @@ export default function Rashi() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_292_522)">
-                  <g clip-path="url(#clip1_292_522)">
+                <g clipPath="url(#clip0_292_522)">
+                  <g clipPath="url(#clip1_292_522)">
                     <path
                       d="M16.6132 12.6697L0.00144005 12.6697V10.1434L16.612 10.1434C14.8612 8.52654 13.5501 6.05453 13.5501 2.52654H16.0764C16.0764 5.58338 17.2675 7.44401 18.6469 8.56569C20.0806 9.73032 21.7758 10.1434 22.7383 10.1434V12.6697C21.7758 12.6697 20.0806 13.0827 18.6456 14.2486C17.2688 15.3703 16.0764 17.231 16.0764 20.2891H13.5501C13.5501 16.7585 14.8612 14.2878 16.6132 12.6697Z"
                       fill="#AC8C60"
@@ -209,8 +209,8 @@ export default function Rashi() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_292_522)">
-                  <g clip-path="url(#clip1_292_522)">
+                <g clipPath="url(#clip0_292_522)">
+                  <g clipPath="url(#clip1_292_522)">
                     <path
                       d="M16.6132 12.6697L0.00144005 12.6697V10.1434L16.612 10.1434C14.8612 8.52654 13.5501 6.05453 13.5501 2.52654H16.0764C16.0764 5.58338 17.2675 7.44401 18.6469 8.56569C20.0806 9.73032 21.7758 10.1434 22.7383 10.1434V12.6697C21.7758 12.6697 20.0806 13.0827 18.6456 14.2486C17.2688 15.3703 16.0764 17.231 16.0764 20.2891H13.5501C13.5501 16.7585 14.8612 14.2878 16.6132 12.6697Z"
                       fill="#AC8C60"
@@ -241,7 +241,7 @@ export default function Rashi() {
           </div>
         </div>
 
-        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-md:w-full  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-lg:w-full  text-center">
           If astrology were solely based on the Moon sign, it would mean the{" "}
           <span className="text-[#000]">
             same destiny for 1,84,468 people born within that time frame in
@@ -249,11 +249,11 @@ export default function Rashi() {
           </span>{" "}
         </p>
         <br />
-        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-md:w-full  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-lg:w-full  text-center">
           Is this logical? <span className="text-[#000]">Clearly not.</span>{" "}
         </p>
         <br />
-        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-md:w-full  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-lg:w-full  text-center">
           Mass media predictions using Moon signs rely on broad generalizations,
           drawing people into astrology consultations through{" "}
           <span className="text-[#000]">fear-driven marketing</span> (e.g., Sade

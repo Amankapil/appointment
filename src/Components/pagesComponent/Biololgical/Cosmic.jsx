@@ -33,11 +33,11 @@ export default function Cosmic() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           At Birth: The Role of the Ascendant (Lagna)
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             The Ascendant (Lagna) at birth sets the tone for an individual’s
             health and overall growth trajectory. Any significant afflictions to
@@ -58,11 +58,11 @@ export default function Cosmic() {
       </div>
 
       {/* ?//////////////////////////////////////////////////////////////// */}
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 9th Year: The Reverse Nodal Return
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               At approximately nine years of age, a child experiences Reverse
@@ -156,11 +156,11 @@ export default function Cosmic() {
       </div>
 
       {/* ?//////////////////////////////////////////////////////////////// */}
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 12th Year: The Jupiter Return & Profection Ascendant
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               By the age of 12, two major astrological events unfold:
@@ -228,11 +228,11 @@ export default function Cosmic() {
       </div>
 
       {/* ?//////////////////////////////////////////////////////////////// */}
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 18th Year: The Nodal Return – A Life Milestone
         </h1>
-        <div className="w-1/2 max-md:w-full">
+        <div className="w-1/2 max-lg:w-full">
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               Eighteen is a legally and astrologically significant age. It is
@@ -329,7 +329,7 @@ export default function Cosmic() {
           </div>
         </div>
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

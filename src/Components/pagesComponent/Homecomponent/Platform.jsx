@@ -30,7 +30,7 @@ const Platform = () => {
           </svg>
 
           <Image src={img} alt="jflas" />
-          <div className="flex items-center flex-col w-1/2 max-md:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">
+          <div className="flex items-center flex-col w-1/2 max-lg:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8">
               This space is for those who{" "}
               <span className="text-[#000]"> seek spiritual </span> clarity and

@@ -27,14 +27,14 @@ const Takeaways = () => {
           {/* <Image src={} alt="j"/> */}
           imge
         </div>
-        <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+        <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
           <p className="font-normal text-lg text-[#4D4D4D] w-[50%] max-lg:w-full  text-left">
             The 18-year mark is not just about reaching legal adulthood—it is
             also a karmic checkpoint. According to Vedic wisdom, this phase
             updates an individual’s karmic balance, incorporating all actions
             since birth into the grand tapestry of their destiny.
           </p>
-          <div className="w-1/2 max-md:w-full">
+          <div className="w-1/2 max-lg:w-full">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               At Prashnasiddhi.live, we bring the sacred science of Prashna
               Jyotishya into practical use, helping individuals make informed
@@ -46,7 +46,7 @@ const Takeaways = () => {
         </div>
       </div>
 
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

@@ -27,7 +27,7 @@ export default function Herodone() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           A Divine & Dynamic Approach to Astrology
         </h1> */}
@@ -54,13 +54,13 @@ export default function Herodone() {
           </p>
         </div>
       </div>
-      <div className="pr-4 max-md:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
+      <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Would you rather spend your time explaining problems or receive
           instant, meaningful answers that set your course right?{" "}
         </h1>
-        {/* <div className="w-1/2 max-md:w-full"> */}
-        <div className="lis  max-lg:p-8  max-w-[1280px] mx-auto flex items-center justify-center space-x-12 pb-10">
+        {/* <div className="w-1/2 max-lg:w-full"> */}
+        <div className="lis max-lg:flex-col  max-lg:p-8  max-w-[1280px] mx-auto flex items-center justify-center space-x-12 pb-10 max-lg:gap-10 max-lg:space-x-0 ">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px]  border-[#AC8C60] w-full items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
