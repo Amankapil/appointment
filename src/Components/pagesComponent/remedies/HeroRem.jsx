@@ -33,7 +33,7 @@ export default function HeroRem() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 max-lg:flex-wrap flex max-md:flex-wrap flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 my-10 max-lg:flex-wrap flex max-md:flex-wrap flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Astrology, Karma, and the Role of Remedies{" "}
         </h1>
@@ -45,10 +45,11 @@ export default function HeroRem() {
           <br />
 
           <p className="font-normal text-lg text-[#4D4D4D] w-1/ text-left">
-            In today’s fast-moving digital age, dominated by
+            In today’s fast-moving digital age, dominated by{" "}
             <span className="text-[#000]">AI (Artificial Intelligence)</span>,
             many question these ancient concepts. Yet,
             <span className="text-[#000]">
+              {" "}
               ironically, faith in astrological remedies remains stronger than
               ever. People spend heavily
             </span>{" "}
@@ -57,7 +58,7 @@ export default function HeroRem() {
           </p>
           <br />
           <p className="font-normal text-lg text-[#4D4D4D] w2  text-left">
-            Astrological remedies have become a
+            Astrological remedies have become a{" "}
             <span className="text-[#000]">commercial phenomenon,</span> but do
             they truly change one’s destiny?
           </p>
@@ -75,11 +76,9 @@ export default function HeroRem() {
         </h1>
         <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
-            Think of destiny like
-            <span className="text-[#000]">
-              the foundation of a building—
-            </span>{" "}
-            it cannot be replaced. However, the
+            Think of destiny like{" "}
+            <span className="text-[#000]">the foundation of a building—</span>{" "}
+            it cannot be replaced. However, the{" "}
             <span className="text-[#000]">superstructure</span> (life’s
             circumstances) can be modified{" "}
             <span className="text-[#000]">

@@ -161,7 +161,7 @@ export default function Navbar() {
                 ></path>
               </svg>
             </button>
-            <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0">
+            <div className="flex font-inter flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 p-4 md:p-0 items-center">
               {/* Services Dropdown */}
               <div
                 className="relative"

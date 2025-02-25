@@ -17,7 +17,7 @@ const AboutMe = () => {
 
           <Image src={img} alt="jflas" />
           <div className="flex items-center flex-col w-[60%] max-md:w-full max-md:w-full  justify-center text-center">
-            <p className="text-xl font-inter text-[#4D4D4D] mb-8">
+            <p className="text-xl font-inter text-[#4D4D4D] mb-8 max-md:p-4">
               I am
               <span className="text-[#000]"> K. Jagadish, </span> an
               <span className="text-[#000]"> Astrologer, Life Coach, </span> and

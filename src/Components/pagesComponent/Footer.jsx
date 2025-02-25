@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#F0EDE9] text-black py-10">
       <div className="container mx-auto px-6">
-        <div className="flex items-start justify-between text-center md:text-left  max-md:w-full  max-md:flex-wrap  max-md:items-center  max-md:justify-center">
+        <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-md:items-center  max-md:justify-center">
           {/* Left Section */}
           <div className="flex flex-col items-center md:items-start">
             <Image

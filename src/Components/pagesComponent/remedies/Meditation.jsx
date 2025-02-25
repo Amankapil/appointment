@@ -36,8 +36,7 @@ export default function Meditation() {
       <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <div className="w-[50%] max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w-[100%]  text-center">
-            We
-            <span className="text-[#000]">strongly believe</span> that the
+            We <span className="text-[#000]"> strongly believe</span> that the
             <span className="text-[#000]">
               most powerful remedy is sincere prayer and meditation—
             </span>{" "}
