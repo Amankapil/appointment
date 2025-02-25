@@ -13,8 +13,8 @@ const FourCardsSection = () => {
   // Single Card component with triple borders
   const Card = ({ text }) => (
     <div className="flex flex-col group relative bgwhite max-md:w-full max-md:h-full">
-      <div className="border border-[#c49b6d] w-614 max-md:w-full max-md:h-full h-340 rounded-[24px] bg-white p-2">
-        <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-550   h-308 rounded-[24px] one border-[#c49b6d] p-2">
+      <div className="border border-[#c49b6d] w-[614px] max-md:w-full max-md:h-full h-[340px] rounded-[24px] bg-white p-2">
+        <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-[550px]   h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
           <div
             style={{
               backgroundImage: isHovered
@@ -25,7 +25,7 @@ const FourCardsSection = () => {
             }}
             // onMouseEnter={() => setIsHovered(true)}
             // onMouseLeave={() => setIsHovered(false)}
-            className="border absolute left-[-18px] top-[17px] tw w-582  max-md:w-full max-md:h-full h-276 rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+            className="border absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
           >
             <div
               style={{ height: "-webkit-fill-available" }}

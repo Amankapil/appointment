@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: 'Salernomi J';
+    src: url('./fonts/9SALERNO.TTF');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-salernomi{
+    font-family: 'Salernomi J';
+}
