@@ -31,6 +31,12 @@ const tailwindConfig = {
       },
     },
   },
+  corePlugins: {
+    preflight: true,
+  },
+  safelist: [
+    { pattern: /.*/ }, // ✅ Allow ALL Tailwind classes, including arbitrary values
+  ],
   plugins: [require("@tailwindcss/forms")],
 };
 
