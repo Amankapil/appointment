@@ -8,7 +8,7 @@ import img2 from "../serviceComponent/assets/Rectangle 9.png";
 import Image from "next/image";
 export default function HeroRem() {
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Remedies: The Truth Behind Astrology, Karma & Spirituality
@@ -33,15 +33,14 @@ export default function HeroRem() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 max-md:flex-wrap flex max-md:flex-wrap flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Astrology, Karma, and the Role of Remedies{" "}
         </h1>
         <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
-            Does belief in
-            <span className="text-[#000]">God, Karma</span> or
-            <span className="text-[#000]">Transmigration</span> truly matter?
+            Does belief in <span className="text-[#000]">God, Karma </span> or
+            <span className="text-[#000]"> Transmigration</span> truly matter?
           </p>
           <br />
 
@@ -70,7 +69,7 @@ export default function HeroRem() {
         imge
       </div>
 
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 max-md:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Can Remedies Change Destiny?
         </h1>

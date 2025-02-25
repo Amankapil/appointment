@@ -3,12 +3,12 @@ import React from "react";
 const Karmic = () => {
   return (
     <>
-      <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
+      <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
         <div className="img h-[500px] bg-[#1E1E1E]">
           {/* <Image src={} alt="j"/> */}
           imge
         </div>
-        <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+        <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
           <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
             The Spiritual Perspective: Karmic Reckoning
           </h1>

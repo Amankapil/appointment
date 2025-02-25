@@ -8,7 +8,7 @@ import img2 from "../serviceComponent/assets/Rectangle 9.png";
 import Image from "next/image";
 export default function Peace() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] font-normal mb-6">
           Take the First Step Toward Clarity & Peace
@@ -25,7 +25,7 @@ export default function Peace() {
             Request your Consultation
           </button>
         </div>
-        <div className="mt-0 w-[50%]">
+        <div className="mt-0 w-[50%] max-lg:w-full">
           <div className="img h-[500px] bg-[#101010]">imge</div>
         </div>
       </div>

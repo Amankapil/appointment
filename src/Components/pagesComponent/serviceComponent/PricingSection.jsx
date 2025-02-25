@@ -12,7 +12,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-6 p-10">
+    <div className="flex flex-col items-center gap-6 p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
           Premium Consultation
@@ -84,7 +84,7 @@ const PricingSection = () => {
 
             {/* Book Now Button */}
             <div className="flex items-center justify-center">
-              <button className="mt-5 w-[80%] bg-black text-white py-2 rounded-md text-sm font-medium">
+              <button className="mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium">
                 Book Now
               </button>
             </div>

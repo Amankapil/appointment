@@ -2,8 +2,8 @@
 
 export default function Consultation() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
-      <div className="pr-4 flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
+    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+      <div className="pr-4 max-md:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[30%] font-normal mb-6">
           How to Prepare for Your Consultation?
         </h1>
@@ -27,7 +27,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_236)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -117,7 +117,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_241)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -207,7 +207,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_253)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -296,7 +296,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_265)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -389,7 +389,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_277)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -479,7 +479,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_289)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -567,7 +567,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_301)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -657,7 +657,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_313)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -747,7 +747,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_325)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -837,7 +837,7 @@ export default function Consultation() {
                   r="49"
                   fill="white"
                   stroke="#AC8C60"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <g filter="url(#filter0_i_292_337)">
                   <circle cx="50" cy="50" r="40" fill="#F0EDE9" />
@@ -910,7 +910,7 @@ export default function Consultation() {
             </p>
           </div>
         </div>
-        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[80%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[80%] max-lg:w-full font-normal mb-6">
           By following these steps, you ensure a deeply insightful experience,
           guided by the power of Prashna.
         </h1>

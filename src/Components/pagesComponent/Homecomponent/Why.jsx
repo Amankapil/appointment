@@ -2,7 +2,7 @@ import React from "react";
 
 const Why = () => {
   return (
-    <div className="relative flex flex-col gap-10 items-center justify-center bg-white p-10 space-y-10 overflow-hidden">
+    <div className="relative flex flex-col gap-10 items-center justify-center bg-white p-10 max-md:p-4 space-y-10 overflow-hidden">
       {/* First Circle */}
       <div
         style={{

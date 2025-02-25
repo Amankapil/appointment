@@ -10,7 +10,7 @@ export default function HeroWork() {
   const [currency, setCurrency] = useState("INR");
 
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       {/* Top Consultation Section */}
 
       <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -50,9 +50,9 @@ export default function HeroWork() {
           <>
             <div
               key={index}
-              className="border-[2px] border-[#AC8C60] rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md max-md:flex-wrap"
+              className="border-[2px] border-[#AC8C60] rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md max-md:flex-wrap max-md:justify-center"
             >
-              <div className="w-3/4 max-md:w-full  pr-4 flex flex-col font-inter justify-center max-md:w-full">
+              <div className="w-3/4   pr-4 max-md:flex-wrap flex flex-col font-inter justify-center max-md:w-full">
                 <p className="font-normal text-lg">{item.title}</p>
               </div>
               <div className="w-[248px] h[296px] bggray-300 ">

@@ -44,7 +44,7 @@ const Disclaimer = () => {
                 r="29.4"
                 fill="#F0EDE9"
                 stroke="#AC8C60"
-                stroke-width="1.2"
+                strokeWidth="1.2"
               />
               <g filter="url(#filter0_i_298_744)">
                 <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
@@ -171,7 +171,7 @@ const Disclaimer = () => {
             r="29.4"
             fill="#F0EDE9"
             stroke="#AC8C60"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <g filter="url(#filter0_i_298_744)">
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
@@ -265,7 +265,7 @@ const Disclaimer = () => {
             r="29.4"
             fill="#F0EDE9"
             stroke="#AC8C60"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <g filter="url(#filter0_i_298_744)">
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
@@ -361,7 +361,7 @@ const Disclaimer = () => {
             r="29.4"
             fill="#F0EDE9"
             stroke="#AC8C60"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <g filter="url(#filter0_i_298_744)">
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />
@@ -457,7 +457,7 @@ const Disclaimer = () => {
             r="29.4"
             fill="#F0EDE9"
             stroke="#AC8C60"
-            stroke-width="1.2"
+            strokeWidth="1.2"
           />
           <g filter="url(#filter0_i_298_744)">
             <circle cx="30" cy="30" r="24" fill="#F0EDE9" />

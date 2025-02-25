@@ -2,7 +2,7 @@
 
 export default function Herodone() {
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Make the Most of Your Consultation{" "}
@@ -27,7 +27,7 @@ export default function Herodone() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-center my-10 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           A Divine & Dynamic Approach to Astrology
         </h1> */}
@@ -54,7 +54,7 @@ export default function Herodone() {
           </p>
         </div>
       </div>
-      <div className="pr-4 flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
+      <div className="pr-4 max-md:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Would you rather spend your time explaining problems or receive
           instant, meaningful answers that set your course right?{" "}

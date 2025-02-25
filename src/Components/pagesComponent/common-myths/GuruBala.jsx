@@ -150,7 +150,7 @@ const GuruBala = () => {
         </div>
 
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <h1 className="text-[40px] text-[#4D4D4D] w-[80%] text-center font-salernomi font-normal mb-6">
+          <h1 className="text-[40px] text-[#4D4D4D] w-[80%] max-lg:w-full text-center font-salernomi font-normal mb-6">
             <span className="text-[#000]">
               Does this mean life is bad for 30 years?{" "}
             </span>{" "}

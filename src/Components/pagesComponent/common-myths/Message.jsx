@@ -15,20 +15,8 @@ const Message = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <circle
-                cx="52"
-                cy="52"
-                r="51"
-                stroke="#AC8C60"
-                stroke-width="2"
-              />
-              <circle
-                cx="52"
-                cy="52"
-                r="43"
-                stroke="#AC8C60"
-                stroke-width="2"
-              />
+              <circle cx="52" cy="52" r="51" stroke="#AC8C60" strokeWidth="2" />
+              <circle cx="52" cy="52" r="43" stroke="#AC8C60" strokeWidth="2" />
               <path
                 d="M57.2305 73H47.1406L47.168 72.1797C48.0612 72.1797 48.7083 71.7786 49.1094 70.9766C49.5286 70.1562 49.7383 68.8984 49.7383 67.2031L49.7656 43.168C49.7656 41.8737 49.4284 40.8802 48.7539 40.1875C48.4622 39.8958 48.0703 39.6589 47.5781 39.4766C47.0859 39.276 46.5117 39.1758 45.8555 39.1758V38.3555C47.0221 38.0638 48.2708 37.5534 49.6016 36.8242C50.2578 36.4414 50.9049 36.0221 51.543 35.5664C52.1992 35.0924 52.8646 34.5638 53.5391 33.9805H54.6602V67.2031C54.6602 68.9531 54.8607 70.2201 55.2617 71.0039C55.6628 71.7878 56.319 72.1797 57.2305 72.1797V73Z"
                 fill="#AC8C60"
@@ -146,7 +134,7 @@ const Message = () => {
           </div>
 
           <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-            <h1 className="text-[40px] text-[#4D4D4D] w-[80%] text-center font-salernomi font-normal mb-6">
+            <h1 className="text-[40px] text-[#4D4D4D] w-[80%] max-lg:w-full text-center font-salernomi font-normal mb-6">
               <span className="text-[#000]">
                 Every moment, our thoughts and actions are recorded in the
                 karmic cycle.

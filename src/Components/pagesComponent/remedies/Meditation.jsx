@@ -8,7 +8,7 @@ import img2 from "../serviceComponent/assets/Rectangle 9.png";
 import Image from "next/image";
 export default function Meditation() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           The True Remedy: Prayer & Meditation
@@ -33,8 +33,8 @@ export default function Meditation() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
-        <div className="w-[50%]">
+      <div className="pr-4 max-md:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+        <div className="w-[50%] max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w-[100%]  text-center">
             We
             <span className="text-[#000]">strongly believe</span> that the
@@ -50,7 +50,7 @@ export default function Meditation() {
         </div>
       </div>
 
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Key Spiritual Insights:
         </h1>
@@ -139,7 +139,7 @@ export default function Meditation() {
         </div>
       </div>
 
-      <div className="pr-4 flex flexcol font-inter gap-10 mt-20 justify-center items-start mt4 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 mt-20 justify-center items-start mt4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi  w-[100%] font-normal mb-6">
           Our view is clearly expressed in the “Zero Cost Remedies” video:
         </h1>

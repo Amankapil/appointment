@@ -3,7 +3,7 @@ import React from "react";
 const Takeaways = () => {
   return (
     <>
-      <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
+      <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
         <div className="heading flex mb-10 flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6 max-md:w-full">
             Key Takeaways
@@ -27,8 +27,8 @@ const Takeaways = () => {
           {/* <Image src={} alt="j"/> */}
           imge
         </div>
-        <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-          <p className="font-normal text-lg text-[#4D4D4D] w-[50%]  text-left">
+        <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+          <p className="font-normal text-lg text-[#4D4D4D] w-[50%] max-lg:w-full  text-left">
             The 18-year mark is not just about reaching legal adulthood—it is
             also a karmic checkpoint. According to Vedic wisdom, this phase
             updates an individual’s karmic balance, incorporating all actions
@@ -46,7 +46,7 @@ const Takeaways = () => {
         </div>
       </div>
 
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

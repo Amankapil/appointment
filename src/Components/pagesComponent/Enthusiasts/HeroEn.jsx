@@ -8,7 +8,7 @@ import img2 from "../serviceComponent/assets/Rectangle 9.png";
 import Image from "next/image";
 export default function HeroEn() {
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Astrology Enthusiasts – A Must-Read!
@@ -33,7 +33,7 @@ export default function HeroEn() {
         {/* <Image src={} alt="j"/> */}
         imge
       </div>
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1>
@@ -46,7 +46,7 @@ export default function HeroEn() {
           </p>
         </div>
       </div>
-      <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}

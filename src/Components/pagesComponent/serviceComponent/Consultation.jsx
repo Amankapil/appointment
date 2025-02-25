@@ -8,7 +8,7 @@ export default function Consultation() {
   const [currency, setCurrency] = useState("INR");
 
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       {/* Top Consultation Section */}
 
       <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -50,7 +50,7 @@ export default function Consultation() {
               {" "}
               <Image src={img2} alt="j" />
             </div>
-            <div className="w-3/4 max-md:w-full  pr-4 flex flex-col justify-start">
+            <div className="w-3/4 max-md:w-full  pr-4 max-md:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-lg">{item.title}</p>
             </div>
             {/* <div className="w-1/4 h-20 bggray-300 flex items-center justify-center rounded-md"></div> */}

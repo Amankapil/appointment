@@ -24,7 +24,7 @@ const Language = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-6 p-10">
+    <div className="flex flex-col items-center gap-6 p-10 max-md:p-4">
       {/* Pricing Cards */}
       <div className="flex items-center justify-center gap-32 flex-col">
         {pricingOptions.map((option, index) => (

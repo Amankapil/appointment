@@ -19,6 +19,7 @@
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
   content: ["./src/components/**/*.{js,ts,jsx}", "./src/app/**/*.{js,ts,jsx}"],
+  important: true,
   theme: {
     extend: {
       fontFamily: {

@@ -46,7 +46,7 @@ const Vision = () => {
                 rx="23"
                 fill="#F2F2F2"
                 stroke="#AC8C60"
-                stroke-width="2"
+                strokeWidth="2"
               />
             </svg>
           </div>

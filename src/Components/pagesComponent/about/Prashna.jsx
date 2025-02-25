@@ -32,6 +32,7 @@ const Prashna = () => {
 
           <svg
             width="825"
+            className="max-lg:w-full"
             height="440"
             viewBox="0 0 825 440"
             fill="none"
