@@ -165,13 +165,13 @@ export default function Navbar() {
               {/* Services Dropdown */}
               <div
                 className="relative"
-                onMouseEnter={() => setIsServicesOpen(true)} // Open on hover
-                onMouseLeave={() => setIsServicesOpen(false)} // Close on hover out
+                // onMouseEnter={() => setIsServicesOpen(true)} // Open on hover
+                // onMouseLeave={() => setIsServicesOpen(false)} // Close on hover out
               >
                 <Link href="/services" className="hover:text-gray-600 relative">
                   Services
                 </Link>
-                {isServicesOpen && (
+                {/* {isServicesOpen && (
                   <div className="absolute mt-2 py-2 w-48 bg-white rounded-md shadow-xl">
                     <Link
                       href="/services"
@@ -186,7 +186,7 @@ export default function Navbar() {
                       Consultation
                     </Link>
                   </div>
-                )}
+                )} */}
               </div>
 
               <Link href="/work" className="hover:text-gray-600 relative">
