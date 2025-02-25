@@ -12,7 +12,7 @@ export default function HeroCommon() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Astrology Myths vs. Reality: What You Need to Know
         </h1>
         <svg
@@ -36,7 +36,7 @@ export default function HeroCommon() {
         imge
       </div>
       <div className="pr-4 flex flex-col font-inter justify-center items-center mt-4 ">
-        <p className="font-normal text-lg text-[#4D4D4D] w-1/2  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-md:w-full  text-center">
           <span className="text-[#000]"></span> Astrology is often{" "}
           <span className="text-[#000]">
             misunderstood due to misinterpretations and fear-based beliefs.

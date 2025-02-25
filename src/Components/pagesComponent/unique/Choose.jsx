@@ -10,7 +10,7 @@ export default function Choose() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Why Choose PrashnaSiddhi?
         </h1>
         <svg

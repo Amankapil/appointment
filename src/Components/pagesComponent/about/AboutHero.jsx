@@ -6,7 +6,7 @@ export default function AboutHero() {
   return (
     <div className="bg-[#F0EDE9] pb-20">
       <div className="max-wxl ml-20 mx-auto text-left items-start justify-center flex gap-20">
-        <div className="w-1/2 h-[800px]">
+        <div className="w-1/2 max-md:w-full h-[800px]">
           <div className="flex flex-col justify-between h-full">
             <div>
               <h1 className="text-[56px] font-salernomi font-normal mb-6">

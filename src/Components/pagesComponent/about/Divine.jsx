@@ -33,6 +33,7 @@ const Divine = () => {
           <div className="svg regius">
             <svg
               width="1248"
+              className="mt-10 max-xl:w-full"
               height="400"
               viewBox="0 0 1248 400"
               fill="none"
@@ -56,7 +57,7 @@ const Divine = () => {
               />
             </svg> */}
 
-            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] mb-8">
+            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] max-lg:w-full mb-8">
               True astrological guidance comes through
               <span className="text-[#000]">Divine Grace</span> where the
               concept of
@@ -89,6 +90,7 @@ const Divine = () => {
       <div className="flex items-center flex-ol   justify-center text-center my-16">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

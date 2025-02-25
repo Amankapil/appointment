@@ -6,7 +6,7 @@ const Message = () => {
   return (
     <>
       <div className="manin bg max-w-7xl mx-auto py-20">
-        <div className="head flex items-center justify-start gap-4">
+        <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
           <div className="icon">
             <svg
               width="116"
@@ -43,13 +43,13 @@ const Message = () => {
               />
             </svg>
           </div>
-          <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] font-normal mb-6">
+          <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
             The Hidden Spiritual Message in Astrology
           </h1>
         </div>
-        <div className="below flex items-start justify-center mt-8">
-          <div className="left w-1/2">
-            <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4">
+        <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
+          <div className="left w-1/2 max-md:w-full">
+            <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
               Have you ever wondered
               <span className="text-[#000]">
                 why the Sun and Moon own only one zodiac sign each, while other
@@ -66,7 +66,7 @@ const Message = () => {
             The Deeper Meaning
           </h1>
 
-          <div className="lis  max-w-[846px] mx-auto space-y-4">
+          <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
               className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -86,7 +86,7 @@ const Message = () => {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">Moon (Mind) moves rapidly,</span>{" "}
                 collecting desires, ambitions, and attachments
               </p>
@@ -110,7 +110,7 @@ const Message = () => {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">Sun (Soul) remains steady</span>{" "}
                 guiding us towards righteousness.
               </p>
@@ -134,7 +134,7 @@ const Message = () => {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">Rahu acts as a mirror, </span>{" "}
                 reflecting the impact of our choices.
               </p>
@@ -164,6 +164,7 @@ const Message = () => {
       <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"
@@ -182,12 +183,12 @@ const Message = () => {
         </svg>
       </div>
       <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Conclusion: Why Fear When You Can Understand?
         </h1>
       </div>
 
-      <div className="lis  max-w-[846px] mx-auto space-y-4 py-20">
+      <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 py-20">
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
           className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -207,7 +208,7 @@ const Message = () => {
               />
             </svg>
           </div>
-          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4">
+          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4 max-md:w-full ">
             Astrology is not about fear—it’s about awareness and
             self-improvement.
           </p>
@@ -231,7 +232,7 @@ const Message = () => {
               />
             </svg>
           </div>
-          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4">
+          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4 max-md:w-full ">
             Planets are teachers, not punishers.
           </p>
         </div>
@@ -254,7 +255,7 @@ const Message = () => {
               />
             </svg>
           </div>
-          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4">
+          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4 max-md:w-full ">
             Misinterpretations create fear, but true wisdom empowers you.
           </p>
         </div>
@@ -277,11 +278,13 @@ const Message = () => {
               />
             </svg>
           </div>
-          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4">
+          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4 max-md:w-full ">
             Watch this insightful video to learn more:
           </p>
 
-          <div className="bg-white h-[500px] w-[500px]">video</div>
+          <div className="bg-white h-[500px] w-[500px] max-md:w-full">
+            video
+          </div>
         </div>
 
         <div
@@ -303,7 +306,7 @@ const Message = () => {
               />
             </svg>
           </div>
-          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4">
+          <p className="text-xl font-inter text-center text-[#000] mb8 w-3/4 max-md:w-full ">
             Take charge of your destiny with knowledge and wisdom!
           </p>
         </div>

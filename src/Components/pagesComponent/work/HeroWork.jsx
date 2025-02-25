@@ -50,9 +50,9 @@ export default function HeroWork() {
           <>
             <div
               key={index}
-              className="border-[2px] border-[#AC8C60] rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] border-[#AC8C60] rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md max-md:flex-wrap"
             >
-              <div className="w-3/4 pr-4 flex flex-col font-inter justify-center">
+              <div className="w-3/4 max-md:w-full  pr-4 flex flex-col font-inter justify-center max-md:w-full">
                 <p className="font-normal text-lg">{item.title}</p>
               </div>
               <div className="w-[248px] h[296px] bggray-300 ">

@@ -32,6 +32,7 @@ const Spirituality = () => {
 
           <div className="svg regius">
             <svg
+              className="mt-10 max-xl:w-full"
               width="1248"
               height="223"
               viewBox="0 0 1248 223"
@@ -359,7 +360,7 @@ const Spirituality = () => {
               />
             </svg>
 
-            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] mb-8">
+            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] max-lg:w-full mb-8">
               The
               <span className="text-[#000]">
                 {" "}
@@ -399,6 +400,7 @@ const Spirituality = () => {
       <div className="flex items-center flex-ol   justify-center text-center my-16">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

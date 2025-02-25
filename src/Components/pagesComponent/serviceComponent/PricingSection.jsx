@@ -38,7 +38,7 @@ const PricingSection = () => {
       </div>
 
       {/* Pricing Cards */}
-      <div className="flex items-center justify-center gap-6">
+      <div className="flex items-center justify-center gap-6 max-lg:flex-wrap">
         {pricingOptions.map((option, index) => (
           <div
             key={index}

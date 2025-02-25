@@ -50,7 +50,7 @@ export default function Consultation() {
               {" "}
               <Image src={img2} alt="j" />
             </div>
-            <div className="w-3/4 pr-4 flex flex-col justify-start">
+            <div className="w-3/4 max-md:w-full  pr-4 flex flex-col justify-start">
               <p className="font-normal text-lg">{item.title}</p>
             </div>
             {/* <div className="w-1/4 h-20 bggray-300 flex items-center justify-center rounded-md"></div> */}

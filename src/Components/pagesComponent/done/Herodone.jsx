@@ -4,7 +4,7 @@ export default function Herodone() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Make the Most of Your Consultation{" "}
         </h1>
         <svg
@@ -28,10 +28,10 @@ export default function Herodone() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-center my-10 ">
-        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           A Divine & Dynamic Approach to Astrology
         </h1> */}
-        <div className="w-[60%] text-center">
+        <div className="w-[60%] max-md:w-full text-center">
           <p className="font-normal text-lg text-[#4D4D4D] text-center">
             Are you wondering,{" "}
             <span className="text-[#000]">
@@ -59,8 +59,8 @@ export default function Herodone() {
           Would you rather spend your time explaining problems or receive
           instant, meaningful answers that set your course right?{" "}
         </h1>
-        {/* <div className="w-1/2"> */}
-        <div className="lis  max-w-[1280px] mx-auto flex items-center justify-center space-x-12 pb-10">
+        {/* <div className="w-1/2 max-md:w-full"> */}
+        <div className="lis  max-lg:p-8  max-w-[1280px] mx-auto flex items-center justify-center space-x-12 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px]  border-[#AC8C60] w-full items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -80,7 +80,7 @@ export default function Herodone() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 {" "}
                 Focused questions bring profound insights.{" "}
@@ -106,7 +106,7 @@ export default function Herodone() {
                 />
               </svg>
             </div>
-            <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 "Less is more"—when clarity meets divine wisdom.
               </span>

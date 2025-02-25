@@ -16,7 +16,7 @@ export default function Peace() {
       </div>
 
       <div className="max-wxl ml-20 mx-auto text-left items-start justify-center flex gap-20">
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="text-xl font-inter text-[#4D4D4D] mb-8">
             Seeking answers? Get a Prashna Kundali consultation today and
             receive divine guidance with clarity and confidence!

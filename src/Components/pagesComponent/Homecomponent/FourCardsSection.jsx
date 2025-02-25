@@ -12,9 +12,9 @@ const FourCardsSection = () => {
 
   // Single Card component with triple borders
   const Card = ({ text }) => (
-    <div className="flex flex-col group relative bgwhite">
-      <div className="border border-[#c49b6d] w-[614px] max-md:w-full h-[340px] rounded-[24px] bg-white p-2">
-        <div className="border absolute left-[32px] top-[10px]  w-[550px]  max-md:w-full h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
+    <div className="flex flex-col group relative bgwhite max-md:w-full max-md:h-full">
+      <div className="border border-[#c49b6d] w-614 max-md:w-full max-md:h-full h-340 rounded-[24px] bg-white p-2">
+        <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-550   h-308 rounded-[24px] one border-[#c49b6d] p-2">
           <div
             style={{
               backgroundImage: isHovered
@@ -23,9 +23,9 @@ const FourCardsSection = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="border absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+            // onMouseEnter={() => setIsHovered(true)}
+            // onMouseLeave={() => setIsHovered(false)}
+            className="border absolute left-[-18px] top-[17px] tw w-582  max-md:w-full max-md:h-full h-276 rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
           >
             <div
               style={{ height: "-webkit-fill-available" }}
@@ -43,7 +43,7 @@ const FourCardsSection = () => {
 
   return (
     <>
-      <div className="bg-[#F0EDE9] py-20">
+      <div className="bg-[#F0EDE9] py-20 max-md:hidden">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             What You Can Expect?
@@ -66,9 +66,9 @@ const FourCardsSection = () => {
         </div>
 
         <div className="w-full h-auto p-8">
-          <div className=" flex flex-col gap-8 items-center justify-center flex-wrap">
-            <div className=" flex gap-8 items-center justify-center flex-wrap">
-              <div className=" flex justify-center items-center">
+          <div className=" flex flex-col gap-8 items-center justify-center flex-wrap max-md:w-full max-m-340">
+            <div className=" flex gap-8 items-center justify-center flex-wrap max-md:w-full max-md340">
+              <div className=" flex justify-center items-center max-md:w-full ma-340">
                 <Card text={cardData[0]} />
               </div>
               <div className="flex justify-center items-center">

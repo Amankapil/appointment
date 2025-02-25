@@ -11,10 +11,10 @@ export default function Medical() {
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
       <div className="img h-[500px] bg-white">imge</div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           The Medical Perspective: Understanding Growth
         </h1>
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             Medical professionals chart human growth with logical precision
             tracking physiological and psychological developments from birth
@@ -28,6 +28,7 @@ export default function Medical() {
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

@@ -40,7 +40,7 @@ const Prashna = () => {
             <rect width="825" height="440" rx="24" fill="#F2F2F2" />
           </svg>
           {/* <Image src={img} alt="jflas" /> */}
-          <div className="flex items-center flex-col w-1/2  justify-center text-center my-10">
+          <div className="flex items-center flex-col w-1/2 max-md:w-full  justify-center text-center my-10">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8">
               Prashna Jyotishya is an ancient{" "}
               <span className="text-[#000]"> Vedic science </span> rooted in the

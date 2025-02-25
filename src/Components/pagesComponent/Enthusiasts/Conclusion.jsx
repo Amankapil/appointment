@@ -34,10 +34,10 @@ export default function Conclusion() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-center my-10 ">
-        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-center">
             This is where{" "}
             <span className="text-[#000]">
@@ -48,7 +48,7 @@ export default function Conclusion() {
         </div>
       </div>
       <div className="heading flex  mb-10 flex-col items-center justify-center">
-        <div className="lis w-full  max-w-[988px] mx-auto space-y-4 pb-10">
+        <div className="lis  max-lg:p-8 w-full  max-w-[988px] mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -68,7 +68,7 @@ export default function Conclusion() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Pinpoint Accuracy</span> Beyond
               birth charts, it provides
               <span className="text-[#000]">real-time </span>
@@ -94,7 +94,7 @@ export default function Conclusion() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">A Celestial Compass </span>
               Not just future predictions but a{" "}
               <span className="text-[#000]"> spiritual GPS </span> guiding you
@@ -120,7 +120,7 @@ export default function Conclusion() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Personalized Insights </span>–
               Unlike mass-market astrology, Prashna Jyotishya offers
               <span className="text-[#000]">
@@ -136,6 +136,7 @@ export default function Conclusion() {
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

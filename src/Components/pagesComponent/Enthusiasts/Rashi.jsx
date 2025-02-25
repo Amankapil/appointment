@@ -34,10 +34,10 @@ export default function Rashi() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-center my-10 ">
-        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-center">
             The <span className="text-[#000]">Moon sign</span> is often
             overemphasized in mass-market astrology, leading to misconceptions.
@@ -62,7 +62,7 @@ export default function Rashi() {
           Consider this:
         </p>
 
-        <div className="lis w-full  max-w-[988px] mx-auto space-y-4 pb-10">
+        <div className="lis  max-lg:p-8 w-full  max-w-[988px] mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -82,7 +82,7 @@ export default function Rashi() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 Birth Rate in India (Feb 2025 Estimate)
               </span>
@@ -142,7 +142,7 @@ export default function Rashi() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Per Day</span>
               <svg
                 width="24"
@@ -200,7 +200,7 @@ export default function Rashi() {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center flex items-center justify-center gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Per Moon Sign (2.5 days)</span>
               <svg
                 width="24"
@@ -241,7 +241,7 @@ export default function Rashi() {
           </div>
         </div>
 
-        <p className="font-normal text-lg text-[#4D4D4D] w-1/2  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-md:w-full  text-center">
           If astrology were solely based on the Moon sign, it would mean the{" "}
           <span className="text-[#000]">
             same destiny for 1,84,468 people born within that time frame in
@@ -249,11 +249,11 @@ export default function Rashi() {
           </span>{" "}
         </p>
         <br />
-        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-md:w-full  text-center">
           Is this logical? <span className="text-[#000]">Clearly not.</span>{" "}
         </p>
         <br />
-        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2  text-center">
+        <p className="font-normal text-lg text-[#4D4D4D]  w-1/2 max-md:w-full  text-center">
           Mass media predictions using Moon signs rely on broad generalizations,
           drawing people into astrology consultations through{" "}
           <span className="text-[#000]">fear-driven marketing</span> (e.g., Sade
@@ -265,6 +265,7 @@ export default function Rashi() {
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

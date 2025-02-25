@@ -10,7 +10,7 @@ export default function HeroRem() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Remedies: The Truth Behind Astrology, Karma & Spirituality
         </h1>
         <svg
@@ -34,10 +34,10 @@ export default function HeroRem() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Astrology, Karma, and the Role of Remedies{" "}
         </h1>
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             Does belief in
             <span className="text-[#000]">God, Karma</span> or
@@ -71,10 +71,10 @@ export default function HeroRem() {
       </div>
 
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Can Remedies Change Destiny?
         </h1>
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             Think of destiny like
             <span className="text-[#000]">

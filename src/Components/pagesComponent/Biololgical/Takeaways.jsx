@@ -5,7 +5,7 @@ const Takeaways = () => {
     <>
       <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
         <div className="heading flex mb-10 flex-col items-center justify-center">
-          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6 max-md:w-full">
+          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6 max-md:w-full">
             Key Takeaways
           </h1>
           <svg
@@ -34,7 +34,7 @@ const Takeaways = () => {
             updates an individual’s karmic balance, incorporating all actions
             since birth into the grand tapestry of their destiny.
           </p>
-          <div className="w-1/2">
+          <div className="w-1/2 max-md:w-full">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               At Prashnasiddhi.live, we bring the sacred science of Prashna
               Jyotishya into practical use, helping individuals make informed
@@ -49,6 +49,7 @@ const Takeaways = () => {
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

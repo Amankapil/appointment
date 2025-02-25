@@ -10,7 +10,7 @@ export default function Meditation() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           The True Remedy: Prayer & Meditation
         </h1>
         {/* <svg
@@ -51,11 +51,11 @@ export default function Meditation() {
       </div>
 
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Key Spiritual Insights:
         </h1>
-        <div className="w-1/2">
-          <div className="lis  max-w-[846px] mx-auto space-y-4 pb-10">
+        <div className="w-1/2 max-md:w-full">
+          <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
               className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -75,7 +75,7 @@ export default function Meditation() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   God is not pleased by money-driven rituals.
                 </span>{" "}
@@ -100,7 +100,7 @@ export default function Meditation() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   {" "}
                   Temples, churches, and mosques offer peace, but true
@@ -127,7 +127,7 @@ export default function Meditation() {
                   />
                 </svg>
               </div>
-              <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   {" "}
                   The best remedy is purifying the mind through self-awareness

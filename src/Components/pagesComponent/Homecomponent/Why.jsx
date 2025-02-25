@@ -9,7 +9,7 @@ const Why = () => {
           background:
             "radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0) 75.24%, rgba(234, 230, 225, 0.32) 100%)",
         }}
-        className="relative flex items-center justify-center w-[540px] h-[540px] border border-[#AC8C60] rounded-full shadow-lg"
+        className="relative flex items-center justify-center w-w540 h-h540 max-md:w-full max-md:h-full max-md:p-10 border border-[#AC8C60] rounded-full shadow-lg"
       >
         <h2 className="text-[56px] font-salernomi text-center">
           Why Prashna Siddhi?
@@ -24,7 +24,7 @@ const Why = () => {
           background:
             "radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0) 75.24%, rgba(234, 230, 225, 0.32) 100%)",
         }}
-        className="relative flex font-inter text-[20px] items-center justify-center w-[680px] h-[680px] border border-[#AC8C60] rounded-full shadow-lg"
+        className="relative flex font-inter text-[20px] items-center justify-center w-680 h-680 max-md:w-full max-md:h-full   max-md:p-10 border  border-[#AC8C60] rounded-full shadow-lg"
       >
         <p className=" text-center px-8 font-inter text-[20px]">
           Life presents us with uncertainties, and unanswered questions can
@@ -44,7 +44,7 @@ const Why = () => {
           background:
             "radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0) 75.24%, rgba(234, 230, 225, 0.32) 100%)",
         }}
-        className="relative flex flex-col gap-10 items-center justify-center w-[1200px] h-[1200px] border border-[#AC8C60] rounded-full shadow-lg bg-white"
+        className="relative flex flex-col gap-10 items-center justify-center w-1200 h-1200 max-md:w-full max-md:h-full max-md:p-10 border border-[#AC8C60] rounded-full shadow-lg bg-white"
       >
         {/* Small Inner Circle */}
         {/* <div className="absolute flex items-center justify-center w-40 h-40 border border-[#AC8C60] rounded-full bg-white">
@@ -61,7 +61,7 @@ const Why = () => {
             background:
               "radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0) 75.24%, rgba(234, 230, 225, 0.32) 100%)",
           }}
-          className=" flex items-center justify-center w-[500px] h-[500px] border border-[#AC8C60] rounded-full bg-white"
+          className=" flex items-center justify-center w-500 h-500 max-md:w-full max-md:h-full   max-md:p-10 border border-[#AC8C60] rounded-full bg-white"
         >
           <p className="text-[20px] text-[#4D4D4D] text-center px-6">
             However, it is important to remember the Doctrine of Karma:
@@ -75,7 +75,7 @@ const Why = () => {
             background:
               "radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0) 75.24%, rgba(234, 230, 225, 0.32) 100%)",
           }}
-          className=" flex items-center justify-center w-[680px] h-[680px] border border-[#AC8C60] rounded-full bg-white"
+          className=" flex items-center justify-center w-680 h-680 max-md:w-full max-md:h-full   max-md:p-10 border border-[#AC8C60] rounded-full bg-white"
         >
           <p className="text-[20px] text-[#4D4D4D] text-center px-6">
             This universal cosmic law governs human destiny—while astrology can

@@ -5,7 +5,7 @@ import img from "./assets/Rectangle 27.png";
 const Rahu = () => {
   return (
     <div className="manin bg max-w-7xl mx-auto py-20">
-      <div className="head flex items-center justify-start gap-4">
+      <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
         <div className="icon">
           <svg
             width="116"
@@ -30,13 +30,13 @@ const Rahu = () => {
             />
           </svg>
         </div>
-        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Rahu – The Most Misunderstood Shadow Planet
         </h1>
       </div>
-      <div className="below flex items-start justify-center mt-8">
-        <div className="left w-1/2">
-          <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4">
+      <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
+        <div className="left w-1/2 max-md:w-full">
+          <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
             Rahu is often feared due to
             <span className="text-[#000]">
               Rahu Kala and its 18-year Mahadasha,{" "}
@@ -55,7 +55,7 @@ const Rahu = () => {
           The Truth About Rahu
         </h1>
 
-        <div className="lis  max-w-[846px] mx-auto space-y-4">
+        <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -75,7 +75,7 @@ const Rahu = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               Rahu is not a{" "}
               <span className="text-[#000]">
                 physical planet—it is a shadow entity{" "}
@@ -103,7 +103,7 @@ const Rahu = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               It represents
               <span className="text-[#000]">
                 ambitions, desires, and karmic influences,
@@ -133,7 +133,7 @@ const Rahu = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               Its effects vary based on
               <span className="text-[#000]">
                 placement, nakshatra, planetary aspects, and individual karma.{" "}

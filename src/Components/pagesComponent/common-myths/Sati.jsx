@@ -5,7 +5,7 @@ import img from "./assets/Rectangle 27.png";
 const Sati = () => {
   return (
     <div className="manin bg max-w-7xl mx-auto py-10">
-      <div className="head flex items-center justify-start gap-4">
+      <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
         <div className="icon">
           <svg
             width="116"
@@ -30,13 +30,13 @@ const Sati = () => {
             />
           </svg>
         </div>
-        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Sade Sati – Does It Really Mean 7.5 Years of Hardship?
         </h1>
       </div>
-      <div className="below flex items-start justify-center mt-8">
-        <div className="left w-1/2">
-          <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4">
+      <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
+        <div className="left w-1/2 max-md:w-full">
+          <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
             Sade Sati refers to
             <span className="text-[#000]">
               Saturn’s transit over the natal Moon,{" "}
@@ -57,7 +57,7 @@ const Sati = () => {
           Breaking the Myth
         </h1>
 
-        <div className="lis  max-w-[846px] mx-auto space-y-4">
+        <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -77,7 +77,7 @@ const Sati = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Saturn takes 30 years </span> to
               complete one full cycle around the zodiac.
             </p>
@@ -101,7 +101,7 @@ const Sati = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               In a <span className="text-[#000]"> a 60-year lifespan, </span>
               person will experience
               <span className="text-[#000]">
@@ -128,7 +128,7 @@ const Sati = () => {
                 />
               </svg>
             </div>
-            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               If
               <span className="text-[#000]">
                 {" "}

@@ -4,7 +4,7 @@ import React from "react";
 
 const BubbleComponent = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-white p-8">
+    <div className="flex flex-col items-center justify-center bg-white p-8 max-md:hidden">
       <div className="flex flexcol items-center justify-between  bg-white p-8">
         <svg
           width="80"

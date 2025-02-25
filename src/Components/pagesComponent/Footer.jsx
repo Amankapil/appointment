@@ -43,11 +43,11 @@ const Footer = () => {
                   Services
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/work" className="hover:underline">
                   How it Works
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/common-myths" className="hover:underline">
                   Common Myths
@@ -59,9 +59,34 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="/about" className="hover:underline">
+                <Link href="/work" className="hover:underline">
+                  How it works
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:underline">
                   About Us
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/unique" className="hover:underline">
+                  Unique PrashnaSiddhi
+                </Link>
+              </li>
+              <li>
+                <Link href="/biololgical" className="hover:underline">
+                  Astrology & Biololgical growth
+                </Link>
+              </li>
+              <li>
+                <Link href="/What-can-be-done" className="hover:underline">
+                  What can be done
+                </Link>
+              </li>
+              <li>
+                <Link href="/Enthusiasts" className="hover:underline">
+                  Astrology Enthusiasts
+                </Link>
               </li>
             </ul>
           </div>
@@ -81,7 +106,7 @@ const Footer = () => {
         </div>
 
         <svg
-          className="mt-10 max-md:w-full"
+          className="mt-10 max-xl:w-full"
           width="1248"
           height="36"
           viewBox="0 0 1248 36"

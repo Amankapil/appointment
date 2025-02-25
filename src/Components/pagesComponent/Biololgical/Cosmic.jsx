@@ -10,7 +10,7 @@ export default function Cosmic() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           The Astrological Perspective: A Cosmic Blueprint
         </h1>
         <svg
@@ -34,10 +34,10 @@ export default function Cosmic() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           At Birth: The Role of the Ascendant (Lagna)
         </h1>
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             The Ascendant (Lagna) at birth sets the tone for an individual’s
             health and overall growth trajectory. Any significant afflictions to
@@ -59,11 +59,11 @@ export default function Cosmic() {
 
       {/* ?//////////////////////////////////////////////////////////////// */}
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 9th Year: The Reverse Nodal Return
         </h1>
-        <div className="w-1/2">
-          <div className="lis  max-w-[846px] mx-auto space-y-4 pb-10">
+        <div className="w-1/2 max-md:w-full">
+          <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               At approximately nine years of age, a child experiences Reverse
               Nodal Transit—a significant astrological phase where Rahu transits
@@ -88,7 +88,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   Behavioral shifts and personality changes
                 </span>{" "}
@@ -113,7 +113,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   {" "}
                   Increased challenges in parent-child relationships
@@ -139,7 +139,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl text-center font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   Potential health concerns (varying from case to case){" "}
                 </span>
@@ -157,11 +157,11 @@ export default function Cosmic() {
 
       {/* ?//////////////////////////////////////////////////////////////// */}
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 12th Year: The Jupiter Return & Profection Ascendant
         </h1>
-        <div className="w-1/2">
-          <div className="lis  max-w-[846px] mx-auto space-y-4 pb-10">
+        <div className="w-1/2 max-md:w-full">
+          <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               By the age of 12, two major astrological events unfold:
             </p>
@@ -184,7 +184,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">Jupiter Return –</span> Transit
                 Jupiter returns to its natal position, bringing newfound wisdom
                 and a sense of individuality. This marks a phase where children
@@ -210,7 +210,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]"> Profection Ascendant –</span>{" "}
                 Every year, the Ascendant progresses to a new house, but in the
                 12th year, it returns to its birth position. This period often
@@ -229,11 +229,11 @@ export default function Cosmic() {
 
       {/* ?//////////////////////////////////////////////////////////////// */}
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Around the 18th Year: The Nodal Return – A Life Milestone
         </h1>
-        <div className="w-1/2">
-          <div className="lis  max-w-[846px] mx-auto space-y-4 pb-10">
+        <div className="w-1/2 max-md:w-full">
+          <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 pb-10">
             <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
               Eighteen is a legally and astrologically significant age. It is
               when a person attains adulthood, gains voting rights, and takes
@@ -265,7 +265,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">A shift in life direction</span>
               </p>
             </div>
@@ -288,7 +288,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   {" "}
                   Karmic repercussions of past actions
@@ -314,7 +314,7 @@ export default function Cosmic() {
                   />
                 </svg>
               </div>
-              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+              <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
                 <span className="text-[#000]">
                   {" "}
                   A strong push toward personal responsibility
@@ -332,6 +332,7 @@ export default function Cosmic() {
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
+          className="mt-10 max-xl:w-full"
           height="24"
           viewBox="0 0 1248 24"
           fill="none"

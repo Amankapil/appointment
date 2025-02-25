@@ -33,7 +33,7 @@ const Language = () => {
             style={{
               boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
             }}
-            className="relative  w-[520px] h-[196px]  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+            className="relative  w-[520px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
           >
             <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
               <svg
@@ -110,8 +110,8 @@ const Language = () => {
 
             {/* Toggle Switch */}
             <div className="flex justify-center flex-col items-center mt-3">
-              <div className="border absolute left-[7px] top-[16px]  w-[504px] h-[164px] rounded-[24px] one border-[#c49b6d] p-2">
-                <div className="border absolute left-[7px] -top-[10px] tw w-[488px] h-[180px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+              <div className="border absolute left-[7px] top-[16px]  w-[504px] h-[164px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+                <div className="border absolute left-[7px] -top-[10px] tw w-[488px] h-[180px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
               </div>
             </div>
 

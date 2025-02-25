@@ -113,7 +113,7 @@ const Disclaimer = () => {
               Astrological Guidance & Interpretation
             </h1>
 
-            <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] text-center mb-8">
+            <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] max-md:w-full max-md:w-full text-center mb-8">
               All insights provided on this website are based on{" "}
               <span className="text-[#000]">
                 astrological principles and planetary positions
@@ -240,7 +240,7 @@ const Disclaimer = () => {
           Personal Testimonials & Experiences
         </h1>
 
-        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] text-center mb-8">
+        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] max-md:w-full max-md:w-full text-center mb-8">
           Client testimonials and opinions shared on this website reflect{" "}
           <span className="text-[#000]">individual experiences</span> and should
           not be assumed to apply universally. The effectiveness of astrological
@@ -334,7 +334,7 @@ const Disclaimer = () => {
           Professional Decision-Making
         </h1>
 
-        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] text-center mb-8">
+        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] max-md:w-full max-md:w-full text-center mb-8">
           The guidance, hints, and tips provided here are intended for spiritual
           and personal insight. For major life decisions involving finance,
           health, education, legal matters, or family issues, you should consult
@@ -430,7 +430,7 @@ const Disclaimer = () => {
           Accuracy & Limitations
         </h1>
 
-        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] text-center mb-8">
+        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] max-md:w-full max-md:w-full text-center mb-8">
           The guidance, hints, and tips provided here are intended for spiritual
           and personal insight. For major life decisions involving finance,
           health, education, legal matters, or family issues, you should consult
@@ -526,7 +526,7 @@ const Disclaimer = () => {
           No Inducement or Persuasion
         </h1>
 
-        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] text-center mb-8">
+        <p className="text-xl font-inter text-[#4D4D4D]  w-[60%] max-md:w-full max-md:w-full text-center mb-8">
           The guidance, hints, and tips provided here are intended for spiritual
           and personal insight. For major life decisions involving finance,
           health, education, legal matters, or family issues, you should consult

@@ -7,8 +7,8 @@ export default function Consultation() {
         <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[30%] font-normal mb-6">
           How to Prepare for Your Consultation?
         </h1>
-        {/* <div className="w-1/2"> */}
-        <div className="lis  max-w-[986px] w-full mx-auto space-y-4 pb-10">
+        {/* <div className="w-1/2 max-md:w-full"> */}
+        <div className="lis  max-lg:p-8  max-w-[986px] w-full mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
             className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
@@ -361,7 +361,7 @@ export default function Consultation() {
                 </defs>
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 No background details required. Mr. K. Jagadish himself will
                 very briefly and contextually walk you through the past of the
@@ -454,7 +454,7 @@ export default function Consultation() {
                 </defs>
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 After asking, wait in silence for about 30 seconds.
               </span>{" "}
@@ -902,7 +902,7 @@ export default function Consultation() {
                 </defs>
               </svg>
             </div>
-            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4">
+            <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">
                 Unnecessary conversation dilutes the power of the session. Stay
                 focused to receive clear divine guidance.
@@ -914,7 +914,6 @@ export default function Consultation() {
           By following these steps, you ensure a deeply insightful experience,
           guided by the power of Prashna.
         </h1>
-       
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ const Faq = () => {
   return (
     <div className="bg-[#F0EDE9] text-[#4D4D4D] py-16 px-6 md:px-20 lg:px-40">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           FAQ{" "}
         </h1>
         <svg

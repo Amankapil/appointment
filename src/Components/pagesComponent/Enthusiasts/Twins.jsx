@@ -10,7 +10,7 @@ export default function Twins() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[56px] text-[#4D4D4D] text-center font-salernomi w-[60%] font-normal mb-6">
+        <h1 className="text-[56px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Twins Born Minutes Apart – Do They Have the Same Destiny?
         </h1>
         <svg
@@ -34,10 +34,10 @@ export default function Twins() {
         imge
       </div>
       <div className="pr-4 flex flexcol font-inter gap-10 justify-center items-center my-10 ">
-        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] font-normal mb-6">
+        {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
-        <div className="w-1/2">
+        <div className="w-1/2 max-md:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-center">
             Absolutely not! Even in{" "}
             <span className="text-[#000]">twin births</span> occurring within
