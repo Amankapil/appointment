@@ -34,7 +34,7 @@ export default function Thought() {
         </div>
       </div>
 
-      {/* <div className="img h-[500px] bg-[#4D4D4D]">
+      {/* <div className="img h-[500px] max-md:h-full bg-[#4D4D4D]">
         imge
       </div> */}
 

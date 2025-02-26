@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { img } from "./assets/Frame 50.png";
+import "./style.css";
 
 const FourCardsSection = () => {
   const cardData = [
@@ -16,16 +17,9 @@ const FourCardsSection = () => {
       <div className="border border-[#c49b6d] w-[614px] max-md:w-full max-md:h-full h-[340px] rounded-[24px] bg-white p-2">
         <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-[550px]   h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
           <div
-            style={{
-              backgroundImage: isHovered
-                ? `url(./assets/Frame 50.png)`
-                : "none",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
             // onMouseEnter={() => setIsHovered(true)}
             // onMouseLeave={() => setIsHovered(false)}
-            className="border absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+            className="border bg-change absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
           >
             <div
               style={{ height: "-webkit-fill-available" }}

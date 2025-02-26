@@ -1,12 +1,12 @@
 import Image from "next/image";
-// import hero from "./assets/Frame 35.png";
-import hero from "../Homecomponent/assets/Frame 35.png";
+import hero from "./assets/Group 228.png";
+// import hero from "../Homecomponent/assets/Frame 35.png";
 
 export default function AboutHero() {
   return (
     <div className="bg-[#F0EDE9] pb-20">
       <div className="max-wxl ml-20 mx-auto text-left items-start justify-center flex gap-20 max-md:flex-col max-md:items-center max-md:ml-2">
-        <div className="w-1/2 max-lg:w-full h-[800px]">
+        <div className="w-1/2 max-lg:w-full h-[600px]">
           <div className="flex flex-col justify-between h-full">
             <div>
               <h1 className="text-[56px] font-salernomi font-normal mb-6">
@@ -81,11 +81,7 @@ export default function AboutHero() {
           </div>
         </div>
         <div className="mt-0">
-          <Image
-            src={hero}
-            alt="Dummy"
-            className="mx-auto rounded-lg shadow-lg"
-          />
+          <Image src={hero} alt="Dummy" className="mx-auto rounded-lg " />
         </div>
       </div>
     </div>

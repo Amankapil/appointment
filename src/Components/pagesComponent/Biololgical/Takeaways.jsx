@@ -1,4 +1,6 @@
 import React from "react";
+import img from "./assets/Group 248.png";
+import Image from "next/image";
 
 const Takeaways = () => {
   return (
@@ -23,9 +25,8 @@ const Takeaways = () => {
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
         </div>
-        <div className="img h-[500px] bg-[#1E1E1E]">
-          {/* <Image src={} alt="j"/> */}
-          imge
+        <div className="img h-[500px] max-md:h-full flex items-center justify-center">
+          <Image className="pb-10" src={img} alt="j" />
         </div>
         <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
           <p className="font-normal text-lg text-[#4D4D4D] w-[50%] max-lg:w-full  text-left">

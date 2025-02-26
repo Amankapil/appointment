@@ -9,7 +9,7 @@ const Platform = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20">
+      <div className="bg-[#fff] py-20 ">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Who This Platform Is For?
@@ -28,8 +28,9 @@ const Platform = () => {
             />
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
-
-          <Image src={img} alt="jflas" />
+          <div className="img-home py-10 flex justify-center w-full">
+            <Image src={img} alt="jflas" />
+          </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8">
               This space is for those who{" "}

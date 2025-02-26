@@ -2,8 +2,12 @@
 
 import { useState } from "react";
 // import img from "./assets/Group 161.png";
-import img from "../serviceComponent/assets/Group 161.png";
-import img2 from "../serviceComponent/assets/Rectangle 9.png";
+import img from "./assets/Ellipse 135.png";
+import img2 from "./assets/Ellipse 135 copy.png";
+import img3 from "./assets/Ellipse 135 (1).png";
+import img4 from "./assets/Ellipse 135 (2).png";
+import img5 from "./assets/Ellipse 135 (3).png";
+import img6 from "./assets/Ellipse 135.png";
 // import img2 from "./assets/Rectangle 9.png";
 import Image from "next/image";
 export default function Choose() {
@@ -29,9 +33,132 @@ export default function Choose() {
         </svg>
       </div>
 
-      <div className="img h-[500px] bg-white">
-        {/* <Image src={} alt="j"/> */}
-        imge
+      <div className="flex items-center justify-center flex-wrap gap-4 pb-7">
+        <div
+          style={{
+            boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
+          }}
+          className="relative  w-[614px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+        >
+          {/* <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
+            img
+          </h3> */}
+
+          {/* Toggle Switch */}
+          <div className="flex justify-center flex-col items-center mt-3">
+            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+            </div>
+          </div>
+
+          {/* Price Display */}
+          <div className="text-center flex items-center justify-center mt-4 gap-3">
+            <Image src={img} alt="j" />
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+              No birth details required—Prashna Kundali is divinely accurate.
+            </p>
+          </div>
+        </div>
+        <div
+          style={{
+            boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
+          }}
+          className="relative  w-[614px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+        >
+          {/* <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
+            img
+          </h3> */}
+
+          {/* Toggle Switch */}
+          <div className="flex justify-center flex-col items-center mt-3">
+            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+            </div>
+          </div>
+
+          {/* Price Display */}
+          <div className="text-center flex items-center justify-center mt-4 gap-3">
+            <Image src={img2} alt="j" />
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+              Guidance beyond fear-based astrology—we empower, not frighten.
+            </p>
+          </div>
+        </div>
+        <div
+          style={{
+            boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
+          }}
+          className="relative  w-[614px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+        >
+          {/* <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
+            img
+          </h3> */}
+
+          {/* Toggle Switch */}
+          <div className="flex justify-center flex-col items-center mt-3">
+            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+            </div>
+          </div>
+
+          {/* Price Display */}
+          <div className="text-center flex items-center justify-center mt-4 gap-3">
+            <Image src={img3} alt="j" />
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+              Accurate timing of events through real-time planetary transits.{" "}
+            </p>
+          </div>
+        </div>
+        <div
+          style={{
+            boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
+          }}
+          className="relative  w-[614px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+        >
+          {/* <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
+            img
+          </h3> */}
+
+          {/* Toggle Switch */}
+          <div className="flex justify-center flex-col items-center mt-3">
+            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+            </div>
+          </div>
+
+          {/* Price Display */}
+          <div className="text-center flex items-center justify-center mt-4 gap-3">
+            <Image src={img4} alt="j" />
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+              Divine insights & spiritual wisdom—not commercialized remedies.{" "}
+            </p>
+          </div>
+        </div>
+        <div
+          style={{
+            boxShadow: "0px 0px 24px 2px #AC8C6066 inset",
+          }}
+          className="relative  w-[614px] h-[196px] max-md:w-full  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+        >
+          {/* <h3 className="text-lg font-semibold text-gray-700 text-center flex items-center justify-center">
+            img
+          </h3> */}
+
+          {/* Toggle Switch */}
+          <div className="flex justify-center flex-col items-center mt-3">
+            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+            </div>
+          </div>
+
+          {/* Price Display */}
+          <div className="text-center flex items-center justify-center mt-4 gap-3">
+            <Image src={img5} alt="j" />
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+              A sincere and honest approach—seek answers with faith & devotion.{" "}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

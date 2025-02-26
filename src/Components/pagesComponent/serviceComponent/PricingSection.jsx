@@ -83,8 +83,8 @@ const PricingSection = () => {
             </div>
 
             {/* Book Now Button */}
-            <div className="flex items-center justify-center">
-              <button className="mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium">
+            <div className="flex items-center justify-center mt-8">
+              <button className="mt-5 w-[80%] font-salernomi max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium">
                 Book Now
               </button>
             </div>

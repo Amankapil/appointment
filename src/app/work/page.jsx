@@ -1,4 +1,5 @@
 import PricingSection from "@/Components/pagesComponent/serviceComponent/PricingSection";
+import BubbleComponent from "@/Components/pagesComponent/work/BubbleComponent";
 import DevotionalQuestions from "@/Components/pagesComponent/work/BubbleComponent";
 import HeroWork from "@/Components/pagesComponent/work/HeroWork";
 import Language from "@/Components/pagesComponent/work/Language";
@@ -8,7 +9,8 @@ const page = () => {
   return (
     <>
       <HeroWork />
-      <DevotionalQuestions />
+      <BubbleComponent />
+      {/* <DevotionalQuestions /> */}
       <Language />
       {/* <PricingSection /> */}
     </>

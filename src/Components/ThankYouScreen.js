@@ -6,6 +6,7 @@ export default function ThankYouScreen({
   selectedTime,
   error,
   svgUrl,
+  duration,
 }) {
   console.log(result);
   return (
@@ -23,7 +24,7 @@ export default function ThankYouScreen({
           <div>
             <h3 className="text-lg font-semibold">Consultation Overview</h3>
             <p className="text-gray-700 mt-2">
-              <span className="font-semibold">Duration:</span> 1 hour
+              <span className="font-semibold">Duration:</span> {duration} min
             </p>
             <p className="text-gray-700">
               <span className="font-semibold">Time Slot:</span> {selectedTime}

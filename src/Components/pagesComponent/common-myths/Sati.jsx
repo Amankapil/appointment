@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "./assets/Rectangle 27.png";
+import img from "./assets/image 8.png";
 
 const Sati = () => {
   return (
@@ -37,7 +37,7 @@ const Sati = () => {
       <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
         <div className="left w-1/2 max-lg:w-full">
           <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
-            Sade Sati refers to
+            Sade Sati refers to{" "}
             <span className="text-[#000]">
               Saturn’s transit over the natal Moon,{" "}
             </span>

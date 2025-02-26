@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 // import img from "./assets/Group 161.png";
-import img from "../serviceComponent/assets/Group 161.png";
+import img from "./assets/image 12.png";
 import img2 from "../serviceComponent/assets/Rectangle 9.png";
 // import img2 from "./assets/Rectangle 9.png";
 import Image from "next/image";
@@ -31,9 +31,8 @@ export default function HeroCommon() {
         </svg>
       </div>
 
-      <div className="img h-[500px] bg-white">
-        {/* <Image src={} alt="j"/> */}
-        imge
+      <div className="img h-[500px] max-md:h-full bgwhite flex items-center justify-center py-10">
+        <Image src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter justify-center items-center mt-4 ">
         <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-lg:w-full  text-center">

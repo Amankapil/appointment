@@ -29,7 +29,7 @@ export default function Shielded() {
         </svg>
       </div> */}
 
-      <div className="img h-[500px] bg-white">
+      <div className="img h-[500px] max-md:h-full bg-white">
         {/* <Image src={} alt="j"/> */}
         imge
       </div>

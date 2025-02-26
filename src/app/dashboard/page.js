@@ -213,7 +213,7 @@ export default function Dashboard() {
   const ActiveComponent = tabs.find((tab) => tab.name === activeTab)?.component;
 
   return (
-    <div className="h-[100px] bggray-100">
+    <div className="h-full bggray-100">
       {/* Sidebar */}
       <div className={`w-full  text-black p-5 transition-all  top-`}>
         <div className="flex items-center justify-between">

@@ -1,4 +1,7 @@
 "use client";
+import React from "react";
+import img from "./assets/image 33.png";
+import Image from "next/image";
 
 export default function Herodone() {
   return (
@@ -22,10 +25,8 @@ export default function Herodone() {
           <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
         </svg>
       </div>
-
-      <div className="img h-[500px] bg-white">
-        {/* <Image src={} alt="j"/> */}
-        imge
+      <div className="img h-[500px] max-md:h-full flex items-center justify-center">
+        <Image className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">

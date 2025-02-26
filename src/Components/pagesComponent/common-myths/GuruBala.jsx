@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import img from "./assets/Rectangle 27.png";
+import img from "./assets/image 9 (1).png";
 
 const GuruBala = () => {
   return (

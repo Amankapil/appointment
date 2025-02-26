@@ -4,6 +4,9 @@ import { useState } from "react";
 // import img from "./assets/Group 161.png";
 import img from "../serviceComponent/assets/Group 161.png";
 import img2 from "../serviceComponent/assets/Rectangle 9.png";
+import img3 from "./assets/Rectangle 12.png";
+import img4 from "./assets/Rectangle 12 (1).png";
+import img5 from "./assets/Rectangle 12 copy.png";
 // import img2 from "./assets/Rectangle 9.png";
 import Image from "next/image";
 export default function HeroWork() {
@@ -35,14 +38,17 @@ export default function HeroWork() {
       <div className="grid grid-cols-1 md:grid-cols-1 gap-6 max-w-4xl mx-auto">
         {[
           {
+            img: img3,
             title:
               "Prashna Jyotisha, a branch of ancient Vedic Astrology, originates from the Prashna Upanishad. Unlike traditional astrology that relies on birth details, Prashna Jyotisha also known as Horary Astrology—provides answers based on the exact moment a question is asked.",
           },
           {
+            img: img4,
             title:
               "At this pivotal moment, the astrologer determines the Ascendant (Lagna) by shuffling sacred cowries, aligning the cosmic energies with the seeker’s query. Each question generates a unique Lagna, making every consultation a fresh astrological reading.",
           },
           {
+            img: img5,
             title:
               "The planetary positions at that instant are considered a divine reflection of theuniversal will, resonating perfectly with the querist’s circumstances. This real-time celestial snapshot enables the astrologer to analyze the Prashna Kundali and offer precise, spiritually guided answers.",
           },
@@ -55,9 +61,9 @@ export default function HeroWork() {
               <div className="w-3/4   pr-4 max-lg:flex-wrap flex flex-col font-inter justify-center max-md:w-full">
                 <p className="font-normal text-lg">{item.title}</p>
               </div>
-              <div className="w-[248px] h[296px] bggray-300 ">
+              <div className="w-[297px] h[296px] bggray-300 ">
                 {" "}
-                <Image src={img2} alt="j" />
+                <Image src={item.img} alt="j" />
               </div>
             </div>
 

@@ -2,6 +2,7 @@
 import React from "react";
 // import img from "./assets/Frame 174.png";
 import Image from "next/image";
+import img from "./assets/Group 230.png";
 
 const Divine = () => {
   // Single Card component with triple borders
@@ -10,7 +11,7 @@ const Divine = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20">
+      <div className="bg-[#fff] pt-10">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             The Role of Divine Intelligence (DI) in Guidance
@@ -30,17 +31,8 @@ const Divine = () => {
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
 
-          <div className="svg regius">
-            <svg
-              width="1248"
-              className="mt-10 max-xl:w-full"
-              height="400"
-              viewBox="0 0 1248 400"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect width="1248" height="400" rx="24" fill="#F2F2F2" />
-            </svg>
+          <div className="img h-full pt-10 max-md:h-full flex items-center justify-center">
+            <Image className="" src={img} alt="j" />
           </div>
           {/* <Image src={img} alt="jflas" /> */}
           <div className="flex items-center flex-ol   justify-center text-center my-16">
@@ -57,15 +49,14 @@ const Divine = () => {
               />
             </svg> */}
 
-            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] max-lg:w-full mb-8">
-              True astrological guidance comes through
+            <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] max-lg:w-full">
+              True astrological guidance comes through{" "}
               <span className="text-[#000]">Divine Grace</span> where the
-              concept of
-              <span className="text-[#000]">Aarooda Lagna</span> plays a crucial
-              role. Only an astrologer on a
+              concept of <span className="text-[#000]">Aarooda Lagna</span>{" "}
+              plays a crucial role. Only an astrologer on a
               <span className="text-[#000]">
                 {" "}
-                high moral and spiritual plane
+                high moral and spiritual plane{" "}
               </span>
               can channel divine intelligence to offer authentic answers that
               help people make peace with their destiny
@@ -87,7 +78,7 @@ const Divine = () => {
         </div>
       </div>
 
-      <div className="flex items-center flex-ol   justify-center text-center my-16">
+      <div className="flex items-center flex-ol   justify-center text-center my-4">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

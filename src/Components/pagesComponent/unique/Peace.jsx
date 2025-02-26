@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-// import img from "./assets/Group 161.png";
-import img from "../serviceComponent/assets/Group 161.png";
-import img2 from "../serviceComponent/assets/Rectangle 9.png";
-// import img2 from "./assets/Rectangle 9.png";
+import img from "./assets/Group 115.png";
+
 import Image from "next/image";
+import Link from "next/link";
 export default function Peace() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
@@ -21,12 +20,17 @@ export default function Peace() {
             Seeking answers? Get a Prashna Kundali consultation today and
             receive divine guidance with clarity and confidence!
           </p>
-          <button className="bg-[#101010] text-[20px] font-salernomi text-white px-6 py-3 rounded-lg hover:bg-blue-600">
+          <Link
+            href="/booking"
+            className="bg-[#101010] font-salernomi text-white px-4 py-3 rounded hover:bg-[#333333]"
+          >
             Request your Consultation
-          </button>
+          </Link>
         </div>
         <div className="mt-0 w-[50%] max-lg:w-full">
-          <div className="img h-[500px] bg-[#101010]">imge</div>
+          <div className="img h-[500px] max-md:h-full">
+            <Image className="pb-10" src={img} alt="j" />
+          </div>
         </div>
       </div>
     </div>

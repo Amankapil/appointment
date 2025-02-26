@@ -1,0 +1,71 @@
+.hero {
+  background-image: url("./assets/Group\ 9.png");
+  background-position: bottom left;
+  background-size: 15%;
+  background-repeat: no-repeat;
+  /* transform: rotate(45deg); */
+}
+
+.fcircle {
+  background-image: url("./assets/Group\ 151.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.tcircle {
+  background-image: url("./assets/Group\ 153.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bg-change:hover {
+  background-image: url("./assets/Frame\ 50.png");
+  background-position: center center;
+  background-size: 94%;
+  background-repeat: no-repeat;
+}
+
+.img-home {
+  background-image: url("./assets/Group\ 155.svg");
+  background-position: center center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.karma{
+
+}
+
+.karma::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* Adjust as needed */
+    height: 100%;
+    /* Adjust as needed */
+    background-image: url('./assets/Group\ 24.svg');
+    background-position: center left;
+    background-size: 10%;
+    background-repeat: no-repeat;
+
+    /* Ensure the pseudo-element is behind the content */
+}
+.karma::after {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    width: 100%;
+    /* Adjust as needed */
+    height: 100%;
+    /* Adjust as needed */
+    background-image: url('./assets/Group\ 23.svg');
+    background-position: center right;
+    background-size: 10%;
+    background-repeat: no-repeat;
+
+    /* Ensure the pseudo-element is behind the content */
+}

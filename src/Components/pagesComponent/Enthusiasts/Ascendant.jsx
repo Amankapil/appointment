@@ -1,10 +1,7 @@
 "use client";
 
 import { useState } from "react";
-// import img from "./assets/Group 161.png";
-import img from "../serviceComponent/assets/Group 161.png";
-import img2 from "../serviceComponent/assets/Rectangle 9.png";
-
+import img from "./assets/image 38 (1).png";
 import Image from "next/image";
 export default function Ascendant() {
   return (
@@ -29,9 +26,8 @@ export default function Ascendant() {
         </svg>
       </div>
 
-      <div className="img h-[500px] bg-white">
-        {/* <Image src={} alt="j"/> */}
-        imge
+      <div className="img h-[500px] max-md:h-full flex items-center justify-center">
+        <Image className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-center my-10 ">
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">

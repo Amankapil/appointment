@@ -51,7 +51,10 @@ export default function MultiStepForm() {
     }));
   };
 
+  const [latloading, setlatLoading] = useState(false);
+
   const handleCityChange = async (selected) => {
+    setlatLoading(true);
     const city = selected.value;
     setFormData({ ...formData, city });
 
@@ -76,6 +79,8 @@ export default function MultiStepForm() {
         }
       } catch (error) {
         console.error("Error fetching coordinates:", error);
+      } finally {
+        setlatLoading(false);
       }
     }
   };
@@ -103,6 +108,8 @@ export default function MultiStepForm() {
     state: "",
     city: "",
   });
+
+  const [duration, setDuration] = useState();
   useEffect(() => {
     if (
       formData.fullName &&
@@ -171,6 +178,7 @@ export default function MultiStepForm() {
       const data = await res.json();
       setTimeSlots(data.slots);
       console.log(data.slots);
+      console.log(data.slots[0].duration);
     } catch (error) {
       console.log(error);
     }
@@ -181,6 +189,7 @@ export default function MultiStepForm() {
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     if (currentStep === 2) fetchSlots(selectedDate);
   }, [currentStep, selectedDate]);
@@ -536,7 +545,10 @@ export default function MultiStepForm() {
                   <button
                     key={slot.time}
                     disabled={slot.status === "booked"} // Disable if booked
-                    onClick={() => setSelectedTime(slot.time)}
+                    onClick={() => {
+                      setSelectedTime(slot.time);
+                      setDuration(slot.duration);
+                    }}
                     className={`p-2 rounded text-sm border 
       ${
         slot.status === "available"
@@ -562,6 +574,7 @@ export default function MultiStepForm() {
             <ThankYouScreen
               formData={formData}
               selectedTime={selectedTime}
+              duration={duration}
               result={result}
               error={error}
               svgUrl={svgUrl}
@@ -596,9 +609,14 @@ export default function MultiStepForm() {
         )}
         <button
           onClick={nextStep}
-          className="px-10 py-2 bg-[#B3B3B3] text-white rounded"
+          className="px-10 py-2 bg-[#251cdb] text-white rounded "
+          disabled={!latloading}
         >
-          {currentStep === steps.length - 1 ? "Submit" : "Next"}
+          {currentStep === steps.length - 1
+            ? "Submit"
+            : latloading
+            ? "fetching latitude "
+            : "Next"}
         </button>
       </div>
     </div>

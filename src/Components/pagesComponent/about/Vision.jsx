@@ -2,6 +2,7 @@
 import React from "react";
 // import img from "./assets/Frame 174.png";
 import Image from "next/image";
+import img from "./assets/Group 231.png";
 
 const Vision = () => {
   // Single Card component with triple borders
@@ -10,7 +11,7 @@ const Vision = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20">
+      <div className="bg-[#fff] pt-20">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Vision & Mission of Prashna Siddhi{" "}
@@ -30,25 +31,8 @@ const Vision = () => {
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
 
-          <div className="svg regius">
-            <svg
-              width="297"
-              height="220"
-              viewBox="0 0 297 220"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                x="1"
-                y="1"
-                width="295"
-                height="218"
-                rx="23"
-                fill="#F2F2F2"
-                stroke="#AC8C60"
-                strokeWidth="2"
-              />
-            </svg>
+          <div className="img h-[500px] max-md:h-full flex items-center justify-center py-10">
+            <Image className="pb-10" src={img} alt="j" />
           </div>
           {/* <Image src={img} alt="jflas" /> */}
           <div className="flex items-center flex-ol   justify-center text-center my-16">
@@ -96,7 +80,7 @@ const Vision = () => {
         </div>
       </div>
 
-      <div className="flex items-center flex-ol   justify-center text-center my-16">
+      <div className="flex items-center flex-ol   justify-center text-center my-4">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"
