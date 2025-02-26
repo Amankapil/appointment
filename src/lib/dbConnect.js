@@ -24,7 +24,8 @@
 
 import mongoose from "mongoose";
 
-const mongodbURL = process.env.MONGO_URI;
+const mongodbURL =
+  "mongodb+srv://jagadishk48:ahLXtRbcJWjdI716@cluster0.gqxc8.mongodb.net/book?retryWrites=true&w=majority&appName=Cluster0";
 
 if (!mongodbURL) throw new Error("Please define MONGO_URI in your environment");
 
