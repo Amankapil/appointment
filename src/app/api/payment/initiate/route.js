@@ -93,8 +93,8 @@ export async function POST(request) {
     service_provider: "payu_paisa",
     email,
     phone,
-    surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}`,
-    furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}`,
+    surl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}`,
+    furl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/failure?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}`,
     hash,
     // add: additionalDataString, // Pass additional data as a JSON string
   };
