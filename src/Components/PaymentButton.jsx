@@ -52,7 +52,7 @@ export default function PaymentButton({
           tob: paydata.timeOfBirth,
           dob: paydata.dob,
           gender: paydata.gender,
-          svgUrl: svggg,
+          svgUrl: svgBase64,
           country: paydata.country,
           state: paydata.state,
           city: paydata.city,

@@ -55,7 +55,7 @@ export async function POST(request) {
 
   const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
   const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
-  const NEXT_PUBLIC_BASE_URL = `${protocol}://${host}`;
+  const NEXT_PUBLIC_BASE_URL = "https://prashnasiddhi.com";
   const PAYU_BASE_URL = "https://secure.payu.in/_payment";
 
   const txnid = "Txn" + Date.now();
@@ -93,8 +93,8 @@ export async function POST(request) {
     service_provider: "payu_paisa",
     email,
     phone,
-    surl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}`,
-    furl: `${process.env.NEXT_PUBLIC_BASE_URL}/api/payment/failure?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}`,
+    surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}`,
+    furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}`,
     hash,
     // add: additionalDataString, // Pass additional data as a JSON string
   };
