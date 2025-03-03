@@ -24,14 +24,14 @@ export default function PaymentButton({
 
   console.log(paydata);
 
-  // const blobToBase64 = (blob) => {
-  //   return new Promise((resolve, reject) => {
-  //     const reader = new FileReader();
-  //     reader.readAsDataURL(blob);
-  //     reader.onloadend = () => resolve(reader.result);
-  //     reader.onerror = reject;
-  //   });
-  // };
+  const blobToBase64 = (blob) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(blob);
+      reader.onloadend = () => resolve(reader.result);
+      reader.onerror = reject;
+    });
+  };
 
   const initiatePayment = async () => {
     setLoading(true);
