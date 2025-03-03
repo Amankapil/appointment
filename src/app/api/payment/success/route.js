@@ -109,7 +109,7 @@ export async function POST(request) {
     }
     await transaction.save();
     // Prepare WhatsApp message
-    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nTransaction ID: ${txnid}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\Horodcope URL: ${process.env.NEXT_PUBLIC_BASE_URL}/${filePath}`;
+    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nTransaction ID: ${txnid}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
 
     const res = await client.messages.create({
       body: message,
@@ -120,15 +120,16 @@ export async function POST(request) {
     console.log("whatapp response", res);
     await sendEmail({
       to: email,
-      subject: "Session Confirm with Enlighten-mind",
+      subject: "Session Confirm with Prashna Siddhi",
       text: message,
     });
 
     // Redirect to the payment success page
-    return NextResponse.json({
-      success: true,
-      data: back,
-    });
+    return NextResponse.redirect(
+      `https://prashnasiddhi.com/transaction-summary?data=${encodeURIComponent(
+        JSON.stringify(data)
+      )}`
+    );
   } catch (error) {
     console.error("Error in success URL:", error);
 

@@ -43,14 +43,19 @@ export async function POST(request) {
   await writeFile(filePath1, buffer);
 
   const filePath2 = filePath1.replace(/^public\//, ""); // Remove "public/"
-  const filePath = `${req.protocol}://${req.get("host")}/${filePath2}`;
+
+  const protocol = request.headers.get("x-forwarded-proto") || "http";
+  const host = request.headers.get("host");
+  const filePath = `${protocol}://${host}/${filePath2}`;
+
+  // const filePath = `${request.protocol}://${request.get("host")}/${filePath2}`;
 
   console.log(`SVG saved at: ${filePath1}`);
   console.log(`Stored path in DB: ${filePath}`);
 
   const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
   const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
-  const NEXT_PUBLIC_BASE_URL = `${req.protocol}://${req.get("host")}`;
+  const NEXT_PUBLIC_BASE_URL = `${protocol}://${host}`;
   const PAYU_BASE_URL = "https://secure.payu.in/_payment";
 
   const txnid = "Txn" + Date.now();

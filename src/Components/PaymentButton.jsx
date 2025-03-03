@@ -24,25 +24,25 @@ export default function PaymentButton({
 
   console.log(paydata);
 
-  const blobToBase64 = (blob) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(blob);
-      reader.onloadend = () => resolve(reader.result);
-      reader.onerror = reject;
-    });
-  };
+  // const blobToBase64 = (blob) => {
+  //   return new Promise((resolve, reject) => {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(blob);
+  //     reader.onloadend = () => resolve(reader.result);
+  //     reader.onerror = reject;
+  //   });
+  // };
 
   const initiatePayment = async () => {
     setLoading(true);
 
-    // const svgBase64 = await blobToBase64(svgdata);
-    // console.log(svgBase64);
+    const svgBase64 = await blobToBase64(svgdata);
+    console.log(svgBase64);
     // localStorage.setItem("svg", svgBase64);
-    const svggg = localStorage.getItem("svg");
+    // const svggg = localStorage.getItem("svg");
 
     try {
-      const response = await fetch("/api/payment/test", {
+      const response = await fetch("/api/payment/initiate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

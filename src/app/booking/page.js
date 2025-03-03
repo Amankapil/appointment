@@ -285,16 +285,16 @@ export default function MultiStepForm() {
   const handleSubmit = async () => {
     setError(null);
     setLoading(true);
-    // const blobToBase64 = (blob) => {
-    //   return new Promise((resolve, reject) => {
-    //     const reader = new FileReader();
-    //     reader.readAsDataURL(blob);
-    //     reader.onloadend = () => resolve(reader.result);
-    //     reader.onerror = reject;
-    //   });
-    // };
-    // const svgBase64 = await blobToBase64(svgdata);
-    const svggg = localStorage.getItem("svg");
+    const blobToBase64 = (blob) => {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(blob);
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+      });
+    };
+    const svgBase64 = await blobToBase64(svgdata);
+    // const svggg = localStorage.getItem("svg");
     try {
       const response = await fetch("/api/urgent", {
         method: "POST",
@@ -306,8 +306,8 @@ export default function MultiStepForm() {
           tob: formData.timeOfBirth,
           dob: formData.dob,
           gender: formData.gender,
-          // svgUrl: svgBase64,
-          svgUrl: svggg,
+          svgUrl: svgBase64,
+          // svgUrl: svggg,
           country: formData.country,
           state: formData.state,
           city: formData.city,
@@ -332,7 +332,7 @@ export default function MultiStepForm() {
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
-    // makeApiRequest(horoscopeData);
+    makeApiRequest(horoscopeData);
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
     }
