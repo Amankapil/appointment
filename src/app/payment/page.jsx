@@ -141,62 +141,12 @@ export default function MultiStepForm() {
   };
   return (
     <div className="max-w-6xl mt-10 mx-auto p-6 bg-white shadowmd rounded-md">
-      <div className="flex justify-between mb-6">
-        {/* {steps.map((step, index) => (
-          <div
-            key={index}
-            className={`text-sm font-medium px-2 py-1 rounded-full flex items-center gap-3 justify-center ${
-              index === currentStep ? " text-black" : "bg-gray300  opacity-50"
-            }`}
-          >
-            <span
-              className={`text-sm font-medium text-center  h-5 w-5 rounded-full block ${
-                index === currentStep
-                  ? "bg-[#B3B3B3] text-white"
-                  : "bg-gray-300"
-              }`}
-            >
-              {index + 1}.
-            </span>
+      <div className="flex justify-between mb-6"></div>
 
-            {step}
-          </div>
-        ))} */}
-      </div>
-
-      {currentStep === 3 && (
-        <h1 className="text-xl font-semibold mb-4">
-          <PaymentButton />
-          your payment is sucess click on below button to confirm your
-          Availability
-        </h1>
-      )}
-      {currentStep === steps.length - 1 && (
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
-          <pre className="bg-gray-100 p-4 rounded">
-            {/* {JSON.stringify(formData, null, 2)} */}
-            <ThankYouScreen formData={formData} svgUrl={svgUrl} />
-          </pre>
-        </div>
-      )}
-
-      <div className="mt-6 flex justify-between">
-        {currentStep > 0 && (
-          <button
-            onClick={prevStep}
-            className="px-4 py-2 bg-gray-500 text-white rounded"
-          >
-            {currentStep === 2 ? "Urgent Query" : "Back"}
-          </button>
-        )}
-        <button
-          onClick={nextStep}
-          className="px-10 py-2 bg-[#B3B3B3] text-white rounded"
-        >
-          {currentStep === steps.length - 1 ? "Submit" : "Next"}
-        </button>
-      </div>
+      <h1 className="text-xl font-semibold mb-4">
+        your payment is sucess and booking is confirmed please check your given
+        email for details{" "}
+      </h1>
     </div>
   );
 }

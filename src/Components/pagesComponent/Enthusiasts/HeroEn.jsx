@@ -68,7 +68,7 @@ export default function HeroEn() {
             readings, Prashna Jyotishya provides
             <span className="text-[#000]">
               {" "}
-              real-time, highly accurate insights
+              real-time, highly accurate insights{" "}
             </span>
             taking into account
             <span className="text-[#000]">

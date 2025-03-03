@@ -35,13 +35,13 @@ const Purpose = () => {
           </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full mt-8  justify-center text-center max-md:w-full max-md:h-full max-md:p-10">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8">
-              Our goal is
+              Our goal is{" "}
               <span className="text-[#000]">
                 to settle the turbulence in your mind, relieve anxiety, and
                 create mental clarity{" "}
               </span>{" "}
-              —so you can move forward in life wit{" "}
-              <span className="text-[#000]">confidence, faith, </span> and
+              —so you can move forward in life with{" "}
+              <span className="text-[#000]">confidence, faith, </span> and{" "}
               <span className="text-[#000]">peace. </span>
               <span className="text-[#000]"> seek spiritual </span> clarity and
             </p>

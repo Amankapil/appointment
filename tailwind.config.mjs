@@ -26,6 +26,11 @@ const tailwindConfig = {
 
   theme: {
     extend: {
+      screens: {
+        fhd: "1920px", // Full HD (1080p)
+        qhd: "2460px", // Quad HD (1440p)
+        lhd: "1500px", // Quad HD (1440p)
+      },
       fontFamily: {
         salernomi: ["Salernomi J"],
         inter: ['"Inter Display"', "sans-serif"],

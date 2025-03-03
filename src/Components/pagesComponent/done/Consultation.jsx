@@ -8,10 +8,10 @@ export default function Consultation() {
           How to Prepare for Your Consultation?
         </h1>
         {/* <div className="w-1/2 max-lg:w-full"> */}
-        <div className="lis  max-lg:p-8  max-w-[986px] w-full mx-auto space-y-4 pb-10">
+        <div className="lis  max-lg:p-8  max-w-[986px] max-w-986  w-full mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -101,7 +101,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -191,7 +191,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -280,7 +280,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -373,7 +373,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -463,7 +463,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -551,7 +551,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -641,7 +641,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -731,7 +731,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg
@@ -821,7 +821,7 @@ export default function Consultation() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[2px] max-w-[986px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[2px] max-w-[986px] max-w-986  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute  max-md:hidden  -left-[50px]">
               <svg

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import "./style.css";
 
 const PricingSection = () => {
   const [isUSD, setIsUSD] = useState(false);
@@ -33,26 +34,26 @@ const PricingSection = () => {
         </svg>
       </div>
       {/* Top Info Box */}
-      <div className="bg-[#f5f0eb] px-6 py-3 rounded-xl text-center text-sm font-medium shadow-md">
+      {/* <div className="bg-[#f5f0eb] px-6 py-3 rounded-xl text-center text-sm font-medium shadow-md">
         Overseas Clients Includes NRIs
-      </div>
+      </div> */}
 
       {/* Pricing Cards */}
       <div className="flex items-center justify-center gap-6 max-lg:flex-wrap">
         {pricingOptions.map((option, index) => (
           <div
             key={index}
-            className="relative  w-[403px] h-[376px]  border-[1px] border-[#c2a882] rounded-[24px] p-6 bg-[#F0EDE9] shadow-lg"
+            className="relative flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg"
           >
-            <h3 className="text-lg font-semibold text-gray-700 text-center mt-12">
+            <h3 className="text-[32px] font-normal font-salernomi text-gray-700 text-center m">
               {option.duration}
             </h3>
 
             {/* Toggle Switch */}
             <div className="flex justify-center items-center mt-3">
-              <div className="border absolute left-[14px] top-[34px]  w-[371px] h-[312px] rounded-[24px] one border-[#c49b6d] p-2">
+              {/* <div className="border absolute left-[14px] top-[34px]  w-[371px] h-[312px] rounded-[24px] one border-[#c49b6d] p-2">
                 <div className="border absolute left-[17px] -top-[19px] tw w-[339px] h-[344px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
-              </div>
+              </div> */}
               <span className="text-gray-600">₹</span>
               <label className="relative inline-flex items-center mx-2 cursor-pointer">
                 <input
@@ -73,17 +74,53 @@ const PricingSection = () => {
             </div>
 
             {/* Price Display */}
-            <div className="text-center flex items-center justify-center mt-4">
-              <span className="text-3xl font-bold text-black">
+            <div className="text-center flex items-center justify-center mt-4 w-full">
+              <span className="text-[44px] font-bold text-black">
                 {isUSD ? `$${option.priceUSD}` : `₹${option.priceINR}`}
               </span>
               <p className="text-sm text-gray-600">
                 {isUSD ? " / Overseas Clients" : " / Residents Indians"}
               </p>
             </div>
+            <div className="text-center flex items-center justify-center mt-4 gap-3 w-full">
+              <span className="text-[44px] font-bold text-black">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                    fill="#101010"
+                  />
+                </svg>
+              </span>
+              <p className="text-sm text-gray-600">
+                Overseas Clients Includes NRIs
+              </p>
+            </div>
+            <div className="text-center flex items-center justify-center mt gap-3 w-full">
+              <span className="text-[44px] font-bold text-black">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                    fill="#101010"
+                  />
+                </svg>
+              </span>
+              <p className="text-sm text-gray-600">Astrology Consultation</p>
+            </div>
 
             {/* Book Now Button */}
-            <div className="flex items-center justify-center mt-8">
+            <div className="flex items-center justify-center w-full mt-8">
               <button className="mt-5 w-[80%] font-salernomi max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium">
                 Book Now
               </button>

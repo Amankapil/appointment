@@ -1,13 +1,14 @@
 import Image from "next/image";
 import hero from "./assets/Frame 35.png";
 import "./style.css";
+import Link from "next/link";
 
 export default function Hero() {
   return (
     <div className="bg-[#F0EDE9] pb-20 hero">
-      <div className="max-wxl ml-20 mx-auto text-left items-center justify-center flex gap-20  max-md:ml-2  max-md:flex-wrap">
+      <div className="max-wxl  ml-20 mx-auto text-left items-center justify-center flex gap-20  max-md:ml-2  max-md:flex-wrap">
         <div className="w-1/2 max-lg:w-full  max-md:w-full">
-          <h1 className="text-[64px] font-salernomi font-normal mb-6">
+          <h1 className="text-[64px] font-salernomi font-normal mb-6 lhd:text-[100px] max max-fhd:bg-red-500 qhd:bg-purple-500">
             Welcome to Prashna Siddhi
           </h1>
           {/* ????chage somethingd */}
@@ -16,9 +17,12 @@ export default function Hero() {
             the right place. Prashna Siddhi offers astrological guidance in an
             affordable, instant, and divinely inspired manner.
           </p>
-          <button className="bg-[#101010] font-salernomi text-[20px] text-white px-6 py-3 rounded-lg hover:bg-[#333333]">
+          <Link
+            href="/booking"
+            className="bg-[#101010] text-[20px] font-salernomi text-white px-4 py-3 rounded hover:bg-[#333333]"
+          >
             Request your Consultation
-          </button>
+          </Link>
           {/* prashnasiddhi.com */}
           <div className="mt-5">
             <svg

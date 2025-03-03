@@ -49,7 +49,7 @@ export default function Conclusion() {
         <div className="lis  max-lg:p-8 w-full  max-w-[988px] mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -68,14 +68,14 @@ export default function Conclusion() {
             </div>
             <p className="text-xl font-inter text-center  gap-5 text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
               <span className="text-[#000]">Pinpoint Accuracy</span> Beyond
-              birth charts, it provides
+              birth charts, it provides{" "}
               <span className="text-[#000]">real-time </span>
               answers for life’s pressing questions
             </p>
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -101,7 +101,7 @@ export default function Conclusion() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg

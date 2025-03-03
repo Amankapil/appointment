@@ -1,18 +1,99 @@
 @import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
+/* @tailwind base;
+@tailwind components; */
+/* @tailwind utilities; */
 
 @font-face {
-    font-family: 'Salernomi J';
-    src: url('./fonts/9SALERNO.TTF');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Salernomi J";
+  src: url("./fonts/9SALERNO.TTF");
+  font-weight: 400;
+  font-style: normal;
 }
 
-.font-salernomi{
-    font-family: 'Salernomi J';
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .max-w-7xl {
+    max-width: 1800px;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  p {
+    font-size: 28px;
+  }
+  a {
+    font-size: 25px;
+  }
+  .ml-20 {
+    margin-left: 0px;
+  }
+}
+
+@media (min-width: 2100px) and (max-width: 2600px) {
+  .max-w-7xl {
+    max-width: 2200px;
+  }
+  .max-w-5xl {
+    max-width: 2200px;
+  }
+  .max-w-4xl {
+    max-width: 1500px;
+  }
+  .navbar {
+    gap: 40px;
+  }
+  /* .min-h-screen {
+    height: 700px;
+  } */
+  h1 {
+    font-size: 80px;
+  }
+  p {
+    font-size: 35px;
+  }
+  a {
+    font-size: 25px;
+  }
+  .ml-20 {
+    margin-left: 0px;
+  }
+  .circleone {
+    width: 700px;
+    height: 700px;
+  }
+  .circletwo {
+    width: 800px;
+    height: 800px;
+  }
+  .circlethree {
+    width: 1600px;
+    height: 1600px;
+  }
+  .circlethreeone {
+    width: 700px;
+    height: 700px;
+  }
+  .circlethretwo {
+    width: 800px;
+    height: 800px;
+  }
+  .lis {
+    max-width: 1300px;
+  }
+  .max-w-826 {
+    width: 100%;
+    max-width: 1300px;
+  }
+  .max-w-986 {
+    width: 100%;
+    max-width: 1600px;
+  }
+  .max-w-1000 {
+    width: 100%;
+    max-width: 1600px;
+  }
+}
+
+.font-salernomi {
+  font-family: "Salernomi J";
 }

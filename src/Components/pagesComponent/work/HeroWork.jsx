@@ -50,7 +50,7 @@ export default function HeroWork() {
           {
             img: img5,
             title:
-              "The planetary positions at that instant are considered a divine reflection of theuniversal will, resonating perfectly with the querist’s circumstances. This real-time celestial snapshot enables the astrologer to analyze the Prashna Kundali and offer precise, spiritually guided answers.",
+              "The planetary positions at that instant are considered a divine reflection of the universal will, resonating perfectly with the querist’s circumstances. This real-time celestial snapshot enables the astrologer to analyze the Prashna Kundali and offer precise, spiritually guided answers.",
           },
         ].map((item, index) => (
           <>

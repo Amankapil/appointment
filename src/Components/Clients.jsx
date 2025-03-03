@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
 
 const Clients = () => {
   const [clients, setClients] = useState([]);
@@ -31,7 +32,7 @@ const Clients = () => {
       <div className="flex justify-between items-center p-4 border-b">
         <div>
           <span className="text-gray-600">Total Clients:</span>{" "}
-          <span className="text-lg font-semibold">140</span>
+          <span className="text-lg font-semibold">{clients.length}</span>
         </div>
         <div>
           <span className="text-gray-600">Active Clients:</span>{" "}
@@ -92,6 +93,15 @@ const Clients = () => {
                   <p>City: {client.city}</p>
                   <p>Latitude: {client.latitude || "---"}</p>
                   <p>Longitude: {client.longitude || "---"}</p>
+                  <p className="flex items-center font-bold">
+                    Horodcope:{" "}
+                    <Image
+                      src={client?.filePath}
+                      alt=""
+                      width={200}
+                      height={200}
+                    />
+                  </p>
                 </div>
 
                 {/* Personal Information */}

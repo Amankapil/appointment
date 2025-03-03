@@ -62,6 +62,7 @@ export async function GET(request) {
       headers: {
         "Content-Type": "image/svg+xml",
       },
+      svg: svgData,
       status: 200,
     });
 

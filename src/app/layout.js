@@ -2,8 +2,10 @@
 import Footer from "@/Components/pagesComponent/Footer";
 // import "../";
 import "./globals.css";
-import Navbar from "@/Components/pagesComponent/Navbar";
 
+import NavbarSwitcher from "@/Components/NavbarSwitcher";
+// import Navbar1 from "../components/navbars/Navbar1";
+// import Navbar2 from "../components/navbars/Navbar2";
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
 //   subsets: ["latin"],
@@ -23,7 +25,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={"antialiased"}>
-        <Navbar />
+        {/* <Navbar /> */}
+        {/* {pathname.startsWith("/dashboard") ? <Navbar1 /> : <Navbar />} */}
+        <NavbarSwitcher />
         {children}
         <Footer />
       </body>

@@ -11,10 +11,11 @@ import ThankYouScreen from "@/Components/ThankYouScreen";
 import axios from "axios";
 import PaymentButton from "@/Components/PaymentButton";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const steps = [
   "Personal Details",
-  "Questions",
+  // "Questions",
   "Appointment",
   "Confirmation",
   "Payment",
@@ -22,6 +23,8 @@ const steps = [
 
 export default function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(0);
+
+  const router = useRouter();
   const [formData, setFormData] = useState({
     fullName: "",
     phone: "",
@@ -191,7 +194,7 @@ export default function MultiStepForm() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (currentStep === 2) fetchSlots(selectedDate);
+    if (currentStep === 1) fetchSlots(selectedDate);
   }, [currentStep, selectedDate]);
 
   const userId = "637630";
@@ -199,6 +202,7 @@ export default function MultiStepForm() {
   const language = "hi";
 
   const [svgUrl, setSvgUrl] = useState("");
+  const [svgdata, setSvgData] = useState("");
 
   const makeApiRequest = async (horoscopeData) => {
     const {
@@ -240,10 +244,15 @@ export default function MultiStepForm() {
       const response = await fetch(apiUrl, {
         method: "GET",
       });
-      // const data = await response.json();
       const blob = await response.blob();
+      console.log("blob Response:", blob);
       const objectUrl = URL.createObjectURL(blob);
       setSvgUrl(objectUrl);
+      console.log(objectUrl);
+      // const data = await response.json();
+      // console.log(data.svg);
+      setSvgData(blob);
+
       console.log("API Response:", objectUrl);
     } catch (error) {
       console.error("Error calling API:", error);
@@ -276,6 +285,16 @@ export default function MultiStepForm() {
   const handleSubmit = async () => {
     setError(null);
     setLoading(true);
+    // const blobToBase64 = (blob) => {
+    //   return new Promise((resolve, reject) => {
+    //     const reader = new FileReader();
+    //     reader.readAsDataURL(blob);
+    //     reader.onloadend = () => resolve(reader.result);
+    //     reader.onerror = reject;
+    //   });
+    // };
+    // const svgBase64 = await blobToBase64(svgdata);
+    const svggg = localStorage.getItem("svg");
     try {
       const response = await fetch("/api/urgent", {
         method: "POST",
@@ -287,15 +306,22 @@ export default function MultiStepForm() {
           tob: formData.timeOfBirth,
           dob: formData.dob,
           gender: formData.gender,
-          svgUrl: svgUrl,
+          // svgUrl: svgBase64,
+          svgUrl: svggg,
           country: formData.country,
           state: formData.state,
           city: formData.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
-          amount: "1.00", // 1 INR for testing
+          amount: "0.00", // 1 INR for testing
         }),
       });
+      const data = await response.json();
+      console.log(data);
+      if (data.success == true) {
+        router.push("/payment");
+      }
+      alert(data.success);
     } catch (err) {
       setError("Failed to fetch data");
       console.log(err);
@@ -306,7 +332,7 @@ export default function MultiStepForm() {
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
-    makeApiRequest(horoscopeData);
+    // makeApiRequest(horoscopeData);
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
     }
@@ -323,9 +349,15 @@ export default function MultiStepForm() {
       if (currentStep > 0) setCurrentStep(currentStep - 1);
     }
   };
+
+  const [selectedDuration, setSelectedDuration] = useState(null); // Filter state
+  const filteredSlots = selectedDuration
+    ? timeSlots.filter((slot) => slot.duration === selectedDuration)
+    : timeSlots;
+
   return (
-    <div className="max-w-6xl mt-10 mx-auto p-6 bg-white shadowmd rounded-md">
-      <div className="flex justify-between mb-6">
+    <div className="max-w-4xl mt-10 mx-auto p-6 bg-white shadow-md h-screen rounded-md">
+      <div className="flex justify-between mb-6 max-md:flex-wrap">
         {steps.map((step, index) => (
           <div
             key={index}
@@ -334,13 +366,13 @@ export default function MultiStepForm() {
             }`}
           >
             <span
-              className={`text-sm font-medium text-center  h-5 w-5 rounded-full block ${
+              className={`text-sm font-medium text-center h-6 w-6 rounded-full block ${
                 index === currentStep
-                  ? "bg-[#B3B3B3] text-white"
-                  : "bg-gray-300"
+                  ? "bg[#4597F8] border-[#4597F8] text-[#4597F8] textblack border-[2px]"
+                  : "bg-gray-300  border-[1px]"
               }`}
             >
-              {index + 1}.
+              {index + 1}
             </span>
 
             {step}
@@ -351,7 +383,7 @@ export default function MultiStepForm() {
       {currentStep === 0 && (
         <div className=" flex flex-col mt-20 items-center justify-center">
           <h2 className="text-xl font-semibold mb-4">Personal Details</h2>
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-7 max-md:grid-cols-2 ">
             <label className="text-[16px]">
               Full Name *
               <input
@@ -360,59 +392,59 @@ export default function MultiStepForm() {
                 placeholder="John Doe"
                 value={formData.fullName}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
-              Phone Number
+              Phone Number *
               <input
                 name="phone"
                 type="text"
                 placeholder="+91 9876543210"
                 value={formData.phone}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
-              Email ID
+              Email ID *
               <input
                 name="email"
                 type="email"
                 placeholder="johndoe@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
-              Date of Birth
+              Date of Birth *
               <input
                 name="dob"
                 type="date"
                 placeholder="johndoe@gmail.com"
                 value={formData.dob}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
-              Time of Birth
+              Time of Birth *
               <input
                 name="timeOfBirth"
                 type="time"
                 value={formData.timeOfBirth}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
-              Gender
+              Gender *
               <select
                 name="gender"
                 value={formData.gender}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               >
                 <option value="">Select Gender</option>
                 <option value="Male">Male</option>
@@ -421,7 +453,7 @@ export default function MultiStepForm() {
               </select>
             </label>
             <label>
-              Country
+              Country *
               <Select
                 options={Country.getAllCountries().map((c) => ({
                   label: c.name,
@@ -439,7 +471,7 @@ export default function MultiStepForm() {
               />
             </label>
             <label>
-              State
+              State *
               <Select
                 options={State.getStatesOfCountry(formData.country).map(
                   (s) => ({ label: s.name, value: s.isoCode })
@@ -464,7 +496,7 @@ export default function MultiStepForm() {
               />
             </label> */}
             <label>
-              City
+              City *
               <Select
                 options={City.getCitiesOfState(
                   formData.country,
@@ -479,12 +511,12 @@ export default function MultiStepForm() {
             </label>
 
             <label>
-              Marital Status*
+              Marital Status *
               <select
                 name="Merriged"
                 value={formData.gender}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               >
                 <option value="">Select status</option>
                 <option value="Male">Merriged</option>
@@ -502,7 +534,7 @@ export default function MultiStepForm() {
                 placeholder="Latitude"
                 value={formData.latitude}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
             <label>
@@ -513,24 +545,24 @@ export default function MultiStepForm() {
                 placeholder="longitude"
                 value={formData.longitude}
                 onChange={handleChange}
-                className="border p-2 rounded w-full"
+                className="border p-2 rounded w-full border-[#E4E4E4]"
               />
             </label>
           </div>
         </div>
       )}
 
-      {currentStep === 1 && (
+      {/* {currentStep === 1 && (
         <Questions
           formData={formData}
           handleQuestionChange={handleQuestionChange}
         />
-      )}
+      )} */}
 
-      {currentStep === 2 && (
-        <div className="space-y-4">
+      {currentStep === 1 && (
+        <div className="space-y-4 h[400px] max-md:h[700px]">
           <h2 className="text-lg font-semibold">Select Date & Time</h2>
-          <div className="flex items-center justify-center gap-10">
+          <div className="flex items-center justify-center gap-10 max-md:flex-wrap max-md:h-full">
             <DatePicker
               selected={selectedDate}
               onChange={(date) => setSelectedDate(date)}
@@ -540,7 +572,7 @@ export default function MultiStepForm() {
             />
             <div>
               <h2 className="text-md font-normal">Select a Convenient Time</h2>
-              <div className="grid grid-cols-3 gap-2">
+              {/* <div className="grid grid-cols-3 gap-2">
                 {timeSlots?.map((slot) => (
                   <button
                     key={slot.time}
@@ -561,25 +593,88 @@ export default function MultiStepForm() {
                     {slot.time}
                   </button>
                 ))}
+              </div> */}
+
+              <div className="flex gap-2 mb-4">
+                <button
+                  onClick={() => setSelectedDuration(15)}
+                  className={`p-2 border w-full rounded ${
+                    selectedDuration === 15
+                      ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                      : "bg-white border-[#E4E4E4]"
+                  }`}
+                >
+                  15 Min
+                </button>
+                <button
+                  onClick={() => setSelectedDuration(30)}
+                  className={`p-2 border  w-full  rounded ${
+                    selectedDuration === 30
+                      ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                      : "bg-white border-[#E4E4E4]"
+                  }`}
+                >
+                  30 Min
+                </button>
+                <button
+                  onClick={() => setSelectedDuration(null)} // Show all slots
+                  className={`p-2 border  w-full  rounded ${
+                    selectedDuration === null
+                      ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                      : "bg-white border-[#E4E4E4]"
+                  }`}
+                >
+                  All
+                </button>
+              </div>
+
+              {/* Time Slots */}
+              <div className="grid grid-cols-3 gap-2">
+                {filteredSlots.length > 0 ? (
+                  filteredSlots.map((slot) => (
+                    <button
+                      key={slot._id}
+                      disabled={slot.status === "booked"}
+                      onClick={() => {
+                        setSelectedTime(slot.time);
+                      }}
+                      className={`p-2 rounded text-sm border 
+        ${
+          slot.status === "available"
+            ? selectedTime === slot.time
+              ? "bg-blue-500 text-white" // Selected slot
+              : "bg-green-200 hover:bg-green-300"
+            : "bg-red-200 hover:bg-red-300"
+        }`}
+                    >
+                      {slot.time}
+                    </button>
+                  ))
+                ) : (
+                  <p className="text-gray-500 col-span-3 text-center">
+                    No slots available
+                  </p>
+                )}
               </div>
             </div>
           </div>
         </div>
       )}
-      {currentStep === 3 && (
+      {currentStep === 2 && (
         <div>
           <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
-          <pre className="bg-gray-100 p-4 rounded">
-            {/* {JSON.stringify(formData, null, 2)} */}
-            <ThankYouScreen
-              formData={formData}
-              selectedTime={selectedTime}
-              duration={duration}
-              result={result}
-              error={error}
-              svgUrl={svgUrl}
-            />
-          </pre>
+          {/* <pre className="bg-gray-100 p-4 rounded"> */}
+          {/* {JSON.stringify(formData, null, 2)} */}
+          <ThankYouScreen
+            formData={formData}
+            selectedTime={selectedTime}
+            duration={duration}
+            result={result}
+            error={error}
+            svgUrl={svgUrl}
+            selectedDate={selectedDate}
+          />
+          {/* </pre> */}
         </div>
       )}
       {currentStep === steps.length - 1 && (
@@ -588,7 +683,9 @@ export default function MultiStepForm() {
             setPaymentStatus={setPaymentStatus}
             paydata={paydata}
             selectedTime={selectedTime}
-            svgUrl={svgUrl}
+            // svgUrl={svgUrl}
+            duration={duration}
+            svgdata={svgdata}
             selectedDate={selectedDate}
           />
         </h2>
@@ -598,7 +695,7 @@ export default function MultiStepForm() {
         {currentStep > 0 && (
           <button
             onClick={prevStep}
-            className="px-4 py-2 bg-gray-500 text-white rounded"
+            className="px-8 py-2 border border-[#E4E4E4] bggray-500 text-black w] rounded"
           >
             {currentStep === 2
               ? loading
@@ -609,14 +706,28 @@ export default function MultiStepForm() {
         )}
         <button
           onClick={nextStep}
-          className="px-10 py-2 bg-[#251cdb] text-white rounded "
-          disabled={!latloading}
+          className="px-10 py-2 bg-[#4597F8] text-white rounded flex items-center justify-center gap-2"
         >
           {currentStep === steps.length - 1
             ? "Submit"
             : latloading
             ? "fetching latitude "
-            : "Next"}
+            : "Next"}{" "}
+          <svg
+            width="21"
+            height="20"
+            viewBox="0 0 21 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3.83337 10H17.1667M17.1667 10L12.1667 5M17.1667 10L12.1667 15"
+              stroke="white"
+              strokeWidth="1.3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
         </button>
       </div>
     </div>

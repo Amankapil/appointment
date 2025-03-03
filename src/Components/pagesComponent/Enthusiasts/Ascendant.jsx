@@ -50,7 +50,7 @@ export default function Ascendant() {
         <div className="lis  max-lg:p-8 wfull  max-w-[988px] mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -75,7 +75,7 @@ export default function Ascendant() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -102,7 +102,7 @@ export default function Ascendant() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg

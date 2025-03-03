@@ -8,7 +8,7 @@ export default function AdminAvailability() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedSlots, setSelectedSlots] = useState([]);
   const [availability, setAvailability] = useState([]);
-  const [selectedTab, setSelectedTab] = useState("60"); // Default to 1 hour (60 min)
+  const [selectedTab, setSelectedTab] = useState("30"); // Default to 1 hour (60 min)
 
   const generateSlots = (interval) => {
     const slots = [];
@@ -40,7 +40,7 @@ export default function AdminAvailability() {
   const slotOptions = {
     15: generateSlots(15),
     30: generateSlots(30),
-    60: generateSlots(60),
+    // 60: generateSlots(60),
   };
 
   useEffect(() => {
@@ -129,30 +129,10 @@ export default function AdminAvailability() {
 
   return (
     <div>
-      <div className="flex space-x-4 items-center justify-center">
-        {["15", "30", "60"].map((duration) => (
-          <button
-            key={duration}
-            className={`px-4 py-2 rounded-md ${
-              selectedTab === duration
-                ? "bg-blue-600 text-white"
-                : "bg-gray-200"
-            }`}
-            onClick={() => setSelectedTab(duration)}
-          >
-            {duration === "15"
-              ? "15 Min Slots"
-              : duration === "30"
-              ? "30 Min Slots"
-              : "1 Hour Slots"}
-          </button>
-        ))}
-      </div>
-
       <div className="bg-white p-6 rounded-lg shadow max-w-6xl mx-auto mt-6">
         <div className="flex gap-6">
           <div>
-            <h2 className="text-2xl font-normal mb-6">Manage Availability</h2>
+            <h2 className="text-2xl font-normal mb-6">Choose a Date</h2>
             <Calendar
               onChange={setSelectedDate}
               value={selectedDate}
@@ -162,13 +142,33 @@ export default function AdminAvailability() {
           </div>
 
           <div className="flex-1 bg-gray-50 p-4 rounded-lg">
+            <h3 className="font-medium mb-4">Choose Your Session Length</h3>
+            <div className="flex space-x-4 items-start justify-start pb-6">
+              {["15", "30"].map((duration) => (
+                <button
+                  key={duration}
+                  className={`px-4 border py-2 rounded-md ${
+                    selectedTab === duration
+                      ? "bg-blue-600 text-white"
+                      : "bg-white border-[#CCCCCC] "
+                  }`}
+                  onClick={() => setSelectedTab(duration)}
+                >
+                  {duration === "15"
+                    ? "15 Min Slots"
+                    : duration === "30"
+                    ? "30 Min Slots"
+                    : "1 Hour Slots"}
+                </button>
+              ))}
+            </div>
             <h3 className="font-medium mb-4">
               Availability for{" "}
               {selectedDate
                 ? format(selectedDate, "MMM dd, yyyy")
                 : "Select a date"}
             </h3>
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-4 gap-2">
               {selectedDate &&
                 slotOptions[selectedTab].map((slot, index) => {
                   const status = getSlotStatus(slot);
@@ -198,14 +198,21 @@ export default function AdminAvailability() {
             </div>
           </div>
         </div>
+        <div className="flex items-center justify-end w-full">
+          <button
+            onClick={handleSave}
+            className="mt-4 px-4 py-2 bg-[#4597F8] text-white rounded hover:bg-green-700"
+          >
+            {loading ? "saving data...... " : "Save Availability"}
+          </button>
+        </div>
 
-        <button
-          onClick={handleSave}
-          className="mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
-        >
-          {loading ? "saving data...... " : "Save Selected Slots"}
-        </button>
+
       </div>
+
+
+
+      
     </div>
   );
 }

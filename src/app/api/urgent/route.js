@@ -1,14 +1,12 @@
 import { NextResponse } from "next/server";
 import twilio from "twilio";
-import dbConnect from "@/lib/dbConnect";
+import { writeFile } from "fs/promises";
+import path from "path";
+import { v4 as uuidv4 } from "uuid";
+import crypto from "crypto";
 import Transaction from "@/models/Transaction";
 import nodemailer from "nodemailer";
 import Availability from "@/models/Availability";
-
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER; // Your Twilio WhatsApp-enabled phone number
-const client = twilio(accountSid, authToken);
 
 async function sendEmail({ to, subject, text, html }) {
   const transporter = nodemailer.createTransport({
@@ -20,7 +18,7 @@ async function sendEmail({ to, subject, text, html }) {
   });
 
   await transporter.sendMail({
-    from: '"Enlighen-mind" aman@codelinear',
+    from: '"Prashna Siddhi" aman@codelinear',
     to,
     subject,
     text,
@@ -28,10 +26,12 @@ async function sendEmail({ to, subject, text, html }) {
   });
 }
 
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER; // Your Twilio WhatsApp-enabled phone number
+const client = twilio(accountSid, authToken);
 export async function POST(request) {
   try {
-    // Connect to the database
-    await dbConnect();
     const {
       name,
       email,
@@ -42,29 +42,90 @@ export async function POST(request) {
       gender,
       country,
       state,
-      city,
       svgUrl,
+      city,
       selectedTime,
       selectedDate,
     } = await request.json();
-    const transaction = new Transaction({
+    // const file = formData.get("file");
+    // console.log(file);
+
+    const back = {
       name,
       email,
       phone,
       amount,
+      tob,
+      dob,
+      gender,
       country,
       state,
-      gender,
-      dob,
-      tob,
-      selectedDate,
-      selectedTime,
+      svgUrl,
       city,
-      session: 1,
+      selectedTime,
+      selectedDate,
+    };
+
+    // const svgContent = atob(svgdata);
+    const base64Data = svgUrl.split(",")[1]; // Removes "data:image/svg+xml;base64,"
+    if (!base64Data) {
+      return NextResponse.json({ error: "Invalid SVG data" }, { status: 400 });
+    }
+
+    // Convert Base64 to a Buffer
+    const buffer = Buffer.from(base64Data, "base64");
+    const fileName = `${uuidv4()}.svg`;
+
+    const filePath1 = path.join("public/uploads", fileName);
+    await writeFile(filePath1, buffer);
+
+    const filePath2 = filePath1.replace(/^public\//, ""); // Remove "public/"
+
+    const protocol = request.headers.get("x-forwarded-proto") || "http";
+    const host = request.headers.get("host");
+    const filePath = `${protocol}://${host}/${filePath2}`;
+    // const filePath = `${request.protocol}://${request.get(
+    //   "host"
+    // )}/${filePath2}`;
+
+    console.log(`SVG saved at: ${filePath1}`);
+    console.log(`Stored path in DB: ${filePath}`);
+
+    const transaction = new Transaction({
+      name,
+      email,
+      phone,
+      tob,
+      dob,
+      gender,
+      country,
+      state,
+      city,
+      selectedTime,
+      selectedDate,
+      filePath,
+      amount,
       status: "Urgent",
-      paymentMethod: "PayU", // Save additional data to the database
+      createdAt: new Date(), // Save additional data to the database
     });
+
+    await transaction.save();
+
     // Example date
+
+    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
+    // await sendEmail({
+    //   to: email,
+    //   subject: "Session Confirm with Enlighten-mind",
+    //   text: message,
+    // });
+    const res = await client.messages.create({
+      body: message,
+      from: `whatsapp:${twilioPhoneNumber}`,
+      to: `whatsapp:+91${phone}`,
+    });
+    console.log("whatapp response", res);
+
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
     // Update slot status to "booked"
     const availability = await Availability.findOne({ date: formattedDate });
@@ -78,35 +139,43 @@ export async function POST(request) {
       }
     }
     await transaction.save();
-
-    // Prepare WhatsApp message
-    const message = `Session Confirm with EnlightenMind!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}`;
-
-    await client.messages.create({
-      body: message,
-      from: `whatsapp:${twilioPhoneNumber}`,
-      to: `whatsapp:+91${phone}`,
+    // const redirectUrl = `${protocol}://${host}/payment`;
+    // return NextResponse.redirect(redirectUrl);
+    return NextResponse.json({
+      success: true,
+      data: back,
     });
 
-    await sendEmail({
-      to: email,
-      subject: "Session Confirm with Enlighten-mind",
-      text: message,
-    });
+    // const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
+    // const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
+    // const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+    // const PAYU_BASE_URL = "https://secure.payu.in/_payment";
 
-    // Redirect to the payment success page
+    // const txnid = "Txn" + Date.now();
 
-    return NextResponse.json(
-      {
-        success: true,
-        message: `data sent to astrologer soon he will be connect you on selected time `,
-      },
-      { status: 201 }
-    );
+    // const hashString = `${MERCHANT_KEY}|${txnid}|${amount}|Product_Info|${name}|${email}|||||||||||${MERCHANT_SALT}`;
+    // const hash = crypto.createHash("sha512").update(hashString).digest("hex");
+
+    // const payUData = {
+    //   key: MERCHANT_KEY,
+    //   txnid,
+    //   amount,
+    //   productinfo: "Product_Info",
+    //   firstname: name,
+    //   service_provider: "payu_paisa",
+    //   email,
+    //   phone,
+    //   surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success`,
+    //   furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure`,
+    //   hash,
+    // };
+
+    // return NextResponse.json({ payUData, url: `${PAYU_BASE_URL}/_payment` });
   } catch (error) {
-    console.error("Error in success URL:", error);
-    // Redirect to the payment failure page in case of an error
-    const redirectUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/booking`;
-    return NextResponse.redirect(redirectUrl);
+    console.error("Error processing payment:", error);
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }

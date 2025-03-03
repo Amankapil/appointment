@@ -7,6 +7,7 @@ export default function ThankYouScreen({
   error,
   svgUrl,
   duration,
+  selectedDate,
 }) {
   console.log(result);
   return (
@@ -19,9 +20,9 @@ export default function ThankYouScreen({
         </p>
 
         {/* Main Content Section */}
-        <div className="flex items-center justify-between gap-6 mt-6">
+        <div className="flex items-center justify-between gap-6 mt-6 max-md:flex-col">
           {/* Consultation Overview */}
-          <div>
+          <div className="w-1/2 max-md:w-full">
             <h3 className="text-lg font-semibold">Consultation Overview</h3>
             <p className="text-gray-700 mt-2">
               <span className="font-semibold">Duration:</span> {duration} min
@@ -29,8 +30,9 @@ export default function ThankYouScreen({
             <p className="text-gray-700">
               <span className="font-semibold">Time Slot:</span> {selectedTime}
             </p>
-            <p className="text-gray-700">
-              <span className="font-semibold">Date:</span> {formData.dob}
+            <p className="text-gray-700 w-[50%]">
+              <span className="font-semibold">Date:</span>{" "}
+              {selectedDate.toString()}
             </p>
             {/* <p className="text-gray-700">
               <span className="font-semibold">Astrologer:</span> [Astrologer’s

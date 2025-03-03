@@ -8,8 +8,8 @@
 
 .fcircle {
   background-image: url("./assets/Group\ 151.svg");
-  background-position: center center;
-  background-size: contain;
+  background-position: 42% 50%;
+  background-size: 46%;
   background-repeat: no-repeat;
 }
 .tcircle {
@@ -33,39 +33,38 @@
   background-repeat: no-repeat;
 }
 
-.karma{
-
+.karma {
 }
 
 .karma::before {
-    content: '';
+  content: "";
 
-    position: absolute;
-    left: 0;
-    width: 100%;
-    /* Adjust as needed */
-    height: 100%;
-    /* Adjust as needed */
-    background-image: url('./assets/Group\ 24.svg');
-    background-position: center left;
-    background-size: 10%;
-    background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* Adjust as needed */
+  height: 100%;
+  /* Adjust as needed */
+  background-image: url("./assets/Group\ 24.svg");
+  background-position: center left;
+  background-size: 10%;
+  background-repeat: no-repeat;
 
-    /* Ensure the pseudo-element is behind the content */
+  /* Ensure the pseudo-element is behind the content */
 }
 .karma::after {
-    content: '';
+  content: "";
 
-    position: absolute;
-    left: 0;
-    width: 100%;
-    /* Adjust as needed */
-    height: 100%;
-    /* Adjust as needed */
-    background-image: url('./assets/Group\ 23.svg');
-    background-position: center right;
-    background-size: 10%;
-    background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  /* Adjust as needed */
+  height: 100%;
+  /* Adjust as needed */
+  background-image: url("./assets/Group\ 23.svg");
+  background-position: center right;
+  background-size: 10%;
+  background-repeat: no-repeat;
 
-    /* Ensure the pseudo-element is behind the content */
+  /* Ensure the pseudo-element is behind the content */
 }

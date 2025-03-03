@@ -16,14 +16,14 @@ const AboutMe = () => {
           </h1>
 
           <Image src={img} alt="jflas" />
-          <div className="flex items-center flex-col w-[60%] max-md:w-full max-md:w-full  justify-center text-center">
+          <div className="flex items-center flex-col w-[60%] max-md:w-full justify-center text-center">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8 max-md:p-4">
               I am
               <span className="text-[#000]"> K. Jagadish, </span> an
               <span className="text-[#000]"> Astrologer, Life Coach, </span> and
               <span className="text-[#000]"> Spiritual Thinker </span>
               in the twilight years of my life at{" "}
-              <span className="text-[#000]">77. </span> My journey is built on a
+              <span className="text-[#000]">77. </span> My journey is built on a{" "}
               <span className="text-[#000]">
                 strong foundation of spirituality,{" "}
               </span>{" "}

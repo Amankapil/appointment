@@ -1,0 +1,42 @@
+<svg preserveAspectRatio="none" viewBox="0 0 480 480" width="300" height="300"  xmlns="http://www.w3.org/2000/svg">
+<line x1="10" y1="10" x2="10" y2="472" stroke-width="1" stroke="#000000"/>
+<line x1="10" y1="472" x2="472" y2="472" stroke-width="1" stroke="#000000"/>
+<line x1="472" y1="472" x2="472" y2="10" stroke-width="1" stroke="#000000"/>
+<line x1="472" y1="472" x2="472" y2="10" stroke-width="1" stroke="#000000"/>
+<line x1="472" y1="10" x2="10" y2="10" stroke-width="1" stroke="#000000"/>
+<line x1="10" y1="126" x2="472" y2="126" stroke-width="1" stroke="#000000"/>
+<line x1="10" y1="242" x2="126" y2="242" stroke-width="1" stroke="#000000"/>
+<line x1="358" y1="242" x2="472" y2="242" stroke-width="1" stroke="#000000"/>
+<line x1="10" y1="358" x2="472" y2="358" stroke-width="1" stroke="#000000"/>
+<line x1="126" y1="10" x2="126" y2="472" stroke-width="1" stroke="#000000"/>
+<line x1="242" y1="10" x2="242" y2="126" stroke-width="1" stroke="#000000"/>
+<line x1="242" y1="358" x2="242" y2="472" stroke-width="1" stroke="#000000"/>
+<line x1="358" y1="10" x2="358" y2="472" stroke-width="1" stroke="#000000"/>
+<text x="223" y="216" font-size="16" >Rasi</text>
+<text x="196" y="246" font-size="16" >11 - Feb - 2025</text>
+<text x="206" y="276" font-size="16" >08:22:00 pm</text>
+<text x="141" y="25" font-size="16" >1</text>
+<text x="257" y="25" font-size="16" >2</text>
+<text x="373" y="25" font-size="16" >3</text>
+<text x="373" y="141" font-size="16" >4</text>
+<text x="373" y="257" font-size="16" >5</text>
+<text x="373" y="373" font-size="16" >6</text>
+<text x="257" y="373" font-size="16" >7</text>
+<text x="141" y="373" font-size="16" >8</text>
+<text x="25" y="373" font-size="16" >9</text>
+<text x="25" y="257" font-size="16" >10</text>
+<text x="25" y="141" font-size="16" >11</text>
+<text x="25" y="25" font-size="16" >12</text>
+<text x="405" y="62" font-size="16" >Ma</text>
+<line x1="358" y1="28" x2="376" y2="10" stroke-width="2" stroke="#000000"/>
+<line x1="358" y1="34" x2="382" y2="10" stroke-width="2" stroke="#000000"/>
+<text x="405" y="82" font-size="16" >Asc</text>
+<text x="405" y="181" font-size="16" >Mo</text>
+<text x="405" y="413" font-size="16" >Ke</text>
+<text x="57" y="297" font-size="16" >Su</text>
+<text x="57" y="178" font-size="16" >Me</text>
+<text x="57" y="198" font-size="16" >Sa</text>
+<text x="57" y="62" font-size="16" >Ve</text>
+<text x="57" y="82" font-size="16" >Ra</text>
+<text x="289" y="65" font-size="16" >Ju</text>
+</svg>

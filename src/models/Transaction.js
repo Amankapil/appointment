@@ -6,13 +6,13 @@ const TransactionSchema = new mongoose.Schema(
     name: String, //
     email: String, //
     phone: String, //
-    svgUrl: String,
+    filePath: String,
     amount: Number, //
     status: String, //
     dob: String, //
     tob: String, //
     selectedTime: String, //
-    selectedTime: String, //
+    selectedDate: String, //
     gender: String, //
     marital: String,
     country: String, //
