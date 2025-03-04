@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F0EDE9] text-black pt-16">
+    <footer className="bg-[#F0EDE9] text-black mt-16 pt-16 h[620px]">
       <div className="container mx-auto max-lg:p-4">
         <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-md:items-center  max-md:justify-center">
           {/* Left Section */}
@@ -134,35 +134,37 @@ const Footer = () => {
           </div>
         </div>
 
-        <svg
-          className="mt-10 max-xl:w-full"
-          width="1248"
-          height="36"
-          viewBox="0 0 1248 36"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M624.002 36C624.095 26.1506 632.096 18.1801 642 18.0579C632.058 17.9352 624.032 9.9026 624.002 0H624.001C623.97 9.90352 615.944 17.9366 606 18.0579C615.905 18.1787 623.908 26.1498 624 36H624.002Z"
-            fill="#D8D1C7"
-          />
-          <circle cx="663" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
-          <circle cx="1243" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
-          <path d="M667 18L1239 18.0001" stroke="#D8D1C7" strokeWidth="2" />
-          <circle cx="5" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
-          <circle cx="585" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
-          <path d="M9 18L581 18.0001" stroke="#D8D1C7" strokeWidth="2" />
-        </svg>
+        <div className="flex items-center justify-center">
+          <svg
+            className="mt-10 max-xl:w-full"
+            width="1248"
+            height="36"
+            viewBox="0 0 1248 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M624.002 36C624.095 26.1506 632.096 18.1801 642 18.0579C632.058 17.9352 624.032 9.9026 624.002 0H624.001C623.97 9.90352 615.944 17.9366 606 18.0579C615.905 18.1787 623.908 26.1498 624 36H624.002Z"
+              fill="#D8D1C7"
+            />
+            <circle cx="663" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
+            <circle cx="1243" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
+            <path d="M667 18L1239 18.0001" stroke="#D8D1C7" strokeWidth="2" />
+            <circle cx="5" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
+            <circle cx="585" cy="18" r="4.5" fill="#D8D1C7" stroke="#D8D1C7" />
+            <path d="M9 18L581 18.0001" stroke="#D8D1C7" strokeWidth="2" />
+          </svg>
+        </div>
         {/* Bottom Section */}
         {/* <div className="mt-10 text-center border-t border-gray-300 pt-6 flex justify-center items-center">
           <p className="text-[250px]">Prashna Siddhi</p>
         </div> */}
       </div>
 
-      <div className="mt-10 w-full text-center  pt-6 flex justify-center items-center ">
-        <span className="text-[244px] max-lg:text-[130px] max-md:text-[50px] w-full text-[#D8D1C7] leading-[120%] font-salernomi font-normal pt-10">
+      <div className="mt-10 w-full text-center flex justify-center items-center ">
+        <p className="text-[244px] max-lg:text-[130px] max-md:text-[50px] w-full text-[#D8D1C7] leading-[120%] font-salernomi font-normal">
           Prashna Siddhi
-        </span>
+        </p>
         {/* <p className="text-sm">All Rights Reserved 2025</p> */}
       </div>
     </footer>

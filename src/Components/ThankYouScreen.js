@@ -80,8 +80,8 @@ export default function ThankYouScreen({
             </button> */}
             <a
               href={svgUrl}
-              download="kundli-chart.svg"
-              className="mt-4 w-full bg-gray-300 text-gray-800 py-2 text-center rounded-lg font-medium hover:bg-gray-400 transition"
+              download={`horoscope_${formData.fullName}.svg`}
+              className="mt-4 w-full bg-gray-300 px-10 text-gray-800 py-2 text-center rounded-lg font-medium hover:bg-gray-400 transition"
             >
               Download
             </a>

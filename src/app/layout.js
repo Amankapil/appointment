@@ -4,6 +4,7 @@ import Footer from "@/Components/pagesComponent/Footer";
 import "./globals.css";
 
 import NavbarSwitcher from "@/Components/NavbarSwitcher";
+import FoooterSwitcher from "@/Components/FoooterSwitcher";
 // import Navbar1 from "../components/navbars/Navbar1";
 // import Navbar2 from "../components/navbars/Navbar2";
 // const geistSans = Geist({
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
         {/* {pathname.startsWith("/dashboard") ? <Navbar1 /> : <Navbar />} */}
         <NavbarSwitcher />
         {children}
-        <Footer />
+        <FoooterSwitcher />
       </body>
     </html>
   );

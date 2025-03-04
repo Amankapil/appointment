@@ -30,7 +30,7 @@ const Purpose = () => {
             />
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
-          <div className="py-10">
+          <div className="py-10 mt-20">
             <Image src={img} alt="jflas" />
           </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full mt-8  justify-center text-center max-md:w-full max-md:h-full max-md:p-10">
@@ -66,7 +66,7 @@ const Purpose = () => {
             <path d="M9 18L581 18.0001" stroke="#D8D1C7" strokeWidth="2" />
           </svg>
 
-          <div className="flex items-center karma flex-col w-[60%] max-md:w-full mt-8  justify-center text-center max-md:h-full max-md:p-10">
+          <div className="flex items-center karma gap-20 flex-col w-[60%] max-md:w-full mt-20  justify-center text-center max-md:h-full max-md:p-10">
             <h1 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
               “If you don’t believe in the Karma Theory, ask yourself this – Did
               you choose your parents, or did they choose you?”

@@ -34,43 +34,32 @@ export default function Consultation() {
           <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
         </svg>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-        {/* {[
-          {
-            title: "One-Question Consultation (Real-time answers in 5 minutes)",
-          },
-          { title: "Karma & Life Path Guidance" },
-          { title: "Spiritual Counseling & Life Coaching" },
-          {
-            title:
-              "Personalized Astrological Insights (Optional expansion in future)",
-          },
-        ].map((item, index) => ( */}
-        <div className="border border-[#D4B999] rounded-lg p-6 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h[296px] bggray-300 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto  mt-20">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className="w-[248px] h-[296px] bggray-300 ">
             {" "}
-            <Image src={img2} alt="j" />
+            <Image className="w-[248px] h-[296px]" src={img2} alt="j" />
           </div>
-          <div className="w-3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">
               One-Question Consultation (Real-time answers in 5 minutes)
             </p>
           </div>
-          <div className="absolute bottom-4 right-4 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
+          <div className="absolute bottom-0 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
             <Image src={img} alt="j" />
           </div>
         </div>
-        <div className="border border-[#D4B999] rounded-lg p-6 flex relative gap-10 font-inter bg-white shadow-md">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
           <div className="w-[248px] h[296px] bggray-300 ">
             {" "}
             <Image src={img3} alt="j" />
           </div>
-          <div className="w-3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">Karma & Life Path Guidance</p>
           </div>
-          <div className="absolute bottom-4 right-4 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
+          <div className="absolute bottom-2 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
             <svg
-              width="212"
+              width="200"
               height="212"
               viewBox="0 0 212 212"
               fill="none"
@@ -94,17 +83,17 @@ export default function Consultation() {
             </svg>
           </div>
         </div>
-        <div className="border border-[#D4B999] rounded-lg p-6 flex relative gap-10 font-inter bg-white shadow-md">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
           <div className="w-[248px] h[296px] bggray-300 ">
             {" "}
             <Image src={img4} alt="j" />
           </div>
-          <div className="w-3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">
               Spiritual Counseling & Life Coaching
             </p>
           </div>
-          <div className="absolute bottom-4 right-4 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
+          <div className="absolute bottom-2 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
             <svg
               width="212"
               height="212"
@@ -130,17 +119,22 @@ export default function Consultation() {
             </svg>
           </div>
         </div>
-        <div className="border border-[#D4B999] rounded-lg p-6 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h[296px] bggray-300 ">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className=" w-[248px] h-[296px] bggray-300 ">
             {" "}
-            <Image src={img5} alt="j" />
+            <Image
+              className="w-[248px] h-[296px]"
+              width={248}
+              src={img5}
+              alt="j"
+            />
           </div>
-          <div className="w-3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
-            <p className="font-normal text-lg">
+          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+            <p className="font-normal text-lg ">
               Personalized Astrological Insights (Optional expansion in future)
             </p>
           </div>
-          <div className="absolute bottom-4 right-4 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
+          <div className="absolute bottom-2 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
             <svg
               width="212"
               height="212"

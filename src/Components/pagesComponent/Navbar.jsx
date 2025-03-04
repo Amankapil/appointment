@@ -1,4 +1,3 @@
-
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
@@ -18,7 +17,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="bg-[#F0EDE9] shadow-md h-[80px] sticky top-0 z-[99999999999999999]">
+    <nav className="bg-[#F0EDE9] shadowmd h-[80px] border border-b border-[#D8D1C7] sticky top-0 z-[99999999999999999]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-lg font-semibold">
@@ -90,7 +89,7 @@ export default function Navbar() {
                 onMouseEnter={() => setIsAboutHovered(true)}
                 onMouseLeave={() => setIsAboutHovered(false)}
               >
-                <Link href="/about" className="hover:text-gray-600 relative">
+                <Link href="/about" className="hover:text-gray-600 relative ">
                   About Us
                 </Link>
                 <svg
@@ -107,10 +106,10 @@ export default function Navbar() {
                   ></path>
                 </svg>
                 {isAboutHovered && (
-                  <div className="absolute top-4 pt-4  -left-20 bg-[#F0EDE9] shadow-lg mt-2 py-2 w-[370px] rounded-lg">
+                  <div className="absolute top-4 pt-4  -left-20 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[360px] rounded-lg">
                     <Link
                       href="/unique"
-                      className=" px-4 py-2 hover:bg-gray-100 flex items-center gap-2"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
                       <svg
                         width="16"
@@ -148,7 +147,7 @@ export default function Navbar() {
                     </div>
                     <Link
                       href="/biololgical"
-                      className=" px-4 py-2 hover:bg-gray-100 flex items-center gap-2"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
                       <svg
                         width="16"
@@ -186,7 +185,7 @@ export default function Navbar() {
                     </div>
                     <Link
                       href="/What-can-be-done"
-                      className=" px-4 py-2 hover:bg-gray-100 flex items-center gap-2"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
                       <svg
                         width="16"
@@ -225,7 +224,7 @@ export default function Navbar() {
 
                     <Link
                       href="/Enthusiasts"
-                      className=" px-4 py-2 hover:bg-gray-100 flex items-center gap-2"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
                       <svg
                         width="16"
@@ -246,7 +245,7 @@ export default function Navbar() {
               </div>
               <Link
                 href="/booking"
-                className="bg-[#101010] font-salernomi text-white px-4 py-2 rounded hover:bg-[#333333]"
+                className="bg-[#101010] text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
               >
                 Request your Consultation
               </Link>

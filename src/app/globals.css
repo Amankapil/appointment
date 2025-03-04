@@ -10,6 +10,39 @@
   font-weight: 400;
   font-style: normal;
 }
+.react-tel-input .form-control {
+  width: 260px !important;
+  padding: 17px;
+  height: 40px !important;
+}
+
+.flag-dropdown {
+  height: 40px !important;
+}
+input[type="date"],
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.shadow-button {
+  box-shadow: 0px 3px 6px 0px #00000042;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.shadow-button:hover {
+  box-shadow: 0px 3px 6px 0px #00000042, 0px 11px 11px 0px #00000038,
+    0px 26px 15px 0px #00000021, 0px 46px 18px 0px #0000000a,
+    0px 71px 20px 0px #00000000;
+}
 
 @media (min-width: 1800px) and (max-width: 2000px) {
   .max-w-7xl {
@@ -22,7 +55,7 @@
     font-size: 28px;
   }
   a {
-    font-size: 25px;
+    font-size: 20px;
   }
   .ml-20 {
     margin-left: 0px;

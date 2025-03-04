@@ -66,6 +66,8 @@
 
 // export default dbConnect;
 
+// ????working fine in server
+
 import mongoose from "mongoose";
 const options = {
   useNewUrlParser: true,

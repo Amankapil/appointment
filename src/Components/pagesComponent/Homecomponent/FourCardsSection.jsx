@@ -25,7 +25,7 @@ const FourCardsSection = () => {
               style={{ height: "-webkit-fill-available" }}
               className="flex items-center justify-center"
             >
-              <p className="text-center text-base md:text-lg">{text}</p>
+              <p className="text-center text-[24px]">{text}</p>
             </div>
           </div>
         </div>
@@ -59,11 +59,33 @@ const FourCardsSection = () => {
           </svg>
         </div>
 
-        <div className="w-full h-auto p-8">
+        <div className="w-full h-auto mt-20 p-8">
           <div className=" flex flex-col gap-8 items-center justify-center flex-wrap max-md:w-full max-m-340">
             <div className=" flex gap-8 items-center justify-center flex-wrap max-md:w-full max-md340">
               <div className=" flex justify-center items-center max-md:w-full ma-340">
-                <Card text={cardData[0]} />
+                <div className="flex flex-col group relative bgwhite max-md:w-full max-md:h-full">
+                  <div className="border border-[#c49b6d] w-[614px] max-md:w-full max-md:h-full h-[340px] rounded-[24px] bg-white p-2">
+                    <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-[550px]   h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
+                      <div
+                        // onMouseEnter={() => setIsHovered(true)}
+                        // onMouseLeave={() => setIsHovered(false)}
+                        className="border bg-change absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+                      >
+                        <div
+                          style={{ height: "-webkit-fill-available" }}
+                          className="flex items-center justify-center"
+                        >
+                          <p className="text-center text-[#4D4D4D] text-[24px]">
+                            <span className="text-[#101010]">
+                              Meaningful insights{" "}
+                            </span>{" "}
+                            based on divine wisdom
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="flex justify-center items-center">
                 <Card text={cardData[1]} />
@@ -71,12 +93,56 @@ const FourCardsSection = () => {
             </div>
             <div className=" flex gap-8 items-center justify-center flex-wrap">
               <div className=" flex justify-center items-center">
-                <Card text={cardData[2]} />
+                <div className="flex flex-col group relative bgwhite max-md:w-full max-md:h-full">
+                  <div className="border border-[#c49b6d] w-[614px] max-md:w-full max-md:h-full h-[340px] rounded-[24px] bg-white p-2">
+                    <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-[550px]   h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
+                      <div
+                        // onMouseEnter={() => setIsHovered(true)}
+                        // onMouseLeave={() => setIsHovered(false)}
+                        className="border bg-change absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+                      >
+                        <div
+                          style={{ height: "-webkit-fill-available" }}
+                          className="flex items-center justify-center"
+                        >
+                          <p className="text-center text-[#4D4D4D] text-[24px]">
+                            <span className="text-[#101010]">
+                              Practical hints & tips{" "}
+                            </span>{" "}
+                            to make informed life choices
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className=" flex justify-center items-center">
                 {/* Bottom-right Card */}
                 <div className=" flex justify-center items-center">
-                  <Card text={cardData[3]} />
+                  <div className="flex flex-col group relative bgwhite max-md:w-full max-md:h-full">
+                    <div className="border border-[#c49b6d] w-[614px] max-md:w-full max-md:h-full h-[340px] rounded-[24px] bg-white p-2">
+                      <div className="border absolute left-[32px] top-[10px] max-md:w-full max-md:h-full  w-[550px]   h-[308px] rounded-[24px] one border-[#c49b6d] p-2">
+                        <div
+                          // onMouseEnter={() => setIsHovered(true)}
+                          // onMouseLeave={() => setIsHovered(false)}
+                          className="border bg-change absolute left-[-18px] top-[17px] tw w-[582px]  max-md:w-full max-md:h-full h-[276px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"
+                        >
+                          <div
+                            style={{ height: "-webkit-fill-available" }}
+                            className="flex items-center justify-center"
+                          >
+                            <p className="text-center text-[#4D4D4D] text-[24px]">
+                              <span className="text-[#101010]">
+                                A peaceful mind{" "}
+                              </span>
+                              by relieving stress and anxiety
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

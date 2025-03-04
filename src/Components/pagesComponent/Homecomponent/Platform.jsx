@@ -28,7 +28,7 @@ const Platform = () => {
             />
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
-          <div className="img-home py-10 flex justify-center w-full">
+          <div className="img-home py-20 flex justify-center w-full">
             <Image src={img} alt="jflas" />
           </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">
