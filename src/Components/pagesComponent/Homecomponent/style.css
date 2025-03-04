@@ -113,9 +113,6 @@
   background-repeat: no-repeat;
 }
 
-.karma {
-}
-
 .karma::before {
   content: "";
 

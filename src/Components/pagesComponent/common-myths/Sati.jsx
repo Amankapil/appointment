@@ -111,7 +111,7 @@ const Sati = () => {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] w-full max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
