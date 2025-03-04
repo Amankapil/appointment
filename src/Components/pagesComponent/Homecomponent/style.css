@@ -15,7 +15,7 @@
 .hero::before {
   content: "";
   position: absolute;
-  bottom: 25px;
+  bottom: 30px;
   left: 0;
   width: 300px; /* Adjust size as needed */
   height: 300px;
@@ -28,7 +28,7 @@
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   width: 100%; /* Adjust size as needed */
   height: 740px;
