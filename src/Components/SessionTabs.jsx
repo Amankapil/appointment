@@ -24,19 +24,18 @@ const SessionTabs = ({ data }) => {
     data.forEach((session) => {
       if (!session.selectedTime) {
         console.error("Invalid selectedTime:", session);
-        return; // Skip this session if selectedTime is null or undefined
+        return; // Skip invalid sessions
       }
 
-      const sessionStart = moment(session.selectedDate);
-      const [startHour, startMinute] = session.selectedTime
-        ?.split(" - ")[0]
-        ?.split(/[: ]/) || ["0", "0"]; // Provide default values to avoid errors
+      const sessionStart = moment(session.selectedDate, "YYYY-MM-DD");
+      const [time, period] = session.selectedTime.split(" - ")[0].split(" ");
+      let [startHour, startMinute] = time.split(":").map(Number);
 
-      sessionStart.hour(
-        session.selectedTime.includes("PM") ? +startHour + 12 : +startHour
-      );
-      sessionStart.minute(+startMinute);
+      // Convert 12-hour format to 24-hour format correctly
+      if (period === "PM" && startHour !== 12) startHour += 12;
+      if (period === "AM" && startHour === 12) startHour = 0;
 
+      sessionStart.hour(startHour).minute(startMinute).second(0);
       const sessionEnd = sessionStart.clone().add(30, "minutes");
 
       if (sessionStart.isAfter(now)) {
@@ -58,25 +57,48 @@ const SessionTabs = ({ data }) => {
     const updatedCountdowns = {};
 
     upcomingSessions.forEach((session) => {
-      const sessionStart = moment(session.selectedDate);
-      const [startHour, startMinute] = session.selectedTime
-        .split(" - ")[0]
-        .split(/[: ]/);
-      sessionStart.hour(
-        session.selectedTime.includes("PM") ? +startHour + 12 : +startHour
-      );
-      sessionStart.minute(+startMinute);
+      const sessionStart = moment(session.selectedDate, "YYYY-MM-DD");
+      const [time, period] = session.selectedTime.split(" - ")[0].split(" ");
+      let [startHour, startMinute] = time.split(":").map(Number);
+
+      // Convert to 24-hour format correctly
+      if (period === "PM" && startHour !== 12) startHour += 12;
+      if (period === "AM" && startHour === 12) startHour = 0;
+
+      sessionStart.hour(startHour).minute(startMinute).second(0);
 
       const diff = sessionStart.diff(now, "seconds");
-      if (diff > 0) {
-        updatedCountdowns[session._id] = formatCountdown(diff);
-      } else {
-        updatedCountdowns[session._id] = "Starting now";
-      }
+      updatedCountdowns[session._id] =
+        diff > 0 ? formatCountdown(diff) : "Starting now";
     });
 
     setCountdowns(updatedCountdowns);
   };
+
+  // const updateCountdowns = () => {
+  //   const now = moment();
+  //   const updatedCountdowns = {};
+
+  //   upcomingSessions.forEach((session) => {
+  //     const sessionStart = moment(session.selectedDate);
+  //     const [startHour, startMinute] = session.selectedTime
+  //       .split(" - ")[0]
+  //       .split(/[: ]/);
+  //     sessionStart.hour(
+  //       session.selectedTime.includes("PM") ? +startHour + 12 : +startHour
+  //     );
+  //     sessionStart.minute(+startMinute);
+
+  //     const diff = sessionStart.diff(now, "seconds");
+  //     if (diff > 0) {
+  //       updatedCountdowns[session._id] = formatCountdown(diff);
+  //     } else {
+  //       updatedCountdowns[session._id] = "Starting now";
+  //     }
+  //   });
+
+  //   setCountdowns(updatedCountdowns);
+  // };
 
   const formatCountdown = (seconds) => {
     const hrs = Math.floor(seconds / 3600);

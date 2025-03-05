@@ -15,13 +15,13 @@ async function sendEmail({ to, subject, text, html }) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "aman@codelinear.com", // Replace with your Gmail
-      pass: "ionx trgf ubtb xzcj", // Use App Password (not your Gmail password)
+      user: "prashnadevelop@gmail.com", // Replace with your Gmail
+      pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
     },
   });
 
   await transporter.sendMail({
-    from: '"Your Company" aman@codelinear',
+    from: '"Prashna Siddhi" prashnadevelop@gmail.com',
     to,
     subject,
     text,

@@ -78,7 +78,7 @@ export async function POST(request) {
   };
   // Convert additional data to JSON string
   const additionalDataString = JSON.stringify(additionalData);
-  console.log("on initiate page aditional", additionalDataString);
+  // console.log("on initiate page aditional", additionalDataString);
   // Generate hash
   const hashString = `${MERCHANT_KEY}|${txnid}|${amount}|Product_Info|${name}|${email}|||||||||||${MERCHANT_SALT}`;
   const hash = crypto.createHash("sha512").update(hashString).digest("hex");

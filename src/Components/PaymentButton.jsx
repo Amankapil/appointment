@@ -33,13 +33,69 @@ export default function PaymentButton({
     });
   };
 
+  // const initiatePayment = async () => {
+  //   setLoading(true);
+
+  //   const svgBase64 = await blobToBase64(svgdata);
+  //   console.log(svgBase64);
+  //   // localStorage.setItem("svg", svgBase64);
+  //   // const svggg = localStorage.getItem("svg");
+
+  //   try {
+  //     const response = await fetch("/api/payment/initiate", {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({
+  //         name: paydata.fullName,
+  //         email: paydata.email,
+  //         phone: paydata.phone,
+  //         tob: paydata.timeOfBirth,
+  //         dob: paydata.dob,
+  //         gender: paydata.gender,
+  //         svgUrl: svgBase64,
+  //         country: paydata.country,
+  //         state: paydata.state,
+  //         city: paydata.city,
+  //         selectedTime: selectedTime,
+  //         selectedDate: selectedDate,
+  //         amount: "1.00", // 1 INR for testing
+  //       }),
+  //     });
+
+  //     const { payUData, url } = await response.json();
+
+  //     console.log(payUData, url);
+
+  //     if (!payUData || !url) {
+  //       alert("Invalid response from server");
+  //     }
+
+  //     const form = document.createElement("form");
+  //     form.method = "POST";
+  //     form.action = url;
+
+  //     Object.keys(payUData).forEach((key) => {
+  //       const input = document.createElement("input");
+  //       input.type = "hidden";
+  //       input.name = key;
+  //       input.value = payUData[key];
+  //       form.appendChild(input);
+  //     });
+
+  //     document.body.appendChild(form);
+  //     form.submit();
+  //   } catch (error) {
+  //     alert("Payment initiation failed", error);
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+
   const initiatePayment = async () => {
     setLoading(true);
 
     const svgBase64 = await blobToBase64(svgdata);
     console.log(svgBase64);
-    // localStorage.setItem("svg", svgBase64);
-    // const svggg = localStorage.getItem("svg");
 
     try {
       const response = await fetch("/api/payment/initiate", {
@@ -58,21 +114,21 @@ export default function PaymentButton({
           city: paydata.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
-          amount: "1.00", // 1 INR for testing
+          amount: "1.00",
         }),
       });
 
       const { payUData, url } = await response.json();
 
-      console.log(payUData, url);
-
       if (!payUData || !url) {
         alert("Invalid response from server");
+        return;
       }
 
       const form = document.createElement("form");
       form.method = "POST";
       form.action = url;
+      form.target = "_self"; // Open in the same tab (avoids Safari pop-up block)
 
       Object.keys(payUData).forEach((key) => {
         const input = document.createElement("input");
@@ -83,9 +139,13 @@ export default function PaymentButton({
       });
 
       document.body.appendChild(form);
-      form.submit();
+
+      // Submit the form after a small delay
+      setTimeout(() => {
+        form.submit();
+      }, 100);
     } catch (error) {
-      alert("Payment initiation failed", error);
+      alert("Payment initiation failed");
     } finally {
       setLoading(false);
     }

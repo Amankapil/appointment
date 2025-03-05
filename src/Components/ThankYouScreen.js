@@ -60,9 +60,9 @@ export default function ThankYouScreen({
 
           {/* Horoscope Preview */}
           <div className="bgray-100 rounded-lg p-6 flex flex-col mt-10 items-center justify-center">
-            {/* <h3 className="text-lg font-semibold">
+            <h3 className="text-lg font-semibold">
               Your Personalized Horoscope
-            </h3> */}
+            </h3>
             <div className="bggray-200 w-full h40 flex items-center justify-center mt-4 rounded-lg">
               {/* <span className="text-gray-500">Preview</span> */}
               {svgUrl && (
@@ -75,9 +75,7 @@ export default function ThankYouScreen({
                 />
               )}
             </div>
-            {/* <button className="mt-4 w-full bg-gray-300 text-gray-800 py-2 rounded-lg font-medium hover:bg-gray-400 transition">
-              Download
-            </button> */}
+
             <a
               href={svgUrl}
               download={`horoscope_${formData.fullName}.svg`}

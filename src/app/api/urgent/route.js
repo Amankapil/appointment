@@ -12,8 +12,8 @@ async function sendEmail({ to, subject, text, html }) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "aman@codelinear.com", // Replace with your Gmail
-      pass: "ionx trgf ubtb xzcj", // Use App Password (not your Gmail password)
+      user: "prashnadevelop@gmail.com", // Replace with your Gmail
+      pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
     },
   });
 
@@ -113,7 +113,7 @@ export async function POST(request) {
 
     // Example date
 
-    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
+    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
     //   subject: "Session Confirm with Enlighten-mind",
@@ -125,6 +125,11 @@ export async function POST(request) {
       to: `whatsapp:+91${phone}`,
     });
     console.log("whatapp response", res);
+    await sendEmail({
+      to: email,
+      subject: "Session Confirm with Prashna Siddhi",
+      text: message,
+    });
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
     // Update slot status to "booked"

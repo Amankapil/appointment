@@ -110,6 +110,25 @@ export async function POST(request) {
     // }
     // await transaction.save();
 
+    const back = {
+      name,
+      email,
+      phone,
+      amount,
+      country,
+      state,
+      gender,
+      dob,
+      tob,
+      selectedDate,
+      selectedTime,
+      city,
+      filePath,
+      session: 1,
+      status: "Success",
+      paymentMethod: "PayU", // Save additional data to the database
+    };
+
     const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
     await sendEmail({
       to: email,
@@ -124,6 +143,12 @@ export async function POST(request) {
     console.log("whatapp response", res);
     const redirectUrl = `${protocol}://${host}/payment`;
     return NextResponse.redirect(redirectUrl);
+
+    // return NextResponse.redirect(
+    //   `http://localhost:3000/transaction-summary?data=${encodeURIComponent(
+    //     JSON.stringify(back)
+    //   )}`
+    // );
   } catch (error) {
     console.error("Error processing payment:", error);
     return NextResponse.json(

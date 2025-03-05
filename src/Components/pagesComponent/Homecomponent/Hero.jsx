@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="bg-[#F0EDE9] pb-20 hero h-[710px] max-md:h-full">
+    <div className="bg-[#F0EDE9] pb20 hero h-[710px] max-md:h-full">
       <div className="max-wxl  ml-20 mx-auto text-left items-center justify-center flex gap-20  max-md:ml-2  max-md:flex-wrap">
         <div className="w-1/2 z-[999] max-lg:w-full -20 max-md:mt-0 max-md:w-full">
           <div className="m">
@@ -64,7 +64,7 @@ export default function Hero() {
             </svg>
           </div>
         </div>
-        <div className="mt-0 h-[710px] max-md:h-full">
+        <div className="mt-0  max-md:h-full">
           <Image
             src={hero}
             height={710}

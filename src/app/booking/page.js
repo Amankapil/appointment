@@ -65,6 +65,9 @@ export default function MultiStepForm() {
 
   const [latloading, setlatLoading] = useState(false);
 
+  const [lathoroscope, setlathoroscope] = useState(null);
+  const [longhoroscope, setlonghoroscope] = useState(null);
+
   const handleCityChange = async (selected) => {
     setlatLoading(true);
     const city = selected.value;
@@ -88,6 +91,8 @@ export default function MultiStepForm() {
             latitude: lat,
             longitude: lng,
           }));
+          setlathoroscope(lat);
+          setlonghoroscope(lng);
         }
       } catch (error) {
         console.error("Error fetching coordinates:", error);
@@ -97,17 +102,16 @@ export default function MultiStepForm() {
     }
   };
 
-  const [horoscopeData, setHoroscopeData] = useState({
-    day: null,
-    month: null,
-    year: null,
-    hour: null,
-    min: null,
-    lat: null,
-    lon: null,
-    tzone: 5.5, // Default time zone (adjust as needed)
+  const [horoscopeDataa, setHoroscopeData] = useState({
+    day: new Date().getDate(),
+    month: new Date().getMonth() + 1, // Months are 0-indexed in JavaScript
+    year: new Date().getFullYear(),
+    hour: new Date().getHours(),
+    min: new Date().getMinutes(),
+    lat: lathoroscope,
+    lon: longhoroscope,
+    tzone: 5.5, // Default timezone
   });
-
   const [tok, setTok] = useState(null);
   const [paydata, setPayedata] = useState({
     fullName: "",
@@ -159,95 +163,95 @@ export default function MultiStepForm() {
   ]);
 
   // ?÷working fine in chrome
-  // useEffect(() => {
-  //   if (formData.dob && formData.timeOfBirth) {
-  //     const [year, month, day] = formData.dob.split("-").map(Number);
-  //     const [hour, min] = formData.timeOfBirth.split(":").map(Number);
-
-  //     setHoroscopeData({
-  //       day,
-  //       month,
-  //       year,
-  //       hour,
-  //       min,
-  //       lat: parseFloat(formData.latitude) || null,
-  //       lon: parseFloat(formData.longitude) || null,
-  //       tzone: 5.5, // Adjust this if needed
-  //     });
-  //   }
-  // }, [
-  //   formData.dob,
-  //   formData.timeOfBirth,
-  //   formData.latitude,
-  //   formData.longitude,
-  // ]);
-
   useEffect(() => {
     if (formData.dob && formData.timeOfBirth) {
-      console.log("Raw formData:", formData); // Debugging
-
-      // Validate and split date of birth
-      const dobParts = formData.dob.split("-");
-      const timeParts = formData.timeOfBirth.split(":");
-
-      if (dobParts.length !== 3 || timeParts.length !== 2) {
-        console.error(
-          "Invalid date or time format:",
-          formData.dob,
-          formData.timeOfBirth
-        );
-        return;
-      }
-
-      const [year, month, day] = dobParts.map(Number);
-      const [hour, min] = timeParts.map(Number);
-
-      // Validate numeric values before setting state
-      if (
-        isNaN(year) ||
-        isNaN(month) ||
-        isNaN(day) ||
-        isNaN(hour) ||
-        isNaN(min)
-      ) {
-        console.error("Invalid numeric values in date/time");
-        return;
-      }
-
-      // Parse latitude & longitude
-      const lat = parseFloat(formData.latitude);
-      const lon = parseFloat(formData.longitude);
-
-      // Ensure lat/lon are valid numbers, else set null
+      const [year, month, day] = formData.dob.split("-").map(Number);
+      const [hour, min] = formData.timeOfBirth.split(":").map(Number);
+      console.log("Raw formData:", formData);
+      const lat = formData.latitude;
+      const lon = formData.longitude;
       setHoroscopeData({
         day,
         month,
         year,
         hour,
         min,
-        lat: !isNaN(lat) ? lat : null,
-        lon: !isNaN(lon) ? lon : null,
-        tzone: 5.5, // Adjust if needed
-      });
-
-      console.log("Updated Horoscope Data:", {
-        day,
-        month,
-        year,
-        hour,
-        min,
-        lat: !isNaN(lat) ? lat : null,
-        lon: !isNaN(lon) ? lon : null,
+        lat: lathoroscope,
+        lon: longhoroscope,
+        tzone: 5.5, // Adjust this if needed
       });
     }
   }, [
-    formData,
     formData.dob,
     formData.timeOfBirth,
     formData.latitude,
     formData.longitude,
   ]);
+  // useEffect(() => {
+  //   if (formData.dob && formData.timeOfBirth) {
+  //     console.log("Raw formData:", formData); // Debugging
 
+  //     // Validate and split date of birth
+  //     const dobParts = formData.dob.split("-");
+  //     const timeParts = formData.timeOfBirth.split(":");
+
+  //     if (dobParts.length !== 3 || timeParts.length !== 2) {
+  //       console.error(
+  //         "Invalid date or time format:",
+  //         formData.dob,
+  //         formData.timeOfBirth
+  //       );
+  //       return;
+  //     }
+
+  //     const [year, month, day] = dobParts.map(Number);
+  //     const [hour, min] = timeParts.map(Number);
+
+  //     // Validate numeric values before setting state
+  //     if (
+  //       isNaN(year) ||
+  //       isNaN(month) ||
+  //       isNaN(day) ||
+  //       isNaN(hour) ||
+  //       isNaN(min)
+  //     ) {
+  //       console.error("Invalid numeric values in date/time");
+  //       return;
+  //     }
+
+  //     // Parse latitude & longitude
+  //     const lat = parseFloat(formData.latitude);
+  //     const lon = parseFloat(formData.longitude);
+
+  //     // Update horoscopeData only if new values are provided
+  //     setHoroscopeData((prevData) => ({
+  //       ...prevData, // Keep existing values if no new values are provided
+  //       day: !isNaN(day) ? day : prevData.day,
+  //       month: !isNaN(month) ? month : prevData.month,
+  //       year: !isNaN(year) ? year : prevData.year,
+  //       hour: !isNaN(hour) ? hour : prevData.hour,
+  //       min: !isNaN(min) ? min : prevData.min,
+  //       lat: lat,
+  //       lon: lon,
+  //     }));
+
+  //     console.log("Updated Horoscope Data:", {
+  //       day: !isNaN(day) ? day : horoscopeData.day,
+  //       month: !isNaN(month) ? month : horoscopeData.month,
+  //       year: !isNaN(year) ? year : horoscopeData.year,
+  //       hour: !isNaN(hour) ? hour : horoscopeData.hour,
+  //       min: !isNaN(min) ? min : horoscopeData.min,
+  //       lat: !isNaN(lat) ? lat : horoscopeData.lat,
+  //       lon: !isNaN(lon) ? lon : horoscopeData.lon,
+  //     });
+  //   }
+  // }, [
+  //   formData,
+  //   formData.dob,
+  //   formData.timeOfBirth,
+  //   formData.latitude,
+  //   formData.longitude,
+  // ]);
   // console.log(horoscopeData);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [timeSlots, setTimeSlots] = useState([]);
@@ -338,7 +342,10 @@ export default function MultiStepForm() {
   //   }
   // };
 
-  const makeApiRequest = async (horoscopeData) => {
+  const [pdfUrl, setpdfUrl] = useState("");
+  const [pdfdata, setpdfData] = useState("");
+
+  const makeApiRequest = async (horoscopeData1) => {
     const {
       day,
       month,
@@ -347,14 +354,14 @@ export default function MultiStepForm() {
       min,
       lat,
       lon,
-      chart_type = "rasi",
+      chart_type = "lagna",
       chart_style = "south-indian",
       format = "svg",
       la = "en",
       upagraha_position = "middle",
-    } = horoscopeData;
+    } = horoscopeData1;
 
-    console.log("Received Horoscope Data:", horoscopeData);
+    console.log("Received Horoscope Data:", horoscopeData1);
 
     // Validate each field to ensure they are not undefined or null
     if (
@@ -366,7 +373,7 @@ export default function MultiStepForm() {
       lat == null ||
       lon == null
     ) {
-      console.error("Missing required horoscope data:", horoscopeData);
+      console.log("Missing required horoscope data: line 371", horoscopeData1);
       return;
     }
 
@@ -384,9 +391,7 @@ export default function MultiStepForm() {
     // Encode URL components properly
     const coordinates = `${lat},${lon}`;
     const encodedDatetime = encodeURIComponent(datetime);
-
     const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-
     console.log("Formatted API URL:", apiUrl);
 
     try {
@@ -400,36 +405,12 @@ export default function MultiStepForm() {
       const objectUrl = URL.createObjectURL(blob);
       setSvgUrl(objectUrl);
       setSvgData(blob);
-
       console.log("API Response:", objectUrl);
     } catch (error) {
       console.error("Error calling API:", error);
     }
   };
 
-  // const handleSubmitprokalara = async () => {
-  //   setError(null);
-
-  //   try {
-  //     const auth = `Basic ${btoa(`${userId}:${apiKey}`)}`;
-  //     const response = await axios.post(
-  //       "https://json.astrologyapi.com/v1/horo_chart_image/:chartId",
-  //       horoscopeData,
-  //       {
-  //         headers: {
-  //           Authorization: auth,
-  //           "Content-Type": "application/json",
-  //           "Accept-Language": language,
-  //         },
-  //       }
-  //     );
-  //     setResult(response.data);
-  //     console.log(response.data);
-  //   } catch (err) {
-  //     setError("Failed to fetch data");
-  //     console.log(err);
-  //   }
-  // };
   const handleSubmit = async () => {
     setError(null);
     setLoading(true);
@@ -467,9 +448,12 @@ export default function MultiStepForm() {
       const data = await response.json();
       console.log(data);
       if (data.success == true) {
+        alert(
+          data.success,
+          "your appointment boooked successfull please check your provided email for more info"
+        );
         router.push("/payment");
       }
-      alert(data.success);
     } catch (err) {
       setError("Failed to fetch data");
       console.log(err);
@@ -480,8 +464,8 @@ export default function MultiStepForm() {
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
-    makeApiRequest(horoscopeData);
-    console.log(horoscopeData);
+    makeApiRequest(horoscopeDataa);
+    console.log(horoscopeDataa);
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
     }
@@ -932,7 +916,7 @@ export default function MultiStepForm() {
             >
               {currentStep === 2
                 ? loading
-                  ? "loading"
+                  ? "Processing please wait"
                   : "Urgent Query"
                 : "Back"}
             </button>
