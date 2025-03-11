@@ -494,10 +494,7 @@ export default function MultiStepForm() {
       toast.error("please add proper date and time");
       return;
     }
-    if (!formData.country || !formData.state || formData.city) {
-      toast.error("please enter your country state and city");
-      return;
-    }
+
     makeApiRequest(horoscopeDataa);
     console.log(horoscopeDataa);
     if (currentStep == 0) {
