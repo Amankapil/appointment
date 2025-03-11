@@ -114,7 +114,7 @@ export async function POST(request) {
     const res = await client.messages.create({
       body: message,
       from: `whatsapp:${twilioPhoneNumber}`,
-      to: `whatsapp:+91${phone}`,
+      to: `whatsapp:${phone}`,
     });
 
     console.log("whatapp response", res);

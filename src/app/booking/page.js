@@ -15,6 +15,8 @@ import { useRouter } from "next/navigation";
 import logo from "../../Components/pagesComponent/Homecomponent/assets/logo.svg";
 import Link from "next/link";
 
+import { ToastContainer, toast } from "react-toastify";
+
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -182,7 +184,10 @@ export default function MultiStepForm() {
       });
     }
   }, [
+    formData,
     formData.dob,
+    longhoroscope,
+    lathoroscope,
     formData.timeOfBirth,
     formData.latitude,
     formData.longitude,
@@ -464,6 +469,35 @@ export default function MultiStepForm() {
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
+    if (!formData.fullName) {
+      toast.error("please enter your Full Name");
+      return;
+    }
+    if (!formData.phone) {
+      toast.error("please enter your Number");
+      return;
+    }
+
+    if (!formData.email) {
+      toast.error("please enter your working Email");
+      return;
+    }
+    if (!formData.date && !formData.timeOfBirth) {
+      toast.error("please enter your exact date and exact time with AM/PM");
+      return;
+    }
+    if (!formData.gender) {
+      toast.error("please specify your gender");
+      return;
+    }
+    if (!formData.date && !formData.timeOfBirth) {
+      toast.error("please add proper date and time");
+      return;
+    }
+    if (!formData.country || !formData.state || formData.city) {
+      toast.error("please enter your country state and city");
+      return;
+    }
     makeApiRequest(horoscopeDataa);
     console.log(horoscopeDataa);
     if (currentStep == 0) {
@@ -629,9 +663,8 @@ export default function MultiStepForm() {
                 <input
                   name="dob"
                   type="date"
-                  // placeholder="yyyy-mm-dd"
                   placeholder="dd/mm/yyyy"
-                  pattern="\d{4}-\d{2}-\d{2}"
+                  // pattern="\d{4}-\d{2}-\d{2}"
                   required
                   value={formData.dob}
                   onChange={handleChange}
@@ -742,7 +775,7 @@ export default function MultiStepForm() {
               </label>
 
               <label>
-                Latitude (Optional)
+                Latitude
                 <input
                   name="latitude"
                   type="text"
@@ -753,7 +786,7 @@ export default function MultiStepForm() {
                 />
               </label>
               <label>
-                Longitude (Optional)
+                Longitude
                 <input
                   name="longitude"
                   type="text"
@@ -847,7 +880,7 @@ export default function MultiStepForm() {
 
                 {/* Time Slots */}
                 <div className="grid grid-cols-3 gap-2">
-                  {filteredSlots.length > 0 ? (
+                  {/* {filteredSlots.length > 0 ? (
                     filteredSlots.map((slot) => (
                       <button
                         key={slot._id}
@@ -867,6 +900,40 @@ export default function MultiStepForm() {
                         {slot.time}
                       </button>
                     ))
+                  ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )} */}
+
+                  {filteredSlots.filter(
+                    (slot) =>
+                      new Date(`1970-01-01T${slot.time}:00`).getTime() >
+                      new Date().getTime()
+                  ).length > 0 ? (
+                    filteredSlots
+                      .filter(
+                        (slot) =>
+                          new Date(`1970-01-01T${slot.time}:00`).getTime() >
+                          new Date().getTime()
+                      )
+                      .map((slot) => (
+                        <button
+                          key={slot._id}
+                          disabled={slot.status === "booked"}
+                          onClick={() => setSelectedTime(slot.time)}
+                          className={`p-2 rounded text-sm border 
+            ${
+              slot.status === "available"
+                ? selectedTime === slot.time
+                  ? "bg-blue-500 text-white" // Selected slot
+                  : "bg-green-200 hover:bg-green-300"
+                : "bg-red-200 hover:bg-red-300"
+            }`}
+                        >
+                          {slot.time}
+                        </button>
+                      ))
                   ) : (
                     <p className="text-gray-500 col-span-3 text-center">
                       No slots available

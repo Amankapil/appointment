@@ -12,8 +12,8 @@ export default function AdminAvailability() {
 
   const generateSlots = (interval) => {
     const slots = [];
-    let start = 9 * 60; // 9:00 AM in minutes
-    let end = 19 * 60; // 7:00 PM in minutes
+    let start = 10 * 60; // 10:00 AM in minutes
+    let end = 18 * 60; // 6:00 PM in minutes
 
     while (start < end) {
       let hours = Math.floor(start / 60);
@@ -206,13 +206,7 @@ export default function AdminAvailability() {
             {loading ? "saving data...... " : "Save Availability"}
           </button>
         </div>
-
-
       </div>
-
-
-
-      
     </div>
   );
 }

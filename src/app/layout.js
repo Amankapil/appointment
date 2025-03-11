@@ -5,6 +5,7 @@ import "./globals.css";
 
 import NavbarSwitcher from "@/Components/NavbarSwitcher";
 import FoooterSwitcher from "@/Components/FoooterSwitcher";
+import { ToastContainer } from "react-toastify";
 // import Navbar1 from "../components/navbars/Navbar1";
 // import Navbar2 from "../components/navbars/Navbar2";
 // const geistSans = Geist({
@@ -28,6 +29,10 @@ export default function RootLayout({ children }) {
       <body className={"antialiased"}>
         {/* <Navbar /> */}
         {/* {pathname.startsWith("/dashboard") ? <Navbar1 /> : <Navbar />} */}
+
+        <div className="abosolute right-0 bottom-0">
+          <ToastContainer />
+        </div>
         <NavbarSwitcher />
         {children}
         <FoooterSwitcher />

@@ -15,7 +15,7 @@
 .hero::before {
   content: "";
   position: absolute;
-  bottom: 4%;
+  bottom: 7%;
   left: 0;
   width: 300px; /* Adjust size as needed */
   height: 300px;
