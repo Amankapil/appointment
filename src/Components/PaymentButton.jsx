@@ -15,9 +15,11 @@ export default function PaymentButton({
 
   useEffect(() => {
     if (duration === 30) {
-      setAmount(3000);
-    } else {
+      setAmount(2000);
+    } else if (duration === 45) {
       setAmount(1500);
+    } else {
+      setAmount(1000);
     }
     console.log(duration);
   }, [duration]);

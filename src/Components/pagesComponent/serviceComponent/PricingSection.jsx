@@ -135,7 +135,7 @@ const PricingSection = () => {
               </button>
             </div>
 
-            <div className="flex gap-1 text-[12px] mt-4 items-center justify-center">
+            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
               <input
                 checked={isChecked}
                 onChange={() => setIsChecked(!isChecked)}
@@ -236,7 +236,7 @@ const PricingSection = () => {
               </button>
             </div>
 
-            <div className="flex gap-1 text-[12px] mt-4 items-center justify-center">
+            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
               <input
                 checked={isChecked1}
                 onChange={() => setIsChecked1(!isChecked1)}
@@ -251,6 +251,7 @@ const PricingSection = () => {
               </span>
             </div>
           </div>
+
           <div className="relative flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[32px] font-normal font-salernomi text-gray-700 text-center m">
               Precious 45 Minutes
@@ -337,7 +338,7 @@ const PricingSection = () => {
               </button>
             </div>
 
-            <div className="flex gap-1 text-[12px] mt-4 items-center justify-center">
+            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
               <input
                 checked={isChecked2}
                 onChange={() => setIsChecked2(!isChecked2)}
