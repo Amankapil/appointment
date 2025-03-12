@@ -877,7 +877,7 @@ export default function MultiStepForm() {
 
                 {/* Time Slots */}
                 <div className="grid grid-cols-3 gap-2">
-                  {/* {filteredSlots.length > 0 ? (
+                  {filteredSlots.length > 0 ? (
                     filteredSlots.map((slot) => (
                       <button
                         key={slot._id}
@@ -897,40 +897,6 @@ export default function MultiStepForm() {
                         {slot.time}
                       </button>
                     ))
-                  ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )} */}
-
-                  {filteredSlots.filter(
-                    (slot) =>
-                      new Date(`1970-01-01T${slot.time}:00`).getTime() >
-                      new Date().getTime()
-                  ).length > 0 ? (
-                    filteredSlots
-                      .filter(
-                        (slot) =>
-                          new Date(`1970-01-01T${slot.time}:00`).getTime() >
-                          new Date().getTime()
-                      )
-                      .map((slot) => (
-                        <button
-                          key={slot._id}
-                          disabled={slot.status === "booked"}
-                          onClick={() => setSelectedTime(slot.time)}
-                          className={`p-2 rounded text-sm border 
-            ${
-              slot.status === "available"
-                ? selectedTime === slot.time
-                  ? "bg-blue-500 text-white" // Selected slot
-                  : "bg-green-200 hover:bg-green-300"
-                : "bg-red-200 hover:bg-red-300"
-            }`}
-                        >
-                          {slot.time}
-                        </button>
-                      ))
                   ) : (
                     <p className="text-gray-500 col-span-3 text-center">
                       No slots available

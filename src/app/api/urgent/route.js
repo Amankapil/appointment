@@ -122,7 +122,7 @@ export async function POST(request) {
     const res = await client.messages.create({
       body: message,
       from: `whatsapp:${twilioPhoneNumber}`,
-      to: `whatsapp:+91${phone}`,
+      to: `whatsapp:${phone}`,
     });
     console.log("whatapp response", res);
     await sendEmail({
@@ -151,31 +151,7 @@ export async function POST(request) {
       data: back,
     });
 
-    // const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
-    // const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
-    // const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-    // const PAYU_BASE_URL = "https://secure.payu.in/_payment";
 
-    // const txnid = "Txn" + Date.now();
-
-    // const hashString = `${MERCHANT_KEY}|${txnid}|${amount}|Product_Info|${name}|${email}|||||||||||${MERCHANT_SALT}`;
-    // const hash = crypto.createHash("sha512").update(hashString).digest("hex");
-
-    // const payUData = {
-    //   key: MERCHANT_KEY,
-    //   txnid,
-    //   amount,
-    //   productinfo: "Product_Info",
-    //   firstname: name,
-    //   service_provider: "payu_paisa",
-    //   email,
-    //   phone,
-    //   surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success`,
-    //   furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure`,
-    //   hash,
-    // };
-
-    // return NextResponse.json({ payUData, url: `${PAYU_BASE_URL}/_payment` });
   } catch (error) {
     console.error("Error processing payment:", error);
     return NextResponse.json(
