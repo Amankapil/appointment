@@ -5,7 +5,10 @@ export default function PaymentFailedPage() {
     <div>
       <h1>Payment Failed</h1>
       <p>There was an issue processing your payment.</p>
-      <Link className="text-blue-600" href="/booking"> go back</Link>
+      <Link className="text-blue-600" href="/booking">
+        {" "}
+        go back
+      </Link>
     </div>
   );
 }
