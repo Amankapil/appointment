@@ -492,7 +492,7 @@ export default function MultiStepForm() {
       return;
     }
 
-    // makeApiRequest(horoscopeDataa);
+    makeApiRequest(horoscopeDataa);
     console.log(horoscopeDataa);
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
