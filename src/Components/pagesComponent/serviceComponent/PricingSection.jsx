@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import "./style.css";
+import Link from "next/link";
 
 const PricingSection = () => {
   const [isUSD, setIsUSD] = useState(false);
@@ -126,13 +127,21 @@ const PricingSection = () => {
 
             {/* Book Now Button */}
             <div className="flex items-center justify-center w-full mt-2">
-              <button
+              {/* <button
                 className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
                   !isChecked ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 Book Now
-              </button>
+              </button> */}
+              <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link>
             </div>
 
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
@@ -227,13 +236,21 @@ const PricingSection = () => {
 
             {/* Book Now Button */}
             <div className="flex items-center justify-center w-full mt-2">
-              <button
+              {/* <button
                 className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
                   !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 Book Now
-              </button>
+              </button> */}
+              <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link>
             </div>
 
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
@@ -329,13 +346,21 @@ const PricingSection = () => {
 
             {/* Book Now Button */}
             <div className="flex items-center justify-center w-full mt-2">
-              <button
+              {/* <button
                 className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
                   !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
                 }`}
               >
                 Book Now
-              </button>
+              </button> */}
+              <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link>
             </div>
 
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">

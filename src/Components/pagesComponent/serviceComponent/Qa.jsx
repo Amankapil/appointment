@@ -35,7 +35,7 @@ const Qa = () => {
 
         <div className="heading flex mb-10 items-center justify-center pt-10">
           <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
-            <h3 className="text-[44px] font-normal fontsalernomi text-gray-700 flex items-center text-center m">
+            <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹199
               <p className="text-[20px] text-gray-600">/Plan</p>{" "}
             </h3>
@@ -130,7 +130,7 @@ const Qa = () => {
           </div>
 
           <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
-            <h3 className="text-[44px] font-normal fontsalernomi text-gray-700 flex items-center text-center m">
+            <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹399
               <p className="text-[20px] text-gray-600">/Plan</p>{" "}
             </h3>
