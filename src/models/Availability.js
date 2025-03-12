@@ -35,7 +35,7 @@ const availabilitySchema = new mongoose.Schema({
       time: { type: String, required: true }, // Time slot, e.g., "09:00 - 10:00"
       duration: {
         type: Number,
-        enum: [15, 30, 60], // Duration in minutes
+        enum: [15, 30, 45], // Duration in minutes
         required: true,
       },
       status: {

@@ -64,12 +64,13 @@ const Clients = () => {
             >
               <span>{client.name}</span>
               <span>{client.session}</span>
-              <span>{client.lastBooked || "--"}</span>
+              <span>{client.selectedDate || "--"}</span>
               <span className="flex justify-between">
                 {/* Placeholder for contact icons */}
                 <span className="flex gap-2">
-                  <button className="w-6 h-6 bg-gray-300 rounded"></button>
-                  <button className="w-6 h-6 bg-gray-300 rounded"></button>
+                  +{client.phone}
+                  {/* <button className="w-6 h-6 bg-gray-300 rounded"></button>
+                  <button className="w-6 h-6 bg-gray-300 rounded"></button> */}
                 </span>
                 {expandedIndex === index ? <ChevronUp /> : <ChevronDown />}
               </span>

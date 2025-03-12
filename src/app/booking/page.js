@@ -15,7 +15,7 @@ import { useRouter } from "next/navigation";
 import logo from "../../Components/pagesComponent/Homecomponent/assets/logo.svg";
 import Link from "next/link";
 
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
@@ -453,15 +453,12 @@ export default function MultiStepForm() {
       const data = await response.json();
       console.log(data);
       if (data.success == true) {
-        alert(
-          data.success,
-          "your appointment boooked successfull please check your provided email for more info"
-        );
-        router.push("/payment");
+        toast.success(data.message);
+        router.push("/urgent");
       }
     } catch (err) {
       setError("Failed to fetch data");
-      console.log(err);
+      toast.error(err);
     } finally {
       setLoading(false);
     }
@@ -495,7 +492,7 @@ export default function MultiStepForm() {
       return;
     }
 
-    makeApiRequest(horoscopeDataa);
+    // makeApiRequest(horoscopeDataa);
     console.log(horoscopeDataa);
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
@@ -864,14 +861,14 @@ export default function MultiStepForm() {
                     30 Min
                   </button>
                   <button
-                    onClick={() => setSelectedDuration(null)} // Show all slots
+                    onClick={() => setSelectedDuration(45)} // Show all slots
                     className={`p-2 border  w-full  rounded ${
-                      selectedDuration === null
+                      selectedDuration === 45
                         ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
                         : "bg-white border-[#E4E4E4]"
                     }`}
                   >
-                    All
+                    45 Min
                   </button>
                 </div>
 
@@ -884,6 +881,7 @@ export default function MultiStepForm() {
                         disabled={slot.status === "booked"}
                         onClick={() => {
                           setSelectedTime(slot.time);
+                          setDuration(slot.duration);
                         }}
                         className={`p-2 rounded text-sm border 
         ${

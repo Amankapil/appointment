@@ -148,6 +148,7 @@ export async function POST(request) {
     // return NextResponse.redirect(redirectUrl);
     return NextResponse.json({
       success: true,
+      message: "Your appointment is book on urgent basis",
       data: back,
     });
 

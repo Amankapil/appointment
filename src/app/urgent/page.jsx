@@ -26,8 +26,8 @@ export default function MultiStepForm() {
       <div className="flex justify-between mb-6"></div>
 
       <h1 className="text-xl font-semibold mb-4">
-        your payment is success and booking is confirmed please check your given
-        email for details{" "}
+        your Urgent bookinmg is confirmed please check your given email for more
+        details{" "}
       </h1>
     </div>
   );
