@@ -125,11 +125,8 @@ export async function POST(request) {
     });
 
     // Redirect to the payment success page
-    return NextResponse.redirect(
-      `https://prashnasiddhi.com/transaction-summary?data=${encodeURIComponent(
-        JSON.stringify(data)
-      )}`
-    );
+    const redirectUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/payment`;
+    return NextResponse.redirect(redirectUrl);
   } catch (error) {
     console.error("Error in success URL:", error);
 
