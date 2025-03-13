@@ -107,8 +107,8 @@ const Why = () => {
             </p>
           </div>
 
-          <div className="absolute top-3 left-3 w-2 h-2 bg-black rounded-full"></div>
-          <div className="absolute bottom-3 right-3 w-2 h-2 bg-black rounded-full"></div>
+          {/* <div className="absolute top-3 left-3 w-2 h-2 bg-black rounded-full"></div>
+          <div className="absolute bottom-3 right-3 w-2 h-2 bg-black rounded-full"></div> */}
         </div>
       </div>
     </div>

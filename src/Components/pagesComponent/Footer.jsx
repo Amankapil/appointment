@@ -162,9 +162,9 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 w-full text-center flex justify-center items-center ">
-        <p className="text-[244px] max-lg:text-[130px] max-md:text-[50px] w-full text-[#D8D1C7] leading-[120%] font-salernomi font-normal">
+        <div className="text-[244px] big-text max-lg:text-[130px] max-md:text-[50px] w-full text-[#D8D1C7] leading-[120%] font-salernomi font-normal">
           Prashna Siddhi
-        </p>
+        </div>
         {/* <p className="text-sm">All Rights Reserved 2025</p> */}
       </div>
     </footer>

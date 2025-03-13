@@ -28,7 +28,7 @@ export default function Navbar() {
               </span>
             </Link>
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={toggleMenu}>
               <svg
                 className="w-6 h-6"
@@ -46,12 +46,12 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className={`fixed md:relative top-0 right-0  h-full md:h-auto w-[70%] md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
+            className={`fixed lg:relative top-0 right-0  h-full lg:h-auto w-[70%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-x-0 pt-10 " : "translate-x-full "
-            } md:translate-x-0 md:flex space-x-4 items-center gap-7`}
+            } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start gap-7`}
           >
             <button
-              className="md:hidden absolute top-4 right-4"
+              className="lg:hidden absolute top-4 right-4"
               onClick={toggleMenu}
             >
               <svg
@@ -68,7 +68,7 @@ export default function Navbar() {
                 ></path>
               </svg>
             </button>
-            <div className="flex navbar  font-inter flex-col md:flex-row space-y-4 md:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
+            <div className="flex navbar  font-inter flex-col lg:flex-row space-y-4 lg:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
               <Link href="/services" className="hover:text-gray-600 relative">
                 Services
               </Link>

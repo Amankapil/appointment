@@ -64,7 +64,7 @@ const PricingSection = () => {
       </div> */}
 
         {/* Pricing Cards */}
-        <div className="flex items-center justify-center gap-6 max-lg:flex-wrap">
+        <div className="flex items-center justify-center gap-6 max-lg:flex-wrap price-section">
           <div className="relative flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[32px] font-normal font-salernomi text-gray-700 text-center m">
               Precious 15 Minutes
@@ -105,7 +105,7 @@ const PricingSection = () => {
             </div>
 
             <div className="px-10 space-y-2">
-              <div className="text-center flex items-start justify-start gap-3 w-full">
+              <div className="text-center flex items-center justify-start gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -124,7 +124,7 @@ const PricingSection = () => {
                   Overseas Clients Includes NRIs
                 </p>
               </div>
-              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+              <div className="text-center flex items-center justify-start mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -143,7 +143,7 @@ const PricingSection = () => {
               </div>
             </div>
 
-            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
+            <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
               <input
                 checked={isChecked}
                 onChange={() => setIsChecked(!isChecked)}
@@ -226,7 +226,7 @@ const PricingSection = () => {
             </div>
 
             <div className="px-10 space-y-2">
-              <div className="text-center flex items-start justify-start gap-3 w-full">
+              <div className="text-center flex items-center justify-start gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -245,7 +245,7 @@ const PricingSection = () => {
                   Overseas Clients Includes NRIs
                 </p>
               </div>
-              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+              <div className="text-center flex items-center justify-start mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -264,7 +264,7 @@ const PricingSection = () => {
               </div>
             </div>
 
-            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
+            <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
               <input
                 checked={isChecked1}
                 onChange={() => setIsChecked1(!isChecked1)}
@@ -349,7 +349,7 @@ const PricingSection = () => {
             </div>
 
             <div className="px-10 space-y-2">
-              <div className="text-center flex items-start justify-start gap-3 w-full">
+              <div className="text-center flex items-center justify-start gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -368,7 +368,7 @@ const PricingSection = () => {
                   Overseas Clients Includes NRIs
                 </p>
               </div>
-              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+              <div className="text-center flex items-center justify-start mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -386,7 +386,7 @@ const PricingSection = () => {
                 <p className="text-sm text-gray-600">Astrology Consultation</p>
               </div>
             </div>
-            <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
+            <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
               <input
                 checked={isChecked2}
                 onChange={() => setIsChecked2(!isChecked2)}
@@ -422,7 +422,7 @@ const PricingSection = () => {
               </button>
             </div>
 
-            {/* <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
+            {/* <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
               <input
                 checked={isChecked2}
                 onChange={() => setIsChecked2(!isChecked2)}
@@ -439,7 +439,7 @@ const PricingSection = () => {
           </div>
 
           {isOpen && (
-            <div className="fixed max-md:overflow-scroll max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
+            <div className="fixed max-md:overflow-scroll terms max-md:pt-88 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
               <div className="bg-[#F5F0EB] text-gray-800 p-8 rounded-lg w-[90%] max-w-3xl shadow-lg border border-gray-300">
                 <h2 className="text-xl font-semibold text-center">
                   Disclaimer

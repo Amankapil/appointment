@@ -595,7 +595,7 @@ export default function MultiStepForm() {
                 Your essential details for a personalized consultation.
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-7 max-md:grid-cols-2 ">
+            <div className="grid grid-cols-3 gap-7 max-md:grid-cols-2 booking-form">
               <label className="text-[16px]">
                 Full Name *
                 <input

@@ -47,8 +47,8 @@ const Qa = () => {
           </svg>
         </div>
 
-        <div className="heading flex mb-10 items-center justify-center pt-10 max-md:flex-col max-md:gap-10">
-          <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
+        <div className="heading flex mb-10 items-center justify-center pt-10 max-md:flex-col max-md:gap-10 price-section price-section1">
+          <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price price1 w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹199
               <p className="text-[20px] text-gray-600">/Plan</p>{" "}
@@ -57,7 +57,7 @@ const Qa = () => {
             {/* Toggle Switch */}
 
             <div className="px-10 space-y-2">
-              <div className="text-center flex items-start justify-center gap-3 w-full">
+              <div className="text-center flex items-center justify-center gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -76,7 +76,7 @@ const Qa = () => {
                   Record your question in any language (30-45 sec limit).
                 </p>
               </div>
-              <div className="text-center flex items-start justify-center mt gap-3 w-full">
+              <div className="text-center flex items-center justify-center mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -95,7 +95,7 @@ const Qa = () => {
                   Get a detailed answer in the same language within ~12 hours.
                 </p>
               </div>
-              <div className="text-center flex items-start justify-center mt gap-3 w-full">
+              <div className="text-center flex items-center justify-center mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -116,7 +116,7 @@ const Qa = () => {
               </div>
             </div>
 
-            <div className="flex gap-[2px] text-[12px] font-poppins text-[#101010] mt-2 items-center justify-center">
+            <div className="flex gap-[2px] text-[12px] text-12   font-poppins text-[#101010] mt-2 items-center justify-center">
               <input
                 checked={isChecked2}
                 onChange={() => setIsChecked2(!isChecked2)}
@@ -152,7 +152,7 @@ const Qa = () => {
             </div>
           </div>
 
-          <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
+          <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price price1 w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹399
               <p className="text-[20px] text-gray-600">/Plan</p>{" "}
@@ -161,7 +161,7 @@ const Qa = () => {
             {/* Toggle Switch */}
 
             <div className="px-10 space-y-2">
-              <div className="text-center flex items-start justify-center gap-3 w-full">
+              <div className="text-center flex items-center justify-center gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -180,7 +180,7 @@ const Qa = () => {
                   Submit up to 2 questions with a recording limit of 1 minute.
                 </p>
               </div>
-              <div className="text-center flex items-start justify-center mt gap-3 w-full">
+              <div className="text-center flex items-center justify-center mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -200,7 +200,7 @@ const Qa = () => {
                   hours.
                 </p>
               </div>
-              <div className="text-center flex items-start justify-center mt gap-3 w-full">
+              <div className="text-center flex items-center justify-center mt gap-3 w-full">
                 <span className="text-[44px] font-bold text-black">
                   <svg
                     width="20"
@@ -221,7 +221,7 @@ const Qa = () => {
               </div>
             </div>
 
-            <div className="flex gap-[2px] text-[12px] font-poppins text-[#101010] mt-2 items-center justify-center">
+            <div className="flex gap-[2px] text-[12px] text-12   font-poppins text-[#101010] mt-2 items-center justify-center">
               <input
                 checked={isChecked1}
                 onChange={() => setIsChecked1(!isChecked1)}
@@ -259,7 +259,7 @@ const Qa = () => {
           </div>
         </div>
         {isOpen && (
-          <div className="fixed max-md:overflow-scroll max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
+          <div className="fixed max-md:overflow-scroll terms max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-[#F5F0EB] text-gray-800 p-8 rounded-lg w-[90%] max-w-3xl shadow-lg border border-gray-300">
               <h2 className="text-xl font-semibold text-center">Disclaimer</h2>
               <div className="text-center flex items-center justify-center mt-3 text-gray-500">
