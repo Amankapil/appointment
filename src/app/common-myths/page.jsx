@@ -18,11 +18,13 @@ const page = () => {
           content="Uncover the truth about astrology. Prashna Siddhi debunks common astrology myths and misconceptions, providing accurate insights and authentic guidance."
         />
       </Head>
-      <HeroCommon />
-      <Sati />
-      <GuruBala />
-      <Rahu />
-      <Message />
+      <div className="max-md:px-2">
+        <HeroCommon />
+        <Sati />
+        <GuruBala />
+        <Rahu />
+        <Message />
+      </div>
     </>
   );
 };

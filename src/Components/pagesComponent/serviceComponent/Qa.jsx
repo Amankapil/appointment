@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "./style.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Qa = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,19 @@ const Qa = () => {
   const [isChecked1, setIsChecked1] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (isChecked2) {
+      router.push("/booking");
+    }
+    if (isChecked1) {
+      router.push("/booking");
+    }
+    if (isChecked) {
+      router.push("/booking");
+    }
+  };
   return (
     <>
       <div className="heading flex mb-10 flex-col items-center justify-center pt-10">
@@ -33,7 +47,7 @@ const Qa = () => {
           </svg>
         </div>
 
-        <div className="heading flex mb-10 items-center justify-center pt-10">
+        <div className="heading flex mb-10 items-center justify-center pt-10 max-md:flex-col max-md:gap-10">
           <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹199
@@ -101,17 +115,6 @@ const Qa = () => {
                 </p>
               </div>
             </div>
-            {/* Book Now Button */}
-            <div className="flex items-center justify-center w-full mt-2">
-              <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Submit Your Question
-              </Link>
-            </div>
 
             <div className="flex gap-[2px] text-[12px] font-poppins text-[#101010] mt-2 items-center justify-center">
               <input
@@ -126,6 +129,26 @@ const Qa = () => {
               >
                 Terms and Conditions
               </span>
+            </div>
+            {/* Book Now Button */}
+            <div className="flex items-center justify-center w-full mt-2">
+              {/* <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Submit Your Question
+              </Link> */}
+              <button
+                onClick={handleClick}
+                disabled={!isChecked2}
+                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Submit Your Question
+              </button>
             </div>
           </div>
 
@@ -197,17 +220,6 @@ const Qa = () => {
                 </p>
               </div>
             </div>
-            {/* Book Now Button */}
-            <div className="flex items-center justify-center w-full mt-2">
-              <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Submit Your Question
-              </Link>
-            </div>
 
             <div className="flex gap-[2px] text-[12px] font-poppins text-[#101010] mt-2 items-center justify-center">
               <input
@@ -223,10 +235,31 @@ const Qa = () => {
                 Terms and Conditions
               </span>
             </div>
+            {/* Book Now Button */}
+            <div className="flex mt-2 items-center justify-center w-full mt-0">
+              {/* <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Submit Your Question
+              </Link> */}
+
+              <button
+                onClick={handleClick}
+                disabled={!isChecked1}
+                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Submit Your Question
+              </button>
+            </div>
           </div>
         </div>
         {isOpen && (
-          <div className="fixed inset-0 bg-[#0000058d] mt-10 bg-opacity-50 flex justify-center items-center z-50">
+          <div className="fixed max-md:overflow-scroll max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-[#F5F0EB] text-gray-800 p-8 rounded-lg w-[90%] max-w-3xl shadow-lg border border-gray-300">
               <h2 className="text-xl font-semibold text-center">Disclaimer</h2>
               <div className="text-center flex items-center justify-center mt-3 text-gray-500">

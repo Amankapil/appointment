@@ -70,7 +70,7 @@ const Message = () => {
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[1px] max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[1px] max-w-[826px] max-md:pl-8  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute -left-[27px]">
                 <svg
@@ -94,7 +94,7 @@ const Message = () => {
             </div>
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[1px] max-w-[826px] max-md:pl-8 max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute -left-[27px]">
                 <svg
@@ -118,7 +118,7 @@ const Message = () => {
             </div>
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[1px] w-full max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[1px] w-full max-w-[826px] max-md:pl-8 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute -left-[27px]">
                 <svg
@@ -192,7 +192,7 @@ const Message = () => {
       <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4 py-20">
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          className="border-[1px] max-w-[826px] max-md:pl-8 max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
         >
           <div className="svg absolute -left-[27px]">
             <svg
@@ -216,7 +216,7 @@ const Message = () => {
         </div>
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          className="border-[1px] max-w-[826px] max-md:pl-8 max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
         >
           <div className="svg absolute -left-[27px]">
             <svg
@@ -239,7 +239,7 @@ const Message = () => {
         </div>
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          className="border-[1px] w-full max-w-[826px] max-md:pl-8 max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
         >
           <div className="svg absolute -left-[27px]">
             <svg
@@ -262,7 +262,7 @@ const Message = () => {
         </div>
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] w-full flex-col max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          className="border-[1px] w-full flex-col max-w-[826px] max-md:pl-  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
         >
           <div className="svg absolute -left-[27px]">
             <svg
@@ -284,13 +284,18 @@ const Message = () => {
           </p>
 
           <div className="bg-white flex items-center justify-center max-md:w-full">
-            <YouTube videoId="1nr9EuSeQN8" opts={opts} onReady={onReady} />
+            <YouTube
+              className="max-md:w-full"
+              videoId="1nr9EuSeQN8"
+              opts={opts}
+              onReady={onReady}
+            />
           </div>
         </div>
 
         <div
           style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          className="border-[1px] w-full max-w-[826px] max-md:pl-8 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
         >
           <div className="svg absolute -left-[27px]">
             <svg

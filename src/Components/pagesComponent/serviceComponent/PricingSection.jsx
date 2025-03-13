@@ -3,6 +3,7 @@
 import { useState } from "react";
 import "./style.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const PricingSection = () => {
   const [isUSD, setIsUSD] = useState(false);
@@ -20,6 +21,20 @@ const PricingSection = () => {
   const [isChecked1, setIsChecked1] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
+
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (isChecked2) {
+      router.push("/booking");
+    }
+    if (isChecked1) {
+      router.push("/booking");
+    }
+    if (isChecked) {
+      router.push("/booking");
+    }
+  };
 
   return (
     <>
@@ -88,60 +103,44 @@ const PricingSection = () => {
                 {isUSD ? " / Overseas Clients" : " / Residents Indians"}
               </p>
             </div>
-            <div className="text-center flex items-start justify-center gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">
-                Overseas Clients Includes NRIs
-              </p>
-            </div>
-            <div className="text-center flex items-start justify-center mt gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">Astrology Consultation</p>
-            </div>
 
-            {/* Book Now Button */}
-            <div className="flex items-center justify-center w-full mt-2">
-              {/* <button
-                className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </button> */}
-              <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </Link>
+            <div className="px-10 space-y-2">
+              <div className="text-center flex items-start justify-start gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">
+                  Overseas Clients Includes NRIs
+                </p>
+              </div>
+              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">Astrology Consultation</p>
+              </div>
             </div>
 
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
@@ -157,6 +156,34 @@ const PricingSection = () => {
               >
                 Terms and Conditions
               </span>
+            </div>
+
+            {/* Book Now Button */}
+            <div className="flex items-center justify-center w-full mt-2">
+              {/* <button
+                className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </button> */}
+              {/* <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link> */}
+              <button
+                onClick={handleClick}
+                disabled={!isChecked}
+                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </button>
             </div>
           </div>
           <div className="relative flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
@@ -197,60 +224,44 @@ const PricingSection = () => {
                 {isUSD2 ? " / Overseas Clients" : " / Residents Indians"}
               </p>
             </div>
-            <div className="text-center flex items-start justify-center gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">
-                Overseas Clients Includes NRIs
-              </p>
-            </div>
-            <div className="text-center flex items-start justify-center mt gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">Astrology Consultation</p>
-            </div>
 
-            {/* Book Now Button */}
-            <div className="flex items-center justify-center w-full mt-2">
-              {/* <button
-                className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </button> */}
-              <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </Link>
+            <div className="px-10 space-y-2">
+              <div className="text-center flex items-start justify-start gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">
+                  Overseas Clients Includes NRIs
+                </p>
+              </div>
+              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">Astrology Consultation</p>
+              </div>
             </div>
 
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
@@ -266,6 +277,35 @@ const PricingSection = () => {
               >
                 Terms and Conditions
               </span>
+            </div>
+
+            {/* Book Now Button */}
+            <div className="flex items-center justify-center w-full mt-2">
+              {/* <button
+                className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </button> */}
+              {/* <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link> */}
+
+              <button
+                onClick={handleClick}
+                disabled={!isChecked1}
+                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </button>
             </div>
           </div>
 
@@ -307,62 +347,45 @@ const PricingSection = () => {
                 {isUSD3 ? " / Overseas Clients" : " / Residents Indians"}
               </p>
             </div>
-            <div className="text-center flex items-start justify-center gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">
-                Overseas Clients Includes NRIs
-              </p>
-            </div>
-            <div className="text-center flex items-start justify-center mt gap-3 w-full">
-              <span className="text-[44px] font-bold text-black">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
-                    fill="#101010"
-                  />
-                </svg>
-              </span>
-              <p className="text-sm text-gray-600">Astrology Consultation</p>
-            </div>
 
-            {/* Book Now Button */}
-            <div className="flex items-center justify-center w-full mt-2">
-              {/* <button
-                className={`mt-5 w-[80%] max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </button> */}
-              <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-full bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Book Now
-              </Link>
+            <div className="px-10 space-y-2">
+              <div className="text-center flex items-start justify-start gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">
+                  Overseas Clients Includes NRIs
+                </p>
+              </div>
+              <div className="text-center flex items-start justify-start mt gap-3 w-full">
+                <span className="text-[44px] font-bold text-black">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                      fill="#101010"
+                    />
+                  </svg>
+                </span>
+                <p className="text-sm text-gray-600">Astrology Consultation</p>
+              </div>
             </div>
-
             <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
               <input
                 checked={isChecked2}
@@ -377,10 +400,46 @@ const PricingSection = () => {
                 Terms and Conditions
               </span>
             </div>
+
+            {/* Book Now Button */}
+            <div className="flex items-center justify-center w-full mt-2">
+              {/* <Link
+                href={"/booking"}
+                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </Link> */}
+              <button
+                onClick={handleClick}
+                disabled={!isChecked2}
+                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
+                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
+                }`}
+              >
+                Book Now
+              </button>
+            </div>
+
+            {/* <div className="flex gap-1 text-[12px] mt-2 items-center justify-center">
+              <input
+                checked={isChecked2}
+                onChange={() => setIsChecked2(!isChecked2)}
+                type="checkbox"
+              />
+              <span>I accept the</span>
+              <span
+                onClick={() => setIsOpen(true)}
+                className="text-[#AC8C60]  cursor-pointer"
+              >
+                Terms and Conditions
+              </span>
+            </div> */}
           </div>
 
           {isOpen && (
-            <div className="fixed inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
+            <div className="fixed max-md:overflow-scroll max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
               <div className="bg-[#F5F0EB] text-gray-800 p-8 rounded-lg w-[90%] max-w-3xl shadow-lg border border-gray-300">
                 <h2 className="text-xl font-semibold text-center">
                   Disclaimer

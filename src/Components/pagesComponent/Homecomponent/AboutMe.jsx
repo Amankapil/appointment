@@ -30,7 +30,7 @@ const AboutMe = () => {
           </svg>
 
           <Image src={img} alt="jflas" />
-          <div className="flex items-center  w-[100%] max-md:w-full gap-10 justify-center text-center">
+          <div className="flex items-center  w-[100%] max-md:w-full gap-10 justify-center text-center max-md:flex-col">
             <svg
               width="80"
               height="80"

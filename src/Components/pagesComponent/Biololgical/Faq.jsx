@@ -21,7 +21,7 @@ const Faq = () => {
         </svg>
       </div>
 
-      <div className="space-y-12  max-w-[826px] max-w-826 mx-auto">
+      <div className="space-y-12  max-w-[826px] max-md:pl-8 max-w-826 mx-auto">
         <div className="text-left">
           <div className="flex justify-center my-4">
             <svg

@@ -22,7 +22,7 @@ const SessionTabs = ({ data }) => {
     const completed = [];
 
     data.forEach((session) => {
-      if (!session.selectedTime) {
+      if (!session?.selectedTime) {
         console.error("Invalid selectedTime:", session);
         return; // Skip invalid sessions
       }

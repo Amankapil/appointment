@@ -492,10 +492,17 @@ export default function MultiStepForm() {
       return;
     }
 
-    makeApiRequest(horoscopeDataa);
+    // makeApiRequest(horoscopeDataa);
     console.log(horoscopeDataa);
+
     if (currentStep == 0) {
       setCurrentStep(currentStep + 1);
+    }
+    if (currentStep == 1) {
+      if (!selectedTime) {
+        toast.error("please select time slot");
+        return;
+      }
     }
     if (currentStep < steps.length - 1) setCurrentStep(currentStep + 1);
     // handleSubmitprokalara();

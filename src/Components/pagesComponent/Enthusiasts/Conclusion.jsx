@@ -49,7 +49,7 @@ export default function Conclusion() {
         <div className="lis  max-lg:p-8 w-full  max-w-[988px] mx-auto space-y-4 pb-10">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-md:pl-8 max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -75,7 +75,7 @@ export default function Conclusion() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-md:pl-8 max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -101,7 +101,7 @@ export default function Conclusion() {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[1000px] max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[1000px] max-md:pl-8 max-w-1000 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -131,7 +131,7 @@ export default function Conclusion() {
         </div>
       </div>
 
-      <div className="heading flex mb-10 flex-col items-center justify-center">
+      {/* <div className="heading flex mb-10 flex-col items-center justify-center">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"
@@ -151,7 +151,7 @@ export default function Conclusion() {
           <circle cx="649" cy="12" r="2.5" fill="#F0EDE9" stroke="#F0EDE9" />
           <path d="M1243 12.0001L651 12" stroke="#F0EDE9" />
         </svg>
-      </div>
+      </div> */}
     </div>
   );
 }

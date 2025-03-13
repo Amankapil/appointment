@@ -24,7 +24,7 @@ const Why = () => {
         </div>
       </div>
       {/* Second Circle */}
-      <div className=" flex items-center justify-center">
+      <div className=" flex items-center justify-center max-md:flex-col">
         <div>
           <Image src={img} alt="" />
         </div>
@@ -37,7 +37,7 @@ const Why = () => {
             }}
             className="relative flex font-inter text-[20px] items-center justify-center circletwo w-[680px] h-[680px] max-md:w-full max-md:h-full   max-md:p-10 border  border-[#AC8C60] rounded-full shadow-lg"
           >
-            <p className=" text-center px-8 font-inter text-[20px]">
+            <p className=" text-center px-8 max-md:text-[18px] max-md:px-4  font-inter text-[20px]">
               Life presents us with uncertainties, and unanswered questions can
               weigh heavily on the mind, leading to prolonged stress and
               anxiety.

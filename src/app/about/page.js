@@ -19,11 +19,14 @@ const page = () => {
           content="Learn about Prashna Siddhi, offering expert Vedic astrology services. Discover our mission to provide accurate insights and guidance through Prashna Shastra."
         />
       </Head>
-      <AboutHero />
-      <Prashna />
-      <Spirituality />
-      <Divine />
-      <Vision />
+
+      <div className="max-md:px-2">
+        <AboutHero />
+        <Prashna />
+        <Spirituality />
+        <Divine />
+        <Vision />
+      </div>
     </>
   );
 };

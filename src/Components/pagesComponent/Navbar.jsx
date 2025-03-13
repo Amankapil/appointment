@@ -46,8 +46,8 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className={`fixed md:relative top-0 right-0 h-full md:h-auto w-[70%] md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
-              isOpen ? "translate-x-0 pt-10" : "translate-x-full "
+            className={`fixed md:relative top-0 right-0  h-full md:h-auto w-[70%] md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
+              isOpen ? "translate-x-0 pt-10 " : "translate-x-full "
             } md:translate-x-0 md:flex space-x-4 items-center gap-7`}
           >
             <button
@@ -68,7 +68,7 @@ export default function Navbar() {
                 ></path>
               </svg>
             </button>
-            <div className="flex navbar font-inter flex-col md:flex-row space-y-4 md:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
+            <div className="flex navbar  font-inter flex-col md:flex-row space-y-4 md:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
               <Link href="/services" className="hover:text-gray-600 relative">
                 Services
               </Link>

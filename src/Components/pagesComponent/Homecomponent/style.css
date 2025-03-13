@@ -145,3 +145,15 @@
 
   /* Ensure the pseudo-element is behind the content */
 }
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .twecircle::before {
+    width: 0%;
+  }
+  .fcircle::before {
+    width: 100%;
+  }
+  .tcircle::before {
+    width: 0%;
+  }
+}

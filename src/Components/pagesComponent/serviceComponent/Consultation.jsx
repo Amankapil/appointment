@@ -36,9 +36,13 @@ export default function Consultation() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto  mt-20">
         <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h-[296px] bggray-300 ">
+          <div className="w-[248px] h-[296px] bggray-300 max-md:h-full">
             {" "}
-            <Image className="w-[248px] h-[296px]" src={img2} alt="j" />
+            <Image
+              className="w-[248px] h-[296px] max-md:h-full"
+              src={img2}
+              alt="j"
+            />
           </div>
           <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">
@@ -120,10 +124,10 @@ export default function Consultation() {
           </div>
         </div>
         <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className=" w-[248px] h-[296px] bggray-300 ">
+          <div className=" w-[248px] h-[296px] max-md:h-full bggray-300 ">
             {" "}
             <Image
-              className="w-[248px] h-[296px]"
+              className="w-[248px] h-[296px] max-md:h-full"
               width={248}
               src={img5}
               alt="j"

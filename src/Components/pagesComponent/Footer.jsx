@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="container mx-auto max-lg:p-4">
         <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-md:items-center  max-md:justify-center">
           {/* Left Section */}
-          <div className="flex flex-col items-center md:items-start w-[35%] max-lg:w-full">
+          <div className="flex flex-col items-center md:items-start w-[35%] max-lg:w-full max-md:pb-10">
             <Link href="/" className="flex items-center justify-center gap-2">
               <Image src={logo} alt="kl" />
-              <span className="font-salernomi text-[#322F41] text-[44px]">
+              <span className="font-salernomi text-[#322F41] text-[44px] max-md:text-[30px]">
                 Prashna Siddhi
               </span>
             </Link>
@@ -34,8 +34,8 @@ const Footer = () => {
           {/* Center Section */}
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-serif font-medium mb-4">Site</h3>
-            <div className="flex flexcol max-md:flex-wrap items-center md:items-start gap-10">
-              <ul className="space-y-2 text-left">
+            <div className="flex flexcol max-md:flex-wrap items-center md:items-start gap-10 max-md:items-center max-md:justify-center">
+              <ul className="space-y-2 text-left max-md:text-center">
                 <li>
                   <Link href="/services" className="hover:underline">
                     Services
@@ -64,7 +64,7 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <ul className="space-y-2 text-left">
+              <ul className="space-y-2 text-left max-md:text-center">
                 <li>
                   <Link href="/unique" className="hover:underline">
                     What make Prashna Siddhi truly unique
@@ -90,7 +90,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start max-md:mt-5">
             <h3 className="text-xl  font-medium mb-4 w-[75%]  font-salernomi">
               Contact
             </h3>
