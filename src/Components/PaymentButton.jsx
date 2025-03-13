@@ -116,7 +116,7 @@ export default function PaymentButton({
           city: paydata.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
-          amount: "1.00",
+          amount: amount,
         }),
       });
 
