@@ -8,16 +8,29 @@ import FourCardsSection from "@/Components/pagesComponent/Homecomponent/FourCard
 import Platform from "@/Components/pagesComponent/Homecomponent/Platform";
 import AboutMe from "@/Components/pagesComponent/Homecomponent/AboutMe";
 import Purpose from "@/Components/pagesComponent/Homecomponent/Purpose";
+import Head from "next/head";
 
 export default function BookingModal() {
   return (
-    <div className="k">
-      <Hero />
-      <Why />
-      <FourCardsSection />
-      <Platform />
-      <AboutMe />
-      <Purpose />
-    </div>
+    <>
+      <Head>
+        <meta
+          name="title"
+          content="Prashna Siddhi – Accurate Insights Through Vedic Astrology"
+        />
+        <meta
+          name="description"
+          content="Discover the power of Prashna Siddhi for accurate insights into life’s challenges. Expert Vedic astrology guidance for love, career, health, and more."
+        />
+      </Head>
+      <div className="k">
+        <Hero />
+        <Why />
+        <FourCardsSection />
+        <Platform />
+        <AboutMe />
+        <Purpose />
+      </div>
+    </>
   );
 }

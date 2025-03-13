@@ -71,10 +71,8 @@ export default function AboutHero() {
                 <span className="text-[#000]">
                   Electronics & Communication,{" "}
                 </span>{" "}
-                I travelled extensively before fully dedicating myself to
-                <span className="text-[#000]">
-                  Astrology and Spiritual{" "}
-                </span>{" "}
+                I travelled extensively before fully dedicating myself to{" "}
+                <span className="text-[#000]">Astrology and Spiritual </span>{" "}
                 Guidance in 1980.
               </p>
             </div>

@@ -40,12 +40,12 @@ const GuruBala = () => {
             Jupiter (Guru) is considered the
             <span className="text-[#000]">
               most benevolent planet,{" "}
-            </span> and <span className="text-[#000]">Guru Bala </span> refers
+            </span> and <span className="text-[#000]">Guru Bala </span> refers{" "}
             <span className="text-[#000]">
               to its transit through favorable houses in relation to the natal
               Moon.{" "}
             </span>{" "}
-            Many believe that
+            Many believe that{" "}
             <span className="text-[#000]">
               without Guru Bala, life becomes difficult.{" "}
             </span>
@@ -63,7 +63,7 @@ const GuruBala = () => {
         <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -87,7 +87,7 @@ const GuruBala = () => {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -105,11 +105,9 @@ const GuruBala = () => {
               </svg>
             </div>
             <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
-              It stays in
-              <span className="text-[#000]">
-                each sign for about 1 year,{" "}
-              </span>{" "}
-              giving
+              It stays in{" "}
+              <span className="text-[#000]">each sign for about 1 year, </span>{" "}
+              giving{" "}
               <span className="text-[#000]">
                 6 years of “favorable influence”{" "}
               </span>{" "}
@@ -118,7 +116,7 @@ const GuruBala = () => {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] w-full max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -139,9 +137,9 @@ const GuruBala = () => {
               If
               <span className="text-[#000]">
                 {" "}
-                Sade Sati were always negative,
+                Sade Sati were always negative,{" "}
               </span>
-              wouldn’t
+              wouldn’t{" "}
               <span className="text-[#000]">
                 one-fourth of life be doomed?{" "}
               </span>

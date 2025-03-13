@@ -39,6 +39,7 @@ export default function Honest() {
             We firmly believe that true guidance comes when one approaches
             astrology with
             <span className="text-[#000]">
+              {" "}
               faith, sincerity, and an open heart.{" "}
             </span>{" "}
             Prashna Siddhi is not just about predictions—it is about divine

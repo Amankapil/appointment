@@ -22,13 +22,13 @@ export default function Peace() {
           </p>
           <Link
             href="/booking"
-            className="bg-[#101010] font-salernomi text-white px-4 py-3 rounded hover:bg-[#333333]"
+            className="bg-[#101010] text-[20px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
           >
             Request your Consultation
           </Link>
         </div>
         <div className="mt-0 w-[50%] max-lg:w-full">
-          <div className="img h-[500px] max-md:h-full">
+          <div className="img h[500px] max-md:h-full">
             <Image className="pb-10" src={img} alt="j" />
           </div>
         </div>

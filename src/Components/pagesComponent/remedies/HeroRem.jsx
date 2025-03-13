@@ -99,7 +99,7 @@ export default function HeroRem() {
             <span className="text-[#000]">
               {" "}
               pure spiritual wisdom of the Zodiac, not commercial remedies.
-            </span>
+            </span>{" "}
             We uphold
             <span className="text-[#000]"> moral and spiritual values</span> and
             do not promote solutions that mislead people into false hope.

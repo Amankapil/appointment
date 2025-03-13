@@ -38,11 +38,12 @@ export default function HeroUn() {
             At Prashna Siddhi, we offer a unique and powerful method of Vedic
             Prashna Jyotishya, delivering precise answers without requiring your
             birth details. Unlike traditional astrology, which relies on a
-            static birth chart, we cast a
-            <span className="text-[#000]">dedicated Prashna Kundali</span> for
+            static birth chart, we cast a{" "}
+            <span className="text-[#000]"> dedicated Prashna Kundali</span> for
             each question you ask. This dynamic approach reveals hidden secrets
             and allows for a
             <span className="text-[#000]">
+              {" "}
               multi-faceted analysis of multiple Bhavas
             </span>{" "}
             —giving you deeper clarity than a conventional birth chart alone.

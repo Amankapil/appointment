@@ -3,6 +3,7 @@
 import { useState } from "react";
 import img from "./assets/Group 247.png";
 import Image from "next/image";
+import Link from "next/link";
 export default function Cosmic() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
@@ -44,11 +45,14 @@ export default function Cosmic() {
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">
             However, Prashna Kundali—the art of answering questions based on the
             moment—can provide even deeper insights into potential medical
-            concerns, allowing parents to take proactive measures
-            <span className="text-[#000] underline">
+            concerns, allowing parents to take proactive measures{" "}
+            <Link href="/booking" className="text-[#000] underline">
+              Explore Prashna Consultations.
+            </Link>
+            {/* <span className="text-[#000] underline">
               {" "}
               Explore Prashna Consultations.
-            </span>
+            </span> */}
           </p>
         </div>
       </div>

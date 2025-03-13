@@ -21,9 +21,12 @@ export default function Blueprint() {
           Unlock your life’s cosmic blueprint today! Get expert Prashna
           Jyotishya insights on Prashna Siddhi
         </h1>
-        <button className="bg-[#101010] text-[20px] font-salernomi text-white px-6 py-3 rounded-lg hover:bg-blue-600">
+        <Link
+          href="/booking"
+          className="bg-[#101010] text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
+        >
           Request your Consultation
-        </button>
+        </Link>
         {/* </div> */}
       </div>
     </div>

@@ -1,10 +1,21 @@
 "use client";
-
 import { useState } from "react";
 import img from "./assets/Group 222.png";
 // import img2 from "./assets/Rectangle 9.png";
 import Image from "next/image";
+import YouTube from "react-youtube";
 export default function RemWorks() {
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1, // Auto play the video
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.pauseVideo(); // Pause the video when ready
+  };
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -76,11 +87,16 @@ export default function RemWorks() {
           </p>
         </div>
       </div>
-
-      <div className="img h-[500px] max-md:h-full bg-[#4D4D4D]">
-        {/* <Image src={} alt="j"/> */}
-        video
+      <div className="bg-white flex w-full mt-10 items-center justify-center max-md:w-full">
+        <YouTube
+          // className="w-full"
+          videoId="1nr9EuSeQN8"
+          opts={opts}
+          onReady={onReady}
+        />
       </div>
+
+      {/* <div className="img h-[500px] max-md:h-full bg-[#4D4D4D]">video</div> */}
     </div>
   );
 }

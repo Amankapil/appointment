@@ -37,11 +37,11 @@ const Rahu = () => {
       <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
         <div className="left w-1/2 max-lg:w-full">
           <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
-            Rahu is often feared due to
+            Rahu is often feared due to{" "}
             <span className="text-[#000]">
               Rahu Kala and its 18-year Mahadasha,{" "}
             </span>
-            leading many to believe it brings
+            leading many to believe it brings{" "}
             <span className="text-[#000]">bad luck and misfortunes. </span> But
             does Rahu only cause problems?
           </p>
@@ -58,7 +58,7 @@ const Rahu = () => {
         <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -86,7 +86,7 @@ const Rahu = () => {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -104,11 +104,11 @@ const Rahu = () => {
               </svg>
             </div>
             <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
-              It represents
+              It represents{" "}
               <span className="text-[#000]">
                 ambitions, desires, and karmic influences,
               </span>{" "}
-              acting as a
+              acting as a{" "}
               <span className="text-[#000]">
                 cosmic accountant of past and present deeds.{" "}
               </span>{" "}
@@ -116,7 +116,7 @@ const Rahu = () => {
           </div>
           <div
             style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-            className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            className="border-[1px] w-full max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
           >
             <div className="svg absolute -left-[27px]">
               <svg
@@ -134,7 +134,7 @@ const Rahu = () => {
               </svg>
             </div>
             <p className="text-xl font-inter text-center text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
-              Its effects vary based on
+              Its effects vary based on{" "}
               <span className="text-[#000]">
                 placement, nakshatra, planetary aspects, and individual karma.{" "}
               </span>

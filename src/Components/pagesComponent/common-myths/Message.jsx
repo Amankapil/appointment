@@ -1,8 +1,21 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import img from "./assets/image 11 (1).png";
-
+import YouTube from "react-youtube";
 const Message = () => {
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1, // Auto play the video
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.pauseVideo(); // Pause the video when ready
+  };
+
   return (
     <>
       <div className="manin bg max-w-7xl mx-auto py-20">
@@ -38,7 +51,7 @@ const Message = () => {
         <div className="below max-md:flex-wrap max-lg:p-4  flex items-start justify-center mt-8">
           <div className="left w-1/2 max-lg:w-full">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8 w-3/4 max-md:w-full ">
-              Have you ever wondered
+              Have you ever wondered{" "}
               <span className="text-[#000]">
                 why the Sun and Moon own only one zodiac sign each, while other
                 planets own two?{" "}
@@ -57,7 +70,7 @@ const Message = () => {
           <div className="lis  max-lg:p-8  max-w-[846px] mx-auto space-y-4">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[1px] max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[1px] max-w-[826px]  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute -left-[27px]">
                 <svg
@@ -105,7 +118,7 @@ const Message = () => {
             </div>
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[1px] w-full max-w-[826px] max-w-826 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[1px] w-full max-w-[826px] border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute -left-[27px]">
                 <svg
@@ -270,8 +283,8 @@ const Message = () => {
             Watch this insightful video to learn more:
           </p>
 
-          <div className="bg-white h-[500px] w-[500px] max-md:w-full">
-            video
+          <div className="bg-white flex items-center justify-center max-md:w-full">
+            <YouTube videoId="1nr9EuSeQN8" opts={opts} onReady={onReady} />
           </div>
         </div>
 

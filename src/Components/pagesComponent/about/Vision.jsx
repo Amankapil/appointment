@@ -50,12 +50,10 @@ const Vision = () => {
             </svg> */}
 
             <p className="text-xl font-inter text-[#4D4D4D]  w-[40%] max-lg:w-full mb-8">
-              Our mission is to provide
-              <span className="text-[#000]">
-                instant, meaningful answers
-              </span>{" "}
+              Our mission is to provide{" "}
+              <span className="text-[#000]">instant, meaningful answers</span>{" "}
               to troubling questions, offering clarity and peace of mind.
-              Prashna Siddhi is designed to
+              Prashna Siddhi is designed to{" "}
               <span className="text-[#000]">help people move forward</span> by
               addressing critical life concerns that impact their
               <span className="text-[#000]">

@@ -366,15 +366,15 @@ const Spirituality = () => {
                 {" "}
                 Zodiac is not just a celestial map
               </span>{" "}
-              but a divine guide reinforcing the Doctrine of Karma. Our
+              but a divine guide reinforcing the Doctrine of Karma. Our{" "}
               <span className="text-[#000]">
                 past actions shape our present{" "}
               </span>{" "}
-              and unless one is destined to meet a
-              <span className="text-[#000]"> spiritual master</span>
-              the cycle of transmigration continues. Astrology should never
-              <span className="text-[#000]"> fuel ambition or greed</span>
-              but guide individuals toward
+              and unless one is destined to meet a{" "}
+              <span className="text-[#000]"> spiritual master</span> the cycle
+              of transmigration continues. Astrology should never
+              <span className="text-[#000]"> fuel ambition or greed</span> but
+              guide individuals toward
               <span className="text-[#000]">
                 {" "}
                 righteous living and acceptance of destiny

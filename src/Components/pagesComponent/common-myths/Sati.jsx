@@ -102,8 +102,8 @@ const Sati = () => {
               </svg>
             </div>
             <p className="text-xl font-inter text-[#4D4D4D] mb8 w-3/4 max-md:w-full ">
-              In a <span className="text-[#000]"> a 60-year lifespan, </span>
-              person will experience
+              In a <span className="text-[#000]"> 60-year lifespan, </span>
+              person will experience{" "}
               <span className="text-[#000]">
                 two cycles of Sade Sati (totaling 15 years).
               </span>
@@ -134,7 +134,7 @@ const Sati = () => {
                 {" "}
                 Sade Sati were always negative,
               </span>
-              wouldn’t
+              wouldn’t{" "}
               <span className="text-[#000]">
                 one-fourth of life be doomed?{" "}
               </span>

@@ -113,7 +113,7 @@ export async function POST(request) {
 
     // Example date
 
-    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
+    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
     //   subject: "Session Confirm with Enlighten-mind",
@@ -122,7 +122,7 @@ export async function POST(request) {
     const res = await client.messages.create({
       body: message,
       from: `whatsapp:${twilioPhoneNumber}`,
-      to: `whatsapp:+${phone}`,
+      to: `whatsapp:+917259691375`,
     });
     console.log("whatapp response", res);
     await sendEmail({

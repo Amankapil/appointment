@@ -3,7 +3,20 @@
 import { useState } from "react";
 import img from "./assets/Group 223.png";
 import Image from "next/image";
+import YouTube from "react-youtube";
 export default function Meditation() {
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1, // Auto play the video
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.pauseVideo(); // Pause the video when ready
+  };
+
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -32,12 +45,14 @@ export default function Meditation() {
       <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <div className="w-[50%] max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w-[100%]  text-center">
-            We <span className="text-[#000]"> strongly believe</span> that the
+            We <span className="text-[#000]"> strongly believe </span> that the
             <span className="text-[#000]">
+              {" "}
               most powerful remedy is sincere prayer and meditation—
             </span>{" "}
             the path followed by
             <span className="text-[#000]">
+              {" "}
               saints and mystics across the world.
             </span>{" "}
           </p>
@@ -140,10 +155,13 @@ export default function Meditation() {
         </h1>
       </div>
 
-      <div className="img h-[500px] max-md:h-full bg-[#4D4D4D]">
-        {/* <Image src={} alt="j"/> */}
-        video
+      <div className="bg-white flex items-center justify-center max-md:w-full">
+        <YouTube videoId="Mrs07MGvzFY" opts={opts} onReady={onReady} />
       </div>
+
+      {/* <div className="img h-[500px] max-md:h-full bg-[#4D4D4D]">
+        video
+      </div> */}
     </div>
   );
 }
