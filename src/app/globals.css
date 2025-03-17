@@ -59,9 +59,9 @@ select {
     padding: 17px;
     height: 40px !important;
   }
-  iframe {
+  /* iframe {
     width: 100% !important;
-  }
+  } */
 }
 @media (min-width: 1800px) and (max-width: 2000px) {
   .big-text {
@@ -115,6 +115,8 @@ select {
   .tcircle::before {
     width: 0%;
   }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
 @media (min-width: 2100px) and (max-width: 2600px) {

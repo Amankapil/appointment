@@ -48,7 +48,7 @@ export default function HeroEn() {
         {/* <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
           Unlock the True Power of Astrology
         </h1> */}
-        <div className="img w-[500px] h-[300px] max-md:w-full">
+        <div className="img w-[500px] h-[300px] max-md:h-full max-md:w-full">
           <Image className="pb-10" src={img2} alt="j" />
         </div>
         <div className="w-1/2 max-lg:w-full">

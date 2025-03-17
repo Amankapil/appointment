@@ -20,7 +20,7 @@ export default function Meditation() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           The True Remedy: Prayer & Meditation
         </h1>
         {/* <svg
@@ -61,7 +61,7 @@ export default function Meditation() {
       </div>
 
       <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
-        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
+        <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6 max-md:mb-0">
           Key Spiritual Insights:
         </h1>
         <div className="w-1/2 max-lg:w-full">

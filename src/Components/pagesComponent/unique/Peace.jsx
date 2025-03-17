@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 export default function Peace() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E] p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[60px] text-[#4D4D4D] text-center font-salernomi w-[70%] max-lg:w-full font-normal mb-6">
           Take the First Step Toward Clarity & Peace
@@ -29,7 +29,7 @@ export default function Peace() {
         </div>
         <div className="mt-0 w-[50%] max-lg:w-full">
           <div className="img h[500px] max-md:h-full">
-            <Image className="pb-10" src={img} alt="j" />
+            <Image className="pb-10 max-md:pb-0" src={img} alt="j" />
           </div>
         </div>
       </div>

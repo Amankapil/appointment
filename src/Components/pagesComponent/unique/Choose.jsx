@@ -45,9 +45,9 @@ export default function Choose() {
           </h3> */}
 
           {/* Toggle Switch */}
-          <div className="flex justify-center flex-col items-center mt-3">
-            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
-              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+          <div className="flex justify-center flex-col items-center mt-3 max-md:mt-0">
+            <div className="border absolute left-[7px]  max-md:left-[0px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px]  max-md:left-0 -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
             </div>
           </div>
 
@@ -70,9 +70,9 @@ export default function Choose() {
           </h3> */}
 
           {/* Toggle Switch */}
-          <div className="flex justify-center flex-col items-center mt-3">
-            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
-              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+          <div className="flex justify-center flex-col items-center mt-3 max-md:mt-0">
+            <div className="border absolute left-[7px] max-md:left-0 top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] max-md:left-0 -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
             </div>
           </div>
 
@@ -95,9 +95,9 @@ export default function Choose() {
           </h3> */}
 
           {/* Toggle Switch */}
-          <div className="flex justify-center flex-col items-center mt-3">
-            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
-              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+          <div className="flex justify-center flex-col items-center mt-3 max-md:mt-0">
+            <div className="border absolute left-[7px] max-md:left-0 top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] max-md:left-0 -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
             </div>
           </div>
 
@@ -120,9 +120,9 @@ export default function Choose() {
           </h3> */}
 
           {/* Toggle Switch */}
-          <div className="flex justify-center flex-col items-center mt-3">
-            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
-              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+          <div className="flex justify-center flex-col items-center mt-3 max-md:mt-0">
+            <div className="border absolute left-[7px] max-md:left-0 top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] max-md:left-0 -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
             </div>
           </div>
 
@@ -145,9 +145,9 @@ export default function Choose() {
           </h3> */}
 
           {/* Toggle Switch */}
-          <div className="flex justify-center flex-col items-center mt-3">
-            <div className="border absolute left-[7px] top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
-              <div className="border absolute left-[7px] -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
+          <div className="flex justify-center flex-col items-center mt-3 max-md:mt-0">
+            <div className="border absolute left-[7px] max-md:left-0 top-[16px]  w-[598px] h-[160px] max-md:w-full rounded-[24px] one border-[#c49b6d] p-2">
+              <div className="border absolute left-[7px] max-md:left-0 -top-[10px] tw w-[582px] h-[176px] max-md:w-full rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
             </div>
           </div>
 

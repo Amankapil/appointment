@@ -4,8 +4,8 @@ import img from "./assets/image 10.png";
 
 const Rahu = () => {
   return (
-    <div className="manin bg max-w-7xl mx-auto py-20">
-      <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
+    <div className="manin bg max-w-7xl mx-auto py-20 max-md:py-5">
+      <div className="head max-md:flex-wrap max-md:justify-center max-md:p-5 flex items-center justify-start gap-4">
         <div className="icon">
           <svg
             width="116"
@@ -30,7 +30,7 @@ const Rahu = () => {
             />
           </svg>
         </div>
-        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Rahu – The Most Misunderstood Shadow Planet
         </h1>
       </div>

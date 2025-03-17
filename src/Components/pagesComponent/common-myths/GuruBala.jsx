@@ -30,7 +30,7 @@ const GuruBala = () => {
             />
           </svg>
         </div>
-        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Guru Bala – Does Jupiter’s Absence Mean Trouble?
         </h1>
       </div>

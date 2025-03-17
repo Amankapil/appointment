@@ -13,7 +13,7 @@ const Divine = () => {
     <>
       <div className="bg-[#fff] pt-10">
         <div className="heading flex flex-col items-center justify-center">
-          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
+          <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             The Role of Divine Intelligence (DI) in Guidance
           </h1>
           <svg
@@ -78,7 +78,7 @@ const Divine = () => {
         </div>
       </div>
 
-      <div className="flex items-center flex-ol   justify-center text-center my-4">
+      <div className="flex items-center flex-ol  max-md:hidden justify-center text-center my-4">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

@@ -5,7 +5,7 @@ import img from "./assets/image 30.png";
 import Image from "next/image";
 export default function Medical() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E] p-10 max-md:p-4">
       <div className="img h-[500px] max-md:h-full flex items-center justify-center">
         <Image className="pb-10" src={img} alt="j" />
       </div>
@@ -24,7 +24,7 @@ export default function Medical() {
           </p>
         </div>
       </div>
-      <div className="heading flex mb-10 flex-col items-center justify-center">
+      <div className="heading flex mb-10 flex-col max-md:hidden items-center justify-center">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

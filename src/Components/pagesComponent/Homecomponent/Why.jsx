@@ -125,7 +125,7 @@ const Why = () => {
             }}
             className=" flex items-center justify-center w-[680px] h-[680px] circlethretwo max-md:w-full max-md:h-full   max-md:p-10 border border-[#AC8C60] rounded-full bg-white"
           >
-            <p className="text-[20px] text-[#4D4D4D] text-center px-6">
+            <p className="text-[20px] text-[#4D4D4D] text-center px-6  max-md:px-0">
               This universal cosmic law governs human destiny—while astrology
               can guide you, it cannot alter fate. An astrologer's role is to
               help you{" "}

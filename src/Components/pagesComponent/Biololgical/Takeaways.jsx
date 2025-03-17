@@ -47,7 +47,7 @@ const Takeaways = () => {
         </div>
       </div>
 
-      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
+      <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter max-md:hidden gap-10 justify-center items-start my-10 ">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

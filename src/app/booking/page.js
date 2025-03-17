@@ -595,7 +595,7 @@ export default function MultiStepForm() {
                 Your essential details for a personalized consultation.
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-7 max-md:grid-cols-2 booking-form">
+            <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1 booking-form">
               <label className="text-[16px]">
                 Full Name *
                 <input
@@ -686,19 +686,19 @@ export default function MultiStepForm() {
 
               <label className="relative flex items-start justify-center flex-col">
                 Time of Birth*
-                <div className="flex justify-center items-center">
+                <div className="flex justify-center items-center max-md:w-full">
                   <input
                     name="timeOfBirth"
                     type="time"
                     value={formData.timeOfBirth}
                     onChange={handleChange}
-                    className="border p-2 rounded wfull border-[#E4E4E4] ml-2  w-[240px]"
+                    className="border p-2 rounded wfull border-[#E4E4E4] ml-2 max-md:ml-0  w-[240px] max-md:w-full"
                   />
                   <span className="ml-2 relative group">
                     <span className="text-gray-400 cursor-pointer border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center">
                       i
                     </span>
-                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 max-md:w-full p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
                       If unsure of birth time, enter an estimated time.
                     </span>
                   </span>
@@ -966,7 +966,7 @@ export default function MultiStepForm() {
         )}
 
         <div
-          className={`mt-6 flex ${
+          className={`mt-6 flex max-md:flex-col max-md:gap-6 ${
             currentStep === 0 ? "justify-center" : "justify-between"
           }`}
         >

@@ -6,7 +6,7 @@ import img from "./assets/image 25.png";
 import Image from "next/image";
 export default function Honest() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E]  p-10 max-md:p-4">
       {/* <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           What Makes PrashnaSiddhi Truly Unique?
@@ -48,7 +48,7 @@ export default function Honest() {
           </p>
         </div>
       </div>
-      <div className="heading flex mb-10 flex-col items-center justify-center">
+      <div className="heading flex mb-10 flex-col items-center justify-center max-lg:hidden">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

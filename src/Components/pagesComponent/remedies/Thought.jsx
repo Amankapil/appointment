@@ -9,7 +9,7 @@ import img from "../serviceComponent/assets/Group 161.png";
 import Image from "next/image";
 export default function Thought() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-lg:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Final Thought
@@ -25,7 +25,7 @@ export default function Thought() {
           ].map((text, index) => (
             <div
               key={index}
-              className="w60 flex items-center justify-center text-center h-[500px] w-[400px] max-md:w-full  bg-contain bg-no-repeat text-black p-4 bg-center"
+              className="w60 flex items-center justify-center text-center h-[500px] max-md:h-[300px] w-[400px] max-md:w-full  bg-contain bg-no-repeat text-black p-4 bg-center"
               style={{ backgroundImage: "url('/images/Group 106.png')" }}
             >
               <p className="text-[20px] font-inter font-medium">{text}</p>
@@ -38,7 +38,7 @@ export default function Thought() {
         imge
       </div> */}
 
-      <div className="flex flexcol items-center justify-between  bg-white p-8">
+      <div className="flex flexcol items-center justify-between  bg-white p-8 max-md:flex-col max-md:p-3">
         <svg
           width="80"
           height="80"

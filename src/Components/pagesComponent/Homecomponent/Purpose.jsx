@@ -11,7 +11,7 @@ const Purpose = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20">
+      <div className="bg-[#fff] py-20 max-md:pt-10 max-md:pb-0">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Our Purpose
@@ -48,7 +48,7 @@ const Purpose = () => {
           </div>
           <svg
             width="1248"
-            className="mt-10 max-xl:w-full"
+            className="mt-10 max-xl:w-full max-md:mt-5"
             height="36"
             viewBox="0 0 1248 36"
             fill="none"
@@ -66,7 +66,7 @@ const Purpose = () => {
             <path d="M9 18L581 18.0001" stroke="#D8D1C7" strokeWidth="2" />
           </svg>
 
-          <div className="flex items-center karma gap-20 flex-col w-[60%] max-md:w-full mt-20  justify-center text-center max-md:h-full max-md:p-10">
+          <div className="flex items-center karma gap-20 flex-col w-[60%] max-md:w-full mt-20  justify-center text-center max-md:h-full max-md:p-10 max-md:mt-5">
             <h1 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
               “If you don’t believe in the Karma Theory, ask yourself this – Did
               you choose your parents, or did they choose you?”

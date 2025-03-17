@@ -6,16 +6,16 @@ const Footer = () => {
   return (
     <footer className="bg-[#F0EDE9] text-black mt-16 pt-16 h[620px]">
       <div className="container mx-auto max-lg:p-4">
-        <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-md:items-center  max-md:justify-center gap-10">
+        <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-lg:items-center  max-lg:justify-center gap-10">
           {/* Left Section */}
-          <div className="flex flex-col items-center md:items-start w-[35%] max-lg:w-full max-md:pb-10">
+          <div className="flex flex-col items-start max-lg:items-center  w-[35%] max-lg:w-full max-md:pb-10">
             <Link href="/" className="flex items-center justify-center gap-2">
               <Image src={logo} alt="kl" />
               <span className="font-salernomi text-[#322F41] text-[44px] max-md:text-[30px]">
                 Prashna Siddhi
               </span>
             </Link>
-            <p className="text-[16px] text-[#4C4C4C] font-inter font-normal my-4 w-3/4 max-md:w-full">
+            <p className="text-[16px] text-[#4C4C4C] font-inter font-normal  max-lg:text-center my-4 w-3/4 max-md:w-full">
               Unlock answers with Vedic astrology. Gain clarity and guidance for
               life's questions.
             </p>
@@ -133,7 +133,7 @@ const Footer = () => {
             </button> */}
             <Link
               href="https://www.google.com/search?q=K+Jagadish,+Prashnasiddhi&stick=H4sIAAAAAAAA_-NgU1I1qDBOSkw1TjM3NzK3ME1JNE-yMqiwBPJSjYwTU1It00wNDCwXsUp6K3glpiemZBZn6CgEFCUWZ-QlFmempGRkAgAFID7hRQAAAA&hl=en&mat=CW1OGe_z74SDElcBmzl_paeUQgv2vTQACzC1WC0Z0evYu1sIbfuz6vuRnFlurXmdqzOJoEainICk_6OrhpTLTZTcbt35mN2ULjl6I8_LyCRjuVyJtLt9RvhuoWC3o2IjEFg&authuser=0#mpd=~9476963346861870701/customers/reviews"
-              className="flex items-start w-[70%] gap-1"
+              className="flex items-start w-[70%] max-lg:w-full gap-1"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

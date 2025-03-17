@@ -30,7 +30,7 @@ const Sati = () => {
             />
           </svg>
         </div>
-        <h1 className="text-[56px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-left font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Sade Sati – Does It Really Mean 7.5 Years of Hardship?
         </h1>
       </div>
@@ -53,7 +53,7 @@ const Sati = () => {
         </div>
       </div>
       <div className="breaking mt-10">
-        <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
+        <h1 className="text-[40px]  text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Breaking the Myth
         </h1>
 

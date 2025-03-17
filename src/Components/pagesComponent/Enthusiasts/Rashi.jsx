@@ -9,7 +9,7 @@ export default function Rashi() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[56px] text-[#4D4D4D] text-center font-salernomi w-[50%] max-lg:w-full font-normal mb-6">
+        <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[50%] max-lg:w-full font-normal mb-6">
           Moon Sign (Rashi) – A Commercial Myth?
         </h1>
         <svg
@@ -260,7 +260,7 @@ export default function Rashi() {
         <br />
       </div>
 
-      <div className="heading flex mb-10 flex-col items-center justify-center">
+      <div className="heading flex mb-10 max-md:hidden flex-col items-center justify-center">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

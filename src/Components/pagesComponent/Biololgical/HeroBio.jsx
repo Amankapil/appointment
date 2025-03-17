@@ -8,7 +8,7 @@ export default function HeroBio() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Astrology and Biological Growth: A Deeper Insight
         </h1>
         <svg

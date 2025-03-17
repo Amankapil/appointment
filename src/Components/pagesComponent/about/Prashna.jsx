@@ -13,12 +13,12 @@ const Prashna = () => {
     <>
       <div className="bg-[#fff] pt-20">
         <div className="heading flex flex-col items-center justify-center">
-          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
+          <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             What is Prashna Jyotishya?
           </h1>
 
-          <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10">
-            <Image className="pb-10" src={img} alt="j" />
+          <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10 max-md:pb-0">
+            <Image className="pb-10 max-md:pb-0" src={img} alt="j" />
           </div>
           {/* <Image src={img} alt="jflas" /> */}
           <div className="flex items-center flex-col w-1/2 max-lg:w-full  justify-center text-center my-10">

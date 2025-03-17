@@ -10,9 +10,9 @@ const Spirituality = () => {
 
   return (
     <>
-      <div className="bg-[#fff] pt-20">
+      <div className="bg-[#fff] pt-20 max-md:pt-5">
         <div className="heading flex flex-col items-center justify-center">
-          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
+          <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Why Astrology Must Be Linked to Spirituality
           </h1>
           <svg
@@ -346,7 +346,7 @@ const Spirituality = () => {
             </svg>
           </div>
           {/* <Image src={img} alt="jflas" /> */}
-          <div className="flex items-center flex-ol   justify-center text-center my-16">
+          <div className="flex items-center flex-ol   justify-center text-center my-16 max-md:my-0">
             <svg
               width="120"
               height="120"
@@ -397,7 +397,7 @@ const Spirituality = () => {
         </div>
       </div>
 
-      <div className="flex items-center flex-ol   justify-center text-center my-4">
+      <div className="flex items-center flex-ol max-md:hidden   justify-center text-center my-4">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

@@ -18,7 +18,7 @@ const Message = () => {
 
   return (
     <>
-      <div className="manin bg max-w-7xl mx-auto py-20">
+      <div className="manin bg max-w-7xl mx-auto py-20 max-md:py-5">
         <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
           <div className="icon">
             <svg
@@ -162,7 +162,7 @@ const Message = () => {
           </div>
         </div>
       </div>
-      <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
+      <div className="flex items-center flex-col w-[100%] mt-8 max-md:hidden justify-center text-center">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"

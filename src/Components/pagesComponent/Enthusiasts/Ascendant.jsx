@@ -7,7 +7,7 @@ export default function Ascendant() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center max-lg:flex-col">
-        <h1 className="text-[56px] text-[#4D4D4D] text-center font-salernomi w-[50%] max-lg:w-full font-normal mb-6">
+        <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[50%] max-lg:w-full font-normal mb-6">
           Lagna (Ascendant) – The True Key to Your Destiny
         </h1>
         <svg
@@ -137,7 +137,7 @@ export default function Ascendant() {
         </div>
       </div>
 
-      <div className="heading flex mb-10 flex-col items-center justify-center">
+      <div className="heading flex mb-10 flex-col max-md:hidden items-center justify-center">
         <svg
           width="1248"
           className="mt-10 max-xl:w-full"
