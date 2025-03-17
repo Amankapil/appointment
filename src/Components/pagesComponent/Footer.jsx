@@ -161,7 +161,7 @@ const Footer = () => {
                 ></path>
               </svg>
 
-              <span className="underline">
+              <span className="underline review">
                 Why people trust K Jagadish of Prashna Siddhi
               </span>
             </Link>
