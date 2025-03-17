@@ -261,7 +261,9 @@ const Qa = () => {
         {isOpen && (
           <div className="fixed max-md:overflow-scroll terms max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">
             <div className="bg-[#F5F0EB] text-gray-800 p-8 rounded-lg w-[90%] max-w-3xl shadow-lg border border-gray-300">
-              <h2 className="text-xl font-semibold text-center">Disclaimer</h2>
+              <h2 className="text-xl font-semibold text-center desc-h1">
+                Disclaimer
+              </h2>
               <div className="text-center flex items-center justify-center mt-3 text-gray-500">
                 <svg
                   width="30"
@@ -281,9 +283,9 @@ const Qa = () => {
 
               <div className="mt-4 space-y-4 text-sm text-gray-700">
                 <div>
-                  <h3 className="font-salernomi text-[#4D4D4D] text-[18px] text-center">
+                  <h5 className="font-salernomi text-[#4D4D4D] text-[18px] disclaimer-h1 disclaimer-h1 text-center">
                     Astrological Guidance & Interpretation
-                  </h3>
+                  </h5>
                   <p className="font-inter text-[14px]text-[#4D4D4D] text-center ">
                     All insights provided on this website are based on{" "}
                     <span className="text-[#101010]">
@@ -307,9 +309,9 @@ const Qa = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-salernomi text-[#4D4D4D] text-[18px] text-center">
+                  <h5 className="font-salernomi text-[#4D4D4D] text-[18px] disclaimer-h1 text-center">
                     Personal Testimonials & Experiences
-                  </h3>
+                  </h5>
                   <p className="font-inter text-[14px]text-[#4D4D4D] text-center ">
                     Client testimonials and opinions shared on this website
                     reflect{" "}
@@ -326,9 +328,9 @@ const Qa = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-salernomi text-[#4D4D4D] text-[18px] text-center">
+                  <h5 className="font-salernomi text-[#4D4D4D] text-[18px] disclaimer-h1 text-center">
                     Professional Decision-Making
-                  </h3>
+                  </h5>
                   <p className="font-inter text-[14px]text-[#4D4D4D] text-center ">
                     The guidance, hints, and tips provided here are intended for
                     <span className="text-[#101010]">
@@ -347,9 +349,9 @@ const Qa = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-salernomi text-[#4D4D4D] text-[18px] text-center">
+                  <h5 className="font-salernomi text-[#4D4D4D] text-[18px] disclaimer-h1 text-center">
                     Accuracy & Limitations
-                  </h3>
+                  </h5>
                   <p className="font-inter text-[14px]text-[#4D4D4D] text-center ">
                     No astrologer, no matter how experienced, can{" "}
                     <span className="text-[#101010]">
@@ -368,9 +370,9 @@ const Qa = () => {
                 </div>
 
                 <div>
-                  <h3 className="font-salernomi text-[#4D4D4D] text-[18px] text-center">
+                  <h5 className="font-salernomi text-[#4D4D4D] text-[18px] disclaimer-h1 text-center">
                     No Inducement or Persuasion
-                  </h3>
+                  </h5>
                   <p className="font-inter text-[14px]text-[#4D4D4D] text-center ">
                     We do not intend to{" "}
                     <span className="text-[#101010]">

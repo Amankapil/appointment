@@ -29,7 +29,6 @@
     background-size: 98%;
     width: 31%;
   }
-
 }
 @media (min-width: 2100px) and (max-width: 2600px) {
   .price-section {
@@ -50,5 +49,13 @@
   .price1 {
     background-size: 98%;
     width: 29%;
+  }
+
+  .terms {
+    overflow: scroll;
+    padding-top: 44%;
+  }
+  h5 {
+    font-size: 40px;
   }
 }

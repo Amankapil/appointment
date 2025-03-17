@@ -23,6 +23,21 @@ const Why = () => {
           <div className="absolute bottom-2 right-2 w-2 h-2 bg-black rounded-full"></div> */}
         </div>
       </div>
+
+      <svg
+        width="24"
+        height="112"
+        viewBox="0 0 24 112"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="12" cy="4" r="4" fill="#AC8C60" />
+        <circle cx="12" cy="22" r="6" fill="#AC8C60" />
+        <circle cx="12" cy="44" r="8" fill="#AC8C60" />
+        <circle cx="12" cy="70" r="10" fill="#AC8C60" />
+        <circle cx="12" cy="100" r="12" fill="#AC8C60" />
+      </svg>
+
       {/* Second Circle */}
       <div className=" flex items-center justify-center max-md:flex-col">
         <div>
@@ -54,6 +69,20 @@ const Why = () => {
           <Image src={img2} alt="" />
         </div>
       </div>
+
+      <svg
+        width="24"
+        height="112"
+        viewBox="0 0 24 112"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="12" cy="4" r="4" fill="#AC8C60" />
+        <circle cx="12" cy="22" r="6" fill="#AC8C60" />
+        <circle cx="12" cy="44" r="8" fill="#AC8C60" />
+        <circle cx="12" cy="70" r="10" fill="#AC8C60" />
+        <circle cx="12" cy="100" r="12" fill="#AC8C60" />
+      </svg>
       {/* Third Section with Two Circles */}
       <div className="tcircle w-full flex items-center justify-center">
         <div

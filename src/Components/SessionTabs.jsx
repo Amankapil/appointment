@@ -152,6 +152,8 @@ const SessionList = ({ sessions, label, countdowns = {} }) => {
     return <p className="text-gray-500">No {label} sessions.</p>;
   }
 
+  const [isOpen, setIsOpen] = useState(false);
+
   //   console.log(sessions);
   return (
     <ul className="space-y-2">
@@ -170,10 +172,41 @@ const SessionList = ({ sessions, label, countdowns = {} }) => {
                 alt="Horoscope Image"
                 width={200}
                 height={200}
+                onClick={() => setIsOpen(true)}
               />
             ) : (
               <p>No image available</p>
             )}{" "}
+            {/* <p className="flex items-center font-bold">
+              Horoscope:{" "}
+              <Image
+                src={client?.filePath}
+                alt=""
+                width={200}
+                height={200}
+                className="cursor-pointer ml-2"
+                onClick={() => setIsOpen(true)}
+              />
+            </p> */}
+            {isOpen && (
+              <div className="fixed inset-0  bg-[#fff] bg-opacity80 flex items-center justify-center z-50">
+                <div className="relative">
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="absolute top-2 right-2 cursor-pointer bg-white text-black rounded-full w-8 h-8 flex items-center justify-center font-bold z-50"
+                  >
+                    ✕
+                  </button>
+                  <Image
+                    src={`${session.filePath}`}
+                    alt="Horoscope"
+                    width={800}
+                    height={800}
+                    // className="max-w-full max-h-screen object-contain"
+                  />
+                </div>
+              </div>
+            )}
           </div>
           {label === "Upcoming" && (
             <p className="text-green-600 font-semibold">

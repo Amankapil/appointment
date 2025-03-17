@@ -673,7 +673,7 @@ export default function MultiStepForm() {
                 />
                 {/* <DatePicker onChange={handleChange} />; */}
               </label>
-              <label>
+              {/* <label>
                 Time of Birth *
                 <input
                   name="timeOfBirth"
@@ -682,7 +682,29 @@ export default function MultiStepForm() {
                   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
+              </label> */}
+
+              <label className="relative flex items-start justify-center flex-col">
+                Time of Birth*
+                <div className="flex justify-center items-center">
+                  <input
+                    name="timeOfBirth"
+                    type="time"
+                    value={formData.timeOfBirth}
+                    onChange={handleChange}
+                    className="border p-2 rounded wfull border-[#E4E4E4] ml-2  w-[240px]"
+                  />
+                  <span className="ml-2 relative group">
+                    <span className="text-gray-400 cursor-pointer border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center">
+                      i
+                    </span>
+                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                      If unsure of birth time, enter an estimated time.
+                    </span>
+                  </span>
+                </div>
               </label>
+
               <label>
                 Gender *
                 <select
@@ -943,11 +965,19 @@ export default function MultiStepForm() {
           </h2>
         )}
 
-        <div className="mt-6 flex justify-between">
+        <div
+          className={`mt-6 flex ${
+            currentStep === 0 ? "justify-center" : "justify-between"
+          }`}
+        >
           {currentStep > 0 && (
             <button
               onClick={prevStep}
-              className="px-8 py-2 border border-[#E4E4E4] bggray-500 text-black w] rounded"
+              className={`px-8 py-2 border border-[#E4E4E4] text-black rounded ${
+                currentStep === 2
+                  ? "bg-[#4597F8] text-white text-lg font-bold px-12 py-3"
+                  : ""
+              }`}
             >
               {currentStep === 2
                 ? loading
@@ -956,13 +986,18 @@ export default function MultiStepForm() {
                 : "Back"}
             </button>
           )}
+
           {currentStep < steps.length - 1 && (
             <button
               onClick={nextStep}
               disabled={loading}
               className="px-10 py-2 bg-[#4597F8] text-white rounded flex items-center justify-center gap-2"
             >
-              {latloading ? "Fetching latitude" : "Next"}{" "}
+              {currentStep === 2
+                ? "Checkout for Payment"
+                : latloading
+                ? "Fetching latitude"
+                : "Next"}{" "}
               <svg
                 width="21"
                 height="20"
@@ -982,6 +1017,12 @@ export default function MultiStepForm() {
           )}
         </div>
       </div>
+
+      {loading && (
+        <div className="fixed inset-0 bg-[#00000065] bg-opacity-80 flex items-center justify-center z-50">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-white border-opacity-75"></div>
+        </div>
+      )}
     </>
   );
 }

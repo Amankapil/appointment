@@ -7,6 +7,8 @@ const Clients = () => {
   const [clients, setClients] = useState([]);
   const [expandedIndex, setExpandedIndex] = useState(null);
 
+  const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -94,7 +96,7 @@ const Clients = () => {
                   <p>City: {client.city}</p>
                   <p>Latitude: {client.latitude || "---"}</p>
                   <p>Longitude: {client.longitude || "---"}</p>
-                  <p className="flex items-center font-bold">
+                  {/* <p className="flex items-center font-bold">
                     Horodcope:{" "}
                     <Image
                       src={client?.filePath}
@@ -102,7 +104,39 @@ const Clients = () => {
                       width={200}
                       height={200}
                     />
+                  </p> */}
+
+                  <p className="flex items-center font-bold">
+                    Horoscope:{" "}
+                    <Image
+                      src={client?.filePath}
+                      alt=""
+                      width={200}
+                      height={200}
+                      className="cursor-pointer ml-2"
+                      onClick={() => setIsOpen(true)}
+                    />
                   </p>
+
+                  {isOpen && (
+                    <div className="fixed inset-0 bg-[#fff] bg-opacity-80 flex items-center justify-center z-50">
+                      <div className="relative">
+                        <button
+                          onClick={() => setIsOpen(false)}
+                          className="absolute top-4 -right-8 bg-black cursor-pointer text-white rounded-full w-8 h-8 flex items-center justify-center font-bold z-50"
+                        >
+                          ✕
+                        </button>
+                        <Image
+                          src={client?.filePath}
+                          alt="Horoscope"
+                          width={800}
+                          height={800}
+                          // className="max-w-full max-h-screen object-contain"
+                        />
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Personal Information */}

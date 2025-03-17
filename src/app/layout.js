@@ -34,6 +34,7 @@ import FoooterSwitcher from "@/Components/FoooterSwitcher";
 import { ToastContainer } from "react-toastify";
 import Head from "next/head";
 import Script from "next/script";
+import Image from "next/image";
 
 export const metadata = {
   title: "Prashna Siddhi",
@@ -76,6 +77,19 @@ export default function RootLayout({ children }) {
         </div>
         <NavbarSwitcher />
         {children}
+
+        <a
+          href="https://wa.me/1234567890?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+          target="_blank"
+          class="fixed bottom-4 right-4 z-50 bg-green-500 rounded-full p-4 shadow-lg hover:scale-110 transition-transform duration-200 md:p-5"
+        >
+          <Image
+            src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+            alt="WhatsApp"
+            class="w-8 h-8 md:w-10 md:h-10"
+          />
+        </a>
+
         <FoooterSwitcher />
       </body>
     </html>

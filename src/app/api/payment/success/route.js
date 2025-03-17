@@ -109,12 +109,13 @@ export async function POST(request) {
     }
     await transaction.save();
     // Prepare WhatsApp message
-    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nTransaction ID: ${txnid}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHorodcope URL: ${filePath}`;
+    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nTransaction ID: ${txnid}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
     const res = await client.messages.create({
       body: message,
       from: `whatsapp:${twilioPhoneNumber}`,
-      to: `whatsapp:${phone}`,
+      mediaUrl: [filePath],
+      to: `whatsapp:+917259691375`,
     });
 
     console.log("whatapp response", res);
