@@ -35,6 +35,7 @@ import { ToastContainer } from "react-toastify";
 import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
+import whatsapp from "../../public/whatsapp.svg";
 
 export const metadata = {
   title: "Prashna Siddhi",
@@ -79,14 +80,16 @@ export default function RootLayout({ children }) {
         {children}
 
         <a
-          href="https://wa.me/1234567890?text=Hello,%20I%20would%20like%20to%20inquire%20about%20your%20services."
+          href="https://wa.me/7259691375?text=Got,%20a%20question?%20WhatsApp%20me%20now!%20K%20Jagadish,%20Astrologer."
           target="_blank"
-          class="fixed bottom-4 right-4 z-50 bg-green-500 rounded-full p-4 shadow-lg hover:scale-110 transition-transform duration-200 md:p-5"
+          className="fixed bottom-4 right-4 z-50  rounded-full p-2  hover:scale-110 transition-transform duration-200 md:p-5"
         >
           <Image
-            src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+            src={whatsapp}
             alt="WhatsApp"
-            class="w-8 h-8 md:w-10 md:h-10"
+            width={50}
+            height={50}
+            className="w-8 h-8 md:w-10 md:h-10"
           />
         </a>
 
