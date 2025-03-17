@@ -95,7 +95,7 @@ const Footer = () => {
               Contact
             </h3>
 
-            <p className="mb-4 flex items-center gap-2">
+            <span className="mb-4 flex items-center gap-2">
               <svg
                 width="16"
                 height="16"
@@ -109,8 +109,8 @@ const Footer = () => {
                 />
               </svg>
               +91 7259691375
-            </p>
-            <p className="mb-4 flex items-center gap-2">
+            </span>
+            <span className="mb-4 flex items-center gap-2">
               <svg
                 width="16"
                 height="16"
@@ -127,12 +127,12 @@ const Footer = () => {
                 />
               </svg>
               jagadish.k48@gmail.com
-            </p>
+            </span>
             {/* <button className="bg-black font-salernomi text-white px-4 py-2 rounded-md hover:bg-gray-800">
               <Link href="/Disclaimer">Disclaimer</Link>
             </button> */}
             <Link
-              href="https://g.page/r/CQlQn9464nKXEBM/review"
+              href="https://www.google.com/search?q=K+Jagadish,+Prashnasiddhi&stick=H4sIAAAAAAAA_-NgU1I1qDBOSkw1TjM3NzK3ME1JNE-yMqiwBPJSjYwTU1It00wNDCwXsUp6K3glpiemZBZn6CgEFCUWZ-QlFmempGRkAgAFID7hRQAAAA&hl=en&mat=CW1OGe_z74SDElcBmzl_paeUQgv2vTQACzC1WC0Z0evYu1sIbfuz6vuRnFlurXmdqzOJoEainICk_6OrhpTLTZTcbt35mN2ULjl6I8_LyCRjuVyJtLt9RvhuoWC3o2IjEFg&authuser=0#mpd=~9476963346861870701/customers/reviews"
               className="flex items-start w-[70%] gap-1"
             >
               <svg
@@ -161,9 +161,9 @@ const Footer = () => {
                 ></path>
               </svg>
 
-              <p className="underline">
+              <span className="underline">
                 Why people trust K Jagadish of Prashna Siddhi
-              </p>
+              </span>
             </Link>
           </div>
         </div>

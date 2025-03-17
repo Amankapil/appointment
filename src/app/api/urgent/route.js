@@ -113,7 +113,7 @@ export async function POST(request) {
 
     // Example date
 
-    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone: +91${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
     //   subject: "Session Confirm with Enlighten-mind",
