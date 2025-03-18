@@ -100,7 +100,7 @@ const PricingSection = () => {
                 {isUSD ? `$35` : `₹1000`}
               </span>
               <p className="text-sm text-gray-600">
-                {isUSD ? " / Overseas Clients" : " / Residents Indians"}
+                {isUSD ? " / Overseas Clients" : " / Resident Indians"}
               </p>
             </div>
 
@@ -221,7 +221,7 @@ const PricingSection = () => {
                 {isUSD2 ? `$55` : `₹2000`}
               </span>
               <p className="text-sm text-gray-600">
-                {isUSD2 ? " / Overseas Clients" : " / Residents Indians"}
+                {isUSD2 ? " / Overseas Clients" : " / Resident Indians"}
               </p>
             </div>
 
@@ -344,7 +344,7 @@ const PricingSection = () => {
                 {isUSD3 ? `$90` : `₹2500`}
               </span>
               <p className="text-sm text-gray-600">
-                {isUSD3 ? " / Overseas Clients" : " / Residents Indians"}
+                {isUSD3 ? " / Overseas Clients" : " / Resident Indians"}
               </p>
             </div>
 
@@ -594,31 +594,64 @@ const PricingSection = () => {
         </div>
       </div>
 
-      <div className="space-y-4">
-        <div
-          style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
-        >
-          <p className="text-[20px] font-inter text-[#4D4D4D] mb8 w-full p-3 max-md:w-full ">
-            <span className="text-[#000]"> Notice: </span> The duration of
-            Consultation chosen by you refers to the maximum time that can be
-            spent and does not limit the number persons or the number of
-            questions within the maximum time slot chosen by you.
-          </p>
-        </div>
-        <div
-          style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-          className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
-        >
-          <p className="text-[20px] font-inter text-[#4D4D4D] mb8 w-full p-3 max-md:w-full ">
-            <span className="text-[#000]"> Notice: </span> The time may vary
-            despite your indication while efforts will be made to be very close
-            to your indicated convenience. Further, I work between 10 AM and
-            5.30 PM (IST) on all days of the week and consultation is only over
-            telephone after the receipt of your payment
-          </p>
-        </div>
-      </div>
+      {isUSD3 || isUSD || isUSD2 ? (
+        <>
+          <div
+            style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
+            className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+          >
+            <p className="text-[20px] font-inter text-[#4D4D4D] mb8 w-full p-3 max-md:w-full ">
+              <span className="text-[#000]"> Notice: </span>
+              Overseas clients can transfer money to the account specified below
+              thru Xoom, or Remitly. Transfer commission has to be borne by the
+              Payer and amounts shown above is net amount.
+              <br />
+              <br />
+              Bank Account details:
+              <br />
+              K Jagadish
+              <br />
+              ICICI Bank SB Account
+              <br />
+              Number 029601515128
+              <br />
+              Base Branch Rajajinagar,
+              <br />
+              Bangalore, INDIA.
+              <br />
+              IFSC code: ICIC0000296
+            </p>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="space-y-4">
+            <div
+              style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
+              className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            >
+              <p className="text-[20px] font-inter text-[#4D4D4D] mb8 w-full p-3 max-md:w-full ">
+                <span className="text-[#000]"> Notice: </span> The duration of
+                Consultation chosen by you refers to the maximum time that can
+                be spent and does not limit the number persons or the number of
+                questions within the maximum time slot chosen by you.
+              </p>
+            </div>
+            <div
+              style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
+              className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+            >
+              <p className="text-[20px] font-inter text-[#4D4D4D] mb8 w-full p-3 max-md:w-full ">
+                <span className="text-[#000]"> Notice: </span> The time may vary
+                despite your indication while efforts will be made to be very
+                close to your indicated convenience. Further, I work between 10
+                AM and 5.30 PM (IST) on all days of the week and consultation is
+                only over telephone after the receipt of your payment
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 };
