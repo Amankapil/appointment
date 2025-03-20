@@ -8,23 +8,23 @@ import Transaction from "@/models/Transaction";
 import nodemailer from "nodemailer";
 import Availability from "@/models/Availability";
 
-async function sendEmail({ to, subject, text, html }) {
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "prashnadevelop@gmail.com", // Replace with your Gmail
-      pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
-    },
-  });
+  async function sendEmail({ to, subject, text, html }) {
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "prashnadevelop@gmail.com", // Replace with your Gmail
+        pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
+      },
+    });
 
-  await transporter.sendMail({
-    from: '"Prashna Siddhi" aman@codelinear',
-    to,
-    subject,
-    text,
-    // html,
-  });
-}
+    await transporter.sendMail({
+      from: '"Prashna Siddhi" aman@codelinear',
+      to,
+      subject,
+      text,
+      // html,
+    });
+  }
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
