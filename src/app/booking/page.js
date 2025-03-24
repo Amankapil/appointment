@@ -367,7 +367,7 @@ export default function MultiStepForm() {
       );
 
       const data = await cloudinaryResponse.json();
-      toast.success("Cloudinary Upload Success");
+      // toast.success("Cloudinary Upload Success");
 
       if (data.secure_url) {
         console.log("SVG URL:", data.secure_url);
