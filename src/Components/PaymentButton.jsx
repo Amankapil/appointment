@@ -96,8 +96,8 @@ export default function PaymentButton({
   const initiatePayment = async () => {
     setLoading(true);
 
-    const svgBase64 = await blobToBase64(svgdata);
-    console.log(svgBase64);
+    // const svgBase64 = await blobToBase64(svgdata);
+    // console.log(svgBase64);
 
     try {
       const response = await fetch("/api/payment/initiate", {
@@ -110,7 +110,7 @@ export default function PaymentButton({
           tob: paydata.timeOfBirth,
           dob: paydata.dob,
           gender: paydata.gender,
-          svgUrl: svgBase64,
+          svgUrl: svgdata,
           country: paydata.country,
           state: paydata.state,
           city: paydata.city,

@@ -109,7 +109,8 @@ export async function POST(request) {
     }
     await transaction.save();
     // Prepare WhatsApp message
-    const message = `Payment Successful!\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nTransaction ID: ${txnid}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = ` Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message2 = `Hey, ${name} You booked an Urgent Appointment! with us Please check the details below and horoscope\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
     const res = await client.messages.create({
       body: message,
@@ -122,7 +123,7 @@ export async function POST(request) {
     await sendEmail({
       to: email,
       subject: "Session Confirm with Prashna Siddhi",
-      text: message,
+      text: message2,
     });
 
     // Redirect to the payment success page

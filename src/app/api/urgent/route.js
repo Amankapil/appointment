@@ -8,23 +8,23 @@ import Transaction from "@/models/Transaction";
 import nodemailer from "nodemailer";
 import Availability from "@/models/Availability";
 
-  async function sendEmail({ to, subject, text, html }) {
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "prashnadevelop@gmail.com", // Replace with your Gmail
-        pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
-      },
-    });
+async function sendEmail({ to, subject, text, html }) {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "prashnadevelop@gmail.com", // Replace with your Gmail
+      pass: "hlhc laic lhil njen", // Use App Password (not your Gmail password)
+    },
+  });
 
-    await transporter.sendMail({
-      from: '"Prashna Siddhi" aman@codelinear',
-      to,
-      subject,
-      text,
-      // html,
-    });
-  }
+  await transporter.sendMail({
+    from: '"Prashna Siddhi" aman@codelinear',
+    to,
+    subject,
+    text,
+    // html,
+  });
+}
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
@@ -67,28 +67,12 @@ export async function POST(request) {
     };
 
     // const svgContent = atob(svgdata);
-    const base64Data = svgUrl.split(",")[1]; // Removes "data:image/svg+xml;base64,"
-    if (!base64Data) {
-      return NextResponse.json({ error: "Invalid SVG data" }, { status: 400 });
-    }
 
-    // Convert Base64 to a Buffer
-    const buffer = Buffer.from(base64Data, "base64");
-    const fileName = `${uuidv4()}.svg`;
-
-    const filePath1 = path.join("public/uploads", fileName);
-    await writeFile(filePath1, buffer);
-
-    const filePath2 = filePath1.replace(/^public\//, ""); // Remove "public/"
-
-    const protocol = request.headers.get("x-forwarded-proto") || "http";
-    const host = request.headers.get("host");
-    const filePath = `${protocol}://${host}/${filePath2}`;
+    const filePath = svgUrl;
     // const filePath = `${request.protocol}://${request.get(
     //   "host"
     // )}/${filePath2}`;
 
-    console.log(`SVG saved at: ${filePath1}`);
     console.log(`Stored path in DB: ${filePath}`);
 
     const transaction = new Transaction({
@@ -113,7 +97,8 @@ export async function POST(request) {
 
     // Example date
 
-    const message = `Urgent Appointment!\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = ` Hey Jagdish You have an Urgent Appointment at  ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message2 = `Hey, ${name} You booked an Urgent Appointment! with us Please check the details below and horoscope\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
     //   subject: "Session Confirm with Enlighten-mind",
@@ -122,13 +107,14 @@ export async function POST(request) {
     const res = await client.messages.create({
       body: message,
       from: `whatsapp:${twilioPhoneNumber}`,
+      mediaUrl: [filePath],
       to: `whatsapp:+917259691375`,
     });
     console.log("whatapp response", res);
     await sendEmail({
       to: email,
       subject: "Session Confirm with Prashna Siddhi",
-      text: message,
+      text: message2,
     });
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD

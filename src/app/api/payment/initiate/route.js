@@ -27,30 +27,9 @@ export async function POST(request) {
     );
   }
   // const svgContent = atob(svgdata);
-  const base64Data = svgUrl.split(",")[1]; // Removes "data:image/svg+xml;base64,"
-  if (!base64Data) {
-    return NextResponse.json({ error: "Invalid SVG data" }, { status: 400 });
-  }
-
-  // Convert Base64 to a Buffer
-  const buffer = Buffer.from(base64Data, "base64");
-  const fileName = `${uuidv4()}.svg`;
-  // const filePath = `/public/uploads/${fileName}`;
-
-  // Save the file
-
-  const filePath1 = path.join("public/uploads", fileName);
-  await writeFile(filePath1, buffer);
-
-  const filePath2 = filePath1.replace(/^public\//, ""); // Remove "public/"
-
-  const protocol = request.headers.get("x-forwarded-proto") || "http";
-  const host = request.headers.get("host");
-  const filePath = `${protocol}://${host}/${filePath2}`;
+  const filePath = svgUrl;
 
   // const filePath = `${request.protocol}://${request.get("host")}/${filePath2}`;
-
-  console.log(`SVG saved at: ${filePath1}`);
   console.log(`Stored path in DB: ${filePath}`);
 
   const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;

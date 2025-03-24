@@ -347,6 +347,39 @@ export default function MultiStepForm() {
   //   }
   // };
 
+  const uploadToCloudinary = async (blob) => {
+    try {
+      // Convert blob to File
+      const file = new File([blob], "image.svg", { type: "image/svg+xml" });
+
+      // Create FormData to send to Cloudinary
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "horoscope"); // Replace with your Cloudinary preset
+      formData.append("resource_type", "raw");
+      // Upload to Cloudinary
+      const cloudinaryResponse = await fetch(
+        "https://api.cloudinary.com/v1_1/dpmmcn7zv/image/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await cloudinaryResponse.json();
+      toast.success("Cloudinary Upload Success");
+
+      if (data.secure_url) {
+        console.log("SVG URL:", data.secure_url);
+        return data.secure_url;
+      } else {
+        throw new Error("Upload failed");
+      }
+    } catch (error) {
+      console.error("Error uploading to Cloudinary:", error);
+    }
+  };
+
   const [pdfUrl, setpdfUrl] = useState("");
   const [pdfdata, setpdfData] = useState("");
 
@@ -407,9 +440,15 @@ export default function MultiStepForm() {
       const blob = await response.blob();
       console.log("Blob Response:", blob);
 
+      const cloudinaryUrl = await uploadToCloudinary(blob);
+
+      if (cloudinaryUrl) {
+        console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
+      }
+
       const objectUrl = URL.createObjectURL(blob);
       setSvgUrl(objectUrl);
-      setSvgData(blob);
+      setSvgData(cloudinaryUrl);
       console.log("API Response:", objectUrl);
     } catch (error) {
       console.error("Error calling API:", error);
@@ -427,7 +466,7 @@ export default function MultiStepForm() {
         reader.onerror = reject;
       });
     };
-    const svgBase64 = await blobToBase64(svgdata);
+    // const svgBase64 = await blobToBase64(svgdata);
     // const svggg = localStorage.getItem("svg");
     try {
       const response = await fetch("/api/urgent", {
@@ -440,7 +479,7 @@ export default function MultiStepForm() {
           tob: formData.timeOfBirth,
           dob: formData.dob,
           gender: formData.gender,
-          svgUrl: svgBase64,
+          svgUrl: svgdata,
           // svgUrl: svggg,
           country: formData.country,
           state: formData.state,
