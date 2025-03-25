@@ -53,6 +53,7 @@ export async function POST(request) {
     const city = searchParams.get("city");
     const gender = searchParams.get("gender");
     const filePath = searchParams.get("svgUrl");
+    const duration = searchParams.get("duration");
 
     const transaction = new Transaction({
       transactionId: txnid,
@@ -97,19 +98,86 @@ export async function POST(request) {
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
     // Update slot status to "booked"
+    // const availability = await Availability.findOne({ date: formattedDate });
+    // if (availability) {
+    //   const slotIndex = availability.slots.findIndex(
+    //     (slot) => slot.time === selectedTime
+    //   );
+    //   if (slotIndex !== -1) {
+    //     availability.slots[slotIndex].status = "booked";
+    //     await availability.save();
+    //   }
+    // }
+
     const availability = await Availability.findOne({ date: formattedDate });
+
     if (availability) {
       const slotIndex = availability.slots.findIndex(
         (slot) => slot.time === selectedTime
       );
+
       if (slotIndex !== -1) {
+        // Mark only the selected slot as "booked"
         availability.slots[slotIndex].status = "booked";
+
+        // Convert time to minutes for easier calculations
+        const [startHour, startMin] = selectedTime
+          .split(" ")[0]
+          .split(":")
+          .map(Number);
+        const isPM = selectedTime.includes("PM");
+        const startTimeInMinutes =
+          (isPM && startHour !== 12 ? startHour + 12 : startHour) * 60 +
+          startMin;
+
+        // Define slot durations
+        const slotDurations = [15, 30, 45];
+        const affectedSlots = [];
+
+        // Identify overlapping slots
+        for (const slot of availability.slots) {
+          const [slotHour, slotMin] = slot.time
+            .split(" ")[0]
+            .split(":")
+            .map(Number);
+          const slotPM = slot.time.includes("PM");
+          const slotStartTime =
+            (slotPM && slotHour !== 12 ? slotHour + 12 : slotHour) * 60 +
+            slotMin;
+
+          if (
+            slotStartTime >= startTimeInMinutes &&
+            slotStartTime < startTimeInMinutes + duration &&
+            slot.time !== selectedTime // Keep the selected slot
+          ) {
+            affectedSlots.push(slot.time);
+          }
+
+          // Remove larger slots that overlap
+          if (
+            slotDurations.some(
+              (d) =>
+                d > duration &&
+                slotStartTime >= startTimeInMinutes &&
+                slotStartTime < startTimeInMinutes + d
+            ) &&
+            slot.time !== selectedTime
+          ) {
+            affectedSlots.push(slot.time);
+          }
+        }
+
+        // Remove conflicting slots but keep the selected one
+        availability.slots = availability.slots.filter(
+          (slot) => !affectedSlots.includes(slot.time)
+        );
+
         await availability.save();
       }
     }
     await transaction.save();
     // Prepare WhatsApp message
-    const message = ` Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
     const res = await client.messages.create({

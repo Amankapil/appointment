@@ -42,6 +42,7 @@ export async function POST(request) {
       gender,
       country,
       state,
+      duration,
       svgUrl,
       city,
       selectedTime,
@@ -86,6 +87,7 @@ export async function POST(request) {
       state,
       city,
       selectedTime,
+      duration,
       selectedDate,
       filePath,
       amount,
@@ -97,7 +99,7 @@ export async function POST(request) {
 
     // Example date
 
-    const message = ` Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
@@ -117,17 +119,85 @@ export async function POST(request) {
     });
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
-    // Update slot status to "booked"
+    // Update slot status to "booked" working fien
+    // const availability = await Availability.findOne({ date: formattedDate });
+    // if (availability) {
+    //   const slotIndex = availability.slots.findIndex(
+    //     (slot) => slot.time === selectedTime
+    //   );
+    //   if (slotIndex !== -1) {
+    //     availability.slots[slotIndex].status = "booked";
+    //     await availability.save();
+    //   }
+    // }
+
     const availability = await Availability.findOne({ date: formattedDate });
+
     if (availability) {
       const slotIndex = availability.slots.findIndex(
         (slot) => slot.time === selectedTime
       );
+
       if (slotIndex !== -1) {
+        // Mark only the selected slot as "booked"
         availability.slots[slotIndex].status = "booked";
+
+        // Convert time to minutes for easier calculations
+        const [startHour, startMin] = selectedTime
+          .split(" ")[0]
+          .split(":")
+          .map(Number);
+        const isPM = selectedTime.includes("PM");
+        const startTimeInMinutes =
+          (isPM && startHour !== 12 ? startHour + 12 : startHour) * 60 +
+          startMin;
+
+        // Define slot durations
+        const slotDurations = [15, 30, 45];
+        const affectedSlots = [];
+
+        // Identify overlapping slots
+        for (const slot of availability.slots) {
+          const [slotHour, slotMin] = slot.time
+            .split(" ")[0]
+            .split(":")
+            .map(Number);
+          const slotPM = slot.time.includes("PM");
+          const slotStartTime =
+            (slotPM && slotHour !== 12 ? slotHour + 12 : slotHour) * 60 +
+            slotMin;
+
+          if (
+            slotStartTime >= startTimeInMinutes &&
+            slotStartTime < startTimeInMinutes + duration &&
+            slot.time !== selectedTime // Keep the selected slot
+          ) {
+            affectedSlots.push(slot.time);
+          }
+
+          // Remove larger slots that overlap
+          if (
+            slotDurations.some(
+              (d) =>
+                d > duration &&
+                slotStartTime >= startTimeInMinutes &&
+                slotStartTime < startTimeInMinutes + d
+            ) &&
+            slot.time !== selectedTime
+          ) {
+            affectedSlots.push(slot.time);
+          }
+        }
+
+        // Remove conflicting slots but keep the selected one
+        availability.slots = availability.slots.filter(
+          (slot) => !affectedSlots.includes(slot.time)
+        );
+
         await availability.save();
       }
     }
+
     await transaction.save();
     // const redirectUrl = `${protocol}://${host}/payment`;
     // return NextResponse.redirect(redirectUrl);

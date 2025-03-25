@@ -383,6 +383,74 @@ export default function MultiStepForm() {
   const [pdfUrl, setpdfUrl] = useState("");
   const [pdfdata, setpdfData] = useState("");
 
+  // working till 25march 2025
+
+  // const makeApiRequest = async (horoscopeData1) => {
+  //   const {
+  //     day,
+  //     month,
+  //     year,
+  //     hour,
+  //     min,
+  //     lat,
+  //     lon,
+  //     chart_type = "lagna",
+  //     chart_style = "south-indian",
+  //     format = "svg",
+  //     la = "en",
+  //     upagraha_position = "middle",
+  //   } = horoscopeData1;
+
+  //   console.log("Received Horoscope Data:", horoscopeData1);
+
+  //   // Validate each field to ensure they are not undefined or null
+  //   if (
+  //     day == null ||
+  //     month == null ||
+  //     year == null ||
+  //     hour == null ||
+  //     min == null ||
+  //     lat == null ||
+  //     lon == null
+  //   ) {
+  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
+  //     return;
+  //   }
+
+  //   // Fix for Safari - Use Date.UTC() for reliable datetime conversion
+  //   const datetime = new Date(
+  //     Date.UTC(year, month - 1, day, hour, min, 0)
+  //   ).toISOString();
+
+  //   // Encode URL components properly
+  //   const coordinates = `${lat},${lon}`;
+  //   const encodedDatetime = encodeURIComponent(datetime);
+  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
+  //   console.log("Formatted API URL:", apiUrl);
+
+  //   try {
+  //     const response = await fetch(apiUrl, { method: "GET" });
+
+  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
+
+  //     const blob = await response.blob();
+  //     console.log("Blob Response:", blob);
+
+  //     const cloudinaryUrl = await uploadToCloudinary(blob);
+
+  //     if (cloudinaryUrl) {
+  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
+  //     }
+
+  //     const objectUrl = URL.createObjectURL(blob);
+  //     setSvgUrl(objectUrl);
+  //     setSvgData(cloudinaryUrl);
+  //     console.log("API Response:", objectUrl);
+  //   } catch (error) {
+  //     console.error("Error calling API:", error);
+  //   }
+  // };
+
   const makeApiRequest = async (horoscopeData1) => {
     const {
       day,
@@ -397,11 +465,11 @@ export default function MultiStepForm() {
       format = "svg",
       la = "en",
       upagraha_position = "middle",
+      timezone = "+05:30", // Replace with dynamic timezone if needed
     } = horoscopeData1;
 
     console.log("Received Horoscope Data:", horoscopeData1);
 
-    // Validate each field to ensure they are not undefined or null
     if (
       day == null ||
       month == null ||
@@ -415,26 +483,42 @@ export default function MultiStepForm() {
       return;
     }
 
-    // Ensure all values are properly formatted
-    const formattedMonth = String(month).padStart(2, "0");
-    const formattedDay = String(day).padStart(2, "0");
-    const formattedHour = String(hour).padStart(2, "0");
-    const formattedMin = String(min).padStart(2, "0");
+    // Function to format datetime correctly with timezone offset
+    const formatDateTimeWithOffset = (
+      year,
+      month,
+      day,
+      hour,
+      min,
+      timezone
+    ) => {
+      const pad = (num) => String(num).padStart(2, "0");
+      return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(
+        min
+      )}:00${timezone}`;
+    };
 
-    // Fix for Safari - Use Date.UTC() for reliable datetime conversion
-    const datetime = new Date(
-      Date.UTC(year, month - 1, day, hour, min, 0)
-    ).toISOString();
+    // Get properly formatted datetime
+    const datetime = formatDateTimeWithOffset(
+      year,
+      month,
+      day,
+      hour,
+      min,
+      timezone
+    );
 
-    // Encode URL components properly
+    // Encode the datetime properly
+    const encodedDatetime = encodeURIComponent(datetime.replace("+", "%2B"));
+
+    // Construct API URL
     const coordinates = `${lat},${lon}`;
-    const encodedDatetime = encodeURIComponent(datetime);
     const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
+
     console.log("Formatted API URL:", apiUrl);
 
     try {
       const response = await fetch(apiUrl, { method: "GET" });
-
       if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
 
       const blob = await response.blob();
@@ -478,6 +562,7 @@ export default function MultiStepForm() {
           phone: formData.phone,
           tob: formData.timeOfBirth,
           dob: formData.dob,
+          duration: duration,
           gender: formData.gender,
           svgUrl: svgdata,
           // svgUrl: svggg,
