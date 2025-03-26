@@ -11,6 +11,8 @@ const TransactionSchema = new mongoose.Schema(
     status: String, //
     dob: String, //
     tob: String, //
+    latitude: Number,
+    longitude: Number,
     selectedTime: String, //
     selectedDate: String, //
     gender: String, //

@@ -39,6 +39,8 @@ export async function POST(request) {
       amount,
       tob,
       dob,
+      latitude,
+      longitude,
       gender,
       country,
       state,
@@ -61,12 +63,15 @@ export async function POST(request) {
       gender,
       country,
       state,
+      latitude,
+      longitude,
       svgUrl,
       city,
       selectedTime,
       selectedDate,
     };
 
+    console.log(back);
     // const svgContent = atob(svgdata);
 
     const filePath = svgUrl;
@@ -76,26 +81,61 @@ export async function POST(request) {
 
     console.log(`Stored path in DB: ${filePath}`);
 
-    const transaction = new Transaction({
-      name,
-      email,
-      phone,
-      tob,
-      dob,
-      gender,
-      country,
-      state,
-      city,
-      selectedTime,
-      duration,
-      selectedDate,
-      filePath,
-      amount,
-      status: "Urgent",
-      createdAt: new Date(), // Save additional data to the database
-    });
+    const existingTransaction = await Transaction.findOne({ email });
 
-    await transaction.save();
+    if (existingTransaction) {
+      // Update existing record
+      await Transaction.updateOne(
+        { email },
+        {
+          $set: {
+            name,
+            phone,
+            tob,
+            dob,
+            gender,
+            country,
+            state,
+            city,
+            selectedTime,
+            duration,
+            selectedDate,
+            latitude,
+            longitude,
+            filePath,
+            amount,
+            status: "Urgent",
+            createdAt: new Date(),
+          },
+          $inc: { session: 1 }, // Increase session by 1
+        }
+      );
+    } else {
+      // Create new transaction
+      const transaction = new Transaction({
+        name,
+        email,
+        phone,
+        tob,
+        dob,
+        gender,
+        country,
+        state,
+        city,
+        selectedTime,
+        duration,
+        selectedDate,
+        latitude,
+        longitude,
+        filePath,
+        amount,
+        session: 1,
+        status: "Urgent",
+        createdAt: new Date(),
+      });
+
+      await transaction.save();
+    }
 
     // Example date
 
@@ -198,7 +238,6 @@ export async function POST(request) {
       }
     }
 
-    await transaction.save();
     // const redirectUrl = `${protocol}://${host}/payment`;
     // return NextResponse.redirect(redirectUrl);
     return NextResponse.json({

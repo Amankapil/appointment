@@ -55,46 +55,82 @@ export async function POST(request) {
     const filePath = searchParams.get("svgUrl");
     const duration = searchParams.get("duration");
 
-    const transaction = new Transaction({
-      transactionId: txnid,
-      name,
-      email,
-      phone,
-      amount,
-      country,
-      state,
-      gender,
-      dob,
-      tob,
-      selectedDate,
-      selectedTime,
-      city,
-      filePath,
-      session: 1,
-      status: "Success",
-      paymentMethod: "PayU", // Save additional data to the database
-    });
-    const back = {
-      transactionId: txnid,
-      name,
-      email,
-      phone,
-      amount,
-      country,
-      state,
-      gender,
-      dob,
-      tob,
-      selectedDate,
-      selectedTime,
-      city,
-      filePath,
-      session: 1,
-      status: "Success",
-      paymentMethod: "PayU", // Save additional data to the database
-    };
+    const existingTransaction = await Transaction.findOne({ email });
 
-    await transaction.save();
+    if (existingTransaction) {
+      // Update existing record
+      await Transaction.updateOne(
+        { email },
+        {
+          $set: {
+            transactionId: txnid,
+            name,
+            phone,
+            tob,
+            dob,
+            gender,
+            country,
+            state,
+            city,
+            selectedTime,
+            duration,
+            selectedDate,
+            latitude,
+            longitude,
+            filePath,
+            amount,
+            status: "Urgent",
+            paymentMethod: "PayU",
+            createdAt: new Date(),
+          },
+          $inc: { session: 1 }, // Increase session by 1
+        }
+      );
+    } else {
+      // Create new transaction
+      const transaction = new Transaction({
+        transactionId: txnid,
+        name,
+        email,
+        phone,
+        amount,
+        country,
+        state,
+        gender,
+        dob,
+        tob,
+        selectedDate,
+        selectedTime,
+        city,
+        filePath,
+        session: 1,
+        status: "Paid",
+        paymentMethod: "PayU", // Save additional data to the database
+      });
+
+      await transaction.save();
+    }
+
+    // const transaction = new Transaction({
+    //   transactionId: txnid,
+    //   name,
+    //   email,
+    //   phone,
+    //   amount,
+    //   country,
+    //   state,
+    //   gender,
+    //   dob,
+    //   tob,
+    //   selectedDate,
+    //   selectedTime,
+    //   city,
+    //   filePath,
+    //   session: 1,
+    //   status: "Paid",
+    //   paymentMethod: "PayU", // Save additional data to the database
+    // });
+    // await transaction.save();
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
     // Update slot status to "booked"

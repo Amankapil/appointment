@@ -9,7 +9,7 @@ export default function ThankYouScreen({
   duration,
   selectedDate,
 }) {
-  console.log(result);
+  // console.log(svgUrl);
   return (
     <div className="min-hscreen bg-gray-100 flex items-center justify-center p-6">
       <div className="bg-white shadow-lg rounded-lg p-8 max-w-4xl w-full">

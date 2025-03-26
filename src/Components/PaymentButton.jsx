@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function PaymentButton({
   setPaymentStatus,
@@ -9,6 +10,8 @@ export default function PaymentButton({
   svgdata,
   selectedDate,
   duration,
+  latitude,
+  longitude,
 }) {
   const [loading, setLoading] = useState(false);
   const [amount, setAmount] = useState(0);
@@ -25,15 +28,6 @@ export default function PaymentButton({
   }, [duration]);
 
   console.log(paydata);
-
-  const blobToBase64 = (blob) => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(blob);
-      reader.onloadend = () => resolve(reader.result);
-      reader.onerror = reject;
-    });
-  };
 
   // const initiatePayment = async () => {
   //   setLoading(true);
@@ -96,9 +90,6 @@ export default function PaymentButton({
   const initiatePayment = async () => {
     setLoading(true);
 
-    // const svgBase64 = await blobToBase64(svgdata);
-    // console.log(svgBase64);
-
     try {
       const response = await fetch("/api/payment/initiate", {
         method: "POST",
@@ -110,6 +101,8 @@ export default function PaymentButton({
           tob: paydata.timeOfBirth,
           dob: paydata.dob,
           gender: paydata.gender,
+          latitude: latitude,
+          longitude: longitude,
           svgUrl: svgdata,
           country: paydata.country,
           state: paydata.state,
@@ -147,7 +140,7 @@ export default function PaymentButton({
         form.submit();
       }, 100);
     } catch (error) {
-      alert("Payment initiation failed");
+      toast.error("Payment initiation failed");
     } finally {
       setLoading(false);
     }
