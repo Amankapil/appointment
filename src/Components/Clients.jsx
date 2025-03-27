@@ -47,7 +47,7 @@ const Clients = () => {
       </div>
 
       {/* Table Header */}
-      <div className="grid grid-cols-5 p-4 bg-gray-100 font-semibold">
+      <div className="grid grid-cols-4 p-4 bg-gray-100 font-semibold">
         <span>Name</span>
         <span>Total Sessions</span>
         <span>Last Booked</span>
@@ -61,7 +61,7 @@ const Clients = () => {
         .map((client, index) => (
           <div key={client._id} className="border-b">
             <div
-              className="grid grid-cols-5 p-4 cursor-pointer hover:bg-gray-50"
+              className="grid grid-cols-4 p-4 cursor-pointer hover:bg-gray-50"
               onClick={() => toggleAccordion(index)}
             >
               <span>{client.name}</span>
