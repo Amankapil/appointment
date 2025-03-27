@@ -51,7 +51,6 @@ const Clients = () => {
         <span>Name</span>
         <span>Total Sessions</span>
         <span>Last Booked</span>
-        <span>Email</span>
         <span>Contact</span>
       </div>
 
@@ -68,7 +67,6 @@ const Clients = () => {
               <span>{client.name}</span>
               <span>{client.session}</span>
               <span>{client.selectedDate || "--"}</span>
-              <span>{client.email || "--"}</span>
               <span className="flex justify-between">
                 {/* Placeholder for contact icons */}
                 <span className="flex gap-2">
@@ -85,6 +83,7 @@ const Clients = () => {
               <div className="bg-gray-100 p-4 text-sm grid grid-cols-2 gap-4">
                 {/* Birth Details */}
                 <div>
+                  <p>Email: {client.email}</p>
                   <h3 className="font-semibold">Birth Details</h3>
                   <p>Date of Birth: {client.dob}</p>
                   <p>Time of Birth: {client.tob}</p>
