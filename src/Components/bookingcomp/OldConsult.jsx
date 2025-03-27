@@ -116,7 +116,7 @@ export default function OldConsult() {
     const phone = value.trim();
     setFormData((prev) => ({ ...prev, phone }));
 
-    if (phone.length >= 11) {
+    if (phone.length >= 12) {
       // Adjust as per phone format
       const user = clients.find((client) => client.phone === phone);
       if (user) {
@@ -141,9 +141,9 @@ export default function OldConsult() {
         setSvgData(user?.filePath);
         // setPhoneMessage("");
       } else {
-        setTimeout(() => {
-          toast.error("Phone number not found. Please fill in the details.");
-        }, 500);
+        // setTimeout(() => {
+        toast.error("Phone number not found. Please fill in the details.");
+        // }, 500);
       }
     } else {
       // setPhoneMessage("");
