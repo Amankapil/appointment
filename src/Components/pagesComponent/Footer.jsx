@@ -190,9 +190,6 @@ const Footer = () => {
           </svg>
         </div>
         {/* Bottom Section */}
-        {/* <div className="mt-10 text-center border-t border-gray-300 pt-6 flex justify-center items-center">
-          <p className="text-[250px]">Prashna Siddhi</p>
-        </div> */}
       </div>
 
       <div className="mt-10 w-full text-center flex justify-center items-center ">
@@ -200,6 +197,9 @@ const Footer = () => {
           Prashna Siddhi
         </div>
         {/* <p className="text-sm">All Rights Reserved 2025</p> */}
+      </div>
+      <div className="mt-10 text-center border-t border-gray-300 pt-6 flex justify-center items-center">
+        Copyright © PrashnaSiddhi, 2025. All Rights Reserved.
       </div>
     </footer>
   );

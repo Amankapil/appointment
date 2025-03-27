@@ -112,6 +112,43 @@ export default function OldConsult() {
       setEmailMessage("");
     }
   };
+  const handlePhoneChange = (value) => {
+    const phone = value.trim();
+    setFormData((prev) => ({ ...prev, phone }));
+
+    if (phone.length >= 11) {
+      // Adjust as per phone format
+      const user = clients.find((client) => client.phone === phone);
+      if (user) {
+        // Ensure all fields have default values
+        setFormData({
+          email: user.email || "",
+          fullName: user.name || "",
+          phone: user.phone || "",
+          dob: user.dob || "",
+          timeOfBirth: user.tob || "",
+          gender: user.gender || "",
+          country: user.country || "",
+          state: user.state || "",
+          material: user.material || "",
+          city: user.city || "",
+          maritalStatus: user.maritalStatus || "",
+          latitude: user.latitude || "",
+          longitude: user.longitude || "",
+          selectedQuestions: user.selectedQuestions || [],
+        });
+        toast.success("Phone number found");
+        setSvgData(user?.filePath);
+        // setPhoneMessage("");
+      } else {
+        setTimeout(() => {
+          toast.error("Phone number not found. Please fill in the details.");
+        }, 500);
+      }
+    } else {
+      // setPhoneMessage("");
+    }
+  };
 
   const [latloading, setlatLoading] = useState(false);
 
@@ -340,19 +377,22 @@ export default function OldConsult() {
               </p>
             </div>
             <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1 booking-form">
-              <label>
-                Email ID *
-                <input
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="johndoe@gmail.com"
-                  value={formData.email}
-                  //   onChange={handleChange}
-                  onChange={handleEmailChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
+              <label className="block mb-2">
+                Phone Number *
+                <PhoneInput
+                  country={"in"} // Default country (India)
+                  value={formData.phone}
+                  onChange={handlePhoneChange}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                  }}
+                  inputClass="border p-2 rounded w-full border-[#E4E4E4]"
+                  containerClass="w-full"
+                  enableSearch={true} // Allows country search
                 />
               </label>
+
               <label className="text-[16px]">
                 Full Name *
                 <input
@@ -364,20 +404,17 @@ export default function OldConsult() {
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
-
-              <label className="block mb-2">
-                Phone Number *
-                <PhoneInput
-                  country={"in"} // Default country (India)
-                  value={formData.phone}
-                  //   onChange={handlePhoneChange}
-                  inputProps={{
-                    name: "phone",
-                    required: true,
-                  }}
-                  inputClass="border p-2 rounded w-full border-[#E4E4E4]"
-                  containerClass="w-full"
-                  enableSearch={true} // Allows country search
+              <label>
+                Email ID *
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="johndoe@gmail.com"
+                  value={formData.email}
+                  //   onChange={handleChange}
+                  // onChange={handleEmailChange}
+                  className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
 
