@@ -261,7 +261,6 @@ export async function POST(request) {
     });
   } catch (error) {
     console.error("Error in success URL:", error);
-
     // Redirect to the payment failure page in case of an error
     const redirectUrl = `${process.env.NEXT_PUBLIC_BASE_URL}/payment`;
     return NextResponse.redirect(redirectUrl);
