@@ -29,64 +29,6 @@ export default function PaymentButton({
 
   console.log(paydata);
 
-  // const initiatePayment = async () => {
-  //   setLoading(true);
-
-  //   const svgBase64 = await blobToBase64(svgdata);
-  //   console.log(svgBase64);
-  //   // localStorage.setItem("svg", svgBase64);
-  //   // const svggg = localStorage.getItem("svg");
-
-  //   try {
-  //     const response = await fetch("/api/payment/initiate", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify({
-  //         name: paydata.fullName,
-  //         email: paydata.email,
-  //         phone: paydata.phone,
-  //         tob: paydata.timeOfBirth,
-  //         dob: paydata.dob,
-  //         gender: paydata.gender,
-  //         svgUrl: svgBase64,
-  //         country: paydata.country,
-  //         state: paydata.state,
-  //         city: paydata.city,
-  //         selectedTime: selectedTime,
-  //         selectedDate: selectedDate,
-  //         amount: "1.00", // 1 INR for testing
-  //       }),
-  //     });
-
-  //     const { payUData, url } = await response.json();
-
-  //     console.log(payUData, url);
-
-  //     if (!payUData || !url) {
-  //       alert("Invalid response from server");
-  //     }
-
-  //     const form = document.createElement("form");
-  //     form.method = "POST";
-  //     form.action = url;
-
-  //     Object.keys(payUData).forEach((key) => {
-  //       const input = document.createElement("input");
-  //       input.type = "hidden";
-  //       input.name = key;
-  //       input.value = payUData[key];
-  //       form.appendChild(input);
-  //     });
-
-  //     document.body.appendChild(form);
-  //     form.submit();
-  //   } catch (error) {
-  //     alert("Payment initiation failed", error);
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
   const initiatePayment = async () => {
     setLoading(true);
 
@@ -109,7 +51,7 @@ export default function PaymentButton({
           city: paydata.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
-          amount: amount,
+          amount: 1,
         }),
       });
 

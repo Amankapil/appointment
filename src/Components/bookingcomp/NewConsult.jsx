@@ -920,8 +920,8 @@ export default function NewConsult() {
               paydata={paydata}
               selectedTime={selectedTime}
               // svgUrl={svgUrl}
-              latitude={latitude}
-              longitude={longitude}
+              latitude={formData.latitude}
+              longitude={formData.longitude}
               duration={duration}
               svgdata={svgdata}
               selectedDate={selectedDate}

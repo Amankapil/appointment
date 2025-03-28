@@ -784,8 +784,8 @@ export default function OldConsult() {
               setPaymentStatus={setPaymentStatus}
               paydata={paydata}
               selectedTime={selectedTime}
-              latitude={latitude}
-              longitude={longitude}
+              latitude={formData.latitude}
+              longitude={formData.longitude}
               // svgUrl={svgUrl}
               duration={duration}
               svgdata={svgdata}
