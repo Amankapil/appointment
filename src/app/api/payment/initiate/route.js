@@ -14,6 +14,8 @@ export async function POST(request) {
     gender,
     country,
     duration,
+    latitude,
+    longitude,
     state,
     svgUrl,
     city,
@@ -73,7 +75,7 @@ export async function POST(request) {
     service_provider: "payu_paisa",
     email,
     phone,
-    surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}&duration=${duration}`,
+    surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}&svgUrl=${filePath}&duration=${duration}&latitude=${latitude}&longitude=${longitude}`,
     furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure?selectedDate=${selectedDate}&selectedTime=${selectedTime}&dob=${dob}&country=${country}&gender=${gender}&tob=${tob}&state=${state}&city=${city}`,
     hash,
     // add: additionalDataString, // Pass additional data as a JSON string
