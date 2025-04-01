@@ -36,7 +36,6 @@ Prashnasiddhi.com — starting at ₹199."
           content={`https://prashnasiddhi.com/blog/dont-bargain-with-planets-appeal`}
         />
       </Head>
-      xw
       <div className="max-w-6xl mx-auto p-6 bg-white shadowg rounded-lg">
         <div
           className=" top-0 left-0 w-full h-[500px] bg-cover bg-center"
