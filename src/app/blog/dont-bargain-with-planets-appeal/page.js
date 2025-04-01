@@ -23,7 +23,7 @@ Prashnasiddhi.com — starting at ₹199."
           property="og:title"
           content="Don’t Bargain with Planets – Appeal Gracefully through Prashna Astrology"
         />
-        xw
+
         <meta
           property="og:description"
           content="Learn why planets respond to sincere appeals, not bargains. Discover
