@@ -84,6 +84,9 @@ export default function Navbar() {
               <Link href="/remedies" className="hover:text-gray-600 relative">
                 Remedies
               </Link>
+              <Link href="/blog" className="hover:text-gray-600 relative">
+                Blog
+              </Link>
               <div
                 className="relative flex items-center justify-center"
                 onMouseEnter={() => setIsAboutHovered(true)}

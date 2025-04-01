@@ -139,6 +139,7 @@ export async function POST(request) {
 
     // Example date
 
+    // const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}`;
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
@@ -146,9 +147,11 @@ export async function POST(request) {
     //   subject: "Session Confirm with Enlighten-mind",
     //   text: message,
     // });
+    console.log(message);
     const res = await client.messages.create({
       body: message,
-      from: `whatsapp:${twilioPhoneNumber}`,
+      // from: `whatsapp:${twilioPhoneNumber}`,
+      from: "whatsapp:+15557334838",
       to: `whatsapp:+917259691375`,
     });
     console.log("whatapp response", res);

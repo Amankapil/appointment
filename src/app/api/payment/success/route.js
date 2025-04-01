@@ -239,26 +239,10 @@ export async function POST(request) {
     //   status: 302,
     // }); // Use 303 for safer redirection
 
-    const html = `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta http-equiv="refresh" content="0;/>
-        <title>Thank You</title>
-      </head>
-      <body>
-        <h1>Thank you for your submission!</h1>
-        <p>You are being redirected to the payment page...</p>
-      </body>
-    </html>
-  `;
-
-    return new NextResponse(html, {
-      status: 200,
-      headers: {
-        "Content-Type": "text/html",
-      },
-    });
+    return NextResponse.redirect(
+      `https://prashnasiddhi.com/payment`,
+      { status: 303 } // Use 303 to ensure GET method after redirect
+    );
   } catch (error) {
     console.error("Error in success URL:", error);
     // Redirect to the payment failure page in case of an error

@@ -57,6 +57,11 @@ const Footer = () => {
                     Remedies
                   </Link>
                 </li>
+                <li>
+                  <Link href="/blog" className="hover:underline">
+                    Blog
+                  </Link>
+                </li>
 
                 <li>
                   <Link href="/about" className="hover:underline">
