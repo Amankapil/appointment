@@ -217,7 +217,7 @@ export async function POST(request) {
     }
 
     // Prepare WhatsApp message
-    const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+    const message = `Hey Jagdish You have an Paid Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
     const res = await client.messages.create({
@@ -232,7 +232,11 @@ export async function POST(request) {
       subject: "Session Confirm with Prashna Siddhi",
       text: message2,
     });
-
+    await sendEmail({
+      to: "jagadish.k48@gmail.com",
+      subject: "New Session Confirm",
+      text: message,
+    });
     // Redirect to the payment success page
     // return NextResponse.redirect(`https://prashnasiddhi.com/payment`);
     // return NextResponse.redirect("https://prashnasiddhi.com/payment", {

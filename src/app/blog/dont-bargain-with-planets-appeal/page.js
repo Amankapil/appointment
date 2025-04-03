@@ -48,8 +48,8 @@ Prashnasiddhi.com — starting at ₹199."
           </div>
         </div>
 
-        <section className="my-20">
-          <h2 className="text-[24px] text-center font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px] text-center font-semibold font-salernomi mt-3">
             The Common Misconception
           </h2>
           <p className="mt-2 text-gray-700 font-poppins text-center">
@@ -60,8 +60,8 @@ Prashnasiddhi.com — starting at ₹199."
           </p>
         </section>
 
-        <section className="mb-20">
-          <h2 className="text-[24px] text-center mb-10 font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px] text-center mb-10 font-semibold font-salernomi mt-3">
             Why Bargaining Doesn’t Work in Astrology
           </h2>
           <div className="flex gap-4 items-center max-md:flex-wrap ">
@@ -88,8 +88,8 @@ details"
           </div>
         </section>
 
-        <section className="mb-20">
-          <h2 className="text-[24px] text-center mb-10 font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px] text-center mb-10 font-semibold font-salernomi mt-3">
             What is Vedic Prashna Astrology or Prashna Kundali?
           </h2>
           <div className="flex gap-10 items-center max-md:flex-wrap ">
@@ -107,8 +107,8 @@ details"
           </div>
         </section>
 
-        <section className="mb-20">
-          <h2 className="text-[24px]  text-center mb-10 font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px]  text-center mb-10 font-semibold font-salernomi mt-3">
             Divine Grace vs. Material Remedies
           </h2>
           <div className="flex gap-10 items-center max-md:flex-wrap ">
@@ -126,8 +126,8 @@ details"
           </div>
         </section>
 
-        <section className="mb-20">
-          <h2 className="text-[24px] text-center mb-10 font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px] text-center mb-10 font-semibold font-salernomi mt-3">
             Real-Life Insights{" "}
           </h2>
           <div className="flex gap-10 items-center max-md:flex-wrap ">
@@ -157,10 +157,10 @@ details"
           </p>
         </section> */}
 
-        <section className="mb-20">
-          <h2 className="text-[24px]  text-center mb-10 font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px]  text-center mb-10 font-semibold font-salernomi mt-3">
             How{" "}
-            <Link className="underline text-blue-300" href="/">
+            <Link className="underline text-blue-700" href="/">
               Prashnasiddhi.com
             </Link>{" "}
             Helps You
@@ -189,8 +189,8 @@ details"
           </p>
         </section> */}
 
-        <section className="mb-6">
-          <h2 className="text-[24px] text-center font-semibold font-salernomi mt-3">
+        <section className="my-20 text-[20px]">
+          <h2 className="text-[32px] text-center font-semibold font-salernomi mt-3">
             Conclusion
           </h2>
 

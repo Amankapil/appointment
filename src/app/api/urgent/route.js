@@ -137,11 +137,13 @@ export async function POST(request) {
       await transaction.save();
     }
 
+    const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // Example date
 
-    // const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}`;
+    // const message = "Hey Jagdish You have an Urgent Appointment ";
+    // const message = `Hello Jagdish, your appointment is scheduled. Please find the details below:`;
+    // console.log(message);
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
-    const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // await sendEmail({
     //   to: email,
     //   subject: "Session Confirm with Enlighten-mind",
@@ -152,13 +154,25 @@ export async function POST(request) {
       body: message,
       // from: `whatsapp:${twilioPhoneNumber}`,
       from: "whatsapp:+15557334838",
-      to: `whatsapp:+917259691375`,
+      to: `whatsapp:+918103075691`,
     });
+
+    // const res = await client.messages.create({
+    //   body: "Your approved template content", // Must match exactly an approved template
+    //   from: "whatsapp:+15557334838",
+    //   to: "whatsapp:+918103075691",
+    //   contentSid: "HXa2e86e0ba8a42f0ea7db7e68e924491a", // Your template SID
+    // });
     console.log("whatapp response", res);
     await sendEmail({
       to: email,
       subject: "Session Confirm with Prashna Siddhi",
       text: message2,
+    });
+    await sendEmail({
+      to: "jagadish.k48@gmail.com",
+      subject: "Session Confirm with Prashna Siddhi",
+      text: message,
     });
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD

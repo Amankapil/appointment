@@ -12,6 +12,14 @@ const blogs = [
     link: "/blog/dont-bargain-with-planets-appeal",
     desc: " Many seekers believe that they can buy their way out of astrologicalproblems.",
   },
+  {
+    id: 2,
+    title: "Can You Change Your Destiny?",
+    date: "April 4, 2025",
+    image: "/images/blog2.png",
+    link: "/blog/can-you-change-your-destiny",
+    desc: "Is our fate predetermined, or do we have the power to shape it? Destiny is ....",
+  },
   // {
   //   id: 2,
   //   title: "Invest In Your Skin, Not Just Products",
@@ -35,7 +43,7 @@ export default function BlogSection() {
         Explore our blogs to learn more
       </h2>
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-2">
+        <div className="grid md:grid-cols-3 gap-10">
           {blogs.map((blog) => (
             <div
               key={blog.id}
@@ -57,10 +65,10 @@ export default function BlogSection() {
                   {blog.title}
                 </Link>
 
-                <p className="text-gray-500 text-left text-sm mb-4">
+                <p className="text-gray-500 text-left text-[16px] mb-4">
                   {blog.date}
                 </p>
-                <p className="text-gray-500 text-left text-sm mb-4">
+                <p className="text-gray-500 text-left  text-[16px] mb-4">
                   {blog.desc}
                 </p>
                 <Link
