@@ -81,6 +81,18 @@ select {
   .max-w-4xl {
     max-width: 1340px;
   }
+  .max-w-6xl {
+    max-width: 1840px;
+  }
+  .max-w-6xl a {
+    font-size: 28px;
+  }
+  .max-w-6xl li {
+    font-size: 28px;
+  }
+  .blog-heading {
+    font-size: 30px;
+  }
   .terms {
     overflow: scroll;
     /* top: 10%; */

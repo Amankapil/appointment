@@ -74,7 +74,7 @@ const AstrologyComponent = () => {
           </p>
         </section>
         <section className="my-20 text-[20px]">
-          <h2 className="text-[24px] text-center font-semibold font-salernomi mt-3">
+          <h2 className="text-[32px] text-center font-semibold font-salernomi mt-3">
             Fate vs. Free Will: The Balanced Approach
           </h2>
           <p className="mt-2 text-gray-700 font-poppins text-center">
@@ -85,7 +85,7 @@ const AstrologyComponent = () => {
           </p>
         </section>
         <section className="my-20 text-[20px]">
-          <h2 className="text-[24px] text-center font-semibold font-salernomi mt-3">
+          <h2 className="text-[32px] text-center font-semibold font-salernomi mt-3">
             How Does It Work?
           </h2>
           <p className="mt-2 text-gray-700 font-poppins text-center">
@@ -134,7 +134,7 @@ const AstrologyComponent = () => {
             where you stand, what is achievable, and how to align goals with
             karmic principles.
           </p>
-          <h2 className="text-[24px] text-left font-semibold font-salernomi mt-3">
+          <h2 className="text-[32px] text-left font-semibold font-salernomi mt-3">
             Understanding the Astrological Trinity
           </h2>
 

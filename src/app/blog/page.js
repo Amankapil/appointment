@@ -60,7 +60,7 @@ export default function BlogSection() {
               <div className="p-6 flex items-start  flex-col">
                 <Link
                   href={blog.link}
-                  className="text-[24px] text-left font-salernomi font-semibold mb-2"
+                  className="text-[24px] blog-heading text-left font-salernomi font-semibold mb-2"
                 >
                   {blog.title}
                 </Link>
