@@ -150,19 +150,19 @@ export async function POST(request) {
     //   text: message,
     // });
     console.log(message);
+    // const res = await client.messages.create({
+    //   body: message,
+    //   // from: `whatsapp:${twilioPhoneNumber}`,
+    //   from: "whatsapp:+15557334838",
+    //   to: `whatsapp:+918103075691`,
+    // });
+
     const res = await client.messages.create({
-      body: message,
-      // from: `whatsapp:${twilioPhoneNumber}`,
       from: "whatsapp:+15557334838",
-      to: `whatsapp:+918103075691`,
+      to: "whatsapp:+918103075691",
+      contentSid: "HXa2e86e0ba8a42f0ea7db7e68e924491a", // Replace with your correct template ID
     });
 
-    // const res = await client.messages.create({
-    //   body: "Your approved template content", // Must match exactly an approved template
-    //   from: "whatsapp:+15557334838",
-    //   to: "whatsapp:+918103075691",
-    //   contentSid: "HXa2e86e0ba8a42f0ea7db7e68e924491a", // Your template SID
-    // });
     console.log("whatapp response", res);
     await sendEmail({
       to: email,
@@ -171,7 +171,7 @@ export async function POST(request) {
     });
     await sendEmail({
       to: "jagadish.k48@gmail.com",
-      subject: "Session Confirm with Prashna Siddhi",
+      subject: "Hey You have a New Appointment..",
       text: message,
     });
 

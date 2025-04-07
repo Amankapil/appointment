@@ -6,11 +6,11 @@ import Link from "next/link";
 const blogs = [
   {
     id: 1,
-    title: "Don’t Bargain with Planets, Appeal!",
-    date: "April 1, 2025",
-    image: "/images/blogone.png",
-    link: "/blog/dont-bargain-with-planets-appeal",
-    desc: " Many seekers believe that they can buy their way out of astrologicalproblems.",
+    title: "Are Planets Watching Us?... ",
+    date: "April 6, 2025",
+    image: "/images/blog3.png",
+    link: "/blog/are-planets-watching-us",
+    desc: " The grand architecture of the Zodiac is deeply fascinating. Unfortunately.....",
   },
   {
     id: 2,
@@ -20,6 +20,15 @@ const blogs = [
     link: "/blog/can-you-change-your-destiny",
     desc: "Is our fate predetermined, or do we have the power to shape it? Destiny is ....",
   },
+  {
+    id: 3,
+    title: "Don’t Bargain with Planets, Appeal!",
+    date: "April 1, 2025",
+    image: "/images/blogone.png",
+    link: "/blog/dont-bargain-with-planets-appeal",
+    desc: " Many seekers believe that they can buy their way out of astrologicalproblems.....",
+  },
+
   // {
   //   id: 2,
   //   title: "Invest In Your Skin, Not Just Products",
@@ -47,7 +56,7 @@ export default function BlogSection() {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-start items-start"
+              className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-center items-start"
             >
               <div className="relative w-full h-56">
                 <Image

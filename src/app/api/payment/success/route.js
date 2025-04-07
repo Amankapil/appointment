@@ -234,7 +234,7 @@ export async function POST(request) {
     });
     await sendEmail({
       to: "jagadish.k48@gmail.com",
-      subject: "New Session Confirm",
+      subject: "Hey You have a New Appointment..",
       text: message,
     });
     // Redirect to the payment success page
