@@ -194,7 +194,8 @@
 
 const BlogPost = () => {
   return (
-    <article className="my-20 px-6 max-w-4xl mx-auto">
+    <article className="my-20 px-6 max-w-6xl mx-auto">
+      {/* <div className="max-w-6xl mx-auto p-6 bg-white shadowg rounded-lg"></div> */}
       {/* Introduction */}
       <section className="mb-16">
         <h1 className="text-4xl font-semibold text-center font-salernomi mb-8">
@@ -297,7 +298,7 @@ const BlogPost = () => {
           <strong>Aries</strong>, the very first sign.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           The Sun — Exalted in Aries: What Does It Truly Mean?
         </h3>
         <p className="text-lg mb-4">
@@ -354,7 +355,7 @@ const BlogPost = () => {
           <strong>spiritual warning</strong>.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Libra — The Other Side of the Karmic Scale
         </h3>
         <p className="text-lg mb-4">
@@ -437,7 +438,9 @@ const BlogPost = () => {
           Now let us turn our attention to the <strong>Moon</strong>.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">Is Moon a Planet?</h3>
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+          Is Moon a Planet?
+        </h3>
         <p className="text-lg mb-4">
           From an astronomical standpoint, the Moon is not classified as a
           planet—it is Earth's satellite. Yet, from the{" "}
@@ -451,7 +454,7 @@ const BlogPost = () => {
           spiritual—are immense.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Moon — The Embodiment of the Mind
         </h3>
         <p className="text-lg mb-4">
@@ -473,7 +476,7 @@ const BlogPost = () => {
           illusions, pushing humanity into deeper karmic entanglement.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Moon is Exalted in Taurus — Why?
         </h3>
         <p className="text-lg mb-4">
@@ -507,7 +510,7 @@ const BlogPost = () => {
           desires rather than guiding souls toward liberation.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Moon Debilitated in Scorpio — What's the Message?
         </h3>
         <p className="text-lg mb-4">
@@ -540,7 +543,7 @@ const BlogPost = () => {
           on the <strong>misuse of the mind</strong> and contemplate liberation.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           The Ultimate Spiritual Message
         </h3>
         <p className="text-lg mb-4">
@@ -563,7 +566,7 @@ const BlogPost = () => {
           hidden within the exaltation and debilitation scheme of the Moon.
         </p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Yogic Insight — True Weightlessness
         </h3>
         <p className="text-lg mb-4">
@@ -602,7 +605,7 @@ const BlogPost = () => {
           Spiritual Mandate
         </h2>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Jupiter's Exaltation — A Spiritual Wonder in Cancer
         </h3>
         <p className="text-lg mb-4">
@@ -665,7 +668,7 @@ const BlogPost = () => {
         </p>
         <p className="text-lg mb-4">Let us correct the course.</p>
 
-           <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
+        <h3 className="text-2xl font-semibold mt-8 mb-4 font-salernomi">
           Mercury in Virgo and Venus in Pisces — The Secret of True Pleasure
         </h3>
         <p className="text-lg mb-4">

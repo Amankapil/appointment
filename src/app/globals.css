@@ -90,7 +90,16 @@ select {
   .max-w-6xl li {
     font-size: 28px;
   }
+  .max-w-6xl ul {
+    font-size: 28px;
+  }
+  .max-w-6xl {
+    font-size: 28px;
+  }
   .blog-heading {
+    font-size: 30px;
+  }
+  .max-w-6xl h4 {
     font-size: 30px;
   }
   .terms {
