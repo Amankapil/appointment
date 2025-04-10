@@ -214,7 +214,7 @@ export default function OldConsult() {
       const data = await res.json();
       setTimeSlots(data.slots);
       console.log(data.slots);
-      console.log(data.slots[0].duration);
+      console.log(data?.slots[0]?.duration);
     } catch (error) {
       console.log(error);
     }
@@ -373,7 +373,7 @@ export default function OldConsult() {
             <div className="flex flex-col mb-10 items-start justify-start w-full">
               <h2 className="text-xl font-semibold mb-4">Personal Details</h2>
               <p className="text-[16px] font-normal mb-4">
-                Enter your last used email to confirm.
+                Enter your last used phone number to confirm.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1 booking-form">
@@ -430,7 +430,6 @@ export default function OldConsult() {
                   //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
-                {/* <DatePicker onChange={handleChange} />; */}
               </label>
 
               <label className="relative flex items-start justify-center flex-col">
@@ -468,55 +467,6 @@ export default function OldConsult() {
                   <option value="Other">Other</option>
                 </select>
               </label>
-              {/* <label>
-                Country *
-                <Select
-                  options={Country.getAllCountries().map((c) => ({
-                    label: c.name,
-                    value: c.isoCode,
-                  }))}
-                  className="w-full"
-                  onChange={(selected) =>
-                    setFormData({
-                      ...formData,
-                      country: selected.value,
-                      state: "",
-                      city: "",
-                    })
-                  }
-                />
-              </label>
-              <label>
-                State *
-                <Select
-                  options={State.getStatesOfCountry(formData.country).map(
-                    (s) => ({ label: s.name, value: s.isoCode })
-                  )}
-                  className="w-full"
-                  onChange={(selected) =>
-                    setFormData({
-                      ...formData,
-                      state: selected.value,
-                      city: "",
-                    })
-                  }
-                />
-              </label>
-
-              <label>
-                City *
-                <Select
-                  options={City.getCitiesOfState(
-                    formData.country,
-                    formData.state
-                  ).map((c) => ({
-                    label: c.name,
-                    value: c.name,
-                  }))}
-                  className="w-full"
-                  onChange={handleCityChange}
-                />
-              </label> */}
 
               <label>
                 Country *
@@ -535,14 +485,6 @@ export default function OldConsult() {
                         }
                       : null
                   }
-                  //   onChange={(selected) =>
-                  //     setFormData({
-                  //       ...formData,
-                  //       country: selected.value,
-                  //       state: "",
-                  //       city: "",
-                  //     })
-                  //   }
                 />
               </label>
 
@@ -569,13 +511,6 @@ export default function OldConsult() {
                         }
                       : null
                   }
-                  //   onChange={(selected) =>
-                  //     setFormData({
-                  //       ...formData,
-                  //       state: selected.value,
-                  //       city: "",
-                  //     })
-                  //   }
                 />
               </label>
 
@@ -599,12 +534,6 @@ export default function OldConsult() {
                       ? { label: formData.city, value: formData.city }
                       : null
                   }
-                  //   onChange={(selected) =>
-                  //     setFormData({
-                  //       ...formData,
-                  //       city: selected.value,
-                  //     })
-                  //   }
                 />
               </label>
 
@@ -672,28 +601,6 @@ export default function OldConsult() {
                 <h2 className="text-md font-normal pb-4">
                   Select a Convenient Time
                 </h2>
-                {/* <div className="grid grid-cols-3 gap-2">
-                {timeSlots?.map((slot) => (
-                  <button
-                    key={slot.time}
-                    disabled={slot.status === "booked"} // Disable if booked
-                    onClick={() => {
-                      setSelectedTime(slot.time);
-                      setDuration(slot.duration);
-                    }}
-                    className={`p-2 rounded text-sm border 
-      ${
-        slot.status === "available"
-          ? selectedTime === slot.time
-            ? "bg-blue-500 text-white" // Selected slot
-            : "bg-green-200 hover:bg-green-300"
-          : "bg-red-200 hover:bg-red-300"
-      }`}
-                  >
-                    {slot.time}
-                  </button>
-                ))}
-              </div> */}
 
                 <div className="flex gap-2 mb-4">
                   <button
@@ -730,7 +637,7 @@ export default function OldConsult() {
 
                 {/* Time Slots */}
                 <div className="grid grid-cols-3 gap-2">
-                  {filteredSlots.length > 0 ? (
+                  {/* {filteredSlots.length > 0 ? (
                     filteredSlots.map((slot) => (
                       <button
                         key={slot._id}
@@ -752,6 +659,63 @@ export default function OldConsult() {
                       </button>
                     ))
                   ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )} */}
+
+                  {filteredSlots
+                    .filter((slot) => {
+                      const currentHour = new Date().getHours(); // Get current hour in 24-hour format
+
+                      // Extract the start time (e.g., "10:00 AM")
+                      const startTime = slot.time.split(" - ")[0];
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
+                      const period = startTime.includes("PM") ? "PM" : "AM";
+
+                      // Convert to 24-hour format
+                      if (period === "PM" && hour !== 12) hour += 12;
+                      if (period === "AM" && hour === 12) hour = 0;
+
+                      return hour >= currentHour && hour <= 18; // Show slots from current time to 6 PM
+                    })
+                    .sort((a, b) => {
+                      // Extract start times for sorting
+                      const getTimeInMinutes = (time) => {
+                        let [hour, minute] = time.match(/\d+/g).map(Number);
+                        const period = time.includes("PM") ? "PM" : "AM";
+
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        return hour * 60 + minute; // Convert to total minutes for sorting
+                      };
+
+                      return (
+                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
+                      );
+                    })
+                    .map((slot) => (
+                      <button
+                        key={slot._id}
+                        disabled={slot.status === "booked"}
+                        onClick={() => {
+                          setSelectedTime(slot.time);
+                          setDuration(slot.duration);
+                        }}
+                        className={`p-2 rounded text-sm border 
+        ${
+          slot.status === "available"
+            ? selectedTime === slot.time
+              ? "bg-blue-500 text-white" // Selected slot
+              : "bg-green-200 hover:bg-green-300"
+            : "bg-red-200 hover:bg-red-300"
+        }`}
+                      >
+                        {slot.time}
+                      </button>
+                    ))}
+                  {filteredSlots.length === 0 && (
                     <p className="text-gray-500 col-span-3 text-center">
                       No slots available
                     </p>

@@ -4,26 +4,50 @@ import Select from "react-select";
 import { Country, State, City } from "country-state-city";
 import Questions from "@/Components/Questions";
 
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { DivideIcon } from "@heroicons/react/24/solid";
-import ThankYouScreen from "@/Components/ThankYouScreen";
-import axios from "axios";
-import PaymentButton from "@/Components/PaymentButton";
+
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import logo from "../../Components/pagesComponent/Homecomponent/assets/logo.svg";
 import Link from "next/link";
 
-import { toast } from "react-toastify";
-
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import Bookings from "@/Components/Bookings";
 
 export default function MultiStepForm() {
+  const [showPopup, setShowPopup] = useState(true);
+  const router = useRouter();
+
+  const handleSelection = (type) => {
+    if (type === "overseas") {
+      router.push("/overseas");
+    }
+    setShowPopup(false);
+  };
+
   return (
     <>
+      {/* {showPopup && (
+        <div className="fixed inset-0 flex z-[99999999] items-center justify-center bg[#ffffff13] backdrop-blur-[10px] bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-lg font-semibold mb-4">
+              Select Your Client Type
+            </h2>
+            <button
+              onClick={() => handleSelection("indian")}
+              className="px-4 py-2 bg-blue-500 text-white rounded-md m-2"
+            >
+              Indian Residents
+            </button>
+            <button
+              onClick={() => handleSelection("overseas")}
+              className="px-4 py-2 bg-green-500 text-white rounded-md m-2"
+            >
+              Overseas
+            </button>
+          </div>
+        </div>
+      )} */}
+
       <div className="w-full  text-black p-5 transition-all  top-">
         <div className="flex items-center justify-between">
           <div>

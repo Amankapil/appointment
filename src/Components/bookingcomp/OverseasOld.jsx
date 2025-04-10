@@ -21,6 +21,8 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Bookings from "@/Components/Bookings";
 
+import { DateTime } from "luxon";
+import OverseasPayment from "./OverseasPayment";
 const steps = [
   "Personal Details",
   // "Questions",
@@ -29,14 +31,14 @@ const steps = [
   "Payment",
 ];
 
-export default function NewConsult() {
+export default function OverseasOld({ selectedTimezone }) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const router = useRouter();
   const [formData, setFormData] = useState({
+    email: "",
     fullName: "",
     phone: "",
-    email: "",
     dob: "",
     timeOfBirth: "",
     gender: "",
@@ -50,71 +52,108 @@ export default function NewConsult() {
     selectedQuestions: [],
   });
 
+  const [clients, setClients] = useState([]);
+  const [emailMessage, setEmailMessage] = useState("");
+  const [svgdata, setSvgData] = useState("");
+
+  // Fetch all data once when the component mounts
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/api/admin/getTransaction");
+        const data = await response.json();
+        // console.log(data.data);
+        setClients(data.data); // Store the fetched users
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  //   console.log(clients);
+  //
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handlePhoneChange = (value) => {
-    setFormData((prev) => ({ ...prev, phone: value }));
-  };
+  // Function to handle email input change
+  const handleEmailChange = (e) => {
+    const email = e.target.value.trim();
+    setFormData((prev) => ({ ...prev, email }));
 
-  const handleQuestionChange = (question) => {
-    setFormData((prev) => ({
-      ...prev,
-      selectedQuestions: prev.selectedQuestions.includes(question)
-        ? prev.selectedQuestions.filter((q) => q !== question)
-        : [...prev.selectedQuestions, question],
-    }));
+    if (email.includes("@") && email.includes(".com")) {
+      const user = clients.find((client) => client.email === email);
+      if (user) {
+        // Ensure all fields have default values
+        setFormData({
+          email: user.email || "",
+          fullName: user.name || "",
+          phone: user.phone || "",
+          dob: user.dob || "",
+          timeOfBirth: user.tob || "",
+          gender: user.gender || "",
+          country: user.country || "",
+          state: user.state || "",
+          material: user.material || "",
+          city: user.city || "",
+          maritalStatus: user.maritalStatus || "",
+          latitude: user.latitude || "",
+          longitude: user.longitude || "",
+          selectedQuestions: user.selectedQuestions || [],
+        });
+        toast.success("Email found");
+        setSvgData(user?.filePath);
+        setEmailMessage("");
+      } else {
+        // Show toast only when a complete email is typed and not found
+        setTimeout(() => {
+          toast.error("Email not found. Please fill in the details.");
+        }, 500);
+      }
+    } else {
+      setEmailMessage("");
+    }
+  };
+  const handlePhoneChange = (value) => {
+    const phone = value.trim();
+    setFormData((prev) => ({ ...prev, phone }));
+
+    if (phone.length >= 12) {
+      // Adjust as per phone format
+      const user = clients.find((client) => client.phone === phone);
+      if (user) {
+        // Ensure all fields have default values
+        setFormData({
+          email: user.email || "",
+          fullName: user.name || "",
+          phone: user.phone || "",
+          dob: user.dob || "",
+          timeOfBirth: user.tob || "",
+          gender: user.gender || "",
+          country: user.country || "",
+          state: user.state || "",
+          material: user.material || "",
+          city: user.city || "",
+          maritalStatus: user.maritalStatus || "",
+          latitude: user.latitude || "",
+          longitude: user.longitude || "",
+          selectedQuestions: user.selectedQuestions || [],
+        });
+        toast.success("Phone number found");
+        setSvgData(user?.filePath);
+        // setPhoneMessage("");
+      } else {
+        // setTimeout(() => {
+        toast.error("Phone number not found. Please fill in the details.");
+        // }, 500);
+      }
+    } else {
+      // setPhoneMessage("");
+    }
   };
 
   const [latloading, setlatLoading] = useState(false);
 
-  const [lathoroscope, setlathoroscope] = useState(null);
-  const [longhoroscope, setlonghoroscope] = useState(null);
-
-  const handleCityChange = async (selected) => {
-    setlatLoading(true);
-    const city = selected.value;
-    setFormData({ ...formData, city });
-
-    if (formData.country && formData.state && city) {
-      try {
-        const apiKey = "7bff259ba7ff49bd8d7e7a0db4666a20"; // Replace with your OpenCage API key
-        const response = await fetch(
-          `https://api.opencagedata.com/geocode/v1/json?q=${city},${formData.state},${formData.country}&key=${apiKey}`
-        );
-
-        const data = await response.json();
-
-        console.log(data);
-        console.log(data.results[0].geometry);
-        if (data.results.length > 0) {
-          const { lat, lng } = data.results[0].geometry;
-          setFormData((prev) => ({
-            ...prev,
-            latitude: lat,
-            longitude: lng,
-          }));
-          setlathoroscope(lat);
-          setlonghoroscope(lng);
-        }
-      } catch (error) {
-        console.error("Error fetching coordinates:", error);
-      } finally {
-        setlatLoading(false);
-      }
-    }
-  };
-
-  const [horoscopeDataa, setHoroscopeData] = useState({
-    day: new Date().getDate(),
-    month: new Date().getMonth() + 1, // Months are 0-indexed in JavaScript
-    year: new Date().getFullYear(),
-    hour: new Date().getHours(),
-    min: new Date().getMinutes(),
-    lat: lathoroscope,
-    lon: longhoroscope,
-    tzone: 5.5, // Default timezone
-  });
   const [tok, setTok] = useState(null);
   const [paydata, setPayedata] = useState({
     fullName: "",
@@ -166,49 +205,91 @@ export default function NewConsult() {
   ]);
 
   // ?÷working fine in chrome
-  useEffect(() => {
-    if (formData.dob && formData.timeOfBirth) {
-      const [year, month, day] = formData.dob.split("-").map(Number);
-      const [hour, min] = formData.timeOfBirth.split(":").map(Number);
-      console.log("Raw formData:", formData);
-      const lat = formData.latitude;
-      const lon = formData.longitude;
-      setHoroscopeData({
-        day,
-        month,
-        year,
-        hour,
-        min,
-        lat: lathoroscope,
-        lon: longhoroscope,
-        tzone: 5.5, // Adjust this if needed
-      });
-    }
-  }, [
-    formData,
-    formData.dob,
-    longhoroscope,
-    lathoroscope,
-    formData.timeOfBirth,
-    formData.latitude,
-    formData.longitude,
-  ]);
 
   const [selectedDate, setSelectedDate] = useState(new Date());
+  //   const [timeSlots, setTimeSlots] = useState([]);
+  //   // Fetch time slots for the selected date
+  //   const fetchSlots = async (date) => {
+  //     try {
+  //       const formattedDate = date.toISOString().split("T")[0]; // Extract YYYY-MM-DD
+  //       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
+  //       const data = await res.json();
+  //       setTimeSlots(data.slots);
+  //       console.log(data.slots);
+  //       console.log(data?.slots[0]?.duration);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+
+  const [indiantimetoesend, setindiantimetosend] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
-  // Fetch time slots for the selected date
+
+  // Fetch slots for today's date from the server
   const fetchSlots = async (date) => {
     try {
-      const formattedDate = date.toISOString().split("T")[0]; // Extract YYYY-MM-DD
+      const formattedDate = date.toISOString().split("T")[0]; // YYYY-MM-DD
       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
       const data = await res.json();
-      setTimeSlots(data.slots);
-      console.log(data.slots);
-      console.log(data.slots[0].duration);
+      //   console.log(data);
+
+      // Convert stored IST slots to UTC and retain status & duration
+      const filteredSlots = data.slots
+        .map((slot) => {
+          const [startTime, endTime] = slot.time.split(" - ");
+
+          // Convert IST times to UTC
+          const startUTC = DateTime.fromFormat(startTime, "h:mm a", {
+            zone: "Asia/Kolkata",
+          }).toUTC();
+
+          const endUTC = DateTime.fromFormat(endTime, "h:mm a", {
+            zone: "Asia/Kolkata",
+          }).toUTC();
+
+          return {
+            startUTC,
+            endUTC,
+            status: slot.status,
+            duration: slot.duration,
+          };
+        })
+        .filter((slot) => {
+          const hour = slot.startUTC.hour;
+          return hour >= 4 && hour <= 12; // 10 AM - 6 PM IST in UTC (4 AM - 12 PM)
+        });
+
+      //   console.log(filteredSlots);
+
+      setTimeSlots(filteredSlots);
     } catch (error) {
-      console.log(error);
+      console.log("Error fetching slots:", error);
     }
   };
+
+  // Convert UTC slots to the selected timezone while keeping status & duration
+  const convertSlotsToTimezone = () => {
+    return timeSlots.map((slot) => {
+      const startDateTime = slot.startUTC.setZone(selectedTimezone);
+      const endDateTime = slot.endUTC.setZone(selectedTimezone);
+
+      return {
+        timeRange: `${startDateTime.toFormat(
+          "h:mm a"
+        )} - ${endDateTime.toFormat("h:mm a")}`,
+        status: slot.status,
+        duration: slot.duration,
+        istTime: `${slot.startUTC
+          .setZone("Asia/Kolkata")
+          .toFormat("h:mm a")} - ${slot.endUTC
+          .setZone("Asia/Kolkata")
+          .toFormat("h:mm a")}`, // Store IST time
+      };
+    });
+  };
+
+  const convertedSlots = convertSlotsToTimezone();
+  //   console.log(convertedSlots);
 
   const [selectedTime, setSelectedTime] = useState(null);
   // console.log(selectedTime);
@@ -220,306 +301,11 @@ export default function NewConsult() {
     if (currentStep === 1) fetchSlots(selectedDate);
   }, [currentStep, selectedDate]);
 
-  const userId = "637630";
-  const apiKey = "d749395941556d92772b002cc738fd79ae63d73b";
-  const language = "hi";
-
   const [svgUrl, setSvgUrl] = useState("");
-  const [svgdata, setSvgData] = useState("");
-
-  const uploadToCloudinary = async (blob) => {
-    try {
-      // Convert blob to File
-      const file = new File([blob], "image.svg", { type: "image/svg+xml" });
-
-      // Create FormData to send to Cloudinary
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("upload_preset", "horoscope"); // Replace with your Cloudinary preset
-      formData.append("resource_type", "raw");
-      // Upload to Cloudinary
-      const cloudinaryResponse = await fetch(
-        "https://api.cloudinary.com/v1_1/dpmmcn7zv/image/upload",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
-
-      const data = await cloudinaryResponse.json();
-      // toast.success("Cloudinary Upload Success");
-
-      if (data.secure_url) {
-        console.log("SVG URL:", data.secure_url);
-        return data.secure_url;
-      } else {
-        throw new Error("Upload failed");
-      }
-    } catch (error) {
-      console.error("Error uploading to Cloudinary:", error);
-    }
-  };
-
-  const [pdfUrl, setpdfUrl] = useState("");
-  const [pdfdata, setpdfData] = useState("");
-
-  // working till 25march 2025
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   // Validate each field to ensure they are not undefined or null
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Fix for Safari - Use Date.UTC() for reliable datetime conversion
-  //   const datetime = new Date(
-  //     Date.UTC(year, month - 1, day, hour, min, 0)
-  //   ).toISOString();
-
-  //   // Encode URL components properly
-  //   const coordinates = `${lat},${lon}`;
-  //   const encodedDatetime = encodeURIComponent(datetime);
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //     timezone = "+05:30", // Replace with dynamic timezone if needed
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Function to format datetime correctly with timezone offset
-  //   const formatDateTimeWithOffset = (
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   ) => {
-  //     const pad = (num) => String(num).padStart(2, "0");
-  //     return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(
-  //       min
-  //     )}:00${timezone}`;
-  //   };
-
-  //   // Get properly formatted datetime
-  //   const datetime = formatDateTimeWithOffset(
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   );
-
-  //   // Encode the datetime properly
-  //   const encodedDatetime = encodeURIComponent(datetime.replace("+", "%2B"));
-
-  //   // Construct API URL
-  //   const coordinates = `${lat},${lon}`;
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
-
-  const makeApiRequest = async (horoscopeData1) => {
-    const {
-      day,
-      month,
-      year,
-      hour,
-      min,
-      lat,
-      lon,
-      chart_type = "lagna",
-      chart_style = "south-indian",
-      format = "svg",
-      la = "en",
-      upagraha_position = "middle",
-      timezone = "+05:30", // Ensure this is correct
-    } = horoscopeData1;
-
-    console.log("Received Horoscope Data:", horoscopeData1);
-
-    if (
-      day == null ||
-      month == null ||
-      year == null ||
-      hour == null ||
-      min == null ||
-      lat == null ||
-      lon == null
-    ) {
-      console.log("Missing required horoscope data", horoscopeData1);
-      return;
-    }
-
-    // Function to format datetime correctly with timezone offset
-    const formatDateTimeWithOffset = (
-      year,
-      month,
-      day,
-      hour,
-      min,
-      timezone
-    ) => {
-      const pad = (num) => String(num).padStart(2, "0");
-
-      // Ensure the timezone is correctly formatted
-      let formattedTimezone = timezone.trim();
-      if (formattedTimezone === "Z") {
-        formattedTimezone = "+00:00"; // Convert 'Z' to UTC offset
-      }
-
-      return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(
-        min
-      )}:00${formattedTimezone}`;
-    };
-
-    // Get properly formatted datetime
-    const datetime = formatDateTimeWithOffset(
-      year,
-      month,
-      day,
-      hour,
-      min,
-      timezone
-    );
-
-    // Encode the datetime properly
-    const encodedDatetime = encodeURIComponent(datetime);
-
-    // Construct API URL
-    const coordinates = `${lat},${lon}`;
-    const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-
-    console.log("Formatted API URL:", apiUrl);
-
-    try {
-      const response = await fetch(apiUrl, { method: "GET" });
-      if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-      const blob = await response.blob();
-      console.log("Blob Response:", blob);
-
-      const cloudinaryUrl = await uploadToCloudinary(blob);
-
-      if (cloudinaryUrl) {
-        console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-      }
-
-      const objectUrl = URL.createObjectURL(blob);
-      setSvgUrl(objectUrl);
-      setSvgData(cloudinaryUrl);
-      console.log("API Response:", objectUrl);
-    } catch (error) {
-      console.error("Error calling API:", error);
-    }
-  };
 
   const handleSubmit = async () => {
     setError(null);
     setLoading(true);
-
-    // const svgBase64 = await blobToBase64(svgdata);
-    // const svggg = localStorage.getItem("svg");
     try {
       const response = await fetch("/api/urgent", {
         method: "POST",
@@ -533,9 +319,9 @@ export default function NewConsult() {
           duration: duration,
           gender: formData.gender,
           svgUrl: svgdata,
-          latitude: lathoroscope,
-          longitude: longhoroscope,
           // svgUrl: svggg,
+          latitude: formData.latitude,
+          longitude: formData.longitude,
           country: formData.country,
           state: formData.state,
           city: formData.city,
@@ -545,7 +331,7 @@ export default function NewConsult() {
         }),
       });
       const data = await response.json();
-      console.log(data);
+      //   console.log(data);
       if (data.success == true) {
         toast.success(data.message);
         router.push("/urgent");
@@ -586,12 +372,21 @@ export default function NewConsult() {
       return;
     }
 
+    // makeApiRequest(horoscopeDataa);
+
+    // console.log(horoscopeDataa);
+
     if (currentStep == 0) {
-      makeApiRequest(horoscopeDataa);
-      console.log(horoscopeDataa);
+      setSvgUrl(clients?.filePath);
+
+      //   console.log(clients?.filePath);
+      //   console.log(svgUrl);
       setCurrentStep(currentStep + 1);
     }
     if (currentStep == 1) {
+      setSvgUrl(clients?.filePath);
+      //   console.log(clients?.filePath);
+      //   console.log(svgUrl);
       if (!selectedTime) {
         toast.error("please select time slot");
         return;
@@ -615,6 +410,23 @@ export default function NewConsult() {
   const filteredSlots = selectedDuration
     ? timeSlots.filter((slot) => slot.duration === selectedDuration)
     : timeSlots;
+
+  //   // Convert UTC slots to the selected timezone
+  //   const convertSlotsToTimezone = () => {
+  //     return timeSlots.map((slot) => {
+  //       const startDateTime = slot.startUTC.setZone(selectedTimezone);
+  //       const endDateTime = slot.endUTC.setZone(selectedTimezone);
+
+  //       return {
+  //         timeRange: `${startDateTime.toFormat(
+  //           "h:mm a"
+  //         )} - ${endDateTime.toFormat("h:mm a")}`,
+  //       };
+  //     });
+  //   };
+
+  //   const convertedSlots = convertSlotsToTimezone();
+  //   console.log(convertedSlots);
 
   return (
     <>
@@ -649,33 +461,10 @@ export default function NewConsult() {
             <div className="flex flex-col mb-10 items-start justify-start w-full">
               <h2 className="text-xl font-semibold mb-4">Personal Details</h2>
               <p className="text-[16px] font-normal mb-4">
-                Your essential details for a personalized consultation.
+                Enter your last used email to confirm.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1 booking-form">
-              <label className="text-[16px]">
-                Full Name *
-                <input
-                  name="fullName"
-                  type="text"
-                  placeholder="John Doe"
-                  value={formData.fullName}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
-              {/* <label>
-                Phone Number *
-                <input
-                  name="phone"
-                  type="number"
-                  required
-                  placeholder="+91 9876543210"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label> */}
               <label className="block mb-2">
                 Phone Number *
                 <PhoneInput
@@ -691,19 +480,18 @@ export default function NewConsult() {
                   enableSearch={true} // Allows country search
                 />
               </label>
-              {/* <label>
-                Phone Number *
+
+              <label className="text-[16px]">
+                Full Name *
                 <input
-                  name="phone"
-                  type="number"
-                  required
-                  placeholder="+91 9876543210"
-                  value={formData.phone}
-                  onChange={handleChange}
+                  name="fullName"
+                  type="text"
+                  placeholder="John Doe"
+                  value={formData.fullName}
+                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
-              </label> */}
-
+              </label>
               <label>
                 Email ID *
                 <input
@@ -712,10 +500,12 @@ export default function NewConsult() {
                   required
                   placeholder="johndoe@gmail.com"
                   value={formData.email}
-                  onChange={handleChange}
+                  //   onChange={handleChange}
+                  // onChange={handleEmailChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
+
               <label>
                 Date of Birth *
                 <input
@@ -725,21 +515,10 @@ export default function NewConsult() {
                   // pattern="\d{4}-\d{2}-\d{2}"
                   required
                   value={formData.dob}
-                  onChange={handleChange}
+                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
-                {/* <DatePicker onChange={handleChange} />; */}
               </label>
-              {/* <label>
-                Time of Birth *
-                <input
-                  name="timeOfBirth"
-                  type="time"
-                  value={formData.timeOfBirth}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label> */}
 
               <label className="relative flex items-start justify-center flex-col">
                 Time of Birth*
@@ -748,7 +527,7 @@ export default function NewConsult() {
                     name="timeOfBirth"
                     type="time"
                     value={formData.timeOfBirth}
-                    onChange={handleChange}
+                    // onChange={handleChange}
                     className="border p-2 rounded wfull border-[#E4E4E4] ml-2 max-md:ml-0  w-[240px] max-md:w-full"
                   />
                   <span className="ml-2 relative group">
@@ -776,6 +555,7 @@ export default function NewConsult() {
                   <option value="Other">Other</option>
                 </select>
               </label>
+
               <label>
                 Country *
                 <Select
@@ -784,57 +564,64 @@ export default function NewConsult() {
                     value: c.isoCode,
                   }))}
                   className="w-full"
-                  onChange={(selected) =>
-                    setFormData({
-                      ...formData,
-                      country: selected.value,
-                      state: "",
-                      city: "",
-                    })
+                  value={
+                    formData.country
+                      ? {
+                          label: Country.getCountryByCode(formData.country)
+                            ?.name,
+                          value: formData.country,
+                        }
+                      : null
                   }
                 />
               </label>
+
               <label>
                 State *
                 <Select
-                  options={State.getStatesOfCountry(formData.country).map(
-                    (s) => ({ label: s.name, value: s.isoCode })
-                  )}
+                  options={
+                    formData.country
+                      ? State.getStatesOfCountry(formData.country).map((s) => ({
+                          label: s.name,
+                          value: s.isoCode,
+                        }))
+                      : []
+                  }
                   className="w-full"
-                  onChange={(selected) =>
-                    setFormData({
-                      ...formData,
-                      state: selected.value,
-                      city: "",
-                    })
+                  value={
+                    formData.state
+                      ? {
+                          label: State.getStateByCodeAndCountry(
+                            formData.state,
+                            formData.country
+                          )?.name,
+                          value: formData.state,
+                        }
+                      : null
                   }
                 />
               </label>
-              {/* <label>
-              City
-              <Select
-                options={City.getCitiesOfState(
-                  formData.country,
-                  formData.state
-                ).map((c) => ({ label: c.name, value: c.name }))}
-                className="w-full"
-                onChange={(selected) =>
-                  setFormData({ ...formData, city: selected.value })
-                }
-              />
-            </label> */}
+
               <label>
                 City *
                 <Select
-                  options={City.getCitiesOfState(
-                    formData.country,
-                    formData.state
-                  ).map((c) => ({
-                    label: c.name,
-                    value: c.name,
-                  }))}
+                  options={
+                    formData.country && formData.state
+                      ? City.getCitiesOfState(
+                          formData.country,
+                          formData.state
+                        ).map((c) => ({
+                          label: c.name,
+                          value: c.name,
+                        }))
+                      : []
+                  }
                   className="w-full"
-                  onChange={handleCityChange}
+                  value={
+                    formData.city
+                      ? { label: formData.city, value: formData.city }
+                      : null
+                  }
                 />
               </label>
 
@@ -861,7 +648,7 @@ export default function NewConsult() {
                   type="text"
                   placeholder="Latitude"
                   value={formData.latitude}
-                  onChange={handleChange}
+                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
@@ -872,7 +659,7 @@ export default function NewConsult() {
                   type="text"
                   placeholder="longitude"
                   value={formData.longitude}
-                  onChange={handleChange}
+                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
@@ -902,28 +689,6 @@ export default function NewConsult() {
                 <h2 className="text-md font-normal pb-4">
                   Select a Convenient Time
                 </h2>
-                {/* <div className="grid grid-cols-3 gap-2">
-                {timeSlots?.map((slot) => (
-                  <button
-                    key={slot.time}
-                    disabled={slot.status === "booked"} // Disable if booked
-                    onClick={() => {
-                      setSelectedTime(slot.time);
-                      setDuration(slot.duration);
-                    }}
-                    className={`p-2 rounded text-sm border 
-      ${
-        slot.status === "available"
-          ? selectedTime === slot.time
-            ? "bg-blue-500 text-white" // Selected slot
-            : "bg-green-200 hover:bg-green-300"
-          : "bg-red-200 hover:bg-red-300"
-      }`}
-                  >
-                    {slot.time}
-                  </button>
-                ))}
-              </div> */}
 
                 <div className="flex gap-2 mb-4">
                   <button
@@ -959,41 +724,14 @@ export default function NewConsult() {
                 </div>
 
                 {/* Time Slots */}
-                <div className="grid grid-cols-3 gap-2">
-                  {/* {filteredSlots.length > 0 ? (
-                    filteredSlots.map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))
-                  ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )} */}
-
+                {/* <div className="grid grid-cols-3 gap-2">
                   {filteredSlots
                     .filter((slot) => {
                       const currentHour = new Date().getHours(); // Get current hour in 24-hour format
 
                       // Extract the start time (e.g., "10:00 AM")
-                      const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
+                      const startTime = slot?.time?.split(" - ")[0];
+                      let [hour, minute] = startTime?.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
                       const period = startTime.includes("PM") ? "PM" : "AM";
 
                       // Convert to 24-hour format
@@ -1043,6 +781,36 @@ export default function NewConsult() {
                       No slots available
                     </p>
                   )}
+                </div> */}
+
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  {convertedSlots.length > 0 ? (
+                    convertedSlots.map((slot, index) => (
+                      <button
+                        key={index}
+                        onClick={() => {
+                          setSelectedTime(slot.timeRange);
+                          setDuration(slot.duration);
+                          setindiantimetosend(slot.istTime);
+                        }}
+                        // className="p-2 rounded text-sm border bg-green-200 hover:bg-green-300"
+                        className={`p-2 rounded text-sm border 
+        ${
+          slot.status === "available"
+            ? selectedTime === slot.timeRange
+              ? "bg-blue-500 text-white" // Selected slot
+              : "bg-green-200 hover:bg-green-300"
+            : "bg-red-200 hover:bg-red-300"
+        }`}
+                      >
+                        {slot.timeRange}{" "}
+                      </button>
+                    ))
+                  ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -1055,11 +823,11 @@ export default function NewConsult() {
             {/* {JSON.stringify(formData, null, 2)} */}
             <ThankYouScreen
               formData={formData}
-              selectedTime={selectedTime}
+              selectedTime={indiantimetoesend}
               duration={duration}
               result={result}
               error={error}
-              svgUrl={svgUrl}
+              svgUrl={svgdata}
               selectedDate={selectedDate}
             />
             {/* </pre> */}
@@ -1067,13 +835,13 @@ export default function NewConsult() {
         )}
         {currentStep === steps.length - 1 && (
           <h2 className="text-xl font-semibold mb-4 text-center">
-            <PaymentButton
+            <OverseasPayment
               setPaymentStatus={setPaymentStatus}
               paydata={paydata}
-              selectedTime={selectedTime}
-              // svgUrl={svgUrl}
+              selectedTime={indiantimetoesend}
               latitude={formData.latitude}
               longitude={formData.longitude}
+              // svgUrl={svgUrl}
               duration={duration}
               svgdata={svgdata}
               selectedDate={selectedDate}

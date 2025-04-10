@@ -20,6 +20,7 @@ import { toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Bookings from "@/Components/Bookings";
+import OverseasPayment from "./OverseasPayment";
 
 const steps = [
   "Personal Details",
@@ -29,7 +30,7 @@ const steps = [
   "Payment",
 ];
 
-export default function NewConsult() {
+export default function OverseasNew() {
   const [currentStep, setCurrentStep] = useState(0);
 
   const router = useRouter();
@@ -55,15 +56,6 @@ export default function NewConsult() {
   };
   const handlePhoneChange = (value) => {
     setFormData((prev) => ({ ...prev, phone: value }));
-  };
-
-  const handleQuestionChange = (question) => {
-    setFormData((prev) => ({
-      ...prev,
-      selectedQuestions: prev.selectedQuestions.includes(question)
-        ? prev.selectedQuestions.filter((q) => q !== question)
-        : [...prev.selectedQuestions, question],
-    }));
   };
 
   const [latloading, setlatLoading] = useState(false);
@@ -259,165 +251,6 @@ export default function NewConsult() {
       console.error("Error uploading to Cloudinary:", error);
     }
   };
-
-  const [pdfUrl, setpdfUrl] = useState("");
-  const [pdfdata, setpdfData] = useState("");
-
-  // working till 25march 2025
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   // Validate each field to ensure they are not undefined or null
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Fix for Safari - Use Date.UTC() for reliable datetime conversion
-  //   const datetime = new Date(
-  //     Date.UTC(year, month - 1, day, hour, min, 0)
-  //   ).toISOString();
-
-  //   // Encode URL components properly
-  //   const coordinates = `${lat},${lon}`;
-  //   const encodedDatetime = encodeURIComponent(datetime);
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //     timezone = "+05:30", // Replace with dynamic timezone if needed
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Function to format datetime correctly with timezone offset
-  //   const formatDateTimeWithOffset = (
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   ) => {
-  //     const pad = (num) => String(num).padStart(2, "0");
-  //     return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(
-  //       min
-  //     )}:00${timezone}`;
-  //   };
-
-  //   // Get properly formatted datetime
-  //   const datetime = formatDateTimeWithOffset(
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   );
-
-  //   // Encode the datetime properly
-  //   const encodedDatetime = encodeURIComponent(datetime.replace("+", "%2B"));
-
-  //   // Construct API URL
-  //   const coordinates = `${lat},${lon}`;
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
 
   const makeApiRequest = async (horoscopeData1) => {
     const {
@@ -1067,7 +900,7 @@ export default function NewConsult() {
         )}
         {currentStep === steps.length - 1 && (
           <h2 className="text-xl font-semibold mb-4 text-center">
-            <PaymentButton
+            <OverseasPayment
               setPaymentStatus={setPaymentStatus}
               paydata={paydata}
               selectedTime={selectedTime}

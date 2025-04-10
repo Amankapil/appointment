@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 4,
+    title: "Rediscovering the Truth Behind... ",
+    date: "April 10, 2025",
+    image: "/images/Image-07.png",
+    link: "/blog/truth-behind-planetary-exaltation-and-debilitation",
+    desc: "In the vast and ancient tradition of Vedic Astrology.....",
+  },
+  {
     id: 1,
     title: "Are Planets Watching Us?... ",
     date: "April 6, 2025",
