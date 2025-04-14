@@ -5,6 +5,22 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 6,
+    title: "The Divine Logic Behind... ",
+    date: "April 10, 2025",
+    image: "/images/Image-01 copy.png",
+    link: "/blog/the-divine-logic-behind-planetary-dual-rulership",
+    desc: "In the vast and ancient tradition of Vedic Astrology.....",
+  },
+  {
+    id: 5,
+    title: "The Special Aspects of Planets... ",
+    date: "April 10, 2025",
+    image: "/images/Image-01.png",
+    link: "/blog/the-special-aspects-of-planets",
+    desc: "In the vast and ancient tradition of Vedic Astrology.....",
+  },
+  {
     id: 4,
     title: "Rediscovering the Truth Behind... ",
     date: "April 10, 2025",

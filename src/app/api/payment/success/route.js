@@ -81,7 +81,7 @@ export async function POST(request) {
             longitude,
             filePath,
             amount,
-            status: "Urgent",
+            status: "Paid",
             paymentMethod: "PayU",
             createdAt: new Date(),
           },
@@ -97,6 +97,7 @@ export async function POST(request) {
         phone,
         amount,
         country,
+        duration,
         state,
         gender,
         dob,
@@ -242,6 +243,7 @@ Vedic Astrologer – Prashna Siddhi
 
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
+      // to: "whatsapp:+918103075691", // Recipient's WhatsApp number
       to: "whatsapp:+917259691375", // Recipient's WhatsApp number
       category: "TRANSACTIONAL",
       contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
@@ -253,9 +255,6 @@ Vedic Astrologer – Prashna Siddhi
         5: amount || "", // Ensure it's a string
         6: selectedDate || "", // Ensure it's a string
         7: filePath || "check in dashboard",
-        // 7:
-        //   "https://res.cloudinary.com/dpmmcn7zv/image/upload/v1742885887/image_zuppxz.svg" ||
-        //   "", // Ensure it's a string
       }),
     });
 

@@ -217,7 +217,7 @@ Vedic Astrologer – Prashna Siddhi
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
       to: "whatsapp:+917259691375", // Recipient's WhatsApp number
-      category: "TRANSACTIONAL",
+      // category: "TRANSACTIONAL",
       contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
       contentVariables: JSON.stringify({
         1: selectedTime || "", // Static Name (Ensure it's always a string)
@@ -227,11 +227,9 @@ Vedic Astrologer – Prashna Siddhi
         5: amount || "", // Ensure it's a string
         6: selectedDate || "", // Ensure it's a string
         7: filePath || "check in dashboard",
-        // 7:
-        //   "https://res.cloudinary.com/dpmmcn7zv/image/upload/v1742885887/image_zuppxz.svg" ||
-        //   "", // Ensure it's a string
       }),
     });
+    console.log(res);
     // console.log("amount", amount);
     // console.log("duration", duration);
     // console.log("selectedTime", selectedTime);
@@ -245,14 +243,13 @@ Vedic Astrologer – Prashna Siddhi
     //     3: selectedTime || "11:00 AM - 11:30 AM", // Dynamic Date & Time
     //   }),
     // });
-    // console.log(res);
 
     // console.log("Message sent:", res.sid);
     // 7259691375
 
     // 7022239292
 
-    console.log("whatapp response", res3);
+    // console.log("whatapp response", res3);
     await sendEmail({
       to: email,
       subject: "🌟 Your Prashna Siddhi Consultation is Confirmed",
@@ -265,17 +262,6 @@ Vedic Astrologer – Prashna Siddhi
     });
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
-    // Update slot status to "booked" working fien
-    // const availability = await Availability.findOne({ date: formattedDate });
-    // if (availability) {
-    //   const slotIndex = availability.slots.findIndex(
-    //     (slot) => slot.time === selectedTime
-    //   );
-    //   if (slotIndex !== -1) {
-    //     availability.slots[slotIndex].status = "booked";
-    //     await availability.save();
-    //   }
-    // }
 
     const availability = await Availability.findOne({ date: formattedDate });
 
