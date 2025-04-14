@@ -824,7 +824,7 @@ export default function OverseasOld({ selectedTimezone }) {
             <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
             {/* <pre className="bg-gray-100 p-4 rounded"> */}
             {/* {JSON.stringify(formData, null, 2)} */}
-            <OverseasThank
+            {/* <OverseasThank
               formData={formData}
               selectedTime={indiantimetoesend}
               duration={duration}
@@ -833,7 +833,7 @@ export default function OverseasOld({ selectedTimezone }) {
               error={error}
               svgUrl={svgdata}
               selectedDate={selectedDate}
-            />
+            /> */}
             {/* </pre> */}
           </div>
         )}
