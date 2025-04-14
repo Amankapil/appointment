@@ -23,7 +23,7 @@ import Bookings from "@/Components/Bookings";
 
 import { DateTime } from "luxon";
 import OverseasPayment from "./OverseasPayment";
-import OverseasThank from "./overseasThank";
+// import OverseasThank from "./overseasThank";
 const steps = [
   "Personal Details",
   // "Questions",
