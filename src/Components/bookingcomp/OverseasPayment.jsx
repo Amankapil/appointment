@@ -12,6 +12,7 @@ export default function OverseasPayment({
   duration,
   latitude,
   longitude,
+  actualTime,
 }) {
   const [transactionId, setTransactionId] = useState("");
   const [paymentMode, setPaymentMode] = useState("UPI");
@@ -23,7 +24,7 @@ export default function OverseasPayment({
     setLoading(true);
 
     try {
-      const response = await fetch("/api/payment/initiate", {
+      const response = await fetch("/api/overseas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,11 +64,13 @@ export default function OverseasPayment({
         <div className="text-center border-r pr-6">
           <h2 className="text-xl font-bold mb-4">Scan & Pay via PhonePe</h2>
           <img
-            src="/qr-code.png"
+            src="images/qr.jpeg"
             alt="PhonePe QR Code"
             className="mx-auto w-48 h-48"
           />
-
+          <h3 className="text-lg font-semibold mt-6">Bank Transfer Details</h3>
+          <p className="text-gray-700">kjagadish@upi </p>
+          <p className="text-gray-700"> 7259691375@icici</p>
           <h3 className="text-lg font-semibold mt-6">Bank Transfer Details</h3>
           <p className="text-gray-700">K Jagadish</p>
           <p className="text-gray-700">Bank Name: ICICI Bank SB Account</p>
@@ -109,7 +112,7 @@ export default function OverseasPayment({
               className="w-full bg-black text-white py-2 rounded-md font-salernomi  transition"
               disabled={loading}
             >
-              {loading ? "Submitting..." : "Submit Payment"}
+              {loading ? "Submitting..." : "Submit"}
             </button>
           </form>
 

@@ -49,6 +49,9 @@ select {
     padding: 17px;
     height: 40px !important;
   }
+  .imte img {
+    width: 100%;
+  }
   iframe {
     width: 100% !important;
   }
@@ -70,6 +73,19 @@ select {
   .done-page {
     padding-left: 50px;
     text-align: left;
+  }
+  .imte {
+    width: 1000px;
+  }
+  .imte img {
+    width: 100%;
+  }
+  .imte h1 {
+    font-size: 55px;
+  }
+
+  .bor {
+    display: none;
   }
 
   /* .done-page p {

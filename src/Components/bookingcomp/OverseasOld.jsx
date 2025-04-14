@@ -23,6 +23,7 @@ import Bookings from "@/Components/Bookings";
 
 import { DateTime } from "luxon";
 import OverseasPayment from "./OverseasPayment";
+import OverseasThank from "./overseasThank";
 const steps = [
   "Personal Details",
   // "Questions",
@@ -411,6 +412,7 @@ export default function OverseasOld({ selectedTimezone }) {
     ? timeSlots.filter((slot) => slot.duration === selectedDuration)
     : timeSlots;
 
+  const [actualTime, setActualTime] = useState(null);
   //   // Convert UTC slots to the selected timezone
   //   const convertSlotsToTimezone = () => {
   //     return timeSlots.map((slot) => {
@@ -792,6 +794,7 @@ export default function OverseasOld({ selectedTimezone }) {
                           setSelectedTime(slot.timeRange);
                           setDuration(slot.duration);
                           setindiantimetosend(slot.istTime);
+                          setActualTime(slot.timeRange);
                         }}
                         // className="p-2 rounded text-sm border bg-green-200 hover:bg-green-300"
                         className={`p-2 rounded text-sm border 
@@ -821,10 +824,11 @@ export default function OverseasOld({ selectedTimezone }) {
             <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
             {/* <pre className="bg-gray-100 p-4 rounded"> */}
             {/* {JSON.stringify(formData, null, 2)} */}
-            <ThankYouScreen
+            <OverseasThank
               formData={formData}
               selectedTime={indiantimetoesend}
               duration={duration}
+              actualTime={actualTime}
               result={result}
               error={error}
               svgUrl={svgdata}
@@ -838,6 +842,7 @@ export default function OverseasOld({ selectedTimezone }) {
             <OverseasPayment
               setPaymentStatus={setPaymentStatus}
               paydata={paydata}
+              actualTime={actualTime}
               selectedTime={indiantimetoesend}
               latitude={formData.latitude}
               longitude={formData.longitude}

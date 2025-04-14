@@ -243,6 +243,45 @@ export default function Navbar() {
                       </svg>
                       Astrology enthusiasts
                     </Link>
+                    <div className="flex items-center justify-center">
+                      <svg
+                        width="311"
+                        height="12"
+                        viewBox="0 0 311 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M156.001 12C156.032 8.71688 158.699 6.06002 162 6.01929C158.686 5.97839 156.011 3.30087 156.001 0H156C155.99 3.30117 153.315 5.97888 150 6.01929C153.302 6.05955 155.969 8.71659 156 12H156.001Z"
+                          fill="#D8D1C7"
+                        />
+                        <circle cx="146" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="309" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="2" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="166" cy="6" r="2" fill="#D8D1C7" />
+                        <path d="M145 6.00001L3 6" stroke="#D8D1C7" />
+                        <path d="M308 6.00001L167 6" stroke="#D8D1C7" />
+                      </svg>
+                    </div>
+
+                    <Link
+                      href="/books"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                      Guides to a mindful life
+                    </Link>
                   </div>
                 )}
               </div>

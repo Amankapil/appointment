@@ -90,6 +90,11 @@ const Footer = () => {
                     Astrology Enthusiasts
                   </Link>
                 </li>
+                <li>
+                  <Link href="/books" className="hover:underline">
+                    Guides to a mindful life
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>

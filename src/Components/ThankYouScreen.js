@@ -8,6 +8,7 @@ export default function ThankYouScreen({
   svgUrl,
   duration,
   selectedDate,
+  actualTime,
 }) {
   // console.log(svgUrl);
   return (

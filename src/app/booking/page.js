@@ -29,18 +29,18 @@ export default function MultiStepForm() {
       {/* {showPopup && (
         <div className="fixed inset-0 flex z-[99999999] items-center justify-center bg[#ffffff13] backdrop-blur-[10px] bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h2 className="text-lg font-semibold mb-4">
+            <h2 className="text-xl font-semibold font-salernomi mb-4">
               Select Your Client Type
             </h2>
             <button
               onClick={() => handleSelection("indian")}
-              className="px-4 py-2 bg-blue-500 text-white rounded-md m-2"
+              className="px-4 py-2 bg-[#4597F8] text-white rounded-md m-2"
             >
               Indian Residents
             </button>
             <button
               onClick={() => handleSelection("overseas")}
-              className="px-4 py-2 bg-green-500 text-white rounded-md m-2"
+              className="px-4 py-2 bg-[#000] text-white rounded-md m-2"
             >
               Overseas
             </button>
