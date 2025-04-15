@@ -29,7 +29,12 @@ export default function Peace() {
         </div>
         <div className="mt-0 w-[50%] max-lg:w-full">
           <div className="img h[500px] max-md:h-full">
-            <Image className="pb-10 max-md:pb-0" src={img} alt="j" />
+            <Image
+              loading="lazy"
+              className="pb-10 max-md:pb-0"
+              src={img}
+              alt="j"
+            />
           </div>
         </div>
       </div>

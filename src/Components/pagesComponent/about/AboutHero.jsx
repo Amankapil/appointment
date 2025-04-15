@@ -79,7 +79,12 @@ export default function AboutHero() {
           </div>
         </div>
         <div className="mt-0">
-          <Image src={hero} alt="Dummy" className="mx-auto rounded-lg " />
+          <Image
+            loading="lazy"
+            src={hero}
+            alt="Dummy"
+            className="mx-auto rounded-lg "
+          />
         </div>
       </div>
     </div>

@@ -50,13 +50,13 @@ export default function Consultation() {
             </p>
           </div>
           <div className="absolute bottom-0 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
-            <Image src={img} alt="j" />
+            <Image loading="lazy" src={img} alt="j" />
           </div>
         </div>
         <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
           <div className="w-[248px] h[296px] bggray-300 ">
             {" "}
-            <Image src={img3} alt="j" />
+            <Image loading="lazy" src={img3} alt="j" />
           </div>
           <div className="w3/4 max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">Karma & Life Path Guidance</p>
@@ -90,7 +90,7 @@ export default function Consultation() {
         <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
           <div className="w-[248px] h[296px] bggray-300 ">
             {" "}
-            <Image src={img4} alt="j" />
+            <Image loading="lazy" src={img4} alt="j" />
           </div>
           <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">

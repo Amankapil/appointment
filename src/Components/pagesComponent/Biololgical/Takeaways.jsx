@@ -26,7 +26,7 @@ const Takeaways = () => {
           </svg>
         </div>
         <div className="img h-[500px] max-md:h-full flex items-center justify-center">
-          <Image className="pb-10" src={img} alt="j" />
+          <Image loading="lazy" className="pb-10" src={img} alt="j" />
         </div>
         <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
           <p className="font-normal text-lg text-[#4D4D4D] w-[50%] max-lg:w-full  text-left">

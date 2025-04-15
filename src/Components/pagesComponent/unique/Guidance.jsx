@@ -30,7 +30,7 @@ export default function Shielded() {
       </div> */}
 
       <div className="img h-[500px] max-md:h-full bg-white">
-        {/* <Image src={} alt="j"/> */}
+        {/* <Image  loading="lazy"  src={} alt="j"/> */}
         imge
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">

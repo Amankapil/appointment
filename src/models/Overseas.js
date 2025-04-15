@@ -28,5 +28,4 @@ const Overseas = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.models.Overseas ||
-  mongoose.model("Transaction", Overseas);
+export default mongoose.models.Overseas || mongoose.model("Overseas", Overseas);

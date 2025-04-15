@@ -345,7 +345,7 @@ const Spirituality = () => {
               </defs>
             </svg>
           </div>
-          {/* <Image src={img} alt="jflas" /> */}
+          {/* <Image  loading="lazy"  src={img} alt="jflas" /> */}
           <div className="flex items-center flex-ol   justify-center text-center my-16 max-md:my-0">
             <svg
               width="120"

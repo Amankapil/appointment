@@ -63,7 +63,7 @@ export default function HeroWork() {
               </div>
               <div className="w-[297px] h[296px] bggray-300 ">
                 {" "}
-                <Image src={item.img} alt="j" />
+                <Image loading="lazy" src={item.img} alt="j" />
               </div>
             </div>
 

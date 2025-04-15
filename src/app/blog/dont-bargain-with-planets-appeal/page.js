@@ -166,7 +166,7 @@ details"
             Helps You
           </h2>
           <div className="flex gap-10 items-center max-md:flex-wrap ">
-            <Image className="w-[100%]" src={img5} alt="l" />
+            <Image loading="lazy" className="w-[100%]" src={img5} alt="l" />
             <p className="mt-2 text-gray-700">
               At Prashnasiddhi.com, you receive authentic Prashna Kundali-based
               guidance within minutes. Whether it is a burning question about

@@ -26,7 +26,7 @@ export default function MultiStepForm() {
 
   return (
     <>
-      {/* {showPopup && (
+      {showPopup && (
         <div className="fixed inset-0 flex z-[99999999] items-center justify-center bg[#ffffff13] backdrop-blur-[10px] bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-xl font-semibold font-salernomi mb-4">
@@ -34,25 +34,25 @@ export default function MultiStepForm() {
             </h2>
             <button
               onClick={() => handleSelection("indian")}
-              className="px-4 py-2 bg-[#4597F8] text-white rounded-md m-2"
+              className="px-4 py-2 bg-[#4597F8] text-white cursor-pointer rounded-md m-2"
             >
               Indian Residents
             </button>
             <button
               onClick={() => handleSelection("overseas")}
-              className="px-4 py-2 bg-[#000] text-white rounded-md m-2"
+              className="px-4 py-2 bg-[#000] text-white cursor-pointer rounded-md m-2"
             >
               Overseas
             </button>
           </div>
         </div>
-      )} */}
+      )}
 
       <div className="w-full  text-black p-5 transition-all  top-">
         <div className="flex items-center justify-between">
           <div>
             <Link href="/" className="flex items-center justify-center gap-2">
-              <Image src={logo} alt="kl" />
+              <Image loading="lazy" src={logo} alt="kl" />
               <span className="font-salernomi text-[#322F41] font-[16px]">
                 Prashna Siddhi
               </span>

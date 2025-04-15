@@ -40,7 +40,7 @@ export default function Meditation() {
       </div>
 
       <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10">
-        <Image className="pb-10" src={img} alt="j" />
+        <Image loading="lazy" className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <div className="w-[50%] max-lg:w-full">

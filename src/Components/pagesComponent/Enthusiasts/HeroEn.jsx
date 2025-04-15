@@ -29,7 +29,7 @@ export default function HeroEn() {
       </div>
 
       <div className="img h-[500px] max-md:h-full flex items-center justify-center">
-        <Image className="pb-10" src={img} alt="j" />
+        <Image loading="lazy" className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flexcol font-inter gap-10 justify-center items-start my-10 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
@@ -49,7 +49,7 @@ export default function HeroEn() {
           Unlock the True Power of Astrology
         </h1> */}
         <div className="img w-[500px] h-[300px] max-md:h-full max-md:w-full">
-          <Image className="pb-10" src={img2} alt="j" />
+          <Image loading="lazy" className="pb-10" src={img2} alt="j" />
         </div>
         <div className="w-1/2 max-lg:w-full">
           <p className="font-normal text-lg text-[#4D4D4D] w  text-left">

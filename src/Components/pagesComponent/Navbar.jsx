@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import logo from "./Homecomponent/assets/logo.svg";
+// import logo1 from "./Homecomponent/assets/logo2.png";
 import Image from "next/image";
 
 export default function Navbar() {
@@ -22,7 +23,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center py-4">
           <div className="text-lg font-semibold">
             <Link href="/" className="flex items-center justify-center gap-2">
-              <Image src={logo} alt="kl" />
+              <Image src={logo} alt="fasdfasdfasd" priority />
               <span className="font-salernomi text-[#322F41] font-[16px]">
                 Prashna Siddhi
               </span>

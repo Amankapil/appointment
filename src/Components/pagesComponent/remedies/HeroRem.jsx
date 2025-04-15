@@ -31,7 +31,7 @@ export default function HeroRem() {
       </div>
 
       <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10">
-        <Image className="pb-10" src={img} alt="j" />
+        <Image loading="lazy" className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 my-10 max-lg:flex-wrap flex max-md:flex-wrap flexcol font-inter gap-10 justify-center items-start mt-4 ">
         <h1 className="text-[40px] text-[#4D4D4D] text-left font-salernomi w-[40%] max-lg:w-full font-normal mb-6">
@@ -66,7 +66,7 @@ export default function HeroRem() {
       </div>
 
       <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10">
-        <Image className="pb-10" src={img3} alt="j" />
+        <Image loading="lazy" className="pb-10" src={img3} alt="j" />
       </div>
 
       <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">

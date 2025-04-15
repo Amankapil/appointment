@@ -132,7 +132,7 @@ const Disclaimer = () => {
               </span>
             </p>
           </div>
-          {/* <Image src={img} alt="jflas" /> */}
+          {/* <Image  loading="lazy"  src={img} alt="jflas" /> */}
         </div>
       </div>
 

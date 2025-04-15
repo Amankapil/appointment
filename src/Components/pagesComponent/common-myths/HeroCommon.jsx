@@ -32,7 +32,7 @@ export default function HeroCommon() {
       </div>
 
       <div className="img h-[500px] max-md:h-full bgwhite flex items-center justify-center py-10">
-        <Image src={img} alt="j" />
+        <Image loading="lazy" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter justify-center items-center mt-4 ">
         <p className="font-normal text-lg text-[#4D4D4D] w-1/2 max-lg:w-full  text-center">

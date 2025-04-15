@@ -29,7 +29,7 @@ const AboutMe = () => {
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
 
-          <Image src={img} alt="jflas" />
+          <Image loading="lazy" src={img} alt="jflas" />
           <div className="flex items-center  w-[100%] max-md:w-full gap-10 justify-center text-center max-md:flex-col">
             <svg
               width="80"

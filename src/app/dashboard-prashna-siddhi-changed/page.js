@@ -90,7 +90,7 @@ export default function Dashboard() {
         <div className="flex items-center justify-between">
           <div>
             <Link href="/" className="flex items-center justify-center gap-2">
-              <Image src={logo} alt="kl" />
+              <Image loading="lazy" src={logo} alt="kl" />
               <span className="font-salernomi text-[#322F41] font-[16px]">
                 Prashna Siddhi
               </span>

@@ -18,9 +18,14 @@ const Prashna = () => {
           </h1>
 
           <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10 max-md:pb-0">
-            <Image className="pb-10 max-md:pb-0" src={img} alt="j" />
+            <Image
+              loading="lazy"
+              className="pb-10 max-md:pb-0"
+              src={img}
+              alt="j"
+            />
           </div>
-          {/* <Image src={img} alt="jflas" /> */}
+          {/* <Image  loading="lazy"  src={img} alt="jflas" /> */}
           <div className="flex items-center flex-col w-1/2 max-lg:w-full  justify-center text-center my-10">
             <p className="text-xl font-inter text-[#4D4D4D] mb-8">
               Prashna Jyotishya is an ancient{" "}

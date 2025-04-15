@@ -23,6 +23,7 @@ import Bookings from "@/Components/Bookings";
 
 import { DateTime } from "luxon";
 import OverseasPayment from "./OverseasPayment";
+import OverseasThank from "./OverseasThank";
 // import OverseasThank from "./overseasThank";
 const steps = [
   "Personal Details",
@@ -308,7 +309,7 @@ export default function OverseasOld({ selectedTimezone }) {
     setError(null);
     setLoading(true);
     try {
-      const response = await fetch("/api/urgent", {
+      const response = await fetch("/api/overseas/urgent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -824,7 +825,7 @@ export default function OverseasOld({ selectedTimezone }) {
             <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
             {/* <pre className="bg-gray-100 p-4 rounded"> */}
             {/* {JSON.stringify(formData, null, 2)} */}
-            {/* <OverseasThank
+            <OverseasThank
               formData={formData}
               selectedTime={indiantimetoesend}
               duration={duration}
@@ -833,7 +834,7 @@ export default function OverseasOld({ selectedTimezone }) {
               error={error}
               svgUrl={svgdata}
               selectedDate={selectedDate}
-            /> */}
+            />
             {/* </pre> */}
           </div>
         )}

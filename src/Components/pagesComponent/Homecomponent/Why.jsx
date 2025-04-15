@@ -41,7 +41,7 @@ const Why = () => {
       {/* Second Circle */}
       <div className=" flex items-center justify-center max-md:flex-col">
         <div>
-          <Image src={img} alt="" />
+          <Image loading="lazy" src={img} alt="" />
         </div>
 
         <div className="twecircle flex items-center justify-center w-[77%] max-md:w-full">
@@ -66,7 +66,7 @@ const Why = () => {
           </div>
         </div>
         <div>
-          <Image src={img2} alt="" />
+          <Image loading="lazy" src={img2} alt="" />
         </div>
       </div>
 

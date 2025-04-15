@@ -31,13 +31,13 @@ export default function MindLabCard() {
         </div>
 
         <div className="img h-[500px] max-md:h-full flex mt-10 items-center justify-center">
-          <Image className="pb-10" src={img2} alt="j" />
+          <Image loading="lazy" className="pb-10" src={img2} alt="j" />
         </div>
       </div>
       <div className="flex mt-10 items-center gap-5 justify-center flex-wrap maxw-6xl mx-auto">
         <div className="flex  w-[630px] gap-1  mt-3 imte rounded-[2rem] border border-[#BFA97A] bg-[#f5f1ea] p-2  shadow-md">
           <div className="w-1/3 p-2">
-            <Image src={img} alt="kljhlj" />
+            <Image loading="lazy" src={img} alt="kljhlj" />
           </div>
 
           {/* Right Side - Text Details */}
@@ -70,7 +70,7 @@ export default function MindLabCard() {
         </div>
         <div className="flex  w-[630px] gap-1  mt-3 imte rounded-[2rem] border border-[#BFA97A] bg-[#f5f1ea] p-2  shadow-md">
           <div className="w-1/3 p-2">
-            <Image src={img3} alt="kljhlj" />
+            <Image loading="lazy" src={img3} alt="kljhlj" />
           </div>
 
           {/* Right Side - Text Details */}
@@ -103,7 +103,7 @@ export default function MindLabCard() {
         </div>
         <div className="flex  w-[630px] max-md:w-full gap-1  mt-3 imte rounded-[2rem] border border-[#BFA97A] bg-[#f5f1ea] p-2  shadow-md">
           <div className="w-1/3 p-2">
-            <Image src={img4} alt="kljhlj" />
+            <Image loading="lazy" src={img4} alt="kljhlj" />
           </div>
 
           {/* Right Side - Text Details */}
@@ -120,7 +120,7 @@ export default function MindLabCard() {
                 By - K Jagadish
               </p>
               <div className="w-16 border-t border-[#CDBA99] mx-auto my-2"></div>
-              <p className="text-[#5b5b5b] mb-6">First Edition - June, 2016</p>
+              <p className="text-[#5b5b5b] mb-6">First Edition - July, 2016</p>
               {/* <button className="bg-black text-white py-3 font-salernomi px-8 rounded-xl text-lg hover:bg-gray-800">
                 Download For Free
               </button> */}

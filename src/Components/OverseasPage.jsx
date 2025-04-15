@@ -171,6 +171,7 @@ export default function Bookings() {
             <TimezoneSelect
               value={selectedTimezone}
               onChange={(tz) => setSelectedTimezone(tz.value)}
+              className="w-[50%] mb-10"
             />
           </div>
         </>

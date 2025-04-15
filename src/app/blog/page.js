@@ -5,20 +5,28 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 4,
+    title: "The Gap Between Hopes and... ",
+    date: "April 15, 2025",
+    image: "/images/Image-06.png",
+    link: "/blog/the-gap-between-hopes-and-reality",
+    desc: "You’ve landed at the right place and a positive spot.....",
+  },
+  {
     id: 6,
     title: "The Divine Logic Behind... ",
-    date: "April 10, 2025",
+    date: "April 14, 2025",
     image: "/images/Image-01 copy.png",
     link: "/blog/the-divine-logic-behind-planetary-dual-rulership",
-    desc: "In the vast and ancient tradition of Vedic Astrology.....",
+    desc: "The Zodiac, far from being a mere astrological construct.....",
   },
   {
     id: 5,
     title: "The Special Aspects of Planets... ",
-    date: "April 10, 2025",
+    date: "April 12, 2025",
     image: "/images/Image-01.png",
     link: "/blog/the-special-aspects-of-planets",
-    desc: "In the vast and ancient tradition of Vedic Astrology.....",
+    desc: "Across all spiritual traditions, there is one common.....",
   },
   {
     id: 4,

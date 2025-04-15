@@ -7,7 +7,7 @@ import img from "./assets/jh.svg";
 const BubbleComponent = () => {
   return (
     <div className="flex flex-col items-center justify-center bg-white p-8 max-md:hidden">
-      <Image src={img} alt="" />
+      <Image loading="lazy" src={img} alt="" />
     </div>
   );
 };

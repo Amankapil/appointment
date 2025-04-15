@@ -21,6 +21,9 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Bookings from "@/Components/Bookings";
 import OverseasPayment from "./OverseasPayment";
+import OverseasThank from "./OverseasThank";
+
+import { DateTime } from "luxon";
 
 const steps = [
   "Personal Details",
@@ -30,7 +33,7 @@ const steps = [
   "Payment",
 ];
 
-export default function OverseasNew() {
+export default function OverseasNew({ selectedTimezone }) {
   const [currentStep, setCurrentStep] = useState(0);
 
   const router = useRouter();
@@ -189,18 +192,79 @@ export default function OverseasNew() {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [timeSlots, setTimeSlots] = useState([]);
   // Fetch time slots for the selected date
+  // const fetchSlots = async (date) => {
+  //   try {
+  //     const formattedDate = date.toISOString().split("T")[0]; // Extract YYYY-MM-DD
+  //     const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
+  //     const data = await res.json();
+  //     setTimeSlots(data.slots);
+  //     console.log(data.slots);
+  //     console.log(data.slots[0].duration);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   const fetchSlots = async (date) => {
     try {
-      const formattedDate = date.toISOString().split("T")[0]; // Extract YYYY-MM-DD
+      const formattedDate = date.toISOString().split("T")[0]; // YYYY-MM-DD
       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
       const data = await res.json();
-      setTimeSlots(data.slots);
-      console.log(data.slots);
-      console.log(data.slots[0].duration);
+      //   console.log(data);
+
+      // Convert stored IST slots to UTC and retain status & duration
+      const filteredSlots = data.slots
+        .map((slot) => {
+          const [startTime, endTime] = slot.time.split(" - ");
+
+          // Convert IST times to UTC
+          const startUTC = DateTime.fromFormat(startTime, "h:mm a", {
+            zone: "Asia/Kolkata",
+          }).toUTC();
+
+          const endUTC = DateTime.fromFormat(endTime, "h:mm a", {
+            zone: "Asia/Kolkata",
+          }).toUTC();
+
+          return {
+            startUTC,
+            endUTC,
+            status: slot.status,
+            duration: slot.duration,
+          };
+        })
+        .filter((slot) => {
+          const hour = slot.startUTC.hour;
+          return hour >= 4 && hour <= 12; // 10 AM - 6 PM IST in UTC (4 AM - 12 PM)
+        });
+
+      //   console.log(filteredSlots);
+
+      setTimeSlots(filteredSlots);
     } catch (error) {
-      console.log(error);
+      console.log("Error fetching slots:", error);
     }
   };
+  const convertSlotsToTimezone = () => {
+    return timeSlots.map((slot) => {
+      const startDateTime = slot.startUTC.setZone(selectedTimezone);
+      const endDateTime = slot.endUTC.setZone(selectedTimezone);
+
+      return {
+        timeRange: `${startDateTime.toFormat(
+          "h:mm a"
+        )} - ${endDateTime.toFormat("h:mm a")}`,
+        status: slot.status,
+        duration: slot.duration,
+        istTime: `${slot.startUTC
+          .setZone("Asia/Kolkata")
+          .toFormat("h:mm a")} - ${slot.endUTC
+          .setZone("Asia/Kolkata")
+          .toFormat("h:mm a")}`, // Store IST time
+      };
+    });
+  };
+
+  const convertedSlots = convertSlotsToTimezone();
 
   const [selectedTime, setSelectedTime] = useState(null);
   // console.log(selectedTime);
@@ -347,6 +411,8 @@ export default function OverseasNew() {
     }
   };
 
+  const [indiantimetoesend, setindiantimetosend] = useState(null);
+
   const handleSubmit = async () => {
     setError(null);
     setLoading(true);
@@ -354,7 +420,7 @@ export default function OverseasNew() {
     // const svgBase64 = await blobToBase64(svgdata);
     // const svggg = localStorage.getItem("svg");
     try {
-      const response = await fetch("/api/urgent", {
+      const response = await fetch("/api/overseas/urgent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -390,6 +456,8 @@ export default function OverseasNew() {
       setLoading(false);
     }
   };
+
+  const [actualTime, setActualTime] = useState(null);
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
@@ -792,86 +860,31 @@ export default function OverseasNew() {
                 </div>
 
                 {/* Time Slots */}
-                <div className="grid grid-cols-3 gap-2">
-                  {/* {filteredSlots.length > 0 ? (
-                    filteredSlots.map((slot) => (
+                <div className="grid grid-cols-3 gap-4 mt-4">
+                  {convertedSlots.length > 0 ? (
+                    convertedSlots.map((slot, index) => (
                       <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
+                        key={index}
                         onClick={() => {
-                          setSelectedTime(slot.time);
+                          setSelectedTime(slot.timeRange);
                           setDuration(slot.duration);
+                          setindiantimetosend(slot.istTime);
+                          setActualTime(slot.timeRange);
                         }}
+                        // className="p-2 rounded text-sm border bg-green-200 hover:bg-green-300"
                         className={`p-2 rounded text-sm border 
         ${
           slot.status === "available"
-            ? selectedTime === slot.time
+            ? selectedTime === slot.timeRange
               ? "bg-blue-500 text-white" // Selected slot
               : "bg-green-200 hover:bg-green-300"
             : "bg-red-200 hover:bg-red-300"
         }`}
                       >
-                        {slot.time}
+                        {slot.timeRange}{" "}
                       </button>
                     ))
                   ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )} */}
-
-                  {filteredSlots
-                    .filter((slot) => {
-                      const currentHour = new Date().getHours(); // Get current hour in 24-hour format
-
-                      // Extract the start time (e.g., "10:00 AM")
-                      const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
-                      const period = startTime.includes("PM") ? "PM" : "AM";
-
-                      // Convert to 24-hour format
-                      if (period === "PM" && hour !== 12) hour += 12;
-                      if (period === "AM" && hour === 12) hour = 0;
-
-                      return hour >= currentHour && hour <= 18; // Show slots from current time to 6 PM
-                    })
-                    .sort((a, b) => {
-                      // Extract start times for sorting
-                      const getTimeInMinutes = (time) => {
-                        let [hour, minute] = time.match(/\d+/g).map(Number);
-                        const period = time.includes("PM") ? "PM" : "AM";
-
-                        if (period === "PM" && hour !== 12) hour += 12;
-                        if (period === "AM" && hour === 12) hour = 0;
-
-                        return hour * 60 + minute; // Convert to total minutes for sorting
-                      };
-
-                      return (
-                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
-                      );
-                    })
-                    .map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))}
-                  {filteredSlots.length === 0 && (
                     <p className="text-gray-500 col-span-3 text-center">
                       No slots available
                     </p>
@@ -886,13 +899,14 @@ export default function OverseasNew() {
             <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
             {/* <pre className="bg-gray-100 p-4 rounded"> */}
             {/* {JSON.stringify(formData, null, 2)} */}
-            <ThankYouScreen
+            <OverseasThank
               formData={formData}
-              selectedTime={selectedTime}
+              selectedTime={indiantimetoesend}
               duration={duration}
+              actualTime={actualTime}
               result={result}
               error={error}
-              svgUrl={svgUrl}
+              svgUrl={svgdata}
               selectedDate={selectedDate}
             />
             {/* </pre> */}
@@ -903,10 +917,11 @@ export default function OverseasNew() {
             <OverseasPayment
               setPaymentStatus={setPaymentStatus}
               paydata={paydata}
-              selectedTime={selectedTime}
-              // svgUrl={svgUrl}
+              actualTime={actualTime}
+              selectedTime={indiantimetoesend}
               latitude={formData.latitude}
               longitude={formData.longitude}
+              // svgUrl={svgUrl}
               duration={duration}
               svgdata={svgdata}
               selectedDate={selectedDate}

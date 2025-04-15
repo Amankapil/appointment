@@ -15,6 +15,7 @@ export default function OverseasPayment({
   actualTime,
 }) {
   const [transactionId, setTransactionId] = useState("");
+  const [amount, setAmount] = useState("");
   const [paymentMode, setPaymentMode] = useState("UPI");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -47,11 +48,18 @@ export default function OverseasPayment({
           paymentMode: paymentMode,
         }),
       });
-      setMessage(response.data.message);
+      // setMessage(response.data.message);
       setTransactionId("");
       setPaymentMode("UPI");
+      const dataa = await response.json();
+      console.log(dataa);
+      if (dataa.success == true) {
+        toast.success(dataa.message);
+        router.push("/urgent");
+      }
     } catch (error) {
       setMessage("Failed to submit payment");
+      console.log(error);
     }
 
     setLoading(false);
@@ -89,6 +97,16 @@ export default function OverseasPayment({
                 type="text"
                 value={transactionId}
                 onChange={(e) => setTransactionId(e.target.value)}
+                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2"
+                required
+              />
+            </div>
+            <div>
+              <label className="block font-medium">Amount Paid</label>
+              <input
+                type="text"
+                value={amount}
+                onChange={(e) => setAmount(e.target.value)}
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-2"
                 required
               />

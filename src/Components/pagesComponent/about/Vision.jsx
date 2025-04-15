@@ -32,9 +32,9 @@ const Vision = () => {
           </svg>
 
           <div className="img h-[500px] max-md:h-full flex items-center justify-center py-10">
-            <Image className="pb-10" src={img} alt="j" />
+            <Image loading="lazy" className="pb-10" src={img} alt="j" />
           </div>
-          {/* <Image src={img} alt="jflas" /> */}
+          {/* <Image  loading="lazy"  src={img} alt="jflas" /> */}
           <div className="flex items-center flex-ol   justify-center text-center my-16 max-md:my-5">
             {/* <svg
               width="120"

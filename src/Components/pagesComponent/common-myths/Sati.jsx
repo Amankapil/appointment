@@ -49,7 +49,7 @@ const Sati = () => {
           </p>
         </div>
         <div className="right">
-          <Image src={img} alt="l" />
+          <Image loading="lazy" src={img} alt="l" />
         </div>
       </div>
       <div className="breaking mt-10">

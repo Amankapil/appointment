@@ -32,9 +32,9 @@ const Divine = () => {
           </svg>
 
           <div className="img h-full pt-10 max-md:h-full flex items-center justify-center">
-            <Image className="" src={img} alt="j" />
+            <Image loading="lazy" className="" src={img} alt="j" />
           </div>
-          {/* <Image src={img} alt="jflas" /> */}
+          {/* <Image  loading="lazy"  src={img} alt="jflas" /> */}
           <div className="flex items-center flex-ol   justify-center text-center my-16">
             {/* <svg
               width="120"

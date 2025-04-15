@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Left Section */}
           <div className="flex flex-col items-start max-lg:items-center  w-[35%] max-lg:w-full max-md:pb-10">
             <Link href="/" className="flex items-center justify-center gap-2">
-              <Image src={logo} alt="kl" />
+              <Image loading="lazy" src={logo} alt="kl" />
               <span className="font-salernomi text-[#322F41] text-[44px] max-md:text-[30px]">
                 Prashna Siddhi
               </span>
