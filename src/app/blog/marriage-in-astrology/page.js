@@ -30,11 +30,11 @@ const MarriageAstrology = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://yourdomain.com/marriage-astrology"
+          content="https://prashnasiddhi.com/marriage-astrology"
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/images/marriage-astrology-og.jpg"
+          content="https://prashnasiddhi.com/images/blog8.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>

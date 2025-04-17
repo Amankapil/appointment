@@ -30,11 +30,11 @@ const ChildBirthAstrology = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://yourdomain.com/childbirth-astrology"
+          content="https://prashnasiddhi.com/childbirth-astrology"
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/images/childbirth-astrology-og.jpg"
+          content="https://prashnasiddhi.com/images/blog9.png"
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
