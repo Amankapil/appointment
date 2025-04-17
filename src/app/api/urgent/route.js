@@ -166,83 +166,41 @@ Vedic Astrologer – Prashna Siddhi
 [www.PrashnaSiddhi.com](http://www.PrashnaSiddhi.com)  
 `;
 
-    // const message = "Hey Jagdish You have an Urgent Appointment ";
-    // const message = `Hello Jagdish, your appointment is scheduled. Please find the details below:`;
-    // console.log(message);
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
-    // await sendEmail({
-    //   to: email,
-    //   subject: "Session Confirm with Enlighten-mind",
-    //   text: message,
-    // });
-    // console.log(message);
-    // const res = await client.messages.create({
-    //   body: message,
-    //   // from: `whatsapp:${twilioPhoneNumber}`,
-    //   from: "whatsapp:+15557334838",
-    //   to: `whatsapp:+918103075691`,
-    // });
-
-    // const res = await client.messages.create({
-    //   from: "whatsapp:+917022239292",
-    //   to: "whatsapp:+918103075691",
-    //   body: "hey you have and message",
-    // });
-
-    // const res = await client.messages.create({
-    //   from: "whatsapp:+917022239292",
-    //   to: "whatsapp:+918103075691", // Recipient's WhatsApp Number
-    //   template: "your_template_name", // Template Name from Twilio
-    //   messagingServiceSid: "MG94ceaf50fa68645b14949efcd6cf22aa",
-    //   contentSid: "HX3c7d2323e4d6e25518d32be7466785de",
-    //   template: "testing", // Your Twilio-approved template name
-    // });
 
     // const res = await client.messages.create({
     //   from: "whatsapp:+917022239292", // Twilio WhatsApp Number
-    //   to: "whatsapp:+918103075691", // Dynamic recipient number
-    //   messagingServiceSid: "MG94ceaf50fa68645b14949efcd6cf22aa", // Required for templates
-    //   contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Get from Twilio Console
+    //   to: "whatsapp:+917259691375", // Recipient's WhatsApp number
+    //   // category: "TRANSACTIONAL",
+    //   contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
     //   contentVariables: JSON.stringify({
-    //     1: selectedTime,
-    //     2: name,
-    //     3: email,
-    //     4: phone,
-    //     5: amount,
-    //     6: selectedDate,
-    //     7: filePath,
+    //     1: selectedTime || "", // Static Name (Ensure it's always a string)
+    //     2: name || "",
+    //     3: email || "",
+    //     4: phone || "",
+    //     5: amount || "", // Ensure it's a string
+    //     6: selectedDate || "", // Ensure it's a string
+    //     7: filePath || "check-in-dashboard",
     //   }),
     // });
-
-    const res = await client.messages.create({
-      from: "whatsapp:+917022239292", // Twilio WhatsApp Number
-      to: "whatsapp:+917259691375", // Recipient's WhatsApp number
-      // category: "TRANSACTIONAL",
-      contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
-      contentVariables: JSON.stringify({
-        1: selectedTime || "", // Static Name (Ensure it's always a string)
-        2: name || "",
-        3: email || "",
-        4: phone || "",
-        5: amount || "", // Ensure it's a string
-        6: selectedDate || "", // Ensure it's a string
-        7: filePath || "check in dashboard",
-      }),
-    });
-    console.log(res);
+    // console.log(res);
+    // console.log("phone", phone);
     // console.log("amount", amount);
     // console.log("duration", duration);
     // console.log("selectedTime", selectedTime);
-    // const res3 = await client.messages.create({
-    //   from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
-    //   to: "whatsapp:+918103075691", // Recipient's WhatsApp number
-    //   contentSid: "HXec22304c88524c193b949e7b9a361a05", // Replace with your Twilio-approved Template SID
-    //   contentVariables: JSON.stringify({
-    //     1: amount || "0.00", // Dynamic Amount (₹)
-    //     2: duration || "15", // Dynamic Consultation Duration (minutes)
-    //     3: selectedTime || "11:00 AM - 11:30 AM", // Dynamic Date & Time
-    //   }),
-    // });
+    const whatsappNumber = `whatsapp:+${phone}`;
+
+    const res3 = await client.messages.create({
+      from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
+      to: whatsappNumber, // Recipient's WhatsApp number
+      // to: "whatsapp:+918103075691", // Recipient's WhatsApp number
+      contentSid: "HXec22304c88524c193b949e7b9a361a05", // Replace with your Twilio-approved Template SID
+      contentVariables: JSON.stringify({
+        1: String(amount || "0.00"),
+        2: String(duration || "15"),
+        3: String(selectedTime || "11:00 AM - 11:30 AM"),
+      }),
+    });
 
     // console.log("Message sent:", res.sid);
     // 7259691375
@@ -330,39 +288,11 @@ Vedic Astrologer – Prashna Siddhi
       }
     }
 
-    // const redirectUrl = `${protocol}://${host}/payment`;
-    // return NextResponse.redirect(redirectUrl);
     return NextResponse.json({
       success: true,
       message: "Your appointment is book on urgent basis",
       data: back,
     });
-
-    // const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
-    // const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
-    // const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-    // const PAYU_BASE_URL = "https://secure.payu.in/_payment";
-
-    // const txnid = "Txn" + Date.now();
-
-    // const hashString = `${MERCHANT_KEY}|${txnid}|${amount}|Product_Info|${name}|${email}|||||||||||${MERCHANT_SALT}`;
-    // const hash = crypto.createHash("sha512").update(hashString).digest("hex");
-
-    // const payUData = {
-    //   key: MERCHANT_KEY,
-    //   txnid,
-    //   amount,
-    //   productinfo: "Product_Info",
-    //   firstname: name,
-    //   service_provider: "payu_paisa",
-    //   email,
-    //   phone,
-    //   surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success`,
-    //   furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure`,
-    //   hash,
-    // };
-
-    // return NextResponse.json({ payUData, url: `${PAYU_BASE_URL}/_payment` });
   } catch (error) {
     console.error("Error processing Urgent query:", error);
     return NextResponse.json(

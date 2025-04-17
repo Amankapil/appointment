@@ -68,7 +68,7 @@ export default function Hero() {
           <Image
             src={hero}
             height={710}
-            alt="Dummy"
+            alt="home Hero"
             className="mx-auto max-md:z-[9999999] shadow-lg h-[710px] max-md:h-full"
           />
         </div>

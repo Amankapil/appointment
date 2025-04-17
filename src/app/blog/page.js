@@ -5,7 +5,15 @@ import Link from "next/link";
 
 const blogs = [
   {
-    id: 4,
+    id: 8,
+    title: "Marriage in Astrology.... ",
+    date: "April 16, 2025",
+    image: "/images/blog8.png",
+    link: "/blog/marriage-in-astrology",
+    desc: "Marriage marks one of the most important transitions in.....",
+  },
+  {
+    id: 7,
     title: "The Gap Between Hopes and... ",
     date: "April 15, 2025",
     image: "/images/Image-06.png",
