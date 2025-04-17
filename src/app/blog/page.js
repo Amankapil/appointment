@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 9,
+    title: "Child Birth — A Spiritual.... ",
+    date: "April 17, 2025",
+    image: "/images/blog9.png",
+    link: "/blog/how-to-predict-child-birth-from-astrology",
+    desc: "The topic of childbirth in astrology is both thrilling and deeply.....",
+  },
+  {
     id: 8,
     title: "Marriage in Astrology.... ",
     date: "April 16, 2025",
