@@ -145,6 +145,15 @@ const ChildBirthAstrology = () => {
             Coincidence? Hardly. This divine patterning speaks volumes of cosmic
             intelligence.
           </p>
+          <p className="text-lg leading-relaxed text-gray-800">
+            In Sagittarius (9th sign), the first star is
+            <strong>Moola </strong> again ruled by Ketu! Here again the Divine
+            message is clear that everyone will get justice according to
+            previous Samskaras.
+            <br />
+            This is the <strong>Golden Triangle </strong> , which is nothing but
+            the Sri Chakra worshipped by Hindus.
+          </p>
         </section>
 
         {/* Special Aspects Section */}
