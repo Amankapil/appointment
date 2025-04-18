@@ -25,8 +25,8 @@ const steps = [
   "Personal Details",
   // "Questions",
   "Appointment",
-  "Confirmation",
-  "Payment",
+  // "Confirmation",
+  // "Payment",
 ];
 
 export default function OldConsult() {
@@ -69,7 +69,7 @@ export default function OldConsult() {
 
     fetchData();
   }, []);
-  console.log(clients);
+  // console.log(clients);
   //
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -213,8 +213,8 @@ export default function OldConsult() {
       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
       const data = await res.json();
       setTimeSlots(data.slots);
-      console.log(data.slots);
-      console.log(data?.slots[0]?.duration);
+      // console.log(data.slots);
+      // console.log(data?.slots[0]?.duration);
     } catch (error) {
       console.log(error);
     }
@@ -307,9 +307,8 @@ export default function OldConsult() {
 
     if (currentStep == 0) {
       setSvgUrl(clients?.filePath);
-
-      console.log(clients?.filePath);
-      console.log(svgUrl);
+      // console.log(clients?.filePath);
+      // console.log(svgUrl);
       setCurrentStep(currentStep + 1);
     }
     if (currentStep == 1) {
@@ -320,6 +319,7 @@ export default function OldConsult() {
         toast.error("please select time slot");
         return;
       }
+      handleSubmit();
     }
     if (currentStep < steps.length - 1) setCurrentStep(currentStep + 1);
     // handleSubmitprokalara();
@@ -340,12 +340,13 @@ export default function OldConsult() {
     ? timeSlots.filter((slot) => slot.duration === selectedDuration)
     : timeSlots;
 
+  // console.log(currentStep);
   return (
     <>
       {/* <Bookings /> */}
 
       <div className="max-w-4xl mt-0 mx-auto p-6 bg-white shadow-md h-full rounded-md">
-        <div className="flex justify-between mb-6 max-md:flex-wrap">
+        <div className="flex justify-center mb-6 max-md:flex-wrap">
           {steps.map((step, index) => (
             <div
               key={index}
@@ -418,16 +419,14 @@ export default function OldConsult() {
                 />
               </label>
 
-              <label>
+              {/* <label>
                 Date of Birth *
                 <input
                   name="dob"
                   type="date"
                   placeholder="dd/mm/yyyy"
-                  // pattern="\d{4}-\d{2}-\d{2}"
                   required
                   value={formData.dob}
-                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
@@ -439,7 +438,6 @@ export default function OldConsult() {
                     name="timeOfBirth"
                     type="time"
                     value={formData.timeOfBirth}
-                    // onChange={handleChange}
                     className="border p-2 rounded wfull border-[#E4E4E4] ml-2 max-md:ml-0  w-[240px] max-md:w-full"
                   />
                   <span className="ml-2 relative group">
@@ -574,17 +572,10 @@ export default function OldConsult() {
                   //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
-              </label>
+              </label> */}
             </div>
           </div>
         )}
-
-        {/* {currentStep === 1 && (
-        <Questions
-          formData={formData}
-          handleQuestionChange={handleQuestionChange}
-        />
-      )} */}
 
         {currentStep === 1 && (
           <div className="space-y-4 h[400px] max-md:h[700px]">
@@ -637,50 +628,30 @@ export default function OldConsult() {
 
                 {/* Time Slots */}
                 <div className="grid grid-cols-3 gap-2">
-                  {/* {filteredSlots.length > 0 ? (
-                    filteredSlots.map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))
-                  ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )} */}
-
                   {filteredSlots
                     .filter((slot) => {
-                      const currentHour = new Date().getHours(); // Get current hour in 24-hour format
+                      const now = new Date(); // Current date and time
+                      const currentTimeInMinutes =
+                        now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
 
                       // Extract the start time (e.g., "10:00 AM")
                       const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
                       const period = startTime.includes("PM") ? "PM" : "AM";
 
                       // Convert to 24-hour format
                       if (period === "PM" && hour !== 12) hour += 12;
                       if (period === "AM" && hour === 12) hour = 0;
 
-                      return hour >= currentHour && hour <= 18; // Show slots from current time to 6 PM
+                      const slotTimeInMinutes = hour * 60 + minute; // Convert slot time to minutes
+
+                      // Show slots that are after current time AND before or equal to 6 PM (18:00)
+                      return (
+                        slotTimeInMinutes >= currentTimeInMinutes && hour <= 18
+                      );
                     })
                     .sort((a, b) => {
-                      // Extract start times for sorting
+                      // Keep your existing sorting logic
                       const getTimeInMinutes = (time) => {
                         let [hour, minute] = time.match(/\d+/g).map(Number);
                         const period = time.includes("PM") ? "PM" : "AM";
@@ -688,7 +659,7 @@ export default function OldConsult() {
                         if (period === "PM" && hour !== 12) hour += 12;
                         if (period === "AM" && hour === 12) hour = 0;
 
-                        return hour * 60 + minute; // Convert to total minutes for sorting
+                        return hour * 60 + minute;
                       };
 
                       return (
@@ -704,13 +675,13 @@ export default function OldConsult() {
                           setDuration(slot.duration);
                         }}
                         className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
+          ${
+            slot.status === "available"
+              ? selectedTime === slot.time
+                ? "bg-blue-500 text-white"
+                : "bg-green-200 hover:bg-green-300"
+              : "bg-red-200 hover:bg-red-300"
+          }`}
                       >
                         {slot.time}
                       </button>
@@ -725,11 +696,10 @@ export default function OldConsult() {
             </div>
           </div>
         )}
-        {currentStep === 2 && (
+        {/* {currentStep === 2 && (
           <div>
             <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
-            {/* <pre className="bg-gray-100 p-4 rounded"> */}
-            {/* {JSON.stringify(formData, null, 2)} */}
+
             <ThankYouScreen
               formData={formData}
               selectedTime={selectedTime}
@@ -739,10 +709,9 @@ export default function OldConsult() {
               svgUrl={svgdata}
               selectedDate={selectedDate}
             />
-            {/* </pre> */}
           </div>
-        )}
-        {currentStep === steps.length - 1 && (
+        )} */}
+        {/* {currentStep === steps.length - 1 && (
           <h2 className="text-xl font-semibold mb-4 text-center">
             <PaymentButton
               setPaymentStatus={setPaymentStatus}
@@ -756,7 +725,7 @@ export default function OldConsult() {
               selectedDate={selectedDate}
             />
           </h2>
-        )}
+        )} */}
 
         <div
           className={`mt-6 flex max-md:flex-col max-md:gap-6 ${
@@ -772,42 +741,19 @@ export default function OldConsult() {
                   : ""
               }`}
             >
-              {currentStep === 2
-                ? loading
-                  ? "Processing please wait"
-                  : "Urgent Query"
-                : "Back"}
+              Back
             </button>
           )}
 
-          {currentStep < steps.length - 1 && (
-            <button
-              onClick={nextStep}
-              disabled={loading}
-              className="px-10 py-2 bg-[#4597F8] text-white rounded flex items-center justify-center gap-2"
-            >
-              {currentStep === 2
-                ? "Checkout for Payment"
-                : latloading
-                ? "Fetching latitude"
-                : "Next"}{" "}
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3.83337 10H17.1667M17.1667 10L12.1667 5M17.1667 10L12.1667 15"
-                  stroke="white"
-                  strokeWidth="1.3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          )}
+          {/* {currentStep < steps.length - 1 && ( */}
+          <button
+            onClick={nextStep}
+            // disabled={loading}
+            className="px-10 py-2 bg-[#4597F8] text-white rounded flex items-center justify-center gap-2"
+          >
+            {currentStep === 1 ? "Submit" : "Next"}
+          </button>
+          {/* )} */}
         </div>
       </div>
 

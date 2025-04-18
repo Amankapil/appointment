@@ -32,7 +32,7 @@ const tabs = [
     component: <NewConsult />,
   },
   {
-    name: "Existing User",
+    name: "Registered User",
     icon: (
       <svg
         width="21"

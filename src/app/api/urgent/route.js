@@ -157,6 +157,13 @@ Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledg
 - Avoid using speakerphones or Bluetooth devices to prevent audio distortion. Do not charge the phone during consultation.  
 - Feel free to record the session for your reference.  
 
+🔮 Book Your Astro Consultation in 1 Minute!
+✅ Register once: https://prashnasiddhi.com
+📅 Choose your time
+💸 Pay immediately via Google Pay/UPI to 7259691375 (No PayTM)
+That’s it. Simple, quick, divine. 🌟
+
+Note : This is one time registration, next time you just have to enter your phone number and have to select slot. No need to fill out the whole details. 
 🙏 **A Note of Blessings**  
 By following the above, you’ll receive deep insights within your chosen time. May Divine Grace illuminate your path and help you find the answers you seek.  
 
@@ -168,21 +175,21 @@ Vedic Astrologer – Prashna Siddhi
 
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
-    // const res = await client.messages.create({
-    //   from: "whatsapp:+917022239292", // Twilio WhatsApp Number
-    //   to: "whatsapp:+917259691375", // Recipient's WhatsApp number
-    //   // category: "TRANSACTIONAL",
-    //   contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
-    //   contentVariables: JSON.stringify({
-    //     1: selectedTime || "", // Static Name (Ensure it's always a string)
-    //     2: name || "",
-    //     3: email || "",
-    //     4: phone || "",
-    //     5: amount || "", // Ensure it's a string
-    //     6: selectedDate || "", // Ensure it's a string
-    //     7: filePath || "check-in-dashboard",
-    //   }),
-    // });
+    const res = await client.messages.create({
+      from: "whatsapp:+917022239292", // Twilio WhatsApp Number
+      to: "whatsapp:+917259691375", // Recipient's WhatsApp number
+      // category: "TRANSACTIONAL",
+      contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
+      contentVariables: JSON.stringify({
+        1: selectedTime || "", // Static Name (Ensure it's always a string)
+        2: name || "",
+        3: email || "",
+        4: phone || "",
+        5: amount || "", // Ensure it's a string
+        6: selectedDate || "", // Ensure it's a string
+        7: filePath || "check-in-dashboard",
+      }),
+    });
     // console.log(res);
     // console.log("phone", phone);
     // console.log("amount", amount);

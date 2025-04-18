@@ -157,6 +157,15 @@ Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledg
 - Avoid using speakerphones or Bluetooth devices to prevent audio distortion. Do not charge the phone during consultation.  
 - Feel free to record the session for your reference.  
 
+🔮 Book Your Astro Consultation in 1 Minute!
+✅ Register once: https://prashnasiddhi.com
+📅 Choose your time
+💸 Pay immediately via Google Pay/UPI to 7259691375 (No PayTM)
+That’s it. Simple, quick, divine. 🌟
+
+Note : This is one time registration, next time you just have to enter your phone number and have to select slot. No need to fill out the whole details. 
+
+
 🙏 **A Note of Blessings**  
 By following the above, you’ll receive deep insights within your chosen time. May Divine Grace illuminate your path and help you find the answers you seek.  
 
