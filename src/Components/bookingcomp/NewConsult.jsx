@@ -989,33 +989,27 @@ export default function NewConsult() {
 
                   {filteredSlots
                     .filter((slot) => {
-                      const currentHour = new Date().getHours(); // Get current hour in 24-hour format
+                      const now = new Date(); // Current date and time
+                      const currentTimeInMinutes =
+                        now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
+
+                      // Skip if slot is not available
+                      if (slot.status !== "available") return false;
 
                       // Extract the start time (e.g., "10:00 AM")
                       const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
                       const period = startTime.includes("PM") ? "PM" : "AM";
 
                       // Convert to 24-hour format
                       if (period === "PM" && hour !== 12) hour += 12;
                       if (period === "AM" && hour === 12) hour = 0;
 
-                      return hour >= currentHour && hour <= 18; // Show slots from current time to 6 PM
-                    })
-                    .sort((a, b) => {
-                      // Extract start times for sorting
-                      const getTimeInMinutes = (time) => {
-                        let [hour, minute] = time.match(/\d+/g).map(Number);
-                        const period = time.includes("PM") ? "PM" : "AM";
+                      const slotTimeInMinutes = hour * 60 + minute;
 
-                        if (period === "PM" && hour !== 12) hour += 12;
-                        if (period === "AM" && hour === 12) hour = 0;
-
-                        return hour * 60 + minute; // Convert to total minutes for sorting
-                      };
-
+                      // Show slots that are after current time AND before or equal to 6 PM (18:00)
                       return (
-                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
+                        slotTimeInMinutes >= currentTimeInMinutes && hour <= 18
                       );
                     })
                     .map((slot) => (

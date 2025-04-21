@@ -138,6 +138,16 @@ export async function POST(request) {
       await transaction.save();
     }
 
+    var amount1 = 0;
+
+    if (duration === 15) {
+      amount1 = 1000;
+    } else if (duration === 30) {
+      amount1 = 100;
+    } else {
+      amount1 = 2500;
+    }
+
     // const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // Example date
     const message2 = `Dear ${name},  
@@ -158,9 +168,9 @@ Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledg
 - Feel free to record the session for your reference.  
 
 🔮 Book Your Astro Consultation in 1 Minute!
-✅ Register once: https://prashnasiddhi.com
+✅ Register once: https://prashnasiddhi.com/booking
 📅 Choose your time
-💸 Pay immediately via Google Pay/UPI to 7259691375 (No PayTM)
+💸 Pay  ${amount1} immediately via Google Pay/UPI to 7259691375 (No PayTM)
 That’s it. Simple, quick, divine. 🌟
 
 Note : This is one time registration, next time you just have to enter your phone number and have to select slot. No need to fill out the whole details. 
@@ -201,11 +211,11 @@ Vedic Astrologer – Prashna Siddhi
       from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
       to: whatsappNumber, // Recipient's WhatsApp number
       // to: "whatsapp:+918103075691", // Recipient's WhatsApp number
-      contentSid: "HXec22304c88524c193b949e7b9a361a05", // Replace with your Twilio-approved Template SID
+      contentSid: "HX8ed84eaaf51731ee4758ae01f9bd7c71", // Replace with your Twilio-approved Template SID
       contentVariables: JSON.stringify({
-        1: String(amount || "0.00"),
-        2: String(duration || "15"),
-        3: String(selectedTime || "11:00 AM - 11:30 AM"),
+        1: String(duration || "15"),
+        2: String(selectedTime || "11:00 AM - 11:30 AM"),
+        3: String(amount1 || "0.00"),
       }),
     });
 
@@ -214,7 +224,7 @@ Vedic Astrologer – Prashna Siddhi
 
     // 7022239292
 
-    // console.log("whatapp response", res3);
+    console.log("whatapp response", res3);
     await sendEmail({
       to: email,
       subject: "🌟 Your Prashna Siddhi Consultation is Confirmed",

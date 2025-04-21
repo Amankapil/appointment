@@ -634,6 +634,9 @@ export default function OldConsult() {
                       const currentTimeInMinutes =
                         now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
 
+                      // Skip if slot is not available
+                      if (slot.status !== "available") return false;
+
                       // Extract the start time (e.g., "10:00 AM")
                       const startTime = slot.time.split(" - ")[0];
                       let [hour, minute] = startTime.match(/\d+/g).map(Number);
@@ -643,13 +646,14 @@ export default function OldConsult() {
                       if (period === "PM" && hour !== 12) hour += 12;
                       if (period === "AM" && hour === 12) hour = 0;
 
-                      const slotTimeInMinutes = hour * 60 + minute; // Convert slot time to minutes
+                      const slotTimeInMinutes = hour * 60 + minute;
 
                       // Show slots that are after current time AND before or equal to 6 PM (18:00)
                       return (
                         slotTimeInMinutes >= currentTimeInMinutes && hour <= 18
                       );
                     })
+
                     .sort((a, b) => {
                       // Keep your existing sorting logic
                       const getTimeInMinutes = (time) => {

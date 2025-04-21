@@ -20,7 +20,7 @@ export default function PaymentButton({
     if (duration === 30) {
       setAmount(2000);
     } else if (duration === 45) {
-      setAmount(1500);
+      setAmount(2500);
     } else {
       setAmount(1000);
     }

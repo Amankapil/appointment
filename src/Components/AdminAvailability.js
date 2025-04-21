@@ -203,7 +203,7 @@ export default function AdminAvailability() {
                           ? "bg-red-500 text-white cursor-not-allowed"
                           : isSelected
                           ? "bg-green-500 text-white"
-                          : "bg-white border-gray-300"
+                          : "bg-red-100 border-gray-300"
                       }`}
                       disabled={status === "booked"}
                     >

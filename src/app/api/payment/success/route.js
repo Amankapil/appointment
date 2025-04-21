@@ -202,11 +202,11 @@ Vedic Astrologer – Prashna Siddhi
       from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
       to: whatsappNumber, // Recipient's WhatsApp number
       // to: "whatsapp:+918103075691", // Recipient's WhatsApp number
-      contentSid: "HXec22304c88524c193b949e7b9a361a05", // Replace with your Twilio-approved Template SID
+      contentSid: "HX8ed84eaaf51731ee4758ae01f9bd7c71", // Replace with your Twilio-approved Template SID
       contentVariables: JSON.stringify({
-        1: String(amount || "0.00"),
-        2: String(duration || "15"),
-        3: String(selectedTime || "11:00 AM - 11:30 AM"),
+        1: String(duration || "15"),
+        2: String(selectedTime || "11:00 AM - 11:30 AM"),
+        3: String(amount || "0.00"),
       }),
     });
 

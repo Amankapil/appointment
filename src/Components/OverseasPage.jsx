@@ -135,7 +135,7 @@ export default function Bookings() {
       component: <OverseasNew selectedTimezone={selectedTimezone} />,
     },
     {
-      name: "Existing User",
+      name: "Registred User",
       icon: (
         <svg
           width="21"
