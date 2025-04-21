@@ -152,7 +152,7 @@ export async function POST(request) {
     // Example date
     const message2 = `Dear ${name},  
 
-Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledge with gratitude the receipt of ₹${amount} for your ${duration}-minute astrology consultation.  
+Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledge with gratitude the receipt of ₹${amount1} for your ${duration}-minute astrology consultation.  
 
 ✅ **Your Appointment Details:**  
 **Date & Time:** ${selectedTime}, ${selectedDate} 
