@@ -143,7 +143,7 @@ export async function POST(request) {
     if (duration === 15) {
       amount1 = 1000;
     } else if (duration === 30) {
-      amount1 = 100;
+      amount1 = 2000;
     } else {
       amount1 = 2500;
     }
