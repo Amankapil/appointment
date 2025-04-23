@@ -27,7 +27,7 @@ export default function MultiStepForm() {
   return (
     <>
       {showPopup && (
-        <div className="fixed inset-0 flex z-[99999999] items-center justify-center bg[#ffffff13] backdrop-blur-[10px] bg-opacity-50">
+        <div className="fixed inset-0 max-md:hidden flex z-[99999999] items-center justify-center bg-white/10 backdrop-blur-[10px]">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
             <h2 className="text-xl font-semibold font-salernomi mb-4">
               Select Your Client Type
