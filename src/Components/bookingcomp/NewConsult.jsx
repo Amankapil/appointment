@@ -960,56 +960,59 @@ export default function NewConsult() {
 
                 {/* Time Slots */}
                 <div className="grid grid-cols-3 gap-2">
-                  {/* {filteredSlots.length > 0 ? (
-                    filteredSlots.map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))
-                  ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )} */}
-
                   {filteredSlots
                     .filter((slot) => {
-                      const now = new Date(); // Current date and time
-                      const currentTimeInMinutes =
-                        now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
-
                       // Skip if slot is not available
                       if (slot.status !== "available") return false;
 
-                      // Extract the start time (e.g., "10:00 AM")
-                      const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
-                      const period = startTime.includes("PM") ? "PM" : "AM";
+                      const now = new Date(); // Current date and time
+                      const selectedDates = new Date(selectedDate); // The date being viewed
 
-                      // Convert to 24-hour format
-                      if (period === "PM" && hour !== 12) hour += 12;
-                      if (period === "AM" && hour === 12) hour = 0;
+                      // If selected date is in the future, show all available slots
+                      if (selectedDates > now) return true;
 
-                      const slotTimeInMinutes = hour * 60 + minute;
+                      // If selected date is today, check times
+                      if (selectedDates.toDateString() === now.toDateString()) {
+                        const currentTimeInMinutes =
+                          now.getHours() * 60 + now.getMinutes();
 
-                      // Show slots that are after current time AND before or equal to 6 PM (18:00)
+                        // Extract the start time (e.g., "10:00 AM")
+                        const startTime = slot.time.split(" - ")[0];
+                        let [hour, minute] = startTime
+                          .match(/\d+/g)
+                          .map(Number);
+                        const period = startTime.includes("PM") ? "PM" : "AM";
+
+                        // Convert to 24-hour format
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        const slotTimeInMinutes = hour * 60 + minute;
+
+                        // Show slots that are after current time AND before or equal to 6 PM (18:00)
+                        return (
+                          slotTimeInMinutes >= currentTimeInMinutes &&
+                          hour <= 18
+                        );
+                      }
+
+                      // If selected date is in the past, hide all slots
+                      return false;
+                    })
+                    .sort((a, b) => {
+                      // Keep your existing sorting logic
+                      const getTimeInMinutes = (time) => {
+                        let [hour, minute] = time.match(/\d+/g).map(Number);
+                        const period = time.includes("PM") ? "PM" : "AM";
+
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        return hour * 60 + minute;
+                      };
+
                       return (
-                        slotTimeInMinutes >= currentTimeInMinutes && hour <= 18
+                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
                       );
                     })
                     .map((slot) => (
@@ -1020,14 +1023,13 @@ export default function NewConsult() {
                           setSelectedTime(slot.time);
                           setDuration(slot.duration);
                         }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
+                        className={`p-2 rounded text-sm border ${
+                          slot.status === "available"
+                            ? selectedTime === slot.time
+                              ? "bg-blue-500 text-white"
+                              : "bg-green-200 hover:bg-green-300"
+                            : "bg-red-200 hover:bg-red-300"
+                        }`}
                       >
                         {slot.time}
                       </button>

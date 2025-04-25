@@ -213,8 +213,6 @@ export default function OldConsult() {
       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
       const data = await res.json();
       setTimeSlots(data.slots);
-      // console.log(data.slots);
-      // console.log(data?.slots[0]?.duration);
     } catch (error) {
       console.log(error);
     }
@@ -335,12 +333,71 @@ export default function OldConsult() {
     }
   };
 
+  // const [selectedDuration, setSelectedDuration] = useState(null); // Filter state
+  // const filteredSlots = selectedDuration
   const [selectedDuration, setSelectedDuration] = useState(null); // Filter state
-  const filteredSlots = selectedDuration
-    ? timeSlots.filter((slot) => slot.duration === selectedDuration)
-    : timeSlots;
 
-  // console.log(currentStep);
+  // Filtered slots considering selected duration and current time logic
+  const filteredSlots = (
+    selectedDuration
+      ? timeSlots.filter((slot) => slot.duration === selectedDuration)
+      : timeSlots
+  )
+    .filter((slot) => {
+      const now = new Date(); // Current date and time
+      const currentTimeInMinutes = now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
+
+      // Parse the slot time (e.g., "10:00 AM" -> 10 * 60 + 0 = 600)
+      const slotTime = slot.time.split(" - ")[0]; // Extract start time (e.g., "10:00 AM")
+      let [hour, minute] = slotTime.match(/\d+/g).map(Number);
+      const period = slotTime.includes("PM") ? "PM" : "AM";
+
+      // Convert to 24-hour format
+      if (period === "PM" && hour !== 12) hour += 12;
+      if (period === "AM" && hour === 12) hour = 0;
+
+      const slotTimeInMinutes = hour * 60 + minute;
+
+      // Extract the date of the slot
+      const slotDate = new Date(slot.date); // Assuming slot.date contains the full date (e.g., "2025-04-25T10:00:00Z")
+      const slotDateString = slotDate.toDateString(); // String representation of the slot date
+
+      // Compare slot date with current date to decide whether to show the slot
+      const currentDateString = now.toDateString();
+
+      // If the slot is today and the current time is after 6 PM, skip it
+      if (slotDateString === currentDateString) {
+        // Only show slots for today that are before or equal to 6 PM
+        if (slotTimeInMinutes >= 18 * 60) {
+          // 18:00 in minutes
+          return false; // Skip if slot time is after 6 PM
+        }
+      }
+
+      // Always show tomorrow's or future slots
+      if (slotDate > now) {
+        return true; // Always show slots for tomorrow or future dates
+      }
+
+      // Default return to ensure we include only valid slots for today and future
+      return true;
+    })
+    .sort((a, b) => {
+      const getTimeInMinutes = (time) => {
+        let [hour, minute] = time.match(/\d+/g).map(Number);
+        const period = time.includes("PM") ? "PM" : "AM";
+
+        if (period === "PM" && hour !== 12) hour += 12;
+        if (period === "AM" && hour === 12) hour = 0;
+
+        return hour * 60 + minute;
+      };
+
+      return getTimeInMinutes(a.time) - getTimeInMinutes(b.time);
+    });
+
+  console.log(filteredSlots);
+  console.log(timeSlots);
   return (
     <>
       {/* <Bookings /> */}
@@ -627,7 +684,7 @@ export default function OldConsult() {
                 </div>
 
                 {/* Time Slots */}
-                <div className="grid grid-cols-3 gap-2">
+                {/* <div className="grid grid-cols-3 gap-2">
                   {filteredSlots
                     .filter((slot) => {
                       const now = new Date(); // Current date and time
@@ -686,6 +743,88 @@ export default function OldConsult() {
                 : "bg-green-200 hover:bg-green-300"
               : "bg-red-200 hover:bg-red-300"
           }`}
+                      >
+                        {slot.time}
+                      </button>
+                    ))}
+                  {filteredSlots.length === 0 && (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
+                </div> */}
+
+                <div className="grid grid-cols-3 gap-2">
+                  {filteredSlots
+                    .filter((slot) => {
+                      // Skip if slot is not available
+                      if (slot.status !== "available") return false;
+
+                      const now = new Date(); // Current date and time
+                      const selectedDates = new Date(selectedDate); // The date being viewed
+
+                      // If selected date is in the future, show all available slots
+                      if (selectedDates > now) return true;
+
+                      // If selected date is today, check times
+                      if (selectedDates.toDateString() === now.toDateString()) {
+                        const currentTimeInMinutes =
+                          now.getHours() * 60 + now.getMinutes();
+
+                        // Extract the start time (e.g., "10:00 AM")
+                        const startTime = slot.time.split(" - ")[0];
+                        let [hour, minute] = startTime
+                          .match(/\d+/g)
+                          .map(Number);
+                        const period = startTime.includes("PM") ? "PM" : "AM";
+
+                        // Convert to 24-hour format
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        const slotTimeInMinutes = hour * 60 + minute;
+
+                        // Show slots that are after current time AND before or equal to 6 PM (18:00)
+                        return (
+                          slotTimeInMinutes >= currentTimeInMinutes &&
+                          hour <= 18
+                        );
+                      }
+
+                      // If selected date is in the past, hide all slots
+                      return false;
+                    })
+                    .sort((a, b) => {
+                      // Keep your existing sorting logic
+                      const getTimeInMinutes = (time) => {
+                        let [hour, minute] = time.match(/\d+/g).map(Number);
+                        const period = time.includes("PM") ? "PM" : "AM";
+
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        return hour * 60 + minute;
+                      };
+
+                      return (
+                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
+                      );
+                    })
+                    .map((slot) => (
+                      <button
+                        key={slot._id}
+                        disabled={slot.status === "booked"}
+                        onClick={() => {
+                          setSelectedTime(slot.time);
+                          setDuration(slot.duration);
+                        }}
+                        className={`p-2 rounded text-sm border ${
+                          slot.status === "available"
+                            ? selectedTime === slot.time
+                              ? "bg-blue-500 text-white"
+                              : "bg-green-200 hover:bg-green-300"
+                            : "bg-red-200 hover:bg-red-300"
+                        }`}
                       >
                         {slot.time}
                       </button>
