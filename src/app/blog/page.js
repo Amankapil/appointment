@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 10,
+    title: "Mystery of the Zodiac Sign.... ",
+    date: "April 28, 2025",
+    image: "/images/blog10.png",
+    link: "/blog/mystery-of-the-zodiac-sign",
+    desc: "Beyond Predictions and Ambitions: Libra and the Silent Law of .....",
+  },
+  {
     id: 9,
     title: "Child Birth — A Spiritual.... ",
     date: "April 17, 2025",
