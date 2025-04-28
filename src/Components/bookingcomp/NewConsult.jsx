@@ -755,8 +755,12 @@ export default function NewConsult() {
                     <span className="text-gray-400 cursor-pointer border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center">
                       i
                     </span>
-                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 max-md:w-full p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                      If unsure of birth time, enter an estimated time.
+                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 z-[9999] w-60 max-md:w-full p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
+                      Not sure about your exact birth time? Simply enter 11:00
+                      AM —
+                      <br />
+                      Vedic Prashna will still guide you with the answers you
+                      seek, through Divine grace.{" "}
                     </span>
                   </span>
                 </div>
