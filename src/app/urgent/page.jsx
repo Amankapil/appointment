@@ -25,10 +25,10 @@ export default function MultiStepForm() {
     <div className="max-w-6xl mt-10 mx-auto p-6 bg-white shadowmd rounded-md">
       <div className="flex justify-between mb-6"></div>
 
-      <h1 className="text-xl font-semibold mb-4">
-        your Urgent booking is confirmed please check your given email for more
-        details{" "}
-      </h1>
+      <h2 className="text-[40px] font-semibold mb-4">
+        Your urgent booking is confirmed. Please check the email for
+        confirmation.
+      </h2>
     </div>
   );
 }

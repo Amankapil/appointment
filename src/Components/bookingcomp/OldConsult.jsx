@@ -652,6 +652,16 @@ export default function OldConsult() {
 
                 <div className="flex gap-2 mb-4">
                   <button
+                    onClick={() => setSelectedDuration(7)}
+                    className={`p-2 border w-full rounded ${
+                      selectedDuration === 7
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    7 Min
+                  </button>
+                  <button
                     onClick={() => setSelectedDuration(15)}
                     className={`p-2 border w-full rounded ${
                       selectedDuration === 15
@@ -682,77 +692,6 @@ export default function OldConsult() {
                     45 Min
                   </button>
                 </div>
-
-                {/* Time Slots */}
-                {/* <div className="grid grid-cols-3 gap-2">
-                  {filteredSlots
-                    .filter((slot) => {
-                      const now = new Date(); // Current date and time
-                      const currentTimeInMinutes =
-                        now.getHours() * 60 + now.getMinutes(); // Convert current time to minutes
-
-                      // Skip if slot is not available
-                      if (slot.status !== "available") return false;
-
-                      // Extract the start time (e.g., "10:00 AM")
-                      const startTime = slot.time.split(" - ")[0];
-                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
-                      const period = startTime.includes("PM") ? "PM" : "AM";
-
-                      // Convert to 24-hour format
-                      if (period === "PM" && hour !== 12) hour += 12;
-                      if (period === "AM" && hour === 12) hour = 0;
-
-                      const slotTimeInMinutes = hour * 60 + minute;
-
-                      // Show slots that are after current time AND before or equal to 6 PM (18:00)
-                      return (
-                        slotTimeInMinutes >= currentTimeInMinutes && hour <= 18
-                      );
-                    })
-
-                    .sort((a, b) => {
-                      // Keep your existing sorting logic
-                      const getTimeInMinutes = (time) => {
-                        let [hour, minute] = time.match(/\d+/g).map(Number);
-                        const period = time.includes("PM") ? "PM" : "AM";
-
-                        if (period === "PM" && hour !== 12) hour += 12;
-                        if (period === "AM" && hour === 12) hour = 0;
-
-                        return hour * 60 + minute;
-                      };
-
-                      return (
-                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
-                      );
-                    })
-                    .map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-          ${
-            slot.status === "available"
-              ? selectedTime === slot.time
-                ? "bg-blue-500 text-white"
-                : "bg-green-200 hover:bg-green-300"
-              : "bg-red-200 hover:bg-red-300"
-          }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))}
-                  {filteredSlots.length === 0 && (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )}
-                </div> */}
 
                 <div className="grid grid-cols-3 gap-2">
                   {filteredSlots

@@ -49,9 +49,10 @@ const Qa = () => {
 
         <div className="heading flex mb-10 items-center justify-center pt-10 max-md:flex-col max-md:gap-10 price-section price-section1">
           <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price price1 w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
-            <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
-              ₹199
-              <p className="text-[20px] text-gray-600">/Plan</p>{" "}
+            <h3 className="text-[30px] font-bold font-salernomi text-[#101010] flex items-center text-center m">
+              {/* ₹499 */}
+              Rs.499 / USD $20
+              {/* <p className="text-[20px] text-gray-600">/Plan</p>{" "} */}
             </h3>
 
             {/* Toggle Switch */}
@@ -73,7 +74,8 @@ const Qa = () => {
                   </svg>
                 </span>
                 <p className="text-[16px] text-[#101010] text-left">
-                  Record your question in any language (30-45 sec limit).
+                  {/* Record your question in any language (30-45 sec limit). */}
+                  Up to 2 questions in 7 minutes consultation.
                 </p>
               </div>
               <div className="text-center flex items-center justify-center mt gap-3 w-full">
@@ -140,25 +142,26 @@ const Qa = () => {
               >
                 Submit Your Question
               </Link> */}
-              <button
-                onClick={handleClick}
-                disabled={!isChecked2}
-                className={`mt-2 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked2 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Submit Your Question
-              </button>
+              <div className="flex items-center justify-center w-full mt-2">
+                <button
+                  onClick={() => {
+                    router.push("/Siddi-7");
+                  }}
+                  // disabled={!isChecked}
+                  className={`mt-6 w-[80%] cursor-pointer font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium 
+                `}
+                >
+                  Know More
+                </button>
+              </div>
             </div>
           </div>
 
-          <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price price1 w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
+          {/* <div className="relative pb-10 flex items-center flex-col justify-center gap-1  price price1 w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
             <h3 className="text-[44px] font-normal fontsalernomi text-[#101010] flex items-center text-center m">
               ₹399
               <p className="text-[20px] text-gray-600">/Plan</p>{" "}
             </h3>
-
-            {/* Toggle Switch */}
 
             <div className="px-10 space-y-2">
               <div className="text-center flex items-center justify-center gap-3 w-full">
@@ -235,17 +238,8 @@ const Qa = () => {
                 Terms and Conditions
               </span>
             </div>
-            {/* Book Now Button */}
-            <div className="flex mt-2 items-center justify-center w-full mt-0">
-              {/* <Link
-                href={"/booking"}
-                className={`mt-5 w-[80%] font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium ${
-                  !isChecked1 ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-              >
-                Submit Your Question
-              </Link> */}
 
+            <div className="flex mt-2 items-center justify-center w-full mt-0">
               <button
                 onClick={handleClick}
                 disabled={!isChecked1}
@@ -256,7 +250,7 @@ const Qa = () => {
                 Submit Your Question
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         {isOpen && (
           <div className="fixed max-md:overflow-scroll terms max-md:pt-64 max-mdtop-20 inset-0 bg-[#00000005] bg-opacity-50 flex justify-center items-center z-50">

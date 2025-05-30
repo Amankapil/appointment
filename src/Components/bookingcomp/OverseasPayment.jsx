@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function OverseasPayment({
@@ -19,6 +19,20 @@ export default function OverseasPayment({
   const [paymentMode, setPaymentMode] = useState("UPI");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (duration === 30) {
+      setAmount(55);
+    } else if (duration === 45) {
+      setAmount(90);
+    } else if (duration === 7) {
+      setAmount(20);
+    } else {
+      setAmount(35);
+    }
+    console.log(duration);
+  }, [duration]);
+  console.log(duration);
   console.log(selectedTime);
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -102,7 +116,7 @@ export default function OverseasPayment({
               />
             </div>
             <div>
-              <label className="block font-medium">Amount Paid</label>
+              <label className="block font-medium">Amount Paid in $</label>
               <input
                 type="text"
                 value={amount}

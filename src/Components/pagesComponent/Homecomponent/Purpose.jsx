@@ -3,6 +3,7 @@ import img from "./assets/Group.svg";
 import Image from "next/image";
 
 import "./style.css";
+import { Heading2Icon } from "lucide-react";
 
 const Purpose = () => {
   // Single Card component with triple borders
@@ -67,14 +68,14 @@ const Purpose = () => {
           </svg>
 
           <div className="flex items-center karma gap-20 flex-col w-[60%] max-md:w-full mt-20  justify-center text-center max-md:h-full max-md:p-10 max-md:mt-5">
-            <h1 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
+            <h2 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
               “If you don’t believe in the Karma Theory, ask yourself this – Did
               you choose your parents, or did they choose you?”
-            </h1>{" "}
-            <h1 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
+            </h2>{" "}
+            <h2 className="text-[32px] text-[#101010] text-center font-salernomi font-normal mb-6">
               “Prediction tells you what may happen. But isn’t guidance about
               making the right choices more valuable?”
-            </h1>
+            </h2>
           </div>
         </div>
       </div>

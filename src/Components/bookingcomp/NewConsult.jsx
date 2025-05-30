@@ -260,165 +260,6 @@ export default function NewConsult() {
     }
   };
 
-  const [pdfUrl, setpdfUrl] = useState("");
-  const [pdfdata, setpdfData] = useState("");
-
-  // working till 25march 2025
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   // Validate each field to ensure they are not undefined or null
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Fix for Safari - Use Date.UTC() for reliable datetime conversion
-  //   const datetime = new Date(
-  //     Date.UTC(year, month - 1, day, hour, min, 0)
-  //   ).toISOString();
-
-  //   // Encode URL components properly
-  //   const coordinates = `${lat},${lon}`;
-  //   const encodedDatetime = encodeURIComponent(datetime);
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
-
-  // const makeApiRequest = async (horoscopeData1) => {
-  //   const {
-  //     day,
-  //     month,
-  //     year,
-  //     hour,
-  //     min,
-  //     lat,
-  //     lon,
-  //     chart_type = "lagna",
-  //     chart_style = "south-indian",
-  //     format = "svg",
-  //     la = "en",
-  //     upagraha_position = "middle",
-  //     timezone = "+05:30", // Replace with dynamic timezone if needed
-  //   } = horoscopeData1;
-
-  //   console.log("Received Horoscope Data:", horoscopeData1);
-
-  //   if (
-  //     day == null ||
-  //     month == null ||
-  //     year == null ||
-  //     hour == null ||
-  //     min == null ||
-  //     lat == null ||
-  //     lon == null
-  //   ) {
-  //     console.log("Missing required horoscope data: line 371", horoscopeData1);
-  //     return;
-  //   }
-
-  //   // Function to format datetime correctly with timezone offset
-  //   const formatDateTimeWithOffset = (
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   ) => {
-  //     const pad = (num) => String(num).padStart(2, "0");
-  //     return `${year}-${pad(month)}-${pad(day)}T${pad(hour)}:${pad(
-  //       min
-  //     )}:00${timezone}`;
-  //   };
-
-  //   // Get properly formatted datetime
-  //   const datetime = formatDateTimeWithOffset(
-  //     year,
-  //     month,
-  //     day,
-  //     hour,
-  //     min,
-  //     timezone
-  //   );
-
-  //   // Encode the datetime properly
-  //   const encodedDatetime = encodeURIComponent(datetime.replace("+", "%2B"));
-
-  //   // Construct API URL
-  //   const coordinates = `${lat},${lon}`;
-  //   const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
-
-  //   console.log("Formatted API URL:", apiUrl);
-
-  //   try {
-  //     const response = await fetch(apiUrl, { method: "GET" });
-  //     if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
-
-  //     const blob = await response.blob();
-  //     console.log("Blob Response:", blob);
-
-  //     const cloudinaryUrl = await uploadToCloudinary(blob);
-
-  //     if (cloudinaryUrl) {
-  //       console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
-  //     }
-
-  //     const objectUrl = URL.createObjectURL(blob);
-  //     setSvgUrl(objectUrl);
-  //     setSvgData(cloudinaryUrl);
-  //     console.log("API Response:", objectUrl);
-  //   } catch (error) {
-  //     console.error("Error calling API:", error);
-  //   }
-  // };
-
   const makeApiRequest = async (horoscopeData1) => {
     const {
       day,
@@ -722,13 +563,14 @@ export default function NewConsult() {
                   name="dob"
                   type="date"
                   placeholder="dd/mm/yyyy"
+                  min="1900-01-01"
+                  max="2100-12-31"
                   // pattern="\d{4}-\d{2}-\d{2}"
                   required
                   value={formData.dob}
                   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
-                {/* <DatePicker onChange={handleChange} />; */}
               </label>
               {/* <label>
                 Time of Birth *
@@ -890,7 +732,7 @@ export default function NewConsult() {
           handleQuestionChange={handleQuestionChange}
         />
       )} */}
-
+        {/* 
         {currentStep === 1 && (
           <div className="space-y-4 h[400px] max-md:h[700px]">
             <h2 className="text-lg font-semibold">Select Date & Time</h2>
@@ -906,28 +748,6 @@ export default function NewConsult() {
                 <h2 className="text-md font-normal pb-4">
                   Select a Convenient Time
                 </h2>
-                {/* <div className="grid grid-cols-3 gap-2">
-                {timeSlots?.map((slot) => (
-                  <button
-                    key={slot.time}
-                    disabled={slot.status === "booked"} // Disable if booked
-                    onClick={() => {
-                      setSelectedTime(slot.time);
-                      setDuration(slot.duration);
-                    }}
-                    className={`p-2 rounded text-sm border 
-      ${
-        slot.status === "available"
-          ? selectedTime === slot.time
-            ? "bg-blue-500 text-white" // Selected slot
-            : "bg-green-200 hover:bg-green-300"
-          : "bg-red-200 hover:bg-red-300"
-      }`}
-                  >
-                    {slot.time}
-                  </button>
-                ))}
-              </div> */}
 
                 <div className="flex gap-2 mb-4">
                   <button
@@ -962,7 +782,151 @@ export default function NewConsult() {
                   </button>
                 </div>
 
-                {/* Time Slots */}
+                <div className="grid grid-cols-3 gap-2">
+                  {filteredSlots
+                    .filter((slot) => {
+                      // Skip if slot is not available
+                      if (slot.status !== "available") return false;
+
+                      const now = new Date(); // Current date and time
+                      const selectedDates = new Date(selectedDate); // The date being viewed
+
+                      // If selected date is in the future, show all available slots
+                      if (selectedDates > now) return true;
+
+                      // If selected date is today, check times
+                      if (selectedDates.toDateString() === now.toDateString()) {
+                        const currentTimeInMinutes =
+                          now.getHours() * 60 + now.getMinutes();
+
+                        // Extract the start time (e.g., "10:00 AM")
+                        const startTime = slot.time.split(" - ")[0];
+                        let [hour, minute] = startTime
+                          .match(/\d+/g)
+                          .map(Number);
+                        const period = startTime.includes("PM") ? "PM" : "AM";
+
+                        // Convert to 24-hour format
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        const slotTimeInMinutes = hour * 60 + minute;
+
+                        // Show slots that are after current time AND before or equal to 6 PM (18:00)
+                        return (
+                          slotTimeInMinutes >= currentTimeInMinutes &&
+                          hour <= 18
+                        );
+                      }
+
+                      // If selected date is in the past, hide all slots
+                      return false;
+                    })
+                    .sort((a, b) => {
+                      // Keep your existing sorting logic
+                      const getTimeInMinutes = (time) => {
+                        let [hour, minute] = time.match(/\d+/g).map(Number);
+                        const period = time.includes("PM") ? "PM" : "AM";
+
+                        if (period === "PM" && hour !== 12) hour += 12;
+                        if (period === "AM" && hour === 12) hour = 0;
+
+                        return hour * 60 + minute;
+                      };
+
+                      return (
+                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
+                      );
+                    })
+                    .map((slot) => (
+                      <button
+                        key={slot._id}
+                        disabled={slot.status === "booked"}
+                        onClick={() => {
+                          setSelectedTime(slot.time);
+                          setDuration(slot.duration);
+                        }}
+                        className={`p-2 rounded text-sm border ${
+                          slot.status === "available"
+                            ? selectedTime === slot.time
+                              ? "bg-blue-500 text-white"
+                              : "bg-green-200 hover:bg-green-300"
+                            : "bg-red-200 hover:bg-red-300"
+                        }`}
+                      >
+                        {slot.time}
+                      </button>
+                    ))}
+                  {filteredSlots.length === 0 && (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        )} */}
+
+        {currentStep === 1 && (
+          <div className="space-y-4 h[400px] max-md:h[700px]">
+            <h2 className="text-lg font-semibold">Select Date & Time</h2>
+            <div className="flex items-center justify-center gap-10 max-md:flex-wrap max-md:h-full">
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                minDate={new Date()}
+                inline
+                className="border rounded p-2 w-full"
+              />
+              <div>
+                <h2 className="text-md font-normal pb-4">
+                  Select a Convenient Time
+                </h2>
+
+                <div className="flex gap-2 mb-4">
+                  <button
+                    onClick={() => setSelectedDuration(7)}
+                    className={`p-2 border w-full rounded ${
+                      selectedDuration === 7
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    7 Min
+                  </button>
+                  <button
+                    onClick={() => setSelectedDuration(15)}
+                    className={`p-2 border w-full rounded ${
+                      selectedDuration === 15
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    15 Min
+                  </button>
+                  <button
+                    onClick={() => setSelectedDuration(30)}
+                    className={`p-2 border  w-full  rounded ${
+                      selectedDuration === 30
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    30 Min
+                  </button>
+                  <button
+                    onClick={() => setSelectedDuration(45)} // Show all slots
+                    className={`p-2 border  w-full  rounded ${
+                      selectedDuration === 45
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    45 Min
+                  </button>
+                </div>
+
                 <div className="grid grid-cols-3 gap-2">
                   {filteredSlots
                     .filter((slot) => {

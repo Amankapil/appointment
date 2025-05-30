@@ -414,22 +414,6 @@ export default function OverseasOld({ selectedTimezone }) {
     : timeSlots;
 
   const [actualTime, setActualTime] = useState(null);
-  //   // Convert UTC slots to the selected timezone
-  //   const convertSlotsToTimezone = () => {
-  //     return timeSlots.map((slot) => {
-  //       const startDateTime = slot.startUTC.setZone(selectedTimezone);
-  //       const endDateTime = slot.endUTC.setZone(selectedTimezone);
-
-  //       return {
-  //         timeRange: `${startDateTime.toFormat(
-  //           "h:mm a"
-  //         )} - ${endDateTime.toFormat("h:mm a")}`,
-  //       };
-  //     });
-  //   };
-
-  //   const convertedSlots = convertSlotsToTimezone();
-  //   console.log(convertedSlots);
 
   return (
     <>
@@ -464,7 +448,7 @@ export default function OverseasOld({ selectedTimezone }) {
             <div className="flex flex-col mb-10 items-start justify-start w-full">
               <h2 className="text-xl font-semibold mb-4">Personal Details</h2>
               <p className="text-[16px] font-normal mb-4">
-                Enter your last used email to confirm.
+                Enter your last used phone number to confirm.
               </p>
             </div>
             <div className="grid grid-cols-3 gap-7 max-md:grid-cols-1 booking-form">
@@ -508,164 +492,6 @@ export default function OverseasOld({ selectedTimezone }) {
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
-
-              <label>
-                Date of Birth *
-                <input
-                  name="dob"
-                  type="date"
-                  placeholder="dd/mm/yyyy"
-                  // pattern="\d{4}-\d{2}-\d{2}"
-                  required
-                  value={formData.dob}
-                  //   onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
-
-              <label className="relative flex items-start justify-center flex-col">
-                Time of Birth*
-                <div className="flex justify-center items-center max-md:w-full">
-                  <input
-                    name="timeOfBirth"
-                    type="time"
-                    value={formData.timeOfBirth}
-                    // onChange={handleChange}
-                    className="border p-2 rounded wfull border-[#E4E4E4] ml-2 max-md:ml-0  w-[240px] max-md:w-full"
-                  />
-                  <span className="ml-2 relative group">
-                    <span className="text-gray-400 cursor-pointer border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center">
-                      i
-                    </span>
-                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 max-md:w-full p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                      If unsure of birth time, enter an estimated time.
-                    </span>
-                  </span>
-                </div>
-              </label>
-
-              <label>
-                Gender *
-                <select
-                  name="gender"
-                  value={formData.gender}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                >
-                  <option value="">Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
-              </label>
-
-              <label>
-                Country *
-                <Select
-                  options={Country.getAllCountries().map((c) => ({
-                    label: c.name,
-                    value: c.isoCode,
-                  }))}
-                  className="w-full"
-                  value={
-                    formData.country
-                      ? {
-                          label: Country.getCountryByCode(formData.country)
-                            ?.name,
-                          value: formData.country,
-                        }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                State *
-                <Select
-                  options={
-                    formData.country
-                      ? State.getStatesOfCountry(formData.country).map((s) => ({
-                          label: s.name,
-                          value: s.isoCode,
-                        }))
-                      : []
-                  }
-                  className="w-full"
-                  value={
-                    formData.state
-                      ? {
-                          label: State.getStateByCodeAndCountry(
-                            formData.state,
-                            formData.country
-                          )?.name,
-                          value: formData.state,
-                        }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                City *
-                <Select
-                  options={
-                    formData.country && formData.state
-                      ? City.getCitiesOfState(
-                          formData.country,
-                          formData.state
-                        ).map((c) => ({
-                          label: c.name,
-                          value: c.name,
-                        }))
-                      : []
-                  }
-                  className="w-full"
-                  value={
-                    formData.city
-                      ? { label: formData.city, value: formData.city }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                Marital Status *
-                <select
-                  name="material"
-                  value={formData.material}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                >
-                  <option value="">Select status</option>
-                  <option value="Male">married</option>
-                  <option value="Female">Unmarried</option>
-                  <option value="single">Single</option>
-                  <option value="Other">Comitted</option>
-                </select>
-              </label>
-
-              <label>
-                Latitude
-                <input
-                  name="latitude"
-                  type="text"
-                  placeholder="Latitude"
-                  value={formData.latitude}
-                  //   onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
-              <label>
-                Longitude
-                <input
-                  name="longitude"
-                  type="text"
-                  placeholder="longitude"
-                  value={formData.longitude}
-                  //   onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
             </div>
           </div>
         )}
@@ -680,7 +506,7 @@ export default function OverseasOld({ selectedTimezone }) {
         {currentStep === 1 && (
           <div className="space-y-4 h[400px] max-md:h[700px]">
             <h2 className="text-lg font-semibold">Select Date & Time</h2>
-            <div className="flex items-center justify-center gap-10 max-md:flex-wrap max-md:h-full">
+            <div className="flex items-start justify-center gap-10 max-md:flex-wrap max-md:h-full">
               <DatePicker
                 selected={selectedDate}
                 onChange={(date) => setSelectedDate(date)}
@@ -694,6 +520,16 @@ export default function OverseasOld({ selectedTimezone }) {
                 </h2>
 
                 <div className="flex gap-2 mb-4">
+                  <button
+                    onClick={() => setSelectedDuration(7)}
+                    className={`p-2 border w-full rounded ${
+                      selectedDuration === 7
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    7 Min
+                  </button>
                   <button
                     onClick={() => setSelectedDuration(15)}
                     className={`p-2 border w-full rounded ${

@@ -23,7 +23,7 @@ export async function POST(req) {
           typeof slot !== "object" ||
           !slot.time ||
           !slot.duration ||
-          ![15, 30, 45].includes(slot.duration) ||
+          ![7, 15, 30, 45].includes(slot.duration) ||
           !["available", "booked"].includes(slot.status)
       )
     ) {

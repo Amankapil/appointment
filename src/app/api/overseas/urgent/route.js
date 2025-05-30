@@ -271,61 +271,37 @@ Vedic Astrologer – Prashna Siddhi
       );
 
       if (slotIndex !== -1) {
-        // Mark only the selected slot as "booked"
+        // Mark the selected slot as "booked"
         availability.slots[slotIndex].status = "booked";
 
-        // Convert time to minutes for easier calculations
-        const [startHour, startMin] = selectedTime
-          .split(" ")[0]
-          .split(":")
-          .map(Number);
-        const isPM = selectedTime.includes("PM");
-        const startTimeInMinutes =
-          (isPM && startHour !== 12 ? startHour + 12 : startHour) * 60 +
-          startMin;
+        // Parse selectedTime start and end
+        const [startPart, endPart] = selectedTime.split(" - ");
+        const parseTimeToMinutes = (timeStr) => {
+          const [hourMin, period] = timeStr.trim().split(" ");
+          let [hour, minute] = hourMin.split(":").map(Number);
+          if (period === "PM" && hour !== 12) hour += 12;
+          if (period === "AM" && hour === 12) hour = 0;
+          return hour * 60 + minute;
+        };
 
-        // Define slot durations
-        const slotDurations = [15, 30, 45];
-        const affectedSlots = [];
+        const selectedStart = parseTimeToMinutes(startPart);
+        const selectedEnd = parseTimeToMinutes(endPart);
 
         // Identify overlapping slots
-        for (const slot of availability.slots) {
-          const [slotHour, slotMin] = slot.time
-            .split(" ")[0]
-            .split(":")
-            .map(Number);
-          const slotPM = slot.time.includes("PM");
-          const slotStartTime =
-            (slotPM && slotHour !== 12 ? slotHour + 12 : slotHour) * 60 +
-            slotMin;
+        const remainingSlots = availability.slots.filter((slot) => {
+          if (slot.time === selectedTime) return true; // Keep selected slot
 
-          if (
-            slotStartTime >= startTimeInMinutes &&
-            slotStartTime < startTimeInMinutes + duration &&
-            slot.time !== selectedTime // Keep the selected slot
-          ) {
-            affectedSlots.push(slot.time);
-          }
+          const [slotStartStr, slotEndStr] = slot.time.split(" - ");
+          const slotStart = parseTimeToMinutes(slotStartStr);
+          const slotEnd = parseTimeToMinutes(slotEndStr);
 
-          // Remove larger slots that overlap
-          if (
-            slotDurations.some(
-              (d) =>
-                d > duration &&
-                slotStartTime >= startTimeInMinutes &&
-                slotStartTime < startTimeInMinutes + d
-            ) &&
-            slot.time !== selectedTime
-          ) {
-            affectedSlots.push(slot.time);
-          }
-        }
+          // Check for overlap
+          const isOverlapping =
+            Math.max(selectedStart, slotStart) < Math.min(selectedEnd, slotEnd);
+          return !isOverlapping;
+        });
 
-        // Remove conflicting slots but keep the selected one
-        availability.slots = availability.slots.filter(
-          (slot) => !affectedSlots.includes(slot.time)
-        );
-
+        availability.slots = remainingSlots;
         await availability.save();
       }
     }

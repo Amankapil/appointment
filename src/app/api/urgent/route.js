@@ -155,9 +155,9 @@ export async function POST(request) {
 Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledge with gratitude the receipt of ₹${amount1} for your ${duration}-minute astrology consultation.  
 
 ✅ **Your Appointment Details:**  
-**Date & Time:** ${selectedTime}, ${selectedDate} 
-**Mode:** Voice Call  
-**Number to Call:** +91 7259691375 (Please call at the exact scheduled time)  
+Date & Time: ${selectedTime}, ${selectedDate} 
+Mode:** Voice Call  
+Number to Call: +91 7259691375 (Please call at the exact scheduled time)  
 
 🔔 **To Get the Best Out of Your Consultation:**  
 - Share the name of the person the question is about.  
@@ -174,17 +174,17 @@ Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledg
 That’s it. Simple, quick, divine. 🌟
 
 Note : This is one time registration, next time you just have to enter your phone number and have to select slot. No need to fill out the whole details. 
-🙏 **A Note of Blessings**  
+🙏 A Note of Blessings
 By following the above, you’ll receive deep insights within your chosen time. May Divine Grace illuminate your path and help you find the answers you seek.  
 
 **Warm regards,**  
 K Jagadish  
 Vedic Astrologer – Prashna Siddhi  
-[www.PrashnaSiddhi.com](http://www.PrashnaSiddhi.com)  
+(http://www.PrashnaSiddhi.com)  
 `;
 
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
-
+    // // uncommet
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
       to: "whatsapp:+917259691375", // Recipient's WhatsApp number
@@ -200,13 +200,14 @@ Vedic Astrologer – Prashna Siddhi
         7: filePath || "check-in-dashboard",
       }),
     });
+    // // uncommet
     // console.log(res);
     // console.log("phone", phone);
     // console.log("amount", amount);
     // console.log("duration", duration);
     // console.log("selectedTime", selectedTime);
     const whatsappNumber = `whatsapp:+${phone}`;
-
+    // // uncommet
     const res3 = await client.messages.create({
       from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
       to: whatsappNumber, // Recipient's WhatsApp number
@@ -218,12 +219,12 @@ Vedic Astrologer – Prashna Siddhi
         3: String(amount1 || "0.00"),
       }),
     });
-
+    // // uncommet
     // console.log("Message sent:", res.sid);
     // 7259691375
 
     // 7022239292
-
+    // // uncommet
     console.log("whatapp response", res3);
     await sendEmail({
       to: email,
@@ -235,75 +236,116 @@ Vedic Astrologer – Prashna Siddhi
       subject: "Hey You have a New Appointment..",
       text: message,
     });
+    // // uncommet
 
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
 
     const availability = await Availability.findOne({ date: formattedDate });
-
     if (availability) {
       const slotIndex = availability.slots.findIndex(
         (slot) => slot.time === selectedTime
       );
 
       if (slotIndex !== -1) {
-        // Mark only the selected slot as "booked"
+        // Mark the selected slot as "booked"
         availability.slots[slotIndex].status = "booked";
 
-        // Convert time to minutes for easier calculations
-        const [startHour, startMin] = selectedTime
-          .split(" ")[0]
-          .split(":")
-          .map(Number);
-        const isPM = selectedTime.includes("PM");
-        const startTimeInMinutes =
-          (isPM && startHour !== 12 ? startHour + 12 : startHour) * 60 +
-          startMin;
+        // Parse selectedTime start and end
+        const [startPart, endPart] = selectedTime.split(" - ");
+        const parseTimeToMinutes = (timeStr) => {
+          const [hourMin, period] = timeStr.trim().split(" ");
+          let [hour, minute] = hourMin.split(":").map(Number);
+          if (period === "PM" && hour !== 12) hour += 12;
+          if (period === "AM" && hour === 12) hour = 0;
+          return hour * 60 + minute;
+        };
 
-        // Define slot durations
-        const slotDurations = [15, 30, 45];
-        const affectedSlots = [];
+        const selectedStart = parseTimeToMinutes(startPart);
+        const selectedEnd = parseTimeToMinutes(endPart);
 
         // Identify overlapping slots
-        for (const slot of availability.slots) {
-          const [slotHour, slotMin] = slot.time
-            .split(" ")[0]
-            .split(":")
-            .map(Number);
-          const slotPM = slot.time.includes("PM");
-          const slotStartTime =
-            (slotPM && slotHour !== 12 ? slotHour + 12 : slotHour) * 60 +
-            slotMin;
+        const remainingSlots = availability.slots.filter((slot) => {
+          if (slot.time === selectedTime) return true; // Keep selected slot
 
-          if (
-            slotStartTime >= startTimeInMinutes &&
-            slotStartTime < startTimeInMinutes + duration &&
-            slot.time !== selectedTime // Keep the selected slot
-          ) {
-            affectedSlots.push(slot.time);
-          }
+          const [slotStartStr, slotEndStr] = slot.time.split(" - ");
+          const slotStart = parseTimeToMinutes(slotStartStr);
+          const slotEnd = parseTimeToMinutes(slotEndStr);
 
-          // Remove larger slots that overlap
-          if (
-            slotDurations.some(
-              (d) =>
-                d > duration &&
-                slotStartTime >= startTimeInMinutes &&
-                slotStartTime < startTimeInMinutes + d
-            ) &&
-            slot.time !== selectedTime
-          ) {
-            affectedSlots.push(slot.time);
-          }
-        }
+          // Check for overlap
+          const isOverlapping =
+            Math.max(selectedStart, slotStart) < Math.min(selectedEnd, slotEnd);
+          return !isOverlapping;
+        });
 
-        // Remove conflicting slots but keep the selected one
-        availability.slots = availability.slots.filter(
-          (slot) => !affectedSlots.includes(slot.time)
-        );
-
+        availability.slots = remainingSlots;
         await availability.save();
       }
     }
+
+    // if (availability) {
+    //   const slotIndex = availability.slots.findIndex(
+    //     (slot) => slot.time === selectedTime
+    //   );
+
+    //   if (slotIndex !== -1) {
+    //     // Mark only the selected slot as "booked"
+    //     availability.slots[slotIndex].status = "booked";
+
+    //     // Convert time to minutes for easier calculations
+    //     const [startHour, startMin] = selectedTime
+    //       .split(" ")[0]
+    //       .split(":")
+    //       .map(Number);
+    //     const isPM = selectedTime.includes("PM");
+    //     const startTimeInMinutes =
+    //       (isPM && startHour !== 12 ? startHour + 12 : startHour) * 60 +
+    //       startMin;
+
+    //     // Define slot durations
+    //     const slotDurations = [7, 15, 30, 45];
+    //     const affectedSlots = [];
+
+    //     // Identify overlapping slots
+    //     for (const slot of availability.slots) {
+    //       const [slotHour, slotMin] = slot.time
+    //         .split(" ")[0]
+    //         .split(":")
+    //         .map(Number);
+    //       const slotPM = slot.time.includes("PM");
+    //       const slotStartTime =
+    //         (slotPM && slotHour !== 12 ? slotHour + 12 : slotHour) * 60 +
+    //         slotMin;
+
+    //       if (
+    //         slotStartTime >= startTimeInMinutes &&
+    //         slotStartTime < startTimeInMinutes + duration &&
+    //         slot.time !== selectedTime // Keep the selected slot
+    //       ) {
+    //         affectedSlots.push(slot.time);
+    //       }
+
+    //       // Remove larger slots that overlap
+    //       if (
+    //         slotDurations.some(
+    //           (d) =>
+    //             d > duration &&
+    //             slotStartTime >= startTimeInMinutes &&
+    //             slotStartTime < startTimeInMinutes + d
+    //         ) &&
+    //         slot.time !== selectedTime
+    //       ) {
+    //         affectedSlots.push(slot.time);
+    //       }
+    //     }
+
+    //     // Remove conflicting slots but keep the selected one
+    //     availability.slots = availability.slots.filter(
+    //       (slot) => !affectedSlots.includes(slot.time)
+    //     );
+
+    //     await availability.save();
+    //   }
+    // }
 
     return NextResponse.json({
       success: true,

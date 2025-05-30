@@ -623,6 +623,8 @@ export default function OverseasNew({ selectedTimezone }) {
                   name="dob"
                   type="date"
                   placeholder="dd/mm/yyyy"
+                  min="1900-01-01"
+                  max="2030-12-31"
                   // pattern="\d{4}-\d{2}-\d{2}"
                   required
                   value={formData.dob}
@@ -831,6 +833,16 @@ export default function OverseasNew({ selectedTimezone }) {
               </div> */}
 
                 <div className="flex gap-2 mb-4">
+                  <button
+                    onClick={() => setSelectedDuration(7)}
+                    className={`p-2 border w-full rounded ${
+                      selectedDuration === 7
+                        ? "bgblue-500 text-[#4597F8] border-[#4597F8]"
+                        : "bg-white border-[#E4E4E4]"
+                    }`}
+                  >
+                    7 Min
+                  </button>
                   <button
                     onClick={() => setSelectedDuration(15)}
                     className={`p-2 border w-full rounded ${
