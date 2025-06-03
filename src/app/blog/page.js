@@ -5,6 +5,22 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 12,
+    title: "Divine Timing vs Muhurta: Is There.... ",
+    date: "june 03, 2025",
+    image: "/images/blog12.png",
+    link: "/blog/why-rahu-ketu-though-shadows",
+    desc: "Beyond Calculations — When Destiny Overrules the Clock.....",
+  },
+  {
+    id: 11,
+    title: "Why Rahu & Ketu, Though Shadows.... ",
+    date: "june 02, 2025",
+    image: "/images/blog11.png",
+    link: "/blog/why-rahu-ketu-though-shadows",
+    desc: "Whether or not we believe in the Doctrine of Karma, truth stands .....",
+  },
+  {
     id: 10,
     title: "Mystery of the Zodiac Sign.... ",
     date: "April 28, 2025",

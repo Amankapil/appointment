@@ -458,7 +458,6 @@ export default function OldConsult() {
                   type="text"
                   placeholder="John Doe"
                   value={formData.fullName}
-                  //   onChange={handleChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
@@ -470,166 +469,9 @@ export default function OldConsult() {
                   required
                   placeholder="johndoe@gmail.com"
                   value={formData.email}
-                  //   onChange={handleChange}
-                  // onChange={handleEmailChange}
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
-
-              {/* <label>
-                Date of Birth *
-                <input
-                  name="dob"
-                  type="date"
-                  placeholder="dd/mm/yyyy"
-                  required
-                  value={formData.dob}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
-
-              <label className="relative flex items-start justify-center flex-col">
-                Time of Birth*
-                <div className="flex justify-center items-center max-md:w-full">
-                  <input
-                    name="timeOfBirth"
-                    type="time"
-                    value={formData.timeOfBirth}
-                    className="border p-2 rounded wfull border-[#E4E4E4] ml-2 max-md:ml-0  w-[240px] max-md:w-full"
-                  />
-                  <span className="ml-2 relative group">
-                    <span className="text-gray-400 cursor-pointer border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center">
-                      i
-                    </span>
-                    <span className="absolute left-1/2 transform -translate-x-1/2 mt-2 w-48 max-md:w-full p-2 bg-gray-800 text-white text-xs rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                      If unsure of birth time, enter an estimated time.
-                    </span>
-                  </span>
-                </div>
-              </label>
-
-              <label>
-                Gender *
-                <select
-                  name="gender"
-                  value={formData.gender}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                >
-                  <option value="">Select Gender</option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Other">Other</option>
-                </select>
-              </label>
-
-              <label>
-                Country *
-                <Select
-                  options={Country.getAllCountries().map((c) => ({
-                    label: c.name,
-                    value: c.isoCode,
-                  }))}
-                  className="w-full"
-                  value={
-                    formData.country
-                      ? {
-                          label: Country.getCountryByCode(formData.country)
-                            ?.name,
-                          value: formData.country,
-                        }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                State *
-                <Select
-                  options={
-                    formData.country
-                      ? State.getStatesOfCountry(formData.country).map((s) => ({
-                          label: s.name,
-                          value: s.isoCode,
-                        }))
-                      : []
-                  }
-                  className="w-full"
-                  value={
-                    formData.state
-                      ? {
-                          label: State.getStateByCodeAndCountry(
-                            formData.state,
-                            formData.country
-                          )?.name,
-                          value: formData.state,
-                        }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                City *
-                <Select
-                  options={
-                    formData.country && formData.state
-                      ? City.getCitiesOfState(
-                          formData.country,
-                          formData.state
-                        ).map((c) => ({
-                          label: c.name,
-                          value: c.name,
-                        }))
-                      : []
-                  }
-                  className="w-full"
-                  value={
-                    formData.city
-                      ? { label: formData.city, value: formData.city }
-                      : null
-                  }
-                />
-              </label>
-
-              <label>
-                Marital Status *
-                <select
-                  name="material"
-                  value={formData.material}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                >
-                  <option value="">Select status</option>
-                  <option value="Male">married</option>
-                  <option value="Female">Unmarried</option>
-                  <option value="single">Single</option>
-                  <option value="Other">Comitted</option>
-                </select>
-              </label>
-
-              <label>
-                Latitude
-                <input
-                  name="latitude"
-                  type="text"
-                  placeholder="Latitude"
-                  value={formData.latitude}
-                  //   onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label>
-              <label>
-                Longitude
-                <input
-                  name="longitude"
-                  type="text"
-                  placeholder="longitude"
-                  value={formData.longitude}
-                  //   onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label> */}
             </div>
           </div>
         )}
@@ -778,36 +620,6 @@ export default function OldConsult() {
             </div>
           </div>
         )}
-        {/* {currentStep === 2 && (
-          <div>
-            <h2 className="text-xl font-semibold mb-4">Confirmation</h2>
-
-            <ThankYouScreen
-              formData={formData}
-              selectedTime={selectedTime}
-              duration={duration}
-              result={result}
-              error={error}
-              svgUrl={svgdata}
-              selectedDate={selectedDate}
-            />
-          </div>
-        )} */}
-        {/* {currentStep === steps.length - 1 && (
-          <h2 className="text-xl font-semibold mb-4 text-center">
-            <PaymentButton
-              setPaymentStatus={setPaymentStatus}
-              paydata={paydata}
-              selectedTime={selectedTime}
-              latitude={formData.latitude}
-              longitude={formData.longitude}
-              // svgUrl={svgUrl}
-              duration={duration}
-              svgdata={svgdata}
-              selectedDate={selectedDate}
-            />
-          </h2>
-        )} */}
 
         <div
           className={`mt-6 flex max-md:flex-col max-md:gap-6 ${

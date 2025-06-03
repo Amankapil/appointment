@@ -561,91 +561,39 @@ export default function OverseasOld({ selectedTimezone }) {
                     45 Min
                   </button>
                 </div>
-
-                {/* Time Slots */}
-                {/* <div className="grid grid-cols-3 gap-2">
-                  {filteredSlots
-                    .filter((slot) => {
-                      const currentHour = new Date().getHours(); // Get current hour in 24-hour format
-
-                      // Extract the start time (e.g., "10:00 AM")
-                      const startTime = slot?.time?.split(" - ")[0];
-                      let [hour, minute] = startTime?.match(/\d+/g).map(Number); // Extract numbers (hour, minute)
-                      const period = startTime.includes("PM") ? "PM" : "AM";
-
-                      // Convert to 24-hour format
-                      if (period === "PM" && hour !== 12) hour += 12;
-                      if (period === "AM" && hour === 12) hour = 0;
-
-                      return hour >= currentHour && hour <= 18; // Show slots from current time to 6 PM
-                    })
-                    .sort((a, b) => {
-                      // Extract start times for sorting
-                      const getTimeInMinutes = (time) => {
-                        let [hour, minute] = time.match(/\d+/g).map(Number);
-                        const period = time.includes("PM") ? "PM" : "AM";
-
-                        if (period === "PM" && hour !== 12) hour += 12;
-                        if (period === "AM" && hour === 12) hour = 0;
-
-                        return hour * 60 + minute; // Convert to total minutes for sorting
-                      };
-
-                      return (
-                        getTimeInMinutes(a.time) - getTimeInMinutes(b.time)
-                      );
-                    })
-                    .map((slot) => (
-                      <button
-                        key={slot._id}
-                        disabled={slot.status === "booked"}
-                        onClick={() => {
-                          setSelectedTime(slot.time);
-                          setDuration(slot.duration);
-                        }}
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.time
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.time}
-                      </button>
-                    ))}
-                  {filteredSlots.length === 0 && (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )}
-                </div> */}
-
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                  {convertedSlots.length > 0 ? (
-                    convertedSlots.map((slot, index) => (
-                      <button
-                        key={index}
-                        onClick={() => {
-                          setSelectedTime(slot.timeRange);
-                          setDuration(slot.duration);
-                          setindiantimetosend(slot.istTime);
-                          setActualTime(slot.timeRange);
-                        }}
-                        // className="p-2 rounded text-sm border bg-green-200 hover:bg-green-300"
-                        className={`p-2 rounded text-sm border 
-        ${
-          slot.status === "available"
-            ? selectedTime === slot.timeRange
-              ? "bg-blue-500 text-white" // Selected slot
-              : "bg-green-200 hover:bg-green-300"
-            : "bg-red-200 hover:bg-red-300"
-        }`}
-                      >
-                        {slot.timeRange}{" "}
-                      </button>
-                    ))
+                  {convertedSlots.filter(
+                    (slot) =>
+                      slot.duration === selectedDuration ||
+                      selectedDuration === 45
+                  ).length > 0 ? (
+                    convertedSlots
+                      .filter(
+                        (slot) =>
+                          slot.duration === selectedDuration ||
+                          selectedDuration === 45
+                      )
+                      .map((slot, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedTime(slot.timeRange);
+                            setDuration(slot.duration);
+                            setindiantimetosend(slot.istTime);
+                            setActualTime(slot.timeRange);
+                          }}
+                          className={`p-2 rounded text-sm border 
+            ${
+              slot.status === "available"
+                ? selectedTime === slot.timeRange
+                  ? "bg-blue-500 text-white"
+                  : "bg-green-200 hover:bg-green-300"
+                : "bg-red-200 hover:bg-red-300"
+            }`}
+                        >
+                          {slot.timeRange}
+                        </button>
+                      ))
                   ) : (
                     <p className="text-gray-500 col-span-3 text-center">
                       No slots available

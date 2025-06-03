@@ -142,25 +142,137 @@ export default function AdminAvailability() {
   const [rangeStart, setRangeStart] = useState(null);
   // const [rangeEnd, setRangeEnd] = useState(null);
 
+  // const handleSlotClick = (slot) => {
+  //   const dateStr = format(selectedDate, "yyyy-MM-dd");
+  //   const slotKey = `${dateStr}-${slot.time}`;
+
+  //   const isBooked = availability.some(
+  //     (s) => s.time === slot.time && s.status === "booked"
+  //   );
+
+  //   if (isBooked) {
+  //     // Change status to available (in state)
+  //     setAvailability((prev) =>
+  //       prev.map((s) =>
+  //         s.time === slot.time ? { ...s, status: "available" } : s
+  //       )
+  //     );
+
+  //     // Add to selectedSlots too
+  //     setSelectedSlots((prev) => [
+  //       ...prev,
+  //       {
+  //         date: dateStr,
+  //         time: slot.time,
+  //         duration: slot.duration,
+  //         status: "available",
+  //       },
+  //     ]);
+
+  //     return;
+  //   }
+
+  //   const isAlreadySelected = selectedSlots.some(
+  //     (s) => s.date === dateStr && s.time === slot.time
+  //   );
+
+  //   if (isAlreadySelected) {
+  //     // Deselect this slot
+  //     setSelectedSlots((prev) =>
+  //       prev.filter((s) => !(s.date === dateStr && s.time === slot.time))
+  //     );
+  //     return;
+  //   }
+
+  //   if (!rangeStart) {
+  //     // First click – set range start
+  //     setRangeStart(slot);
+  //   } else {
+  //     // Second click – define a range
+  //     const allSlots = slotOptions[selectedTab];
+  //     const startIndex = allSlots.findIndex((s) => s.time === rangeStart.time);
+  //     const endIndex = allSlots.findIndex((s) => s.time === slot.time);
+
+  //     if (startIndex === -1 || endIndex === -1) return;
+
+  //     const [from, to] =
+  //       startIndex < endIndex ? [startIndex, endIndex] : [endIndex, startIndex];
+
+  //     const selectedRange = allSlots.slice(from, to + 1).map((s) => ({
+  //       date: dateStr,
+  //       time: s.time,
+  //       duration: s.duration,
+  //     }));
+
+  //     // Merge with existing slots without duplicates
+  //     setSelectedSlots((prev) => {
+  //       const existing = new Set(prev.map((s) => `${s.date}-${s.time}`));
+  //       const newRange = selectedRange.filter(
+  //         (s) => !existing.has(`${s.date}-${s.time}`)
+  //       );
+  //       return [...prev, ...newRange];
+  //     });
+
+  //     // Reset for next range
+  //     setRangeStart(null);
+  //   }
+  // };
+
   const handleSlotClick = (slot) => {
     const dateStr = format(selectedDate, "yyyy-MM-dd");
-    const slotKey = `${dateStr}-${slot.time}`;
 
-    // Check if this is a booked slot
-    // Check if this is a booked slot
+    // Check if slot is already selected
+    const isAlreadySelected = selectedSlots.some(
+      (s) => s.date === dateStr && s.time === slot.time
+    );
+
+    // Check if it's booked
     const isBooked = availability.some(
       (s) => s.time === slot.time && s.status === "booked"
     );
 
     if (isBooked) {
-      // Change status to available (in state)
+      // Toggle booked to available and add it to selectedSlots
       setAvailability((prev) =>
         prev.map((s) =>
           s.time === slot.time ? { ...s, status: "available" } : s
         )
       );
 
-      // Add to selectedSlots too
+      setSelectedSlots((prev) => {
+        const already = prev.some(
+          (s) => s.date === dateStr && s.time === slot.time
+        );
+        if (!already) {
+          return [
+            ...prev,
+            {
+              date: dateStr,
+              time: slot.time,
+              duration: slot.duration,
+              status: "available",
+            },
+          ];
+        }
+        return prev;
+      });
+
+      return;
+    }
+
+    // If slot already selected, toggle it off
+    if (isAlreadySelected) {
+      setSelectedSlots((prev) =>
+        prev.filter((s) => !(s.date === dateStr && s.time === slot.time))
+      );
+      return;
+    }
+
+    // If no range start set, treat as single click (select 1 slot)
+    if (!rangeStart) {
+      setRangeStart(slot);
+
+      // Immediately add it as a selected slot (single select)
       setSelectedSlots((prev) => [
         ...prev,
         {
@@ -170,54 +282,37 @@ export default function AdminAvailability() {
           status: "available",
         },
       ]);
-
       return;
     }
 
-    const isAlreadySelected = selectedSlots.some(
-      (s) => s.date === dateStr && s.time === slot.time
-    );
+    // If rangeStart exists, this is second click → build range
+    const allSlots = slotOptions[selectedTab];
+    const startIndex = allSlots.findIndex((s) => s.time === rangeStart.time);
+    const endIndex = allSlots.findIndex((s) => s.time === slot.time);
 
-    if (isAlreadySelected) {
-      // Deselect this slot
-      setSelectedSlots((prev) =>
-        prev.filter((s) => !(s.date === dateStr && s.time === slot.time))
+    if (startIndex === -1 || endIndex === -1) return;
+
+    const [from, to] =
+      startIndex < endIndex ? [startIndex, endIndex] : [endIndex, startIndex];
+
+    const selectedRange = allSlots.slice(from, to + 1).map((s) => ({
+      date: dateStr,
+      time: s.time,
+      duration: s.duration,
+      status: "available",
+    }));
+
+    // Add range to selectedSlots (no duplicates)
+    setSelectedSlots((prev) => {
+      const existing = new Set(prev.map((s) => `${s.date}-${s.time}`));
+      const newRange = selectedRange.filter(
+        (s) => !existing.has(`${s.date}-${s.time}`)
       );
-      return;
-    }
+      return [...prev, ...newRange];
+    });
 
-    if (!rangeStart) {
-      // First click – set range start
-      setRangeStart(slot);
-    } else {
-      // Second click – define a range
-      const allSlots = slotOptions[selectedTab];
-      const startIndex = allSlots.findIndex((s) => s.time === rangeStart.time);
-      const endIndex = allSlots.findIndex((s) => s.time === slot.time);
-
-      if (startIndex === -1 || endIndex === -1) return;
-
-      const [from, to] =
-        startIndex < endIndex ? [startIndex, endIndex] : [endIndex, startIndex];
-
-      const selectedRange = allSlots.slice(from, to + 1).map((s) => ({
-        date: dateStr,
-        time: s.time,
-        duration: s.duration,
-      }));
-
-      // Merge with existing slots without duplicates
-      setSelectedSlots((prev) => {
-        const existing = new Set(prev.map((s) => `${s.date}-${s.time}`));
-        const newRange = selectedRange.filter(
-          (s) => !existing.has(`${s.date}-${s.time}`)
-        );
-        return [...prev, ...newRange];
-      });
-
-      // Reset for next range
-      setRangeStart(null);
-    }
+    // Reset rangeStart
+    setRangeStart(null);
   };
 
   const handleSave = async () => {

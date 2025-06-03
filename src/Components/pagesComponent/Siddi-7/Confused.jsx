@@ -217,7 +217,7 @@ export default function Confused() {
             className="border-[1px]  border-[#AC8C60] items-center justify-center py-2 px-6 rounded-[24px]  flex relative gap-3 font-inter bg-white shadow-md"
           >
             <span className="text-[40px] font-salernomi text-gray-700 font-medium">
-              +91-XXXXXXXXXX
+              +91-7259691375
             </span>
           </div>
         </div>

@@ -43,8 +43,7 @@ const Purpose = () => {
               </span>{" "}
               —so you can move forward in life with{" "}
               <span className="text-[#000]">confidence, faith, </span> and{" "}
-              <span className="text-[#000]">peace. </span>
-              <span className="text-[#000]"> seek spiritual </span> clarity and
+              <span className="text-[#000]">peace.</span>
             </p>
           </div>
           <svg
