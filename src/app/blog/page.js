@@ -9,7 +9,7 @@ const blogs = [
     title: "Divine Timing vs Muhurta: Is There.... ",
     date: "june 03, 2025",
     image: "/images/blog12.png",
-    link: "/blog/why-rahu-ketu-though-shadows",
+    link: "/blog/divine-timing-vs-muhurta",
     desc: "Beyond Calculations — When Destiny Overrules the Clock.....",
   },
   {
