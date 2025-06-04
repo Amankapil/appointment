@@ -55,7 +55,7 @@ export default function OverseasPayment({
           country: paydata.country,
           state: paydata.state,
           city: paydata.city,
-          selectedTime: selectedTime,
+          selectedTime: actualTime,
           selectedDate: selectedDate,
           amount: amount,
           transactionId: transactionId,

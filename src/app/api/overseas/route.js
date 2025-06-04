@@ -182,6 +182,32 @@ Vedic Astrologer – Prashna Siddhi
       }),
     });
 
+    var amount1 = 0;
+
+    if (duration === 15) {
+      amount1 = 1000;
+    } else if (duration === 30) {
+      amount1 = 2000;
+    } else if (duration === 7) {
+      amount1 = 499;
+    } else {
+      amount1 = 2500;
+    }
+
+    const whatsappNumber = `whatsapp:+${phone}`;
+    // // uncommet
+    const res3 = await client.messages.create({
+      from: "whatsapp:+917022239292", // Your Twilio WhatsApp Number
+      to: whatsappNumber, // Recipient's WhatsApp number
+      // to: "whatsapp:+918103075691", // Recipient's WhatsApp number
+      contentSid: "HX8ed84eaaf51731ee4758ae01f9bd7c71", // Replace with your Twilio-approved Template SID
+      contentVariables: JSON.stringify({
+        1: String(duration || "15"),
+        2: String(selectedTime || "11:00 AM - 11:30 AM"),
+        3: String(amount1 || "0.00"),
+      }),
+    });
+
     // console.log("Message sent:", res.sid);
     // 7259691375
 

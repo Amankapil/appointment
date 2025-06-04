@@ -374,9 +374,6 @@ export default function OverseasOld({ selectedTimezone }) {
       return;
     }
 
-    // makeApiRequest(horoscopeDataa);
-
-    // console.log(horoscopeDataa);
 
     if (currentStep == 0) {
       setSvgUrl(clients?.filePath);
@@ -561,7 +558,116 @@ export default function OverseasOld({ selectedTimezone }) {
                     45 Min
                   </button>
                 </div>
+
                 <div className="grid grid-cols-3 gap-4 mt-4">
+                  {convertedSlots.filter((slot) => {
+                    // Match selected duration
+                    const durationMatch =
+                      slot.duration === selectedDuration ||
+                      selectedDuration === 45;
+
+                    // Skip if not available
+                    if (slot.status !== "available") return false;
+
+                    // Time filtering logic
+                    const now = new Date();
+                    const selectedDates = new Date(selectedDate); // Assume selectedDate is provided
+
+                    if (selectedDates > now) return durationMatch;
+
+                    if (selectedDates.toDateString() === now.toDateString()) {
+                      const currentTimeInMinutes =
+                        now.getHours() * 60 + now.getMinutes();
+
+                      const startTime = slot.timeRange.split(" - ")[0];
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
+                      const period = startTime.includes("PM") ? "PM" : "AM";
+
+                      // Convert to 24-hour format
+                      if (period === "PM" && hour !== 12) hour += 12;
+                      if (period === "AM" && hour === 12) hour = 0;
+
+                      const slotTimeInMinutes = hour * 60 + minute;
+
+                      // Allow only slots after current time and before/equal 6 PM
+                      const isValidTime =
+                        slotTimeInMinutes >= currentTimeInMinutes && hour <= 18;
+
+                      return durationMatch && isValidTime;
+                    }
+
+                    // If date is in the past, show nothing
+                    return false;
+                  }).length > 0 ? (
+                    convertedSlots
+                      .filter((slot) => {
+                        // Apply same logic again in map
+                        const durationMatch =
+                          slot.duration === selectedDuration ||
+                          selectedDuration === 45;
+
+                        if (slot.status !== "available") return false;
+
+                        const now = new Date();
+                        const selectedDates = new Date(selectedDate);
+
+                        if (selectedDates > now) return durationMatch;
+
+                        if (
+                          selectedDates.toDateString() === now.toDateString()
+                        ) {
+                          const currentTimeInMinutes =
+                            now.getHours() * 60 + now.getMinutes();
+
+                          const startTime = slot.timeRange.split(" - ")[0];
+                          let [hour, minute] = startTime
+                            .match(/\d+/g)
+                            .map(Number);
+                          const period = startTime.includes("PM") ? "PM" : "AM";
+
+                          if (period === "PM" && hour !== 12) hour += 12;
+                          if (period === "AM" && hour === 12) hour = 0;
+
+                          const slotTimeInMinutes = hour * 60 + minute;
+
+                          return (
+                            durationMatch &&
+                            slotTimeInMinutes >= currentTimeInMinutes &&
+                            hour <= 18
+                          );
+                        }
+
+                        return false;
+                      })
+                      .map((slot, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedTime(slot.timeRange);
+                            setDuration(slot.duration);
+                            setindiantimetosend(slot.istTime);
+                            setActualTime(slot.timeRange);
+                          }}
+                          className={`p-2 rounded text-sm border 
+            ${
+              slot.status === "available"
+                ? selectedTime === slot.timeRange
+                  ? "bg-blue-500 text-white"
+                  : "bg-green-200 hover:bg-green-300"
+                : "bg-red-200 hover:bg-red-300"
+            }`}
+                        >
+                          {slot.timeRange}
+                        </button>
+                      ))
+                  ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
+                </div>
+
+                {/* <div className="grid grid-cols-3 gap-4 mt-4">
                   {convertedSlots.filter(
                     (slot) =>
                       slot.duration === selectedDuration ||
@@ -599,7 +705,7 @@ export default function OverseasOld({ selectedTimezone }) {
                       No slots available
                     </p>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

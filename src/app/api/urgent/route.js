@@ -144,6 +144,8 @@ export async function POST(request) {
       amount1 = 1000;
     } else if (duration === 30) {
       amount1 = 2000;
+    } else if (duration === 7) {
+      amount1 = 499;
     } else {
       amount1 = 2500;
     }
