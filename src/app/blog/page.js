@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 13,
+    title: "The Hidden Truth of Ketu and Its Nakshatras.... ",
+    date: "june 12, 2025",
+    image: "/images/blog13.png",
+    link: "/blog/the-hidden-truth-of-ketu",
+    desc: " Ketu — The Silent Architect of Destiny and Deliverance.....",
+  },
+  {
     id: 12,
     title: "Divine Timing vs Muhurta: Is There.... ",
     date: "june 03, 2025",
