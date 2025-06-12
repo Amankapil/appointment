@@ -152,6 +152,9 @@ select {
   .tcircle::before {
     width: 0%;
   }
+  .service-peras p {
+    font-size: 16px !important;
+  }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
 }

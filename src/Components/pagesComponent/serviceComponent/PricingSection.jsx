@@ -39,7 +39,7 @@ const PricingSection = () => {
 
   return (
     <>
-      <div className="flex flex-col items-center gap-6 p-10 max-md:p-4 max-w-[925px] mx-auto ">
+      <div className="flex service-peras flex-col items-center gap-6 p-10 max-md:p-4 max-w-[925px] mx-auto ">
         <div className="heading flex mb-10 flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Premium Consultation
