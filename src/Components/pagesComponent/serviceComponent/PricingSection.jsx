@@ -18,6 +18,7 @@ const PricingSection = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [isChecked, setIsChecked] = useState(false);
+  const [isChecked3, setIsChecked3] = useState(false);
   const [isChecked1, setIsChecked1] = useState(false);
   const [isChecked2, setIsChecked2] = useState(false);
   const [isAgreed, setIsAgreed] = useState(false);
@@ -62,15 +63,28 @@ const PricingSection = () => {
         {/* Pricing Cards */}
         <div className="flex items-center justify-center gap-0 flex-wrap price-section h-[100%]">
           <div className="relative flex items-center flex-col justify-center gap-1  price w[403px] h[376px]  border[1px] border[#c2a882] rounded[24px] p-6 bg[#F0EDE9] shadowlg">
-            <h3 className="text-[32px] font-normal font-salernomi text-gray-700 text-center m">
+            <div className="absolute left-[37%] text-white top-0 bg-[#ff0808] p-2  rounded-md">
+              {/* <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.99984 18.3332C14.6022 18.3332 18.3332 14.6022 18.3332 9.99984C18.3332 5.39746 14.6022 1.6665 9.99984 1.6665C5.39746 1.6665 1.6665 5.39746 1.6665 9.99984C1.6665 14.6022 5.39746 18.3332 9.99984 18.3332ZM14.5474 7.88076L9.1665 13.2617L5.66058 9.75575L6.8391 8.57725L9.1665 10.9047L13.3689 6.70225L14.5474 7.88076Z"
+                  fill="#003366"
+                />
+              </svg> */}
+              Most Popular
+            </div>
+
+            <h3 className="text-[32px] font-normal font-salernomi text-gray-700 text[#909e66ae] text-center m">
               Siddhi-7 Consultation
             </h3>
 
             {/* Toggle Switch */}
             <div className="flex justify-center items-center mt-3">
-              {/* <div className="border absolute left-[14px] top-[34px]  w-[371px] h-[312px] rounded-[24px] one border-[#c49b6d] p-2">
-                <div className="border absolute left-[17px] -top-[19px] tw w-[339px] h-[344px] rounded-[24px] border-[#c49b6d] p-6 transition-colors duration-300"></div>{" "}
-              </div> */}
               <span className="text-gray-600">₹</span>
               <label className="relative inline-flex items-center mx-2 cursor-pointer">
                 <input
@@ -141,10 +155,10 @@ const PricingSection = () => {
               </div>
             </div>
 
-            {/* <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
+            <div className="flex gap-1 text-[12px] text-12   mt-2 items-center justify-center">
               <input
-                checked={isChecked}
-                onChange={() => setIsChecked(!isChecked)}
+                checked={isChecked3}
+                onChange={() => setIsChecked3(!isChecked3)}
                 type="checkbox"
               />
               <span>I accept the</span>
@@ -154,7 +168,7 @@ const PricingSection = () => {
               >
                 Terms and Conditions
               </span>
-            </div> */}
+            </div>
 
             {/* Book Now Button */}
             <div className="flex items-center justify-center w-full mt-2">
@@ -162,9 +176,9 @@ const PricingSection = () => {
                 onClick={() => {
                   router.push("/Siddi-7");
                 }}
-                // disabled={!isChecked}
+                disabled={!isChecked3}
                 className={`mt-6 w-[80%] cursor-pointer font-salernomi text-[20px] flex justify-center max-lg:w-[70%] bg-black text-white py-2 rounded-md text-sm font-medium 
-                `}
+                ${!isChecked3 ? "opacity-50 cursor-not-allowed" : ""} `}
               >
                 Know More
               </button>

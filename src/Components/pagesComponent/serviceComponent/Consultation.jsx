@@ -45,8 +45,12 @@ export default function Consultation() {
             />
           </div>
           <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
-            <p className="font-normal text-lg">
-              One-Question Consultation (Real-time answers in 5 minutes)
+            <h3 className="text-[30px] font-normal font-salernomi text-gray-700 text-left m">
+              Siddhi-7 Consultation
+            </h3>
+            <p className="font-normal text-lg pt-2">
+              Get answers for upto Two pointed Questions in 7 minutes Real-time
+              Consultation
             </p>
           </div>
           <div className="absolute bottom-0 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] h-[200px] flex items-center justify-center rounded-full">
