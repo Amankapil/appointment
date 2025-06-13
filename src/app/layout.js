@@ -60,7 +60,7 @@ export default function RootLayout({ children }) {
         <NavbarSwitcher />
         {children}
         {/* ✅ WhatsApp Button */}
-        Need any clarification, pls message
+
         <a
           href="https://wa.me/7259691375?text=Need%20any%20clarification,%20pls%20message."
           target="_blank"
