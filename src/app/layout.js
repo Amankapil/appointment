@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
         {/* ✅ WhatsApp Button */}
         Need any clarification, pls message
         <a
-          href="https://wa.me/7259691375?text=Need,%20any%20clarification,%20pls%20message."
+          href="https://wa.me/7259691375?text=Need%20any%20clarification,%20pls%20message."
           target="_blank"
           className="fixed bottom-4 right-4 z-50 rounded-full p-2 hover:scale-110 transition-transform duration-200 md:p-5"
         >
