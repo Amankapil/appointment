@@ -209,7 +209,15 @@ const Footer = () => {
         {/* <p className="text-sm">All Rights Reserved 2025</p> */}
       </div>
       <div className="mt-10 text-center border-t border-gray-300 pt-6 flex justify-center items-center">
-        Copyright © PrashnaSiddhi, 2025. All Rights Reserved.
+        Copyright © PrashnaSiddhi, 2025. All Rights Reserved. Designed and
+        developed by{" "}
+        <Link
+          href={"https://codelinear.com/"}
+          target="_blank"
+          className="font-bold ml-1 underline"
+        >
+          Codelinear.{" "}
+        </Link>
       </div>
     </footer>
   );
