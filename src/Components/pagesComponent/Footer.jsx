@@ -214,7 +214,7 @@ const Footer = () => {
         <Link
           href={"https://codelinear.com/"}
           target="_blank"
-          className="font-bold ml-1 underline cursor-pointer"
+          className="font-bold text-blue-700 ml-1 underline cursor-pointer"
         >
           Codelinear.{" "}
         </Link>
