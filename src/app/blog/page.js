@@ -5,9 +5,17 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 14,
+    title: "The Bhagavad Gita and The Zodiac......",
+    date: "August 11, 2025",
+    image: "/images/blog14.png",
+    link: "/blog/the-bhagavad-gita-and-the-zodiac",
+    desc: "Beyond Words — The Divine Pulse Behind Sacred Scriptures and Astrology.....",
+  },
+  {
     id: 13,
     title: "The Hidden Truth of Ketu and Its Nakshatras.... ",
-    date: "june 12, 2025",
+    date: "June 12, 2025",
     image: "/images/blog13.png",
     link: "/blog/the-hidden-truth-of-ketu",
     desc: " Ketu — The Silent Architect of Destiny and Deliverance.....",
@@ -15,7 +23,7 @@ const blogs = [
   {
     id: 12,
     title: "Divine Timing vs Muhurta: Is There.... ",
-    date: "june 03, 2025",
+    date: "June 03, 2025",
     image: "/images/blog12.png",
     link: "/blog/divine-timing-vs-muhurta",
     desc: "Beyond Calculations — When Destiny Overrules the Clock.....",
@@ -23,7 +31,7 @@ const blogs = [
   {
     id: 11,
     title: "Why Rahu & Ketu, Though Shadows.... ",
-    date: "june 02, 2025",
+    date: "June 02, 2025",
     image: "/images/blog11.png",
     link: "/blog/why-rahu-ketu-though-shadows",
     desc: "Whether or not we believe in the Doctrine of Karma, truth stands .....",
