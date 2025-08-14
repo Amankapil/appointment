@@ -131,7 +131,7 @@ export async function POST(request) {
         filePath,
         amount,
         session: 1,
-        status: "Urgent",
+        status: "Paid",
         createdAt: new Date(),
       });
 
