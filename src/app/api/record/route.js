@@ -46,7 +46,7 @@ export async function POST(req) {
 
     const result = await uploadPromise;
     // await connectDB();
-    console.log(result);
+    // console.log(result);
 
     // const audioDoc = await Audio.create({ url: result.secure_url });
 

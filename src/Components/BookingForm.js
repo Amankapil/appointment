@@ -154,8 +154,8 @@ export default function BookingForm({
       setLoading(true);
       // Now update the slot status to "booked"
       var date = new Date(datee).toISOString().split("T")[0];
-      console.log(date);
-      console.log(datee);
+      // console.log(date);
+      // console.log(datee);
 
       const response = await fetch("/api/admin/book", {
         method: "POST",

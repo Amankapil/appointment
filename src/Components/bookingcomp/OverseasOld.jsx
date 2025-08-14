@@ -606,8 +606,8 @@ export default function OverseasOld({ selectedTimezone }) {
                             setDuration(slot.duration);
                             setindiantimetosend(slot.istTime);
                             setActualTime(slot.timeRange);
-                            console.log("country time", slot.timeRange);
-                            console.log("indian time", slot.istTime);
+                            // console.log("country time", slot.timeRange);
+                            // console.log("indian time", slot.istTime);
                           }}
                           className={`p-2 rounded text-sm border 
             ${

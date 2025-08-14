@@ -26,10 +26,10 @@ export default function PaymentButton({
     } else {
       setAmount(1000);
     }
-    console.log(duration);
+    // console.log(duration);
   }, [duration]);
 
-  console.log(paydata);
+  // console.log(paydata);
 
   const initiatePayment = async () => {
     setLoading(true);

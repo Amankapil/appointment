@@ -258,7 +258,7 @@ export default function OldConsult() {
         }),
       });
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (data.success == true) {
         toast.success(data.message);
         router.push("/urgent");
@@ -285,8 +285,8 @@ export default function OldConsult() {
     }
     if (currentStep == 1) {
       setSvgUrl(clients?.filePath);
-      console.log(clients?.filePath);
-      console.log(svgUrl);
+      // console.log(clients?.filePath);
+      // console.log(svgUrl);
       if (!selectedTime) {
         toast.error("please select time slot");
         return;
@@ -370,8 +370,8 @@ export default function OldConsult() {
       return getTimeInMinutes(a.time) - getTimeInMinutes(b.time);
     });
 
-  console.log(filteredSlots);
-  console.log(timeSlots);
+  // console.log(filteredSlots);
+  // console.log(timeSlots);
   return (
     <>
       {/* <Bookings /> */}

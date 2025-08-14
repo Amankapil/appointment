@@ -18,7 +18,7 @@ export async function POST(request) {
     const city = searchParams.get("city");
     const gender = searchParams.get("gender");
 
-    console.log("failure page date", selectedTime, date);
+    // console.log("failure page date", selectedTime, date);
     const name = data.get("firstname");
     // const city = data.get("city");
     const email = data.get("email");
@@ -52,7 +52,7 @@ export async function POST(request) {
 
     // Update slot status to "booked"
     const availability = await Availability.findOne({ date: selectedDate });
-    console.log(availability);
+    // console.log(availability);
     if (availability) {
       const slotIndex = availability.slots.findIndex(
         (slot) => slot.time === selectedTime

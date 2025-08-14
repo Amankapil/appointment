@@ -82,7 +82,7 @@ export const dbConnect = async () => {
       .connect(process.env.MONGO_URI, options)
       .then(() => console.log("MongoDB connected"))
       .catch((err) => console.error("MongoDB connection error:", err));
-    console.log("MongoDB connected successfully");
+    // console.log("MongoDB connected successfully");
   } catch (error) {
     console.error("MongoDB connection error:", error);
   }

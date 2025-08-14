@@ -14,7 +14,7 @@ const IndianClient = () => {
       try {
         const response = await fetch("/api/admin/getTransaction"); // Replace with your API endpoint
         const data = await response.json();
-        console.log(data.data);
+        // console.log(data.data);
         setClients(data.data);
       } catch (error) {
         console.error("Error fetching data:", error);

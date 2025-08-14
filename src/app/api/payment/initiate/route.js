@@ -33,7 +33,7 @@ export async function POST(request) {
   const filePath = svgUrl;
 
   // const filePath = `${request.protocol}://${request.get("host")}/${filePath2}`;
-  console.log(`Stored path in DB: ${filePath}`);
+  // console.log(`Stored path in DB: ${filePath}`);
 
   const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
   const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
@@ -81,7 +81,7 @@ export async function POST(request) {
     // add: additionalDataString, // Pass additional data as a JSON string
   };
 
-  console.log("on initiate", payUData);
+  // console.log("on initiate", payUData);
 
   return NextResponse.json({ payUData, url: `${PAYU_BASE_URL}/_payment` });
 }

@@ -72,8 +72,8 @@ export async function POST(request) {
     //   "host"
     // )}/${filePath2}`;
 
-    console.log(`SVG saved at: ${filePath1}`);
-    console.log(`Stored path in DB: ${filePath}`);
+    // console.log(`SVG saved at: ${filePath1}`);
+    // console.log(`Stored path in DB: ${filePath}`);
 
     const transaction = new Transaction({
       name,
@@ -140,7 +140,7 @@ export async function POST(request) {
       from: `whatsapp:${twilioPhoneNumber}`,
       to: `whatsapp:+91${phone}`,
     });
-    console.log("whatapp response", res);
+    // console.log("whatapp response", res);
     const redirectUrl = `${protocol}://${host}/payment`;
     return NextResponse.redirect(redirectUrl);
 

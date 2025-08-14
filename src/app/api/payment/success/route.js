@@ -36,7 +36,7 @@ export async function POST(request) {
     // Parse form data
     const data = await request.formData();
     // const formData = await request.formData();
-    console.log("on success", data);
+    // console.log("on success", data);
     const name = data.get("firstname");
     const email = data.get("email");
     const phone = data.get("phone");
@@ -210,7 +210,7 @@ Vedic Astrologer – Prashna Siddhi
       }),
     });
 
-    console.log("whatapp response", res);
+    // console.log("whatapp response", res);
     await sendEmail({
       to: email,
       subject: "🌟 Your Prashna Siddhi Consultation is Confirmed",

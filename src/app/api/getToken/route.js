@@ -4,7 +4,7 @@ export async function POST() {
   const url = "https://api.prokerala.com/token";
   const clientId = process.env.NEXT_PUBLIC_CLIENT_ID;
   const clientSecret = process.env.NEXT_PUBLIC_CLIENT_SECRET;
-  console.log(clientId);
+  // console.log(clientId);
 
   const body = new URLSearchParams({
     grant_type: "client_credentials",

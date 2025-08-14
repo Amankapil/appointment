@@ -48,7 +48,7 @@ export default function BookingModal() {
       setPersons(data.data);
       // console.log(data.data);
     } catch (error) {
-      console.log("Error fetching persons:", error);
+      // console.log("Error fetching persons:", error);
     }
   };
 
@@ -59,7 +59,7 @@ export default function BookingModal() {
       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
       const data = await res.json();
       setTimeSlots(data.slots);
-      console.log(data.slots);
+      // console.log(data.slots);
     } catch (error) {
       console.log(error);
     }

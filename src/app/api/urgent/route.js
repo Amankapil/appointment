@@ -72,7 +72,7 @@ export async function POST(request) {
       selectedDate,
     };
 
-    console.log(back);
+    // console.log(back);
     // const svgContent = atob(svgdata);
 
     const filePath = svgUrl;
@@ -80,7 +80,7 @@ export async function POST(request) {
     //   "host"
     // )}/${filePath2}`;
 
-    console.log(`Stored path in DB: ${filePath}`);
+    // console.log(`Stored path in DB: ${filePath}`);
 
     const existingTransaction = await Transaction.findOne({ email });
 
@@ -221,7 +221,7 @@ Vedic Astrologer – Prashna Siddhi
     // // uncommet
 
     // // uncommet
-    console.log("whatapp response", res3);
+    // console.log("whatapp response", res3);
     await sendEmail({
       to: email,
       subject: "🌟 Your Prashna Siddhi Consultation is Confirmed",

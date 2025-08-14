@@ -71,7 +71,7 @@ export default function OverseasPayment({
       setTransactionId("");
       setPaymentMode("UPI");
       const dataa = await response.json();
-      console.log(dataa);
+      // console.log(dataa);
       if (dataa.success == true) {
         router.push("/urgent");
         toast.success(dataa.message);

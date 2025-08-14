@@ -73,7 +73,7 @@ export async function POST(request) {
       selectedDate,
     };
 
-    console.log(back);
+    // console.log(back);
     // const svgContent = atob(svgdata);
 
     const filePath = svgUrl;
@@ -81,7 +81,7 @@ export async function POST(request) {
     //   "host"
     // )}/${filePath2}`;
 
-    console.log(`Stored path in DB: ${filePath}`);
+    // console.log(`Stored path in DB: ${filePath}`);
 
     const existingTransaction = await Transaction.findOne({ email });
 
@@ -189,7 +189,7 @@ Vedic Astrologer – Prashna Siddhi
         7: filePath || "check in dashboard",
       }),
     });
-    console.log(res);
+    // console.log(res);
 
     // uncomment
 

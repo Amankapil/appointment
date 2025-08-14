@@ -72,11 +72,11 @@ export async function POST(request) {
       countrytime,
     };
 
-    console.log("data coming from frontend", back);
+    // console.log("data coming from frontend", back);
 
     const filePath = svgUrl;
 
-    console.log(`Stored path in DB: ${filePath}`);
+    // console.log(`Stored path in DB: ${filePath}`);
 
     const existingTransaction = await Overseas.findOne({ email });
 
@@ -181,7 +181,7 @@ Vedic Astrologer – Prashna Siddhi
     // console.log(message);
     const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}$\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
 
-    console.log(message);
+    // console.log(message);
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
       to: "whatsapp:+917259691375", // Recipient's WhatsApp number
@@ -218,7 +218,7 @@ Vedic Astrologer – Prashna Siddhi
 
     // 7022239292
 
-    console.log("whatapp response", res);
+    // console.log("whatapp response", res);
     await sendEmail({
       to: email,
       subject: "Session Confirm with Prashna Siddhi",

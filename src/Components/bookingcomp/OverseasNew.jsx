@@ -80,8 +80,8 @@ export default function OverseasNew({ selectedTimezone }) {
 
         const data = await response.json();
 
-        console.log(data);
-        console.log(data.results[0].geometry);
+        // console.log(data);
+        // console.log(data.results[0].geometry);
         if (data.results.length > 0) {
           const { lat, lng } = data.results[0].geometry;
           setFormData((prev) => ({
@@ -165,7 +165,7 @@ export default function OverseasNew({ selectedTimezone }) {
     if (formData.dob && formData.timeOfBirth) {
       const [year, month, day] = formData.dob.split("-").map(Number);
       const [hour, min] = formData.timeOfBirth.split(":").map(Number);
-      console.log("Raw formData:", formData);
+      // console.log("Raw formData:", formData);
       const lat = formData.latitude;
       const lon = formData.longitude;
       setHoroscopeData({
@@ -241,7 +241,7 @@ export default function OverseasNew({ selectedTimezone }) {
 
       setTimeSlots(filteredSlots);
     } catch (error) {
-      console.log("Error fetching slots:", error);
+      // console.log("Error fetching slots:", error);
     }
   };
   const convertSlotsToTimezone = () => {
@@ -306,7 +306,7 @@ export default function OverseasNew({ selectedTimezone }) {
       // toast.success("Cloudinary Upload Success");
 
       if (data.secure_url) {
-        console.log("SVG URL:", data.secure_url);
+        // console.log("SVG URL:", data.secure_url);
         return data.secure_url;
       } else {
         throw new Error("Upload failed");
@@ -333,7 +333,7 @@ export default function OverseasNew({ selectedTimezone }) {
       timezone = "+05:30", // Ensure this is correct
     } = horoscopeData1;
 
-    console.log("Received Horoscope Data:", horoscopeData1);
+    // console.log("Received Horoscope Data:", horoscopeData1);
 
     if (
       day == null ||
@@ -344,7 +344,7 @@ export default function OverseasNew({ selectedTimezone }) {
       lat == null ||
       lon == null
     ) {
-      console.log("Missing required horoscope data", horoscopeData1);
+      // console.log("Missing required horoscope data", horoscopeData1);
       return;
     }
 
@@ -387,25 +387,25 @@ export default function OverseasNew({ selectedTimezone }) {
     const coordinates = `${lat},${lon}`;
     const apiUrl = `/api/kundli?ayanamsa=1&coordinates=${coordinates}&datetime=${encodedDatetime}&chart_type=${chart_type}&chart_style=${chart_style}&format=${format}&la=${la}&upagraha_position=${upagraha_position}`;
 
-    console.log("Formatted API URL:", apiUrl);
+    // console.log("Formatted API URL:", apiUrl);
 
     try {
       const response = await fetch(apiUrl, { method: "GET" });
       if (!response.ok) throw new Error(`HTTP Error: ${response.status}`);
 
       const blob = await response.blob();
-      console.log("Blob Response:", blob);
+      // console.log("Blob Response:", blob);
 
       const cloudinaryUrl = await uploadToCloudinary(blob);
 
       if (cloudinaryUrl) {
-        console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
+        // console.log("SVG Uploaded to Cloudinary:", cloudinaryUrl);
       }
 
       const objectUrl = URL.createObjectURL(blob);
       setSvgUrl(objectUrl);
       setSvgData(cloudinaryUrl);
-      console.log("API Response:", objectUrl);
+      // console.log("API Response:", objectUrl);
     } catch (error) {
       console.error("Error calling API:", error);
     }
