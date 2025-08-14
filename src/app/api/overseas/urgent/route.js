@@ -49,6 +49,7 @@ export async function POST(request) {
       city,
       selectedTime,
       selectedDate,
+      countrytime,
     } = await request.json();
     // const file = formData.get("file");
     // console.log(file);
@@ -145,7 +146,7 @@ export async function POST(request) {
 Thank you for choosing Prashna Siddhi for your spiritual guidance. We acknowledge with gratitude the receipt of ₹${amount} for your ${duration}-minute astrology consultation.  
 
 ✅ **Your Appointment Details:**  
-**Date & Time:** ${selectedTime}, ${selectedDate} 
+**Date & Time:** ${countrytime}, ${selectedDate} 
 **Mode:** Voice Call  
 **Number to Call:** +91 7259691375 (Please call at the exact scheduled time)  
 
@@ -175,10 +176,11 @@ Vedic Astrologer – Prashna Siddhi
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
       to: "whatsapp:+917259691375", // Recipient's WhatsApp number
+      // to: "whatsapp:+8103075691", // Recipient's WhatsApp number
       // category: "TRANSACTIONAL",
       contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
       contentVariables: JSON.stringify({
-        1: selectedTime || "", // Static Name (Ensure it's always a string)
+        1: countrytime || "", // Static Name (Ensure it's always a string)
         2: name || "",
         3: email || "",
         4: phone || "",
@@ -187,6 +189,7 @@ Vedic Astrologer – Prashna Siddhi
         7: filePath || "check in dashboard",
       }),
     });
+    console.log(res);
 
     // uncomment
 
@@ -234,13 +237,57 @@ Vedic Astrologer – Prashna Siddhi
     });
     // uncomment
 
+    // const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
+
+    // const availability = await Availability.findOne({ date: formattedDate });
+
+    // if (availability) {
+    //   const slotIndex = availability.slots.findIndex(
+    //     (slot) => slot.time === selectedTime
+    //   );
+
+    //   if (slotIndex !== -1) {
+    //     // Mark the selected slot as "booked"
+    //     availability.slots[slotIndex].status = "booked";
+
+    //     // Parse selectedTime start and end
+    //     const [startPart, endPart] = selectedTime.split(" - ");
+    //     const parseTimeToMinutes = (timeStr) => {
+    //       const [hourMin, period] = timeStr.trim().split(" ");
+    //       let [hour, minute] = hourMin.split(":").map(Number);
+    //       if (period === "PM" && hour !== 12) hour += 12;
+    //       if (period === "AM" && hour === 12) hour = 0;
+    //       return hour * 60 + minute;
+    //     };
+
+    //     const selectedStart = parseTimeToMinutes(startPart);
+    //     const selectedEnd = parseTimeToMinutes(endPart);
+
+    //     // Identify overlapping slots
+    //     const remainingSlots = availability.slots.filter((slot) => {
+    //       if (slot.time === selectedTime) return true; // Keep selected slot
+
+    //       const [slotStartStr, slotEndStr] = slot.time.split(" - ");
+    //       const slotStart = parseTimeToMinutes(slotStartStr);
+    //       const slotEnd = parseTimeToMinutes(slotEndStr);
+
+    //       // Check for overlap
+    //       const isOverlapping =
+    //         Math.max(selectedStart, slotStart) < Math.min(selectedEnd, slotEnd);
+    //       return !isOverlapping;
+    //     });
+
+    //     availability.slots = remainingSlots;
+    //     await availability.save();
+    //   }
+    // }
+
     const formattedDate = selectedDate.split("T")[0]; // Extracts only YYYY-MM-DD
 
     const availability = await Availability.findOne({ date: formattedDate });
-
     if (availability) {
       const slotIndex = availability.slots.findIndex(
-        (slot) => slot.time === selectedTime
+        (slot) => slot.time === countrytime
       );
 
       if (slotIndex !== -1) {
@@ -248,7 +295,7 @@ Vedic Astrologer – Prashna Siddhi
         availability.slots[slotIndex].status = "booked";
 
         // Parse selectedTime start and end
-        const [startPart, endPart] = selectedTime.split(" - ");
+        const [startPart, endPart] = countrytime.split(" - ");
         const parseTimeToMinutes = (timeStr) => {
           const [hourMin, period] = timeStr.trim().split(" ");
           let [hour, minute] = hourMin.split(":").map(Number);
@@ -262,7 +309,7 @@ Vedic Astrologer – Prashna Siddhi
 
         // Identify overlapping slots
         const remainingSlots = availability.slots.filter((slot) => {
-          if (slot.time === selectedTime) return true; // Keep selected slot
+          if (slot.time === countrytime) return true; // Keep selected slot
 
           const [slotStartStr, slotEndStr] = slot.time.split(" - ");
           const slotStart = parseTimeToMinutes(slotStartStr);
@@ -279,37 +326,11 @@ Vedic Astrologer – Prashna Siddhi
       }
     }
 
-    // const redirectUrl = `${protocol}://${host}/payment`;
-    // return NextResponse.redirect(redirectUrl);
     return NextResponse.json({
       success: true,
       message: "Your appointment is book on urgent basis",
       data: back,
     });
-
-    // const MERCHANT_KEY = process.env.PAYU_MERCHANT_KEY;
-    // const MERCHANT_SALT = process.env.PAYU_MERCHANT_SALT;
-    // const NEXT_PUBLIC_BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-    // const PAYU_BASE_URL = "https://secure.payu.in/_payment";
-
-    // const txnid = "Txn" + Date.now();
-
-    // const hashString = `${MERCHANT_KEY}|${txnid}|${amount}|Product_Info|${name}|${email}|||||||||||${MERCHANT_SALT}`;
-    // const hash = crypto.createHash("sha512").update(hashString).digest("hex");
-
-    // const payUData = {
-    //   key: MERCHANT_KEY,
-    //   txnid,
-    //   amount,
-    //   productinfo: "Product_Info",
-    //   firstname: name,
-    //   service_provider: "payu_paisa",
-    //   email,
-    //   phone,
-    //   surl: `${NEXT_PUBLIC_BASE_URL}/api/payment/success`,
-    //   furl: `${NEXT_PUBLIC_BASE_URL}/api/payment/failure`,
-    //   hash,
-    // };
 
     // return NextResponse.json({ payUData, url: `${PAYU_BASE_URL}/_payment` });
   } catch (error) {

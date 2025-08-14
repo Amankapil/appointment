@@ -6,14 +6,8 @@ import Questions from "@/Components/Questions";
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { DivideIcon } from "@heroicons/react/24/solid";
-import ThankYouScreen from "@/Components/ThankYouScreen";
-import axios from "axios";
-import PaymentButton from "@/Components/PaymentButton";
-import Image from "next/image";
+
 import { useRouter } from "next/navigation";
-import logo from "../../Components/pagesComponent/Homecomponent/assets/logo.svg";
-import Link from "next/link";
 
 import { toast } from "react-toastify";
 
@@ -79,43 +73,7 @@ export default function OverseasOld({ selectedTimezone }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
   // Function to handle email input change
-  const handleEmailChange = (e) => {
-    const email = e.target.value.trim();
-    setFormData((prev) => ({ ...prev, email }));
 
-    if (email.includes("@") && email.includes(".com")) {
-      const user = clients.find((client) => client.email === email);
-      if (user) {
-        // Ensure all fields have default values
-        setFormData({
-          email: user.email || "",
-          fullName: user.name || "",
-          phone: user.phone || "",
-          dob: user.dob || "",
-          timeOfBirth: user.tob || "",
-          gender: user.gender || "",
-          country: user.country || "",
-          state: user.state || "",
-          material: user.material || "",
-          city: user.city || "",
-          maritalStatus: user.maritalStatus || "",
-          latitude: user.latitude || "",
-          longitude: user.longitude || "",
-          selectedQuestions: user.selectedQuestions || [],
-        });
-        toast.success("Email found");
-        setSvgData(user?.filePath);
-        setEmailMessage("");
-      } else {
-        // Show toast only when a complete email is typed and not found
-        setTimeout(() => {
-          toast.error("Email not found. Please fill in the details.");
-        }, 500);
-      }
-    } else {
-      setEmailMessage("");
-    }
-  };
   const handlePhoneChange = (value) => {
     const phone = value.trim();
     setFormData((prev) => ({ ...prev, phone }));
@@ -209,20 +167,6 @@ export default function OverseasOld({ selectedTimezone }) {
   // ?÷working fine in chrome
 
   const [selectedDate, setSelectedDate] = useState(new Date());
-  //   const [timeSlots, setTimeSlots] = useState([]);
-  //   // Fetch time slots for the selected date
-  //   const fetchSlots = async (date) => {
-  //     try {
-  //       const formattedDate = date.toISOString().split("T")[0]; // Extract YYYY-MM-DD
-  //       const res = await fetch(`/api/admin/getslot?date=${formattedDate}`);
-  //       const data = await res.json();
-  //       setTimeSlots(data.slots);
-  //       console.log(data.slots);
-  //       console.log(data?.slots[0]?.duration);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
 
   const [indiantimetoesend, setindiantimetosend] = useState(null);
   const [timeSlots, setTimeSlots] = useState([]);
@@ -293,6 +237,8 @@ export default function OverseasOld({ selectedTimezone }) {
   const convertedSlots = convertSlotsToTimezone();
   //   console.log(convertedSlots);
 
+  const [actualTime, setActualTime] = useState(null);
+
   const [selectedTime, setSelectedTime] = useState(null);
   // console.log(selectedTime);
   const [result, setResult] = useState(null);
@@ -329,6 +275,7 @@ export default function OverseasOld({ selectedTimezone }) {
           city: formData.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
+          countrytime: indiantimetoesend,
           amount: "0.00", // 1 INR for testing
         }),
       });
@@ -374,7 +321,6 @@ export default function OverseasOld({ selectedTimezone }) {
       return;
     }
 
-
     if (currentStep == 0) {
       setSvgUrl(clients?.filePath);
 
@@ -409,8 +355,6 @@ export default function OverseasOld({ selectedTimezone }) {
   const filteredSlots = selectedDuration
     ? timeSlots.filter((slot) => slot.duration === selectedDuration)
     : timeSlots;
-
-  const [actualTime, setActualTime] = useState(null);
 
   return (
     <>
@@ -515,7 +459,6 @@ export default function OverseasOld({ selectedTimezone }) {
                 <h2 className="text-md font-normal pb-4">
                   Select a Convenient Time
                 </h2>
-
                 <div className="flex gap-2 mb-4">
                   <button
                     onClick={() => setSelectedDuration(7)}
@@ -558,13 +501,137 @@ export default function OverseasOld({ selectedTimezone }) {
                     45 Min
                   </button>
                 </div>
-
                 <div className="grid grid-cols-3 gap-4 mt-4">
                   {convertedSlots.filter((slot) => {
-                    // Match selected duration
+                    // Duration match logic (allow all if none selected)
                     const durationMatch =
-                      slot.duration === selectedDuration ||
-                      selectedDuration === 45;
+                      !selectedDuration || slot.duration === selectedDuration;
+
+                    if (slot.status !== "available") return false;
+
+                    // Current IST time
+                    const nowIST = new Date(
+                      new Date().toLocaleString("en-US", {
+                        timeZone: "Asia/Kolkata",
+                      })
+                    );
+                    const selectedDatesIST = new Date(
+                      new Date(selectedDate).toLocaleString("en-US", {
+                        timeZone: "Asia/Kolkata",
+                      })
+                    );
+
+                    // For future date → only check duration
+                    if (selectedDatesIST > nowIST) return durationMatch;
+
+                    // If selected date is today in IST
+                    if (
+                      selectedDatesIST.toDateString() === nowIST.toDateString()
+                    ) {
+                      const currentTimeInMinutes =
+                        nowIST.getHours() * 60 + nowIST.getMinutes();
+
+                      const startTime = slot.timeRange.split(" - ")[0];
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
+                      const period = startTime.includes("PM") ? "PM" : "AM";
+
+                      // Convert to 24-hour format
+                      if (period === "PM" && hour !== 12) hour += 12;
+                      if (period === "AM" && hour === 12) hour = 0;
+
+                      const slotTimeInMinutes = hour * 60 + minute;
+
+                      // Show only slots after current IST time and before/equal 6 PM IST
+                      const isValidTime =
+                        slotTimeInMinutes > currentTimeInMinutes && hour <= 18;
+
+                      return durationMatch && isValidTime;
+                    }
+
+                    return false; // Past date in IST
+                  }).length > 0 ? (
+                    convertedSlots
+                      .filter((slot) => {
+                        const durationMatch =
+                          !selectedDuration ||
+                          slot.duration === selectedDuration;
+
+                        if (slot.status !== "available") return false;
+
+                        const nowIST = new Date(
+                          new Date().toLocaleString("en-US", {
+                            timeZone: "Asia/Kolkata",
+                          })
+                        );
+                        const selectedDatesIST = new Date(
+                          new Date(selectedDate).toLocaleString("en-US", {
+                            timeZone: "Asia/Kolkata",
+                          })
+                        );
+
+                        if (selectedDatesIST > nowIST) return durationMatch;
+
+                        if (
+                          selectedDatesIST.toDateString() ===
+                          nowIST.toDateString()
+                        ) {
+                          const currentTimeInMinutes =
+                            nowIST.getHours() * 60 + nowIST.getMinutes();
+
+                          const startTime = slot.timeRange.split(" - ")[0];
+                          let [hour, minute] = startTime
+                            .match(/\d+/g)
+                            .map(Number);
+                          const period = startTime.includes("PM") ? "PM" : "AM";
+
+                          if (period === "PM" && hour !== 12) hour += 12;
+                          if (period === "AM" && hour === 12) hour = 0;
+
+                          const slotTimeInMinutes = hour * 60 + minute;
+
+                          return (
+                            durationMatch &&
+                            slotTimeInMinutes > currentTimeInMinutes &&
+                            hour <= 18
+                          );
+                        }
+
+                        return false;
+                      })
+                      .map((slot, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedTime(slot.timeRange);
+                            setDuration(slot.duration);
+                            setindiantimetosend(slot.istTime);
+                            setActualTime(slot.timeRange);
+                            console.log("country time", slot.timeRange);
+                            console.log("indian time", slot.istTime);
+                          }}
+                          className={`p-2 rounded text-sm border 
+            ${
+              slot.status === "available"
+                ? selectedTime === slot.timeRange
+                  ? "bg-blue-500 text-white"
+                  : "bg-green-200 hover:bg-green-300"
+                : "bg-red-200 hover:bg-red-300"
+            }`}
+                        >
+                          {slot.timeRange}
+                        </button>
+                      ))
+                  ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
+                </div>
+
+                {/* <div className="grid grid-cols-3 gap-4 mt-4">
+                  {convertedSlots.filter((slot) => {
+                    // Match selected duration
+                    const durationMatch = slot.duration === selectedDuration;
 
                     // Skip if not available
                     if (slot.status !== "available") return false;
@@ -603,8 +670,7 @@ export default function OverseasOld({ selectedTimezone }) {
                       .filter((slot) => {
                         // Apply same logic again in map
                         const durationMatch =
-                          slot.duration === selectedDuration ||
-                          selectedDuration === 45;
+                          slot.duration === selectedDuration;
 
                         if (slot.status !== "available") return false;
 
@@ -665,46 +731,6 @@ export default function OverseasOld({ selectedTimezone }) {
                       No slots available
                     </p>
                   )}
-                </div>
-
-                {/* <div className="grid grid-cols-3 gap-4 mt-4">
-                  {convertedSlots.filter(
-                    (slot) =>
-                      slot.duration === selectedDuration ||
-                      selectedDuration === 45
-                  ).length > 0 ? (
-                    convertedSlots
-                      .filter(
-                        (slot) =>
-                          slot.duration === selectedDuration ||
-                          selectedDuration === 45
-                      )
-                      .map((slot, index) => (
-                        <button
-                          key={index}
-                          onClick={() => {
-                            setSelectedTime(slot.timeRange);
-                            setDuration(slot.duration);
-                            setindiantimetosend(slot.istTime);
-                            setActualTime(slot.timeRange);
-                          }}
-                          className={`p-2 rounded text-sm border 
-            ${
-              slot.status === "available"
-                ? selectedTime === slot.timeRange
-                  ? "bg-blue-500 text-white"
-                  : "bg-green-200 hover:bg-green-300"
-                : "bg-red-200 hover:bg-red-300"
-            }`}
-                        >
-                          {slot.timeRange}
-                        </button>
-                      ))
-                  ) : (
-                    <p className="text-gray-500 col-span-3 text-center">
-                      No slots available
-                    </p>
-                  )}
                 </div> */}
               </div>
             </div>
@@ -717,7 +743,7 @@ export default function OverseasOld({ selectedTimezone }) {
             {/* {JSON.stringify(formData, null, 2)} */}
             <OverseasThank
               formData={formData}
-              selectedTime={indiantimetoesend}
+              selectedTime={actualTime}
               duration={duration}
               actualTime={actualTime}
               result={result}
@@ -741,6 +767,7 @@ export default function OverseasOld({ selectedTimezone }) {
               duration={duration}
               svgdata={svgdata}
               selectedDate={selectedDate}
+              indiantimetoesend={indiantimetoesend}
             />
           </h2>
         )}

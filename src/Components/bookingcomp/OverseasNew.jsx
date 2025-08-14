@@ -440,11 +440,12 @@ export default function OverseasNew({ selectedTimezone }) {
           city: formData.city,
           selectedTime: selectedTime,
           selectedDate: selectedDate,
+          countrytime: indiantimetoesend,
           amount: "0.00", // 1 INR for testing
         }),
       });
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if (data.success == true) {
         toast.success(data.message);
         router.push("/urgent");
@@ -565,18 +566,7 @@ export default function OverseasNew({ selectedTimezone }) {
                   className="border p-2 rounded w-full border-[#E4E4E4]"
                 />
               </label>
-              {/* <label>
-                Phone Number *
-                <input
-                  name="phone"
-                  type="number"
-                  required
-                  placeholder="+91 9876543210"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="border p-2 rounded w-full border-[#E4E4E4]"
-                />
-              </label> */}
+
               <label className="block mb-2">
                 Phone Number *
                 <PhoneInput
@@ -809,28 +799,6 @@ export default function OverseasNew({ selectedTimezone }) {
                 <h2 className="text-md font-normal pb-4">
                   Select a Convenient Time
                 </h2>
-                {/* <div className="grid grid-cols-3 gap-2">
-                {timeSlots?.map((slot) => (
-                  <button
-                    key={slot.time}
-                    disabled={slot.status === "booked"} // Disable if booked
-                    onClick={() => {
-                      setSelectedTime(slot.time);
-                      setDuration(slot.duration);
-                    }}
-                    className={`p-2 rounded text-sm border 
-      ${
-        slot.status === "available"
-          ? selectedTime === slot.time
-            ? "bg-blue-500 text-white" // Selected slot
-            : "bg-green-200 hover:bg-green-300"
-          : "bg-red-200 hover:bg-red-300"
-      }`}
-                  >
-                    {slot.time}
-                  </button>
-                ))}
-              </div> */}
 
                 <div className="flex gap-2 mb-4">
                   <button
@@ -876,7 +844,134 @@ export default function OverseasNew({ selectedTimezone }) {
                 </div>
 
                 {/* Time Slots */}
+
                 <div className="grid grid-cols-3 gap-4 mt-4">
+                  {convertedSlots.filter((slot) => {
+                    // Duration match logic (allow all if none selected)
+                    const durationMatch =
+                      !selectedDuration || slot.duration === selectedDuration;
+
+                    if (slot.status !== "available") return false;
+
+                    // Current IST time
+                    const nowIST = new Date(
+                      new Date().toLocaleString("en-US", {
+                        timeZone: "Asia/Kolkata",
+                      })
+                    );
+                    const selectedDatesIST = new Date(
+                      new Date(selectedDate).toLocaleString("en-US", {
+                        timeZone: "Asia/Kolkata",
+                      })
+                    );
+
+                    // For future date → only check duration
+                    if (selectedDatesIST > nowIST) return durationMatch;
+
+                    // If selected date is today in IST
+                    if (
+                      selectedDatesIST.toDateString() === nowIST.toDateString()
+                    ) {
+                      const currentTimeInMinutes =
+                        nowIST.getHours() * 60 + nowIST.getMinutes();
+
+                      const startTime = slot.timeRange.split(" - ")[0];
+                      let [hour, minute] = startTime.match(/\d+/g).map(Number);
+                      const period = startTime.includes("PM") ? "PM" : "AM";
+
+                      // Convert to 24-hour format
+                      if (period === "PM" && hour !== 12) hour += 12;
+                      if (period === "AM" && hour === 12) hour = 0;
+
+                      const slotTimeInMinutes = hour * 60 + minute;
+
+                      // Show only slots after current IST time and before/equal 6 PM IST
+                      const isValidTime =
+                        slotTimeInMinutes > currentTimeInMinutes && hour <= 18;
+
+                      return durationMatch && isValidTime;
+                    }
+
+                    return false; // Past date in IST
+                  }).length > 0 ? (
+                    convertedSlots
+                      .filter((slot) => {
+                        const durationMatch =
+                          !selectedDuration ||
+                          slot.duration === selectedDuration;
+
+                        if (slot.status !== "available") return false;
+
+                        const nowIST = new Date(
+                          new Date().toLocaleString("en-US", {
+                            timeZone: "Asia/Kolkata",
+                          })
+                        );
+                        const selectedDatesIST = new Date(
+                          new Date(selectedDate).toLocaleString("en-US", {
+                            timeZone: "Asia/Kolkata",
+                          })
+                        );
+
+                        if (selectedDatesIST > nowIST) return durationMatch;
+
+                        if (
+                          selectedDatesIST.toDateString() ===
+                          nowIST.toDateString()
+                        ) {
+                          const currentTimeInMinutes =
+                            nowIST.getHours() * 60 + nowIST.getMinutes();
+
+                          const startTime = slot.timeRange.split(" - ")[0];
+                          let [hour, minute] = startTime
+                            .match(/\d+/g)
+                            .map(Number);
+                          const period = startTime.includes("PM") ? "PM" : "AM";
+
+                          if (period === "PM" && hour !== 12) hour += 12;
+                          if (period === "AM" && hour === 12) hour = 0;
+
+                          const slotTimeInMinutes = hour * 60 + minute;
+
+                          return (
+                            durationMatch &&
+                            slotTimeInMinutes > currentTimeInMinutes &&
+                            hour <= 18
+                          );
+                        }
+
+                        return false;
+                      })
+                      .map((slot, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedTime(slot.timeRange);
+                            setDuration(slot.duration);
+                            setindiantimetosend(slot.istTime);
+                            setActualTime(slot.timeRange);
+                            // console.log("country time", slots.timeRange);
+                            // console.log("indian time", slot.istTime);
+                          }}
+                          className={`p-2 rounded text-sm border 
+            ${
+              slot.status === "available"
+                ? selectedTime === slot.timeRange
+                  ? "bg-blue-500 text-white"
+                  : "bg-green-200 hover:bg-green-300"
+                : "bg-red-200 hover:bg-red-300"
+            }`}
+                        >
+                          {slot.timeRange}
+                        </button>
+                      ))
+                  ) : (
+                    <p className="text-gray-500 col-span-3 text-center">
+                      No slots available
+                    </p>
+                  )}
+                </div>
+                {/* <div className="grid grid-cols-3 gap-4 mt-4">
                   {convertedSlots.length > 0 ? (
                     convertedSlots.map((slot, index) => (
                       <button
@@ -905,7 +1000,7 @@ export default function OverseasNew({ selectedTimezone }) {
                       No slots available
                     </p>
                   )}
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -917,13 +1012,14 @@ export default function OverseasNew({ selectedTimezone }) {
             {/* {JSON.stringify(formData, null, 2)} */}
             <OverseasThank
               formData={formData}
-              selectedTime={indiantimetoesend}
+              selectedTime={actualTime}
               duration={duration}
               actualTime={actualTime}
               result={result}
               error={error}
               svgUrl={svgdata}
               selectedDate={selectedDate}
+              indiantimetoesend={indiantimetoesend}
             />
             {/* </pre> */}
           </div>
@@ -941,6 +1037,7 @@ export default function OverseasNew({ selectedTimezone }) {
               duration={duration}
               svgdata={svgdata}
               selectedDate={selectedDate}
+              indiantimetoesend={indiantimetoesend}
             />
           </h2>
         )}

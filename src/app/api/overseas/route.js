@@ -46,6 +46,7 @@ export async function POST(request) {
       selectedTime,
       selectedDate,
       transactionId,
+      countrytime,
       paymentMode,
     } = await request.json();
     // const file = formData.get("file");
@@ -60,6 +61,7 @@ export async function POST(request) {
       dob,
       gender,
       country,
+      duration,
       state,
       latitude,
       longitude,
@@ -67,9 +69,10 @@ export async function POST(request) {
       city,
       selectedTime,
       selectedDate,
+      countrytime,
     };
 
-    // console.log(back);
+    console.log("data coming from frontend", back);
 
     const filePath = svgUrl;
 
@@ -161,38 +164,40 @@ Vedic Astrologer – Prashna Siddhi
 [www.PrashnaSiddhi.com](http://www.PrashnaSiddhi.com)  
 `; // Example date
 
-    // const message = "Hey Jagdish You have an Urgent Appointment ";
-    // const message = `Hello Jagdish, your appointment is scheduled. Please find the details below:`;
-    // console.log(message);
-    const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
-
-    const res = await client.messages.create({
-      from: "whatsapp:+917022239292", // Twilio WhatsApp Number
-      to: "whatsapp:+917259691375", // Recipient's WhatsApp number
-      category: "TRANSACTIONAL",
-      contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
-      contentVariables: JSON.stringify({
-        1: selectedTime || "", // Static Name (Ensure it's always a string)
-        2: name || "",
-        3: email || "",
-        4: phone || "",
-        5: amount || "0", // Ensure it's a string
-        6: selectedDate || "", // Ensure it's a string
-        7: filePath || "check in dashboard", // Ensure it's a string
-      }),
-    });
-
     var amount1 = 0;
 
     if (duration === 15) {
-      amount1 = 1000;
+      amount1 = "35$";
     } else if (duration === 30) {
-      amount1 = 2000;
+      amount1 = "55$";
     } else if (duration === 7) {
-      amount1 = 499;
+      amount1 = "20$";
     } else {
-      amount1 = 2500;
+      amount1 = "90$";
     }
+
+    // const message = "Hey Jagdish You have an Urgent Appointment ";
+    // const message = `Hello Jagdish, your appointment is scheduled. Please find the details below:`;
+    // console.log(message);
+    const message = `Hey Jagdish You have an Urgent Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}$\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
+
+    console.log(message);
+    const res = await client.messages.create({
+      from: "whatsapp:+917022239292", // Twilio WhatsApp Number
+      to: "whatsapp:+917259691375", // Recipient's WhatsApp number
+      // to: "whatsapp:+919111421025", // Recipient's WhatsApp number
+      // category: "TRANSACTIONAL",
+      contentSid: "HXa4b0723a3035b7507865e7694e1a028c", // Your Twilio Template SID
+      contentVariables: JSON.stringify({
+        1: countrytime || "0", // Static Name (Ensure it's always a string)
+        2: name || "0",
+        3: email || "0",
+        4: phone || "0",
+        5: String(amount1 || "0"), // Ensure it's a string
+        6: selectedDate || "0", // Ensure it's a string
+        7: filePath || "check in dashboard", // Ensure it's a string
+      }),
+    });
 
     const whatsappNumber = `whatsapp:+${phone}`;
     // // uncommet
@@ -230,7 +235,7 @@ Vedic Astrologer – Prashna Siddhi
     const availability = await Availability.findOne({ date: formattedDate });
     if (availability) {
       const slotIndex = availability.slots.findIndex(
-        (slot) => slot.time === selectedTime
+        (slot) => slot.time === countrytime
       );
 
       if (slotIndex !== -1) {
@@ -238,7 +243,7 @@ Vedic Astrologer – Prashna Siddhi
         availability.slots[slotIndex].status = "booked";
 
         // Parse selectedTime start and end
-        const [startPart, endPart] = selectedTime.split(" - ");
+        const [startPart, endPart] = countrytime.split(" - ");
         const parseTimeToMinutes = (timeStr) => {
           const [hourMin, period] = timeStr.trim().split(" ");
           let [hour, minute] = hourMin.split(":").map(Number);
@@ -252,7 +257,7 @@ Vedic Astrologer – Prashna Siddhi
 
         // Identify overlapping slots
         const remainingSlots = availability.slots.filter((slot) => {
-          if (slot.time === selectedTime) return true; // Keep selected slot
+          if (slot.time === countrytime) return true; // Keep selected slot
 
           const [slotStartStr, slotEndStr] = slot.time.split(" - ");
           const slotStart = parseTimeToMinutes(slotStartStr);
@@ -277,7 +282,7 @@ Vedic Astrologer – Prashna Siddhi
   } catch (error) {
     console.error("Error processing Urgent query:", error);
     return NextResponse.json(
-      { error: "Internal Server Error" },
+      { error: "Internal Server Error", error },
       { status: 500 }
     );
   }

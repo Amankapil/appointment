@@ -273,32 +273,6 @@ export default function OldConsult() {
 
   const [paymentstatus, setPaymentStatus] = useState(false);
   const nextStep = () => {
-    if (!formData.fullName) {
-      toast.error("please enter your Full Name");
-      return;
-    }
-    if (!formData.phone) {
-      toast.error("please enter your Number");
-      return;
-    }
-
-    if (!formData.email) {
-      toast.error("please enter your working Email");
-      return;
-    }
-    if (!formData.date && !formData.timeOfBirth) {
-      toast.error("please enter your exact date and exact time with AM/PM");
-      return;
-    }
-    if (!formData.gender) {
-      toast.error("please specify your gender");
-      return;
-    }
-    if (!formData.date && !formData.timeOfBirth) {
-      toast.error("please add proper date and time");
-      return;
-    }
-
     // makeApiRequest(horoscopeDataa);
 
     // console.log(horoscopeDataa);

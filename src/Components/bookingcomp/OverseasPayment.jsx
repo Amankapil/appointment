@@ -13,12 +13,15 @@ export default function OverseasPayment({
   latitude,
   longitude,
   actualTime,
+  indiantimetoesend,
 }) {
   const [transactionId, setTransactionId] = useState("");
   const [amount, setAmount] = useState("");
   const [paymentMode, setPaymentMode] = useState("UPI");
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+
+  console.log(paydata);
 
   useEffect(() => {
     if (duration === 30) {
@@ -30,10 +33,10 @@ export default function OverseasPayment({
     } else {
       setAmount(35);
     }
-    console.log(duration);
+    // console.log(duration);
   }, [duration]);
-  console.log(duration);
-  console.log(selectedTime);
+  // console.log(duration);
+  // console.log(selectedTime);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -52,6 +55,7 @@ export default function OverseasPayment({
           latitude: latitude,
           longitude: longitude,
           svgUrl: svgdata,
+          duration:duration,
           country: paydata.country,
           state: paydata.state,
           city: paydata.city,
@@ -60,6 +64,7 @@ export default function OverseasPayment({
           amount: amount,
           transactionId: transactionId,
           paymentMode: paymentMode,
+          countrytime: indiantimetoesend,
         }),
       });
       // setMessage(response.data.message);
@@ -68,11 +73,11 @@ export default function OverseasPayment({
       const dataa = await response.json();
       console.log(dataa);
       if (dataa.success == true) {
-        toast.success(dataa.message);
         router.push("/urgent");
+        toast.success(dataa.message);
       }
     } catch (error) {
-      setMessage("Failed to submit payment");
+      setMessage("Failed to Submit");
       console.log(error);
     }
 
