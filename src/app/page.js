@@ -32,8 +32,8 @@ export default function BookingModal() {
         <FourCardsSection />
         <Platform />
         <AboutMe />
-        <Purpose />
         <ReviewSection />
+        <Purpose />
       </div>
     </>
   );

@@ -48,7 +48,7 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className={`fixed lg:relative top-0 right-0  h-full lg:h-auto w-[70%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
+            className={`fixed lg:relative top-0 right-0  h-full lg:h-auto  w-[100%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-x-0 pt-10 " : "translate-x-full "
             } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start gap-7`}
           >
@@ -86,32 +86,32 @@ export default function Navbar() {
               <Link href="/remedies" className="hover:text-gray-600 relative">
                 Remedies
               </Link>
-              {/* <Link href="/blog" className="hover:text-gray-600 relative">
-                Blog
-              </Link> */}
+
               <div
-                className="relative flex items-center justify-center"
+                className="relative flex items-center justify-center max-sm:flex-col"
                 onMouseEnter={() => setIsBloHovered(true)}
                 onMouseLeave={() => setIsBloHovered(false)}
               >
-                <Link href="/blog" className="hover:text-gray-600 relative ">
-                  Knowledge Center
-                </Link>
-                <svg
-                  className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
+                <div className="relative flex items-center justify-center ">
+                  <Link href="/blog" className="hover:text-gray-600 relative ">
+                    Knowledge Center
+                  </Link>
+                  <svg
+                    className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
                 {isBlogHovered && (
-                  <div className="absolute top-4 pt-4  -left-16 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[260px] rounded-lg">
+                  <div className="absolute max-sm:relative top-4 pt-4  max-sm:left-0 max-sm:mb-4  -left-16 max-sm:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[260px] rounded-lg">
                     <Link
                       href="/blog"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
@@ -172,28 +172,30 @@ export default function Navbar() {
                 )}
               </div>
               <div
-                className="relative flex items-center justify-center"
+                className="relative flex items-center justify-center max-sm:flex-col"
                 onMouseEnter={() => setIsAboutHovered(true)}
                 onMouseLeave={() => setIsAboutHovered(false)}
               >
-                <Link href="/about" className="hover:text-gray-600 relative ">
-                  About Us
-                </Link>
-                <svg
-                  className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 9l-7 7-7-7"
-                  ></path>
-                </svg>
+                <div className="relative flex items-center justify-center ">
+                  <Link href="/about" className="hover:text-gray-600 relative ">
+                    About Us
+                  </Link>
+                  <svg
+                    className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
                 {isAboutHovered && (
-                  <div className="absolute top-4 pt-4  -left-20 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[360px] rounded-lg">
+                  <div className="absolute max-sm:mb-5 max-sm:relative top-4 pt-4 max-sm:left-0  -left-20 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[360px] rounded-lg">
                     <Link
                       href="/unique"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"

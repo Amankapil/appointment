@@ -213,7 +213,7 @@ const Footer = () => {
         </div>
         {/* <p className="text-sm">All Rights Reserved 2025</p> */}
       </div>
-      <div className="mt-10 pb-2 text-center border-t border-gray-300 pt-6 flex justify-center items-center">
+      <div className="mt-10 pb-2 text-center border-t border-gray-300 pt-6 flex justify-center items-center max-sm:flex-col">
         Copyright © PrashnaSiddhi, 2025. All Rights Reserved. Designed and
         developed by{" "}
         <Link
