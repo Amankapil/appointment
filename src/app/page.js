@@ -9,6 +9,7 @@ import Platform from "@/Components/pagesComponent/Homecomponent/Platform";
 import AboutMe from "@/Components/pagesComponent/Homecomponent/AboutMe";
 import Purpose from "@/Components/pagesComponent/Homecomponent/Purpose";
 import Head from "next/head";
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 
 export default function BookingModal() {
   return (
@@ -25,11 +26,14 @@ export default function BookingModal() {
       </Head>
       <div className="k">
         <Hero />
+
         <Why />
+
         <FourCardsSection />
         <Platform />
         <AboutMe />
         <Purpose />
+        <ReviewSection />
       </div>
     </>
   );

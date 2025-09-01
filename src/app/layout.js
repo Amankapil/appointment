@@ -22,6 +22,7 @@ export default function RootLayout({ children }) {
           content="PkolaIiMpfXA4n1MyV5YsHbcxnBvaODn5g53C8otKTE"
         />
       </Head>
+      <Script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" />
 
       {/* ✅ Google Tag Manager - Script */}
       <Script

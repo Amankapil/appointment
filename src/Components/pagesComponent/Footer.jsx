@@ -62,6 +62,11 @@ const Footer = () => {
                     Blog
                   </Link>
                 </li>
+                <li>
+                  <Link href="/media" className="hover:underline">
+                    Media
+                  </Link>
+                </li>
 
                 <li>
                   <Link href="/about" className="hover:underline">

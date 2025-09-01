@@ -8,6 +8,7 @@ import Image from "next/image";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
+  const [isBlogHovered, setIsBloHovered] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -85,9 +86,91 @@ export default function Navbar() {
               <Link href="/remedies" className="hover:text-gray-600 relative">
                 Remedies
               </Link>
-              <Link href="/blog" className="hover:text-gray-600 relative">
+              {/* <Link href="/blog" className="hover:text-gray-600 relative">
                 Blog
-              </Link>
+              </Link> */}
+              <div
+                className="relative flex items-center justify-center"
+                onMouseEnter={() => setIsBloHovered(true)}
+                onMouseLeave={() => setIsBloHovered(false)}
+              >
+                <Link href="/blog" className="hover:text-gray-600 relative ">
+                  Knowledge Center
+                </Link>
+                <svg
+                  className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+                {isBlogHovered && (
+                  <div className="absolute top-4 pt-4  -left-16 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[260px] rounded-lg">
+                    <Link
+                      href="/blog"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                      Blog
+                    </Link>
+                    <div className="flex items-center justify-center">
+                      <svg
+                        width="211"
+                        height="12"
+                        viewBox="0 0 311 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M156.001 12C156.032 8.71688 158.699 6.06002 162 6.01929C158.686 5.97839 156.011 3.30087 156.001 0H156C155.99 3.30117 153.315 5.97888 150 6.01929C153.302 6.05955 155.969 8.71659 156 12H156.001Z"
+                          fill="#D8D1C7"
+                        />
+                        <circle cx="146" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="309" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="2" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="166" cy="6" r="2" fill="#D8D1C7" />
+                        <path d="M145 6.00001L3 6" stroke="#D8D1C7" />
+                        <path d="M308 6.00001L167 6" stroke="#D8D1C7" />
+                      </svg>
+                    </div>
+                    <Link
+                      href="/media"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                      Media
+                    </Link>
+                  </div>
+                )}
+              </div>
               <div
                 className="relative flex items-center justify-center"
                 onMouseEnter={() => setIsAboutHovered(true)}

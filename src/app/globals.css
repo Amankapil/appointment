@@ -19,6 +19,15 @@
 .flag-dropdown {
   height: 40px !important;
 }
+
+.google-reviews a {
+  visibility: hidden;
+  display: none !important;
+}
+.fyDWqT a {
+  visibility: hidden;
+  display: none !important;
+}
 input[type="date"],
 select {
   appearance: none;

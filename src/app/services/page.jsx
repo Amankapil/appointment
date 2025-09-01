@@ -1,3 +1,4 @@
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 import Consultation from "@/Components/pagesComponent/serviceComponent/Consultation";
 import PricingSection from "@/Components/pagesComponent/serviceComponent/PricingSection";
 import Qa from "@/Components/pagesComponent/serviceComponent/Qa";
@@ -18,6 +19,7 @@ const page = () => {
         />
       </Head>
       <Consultation />
+      <ReviewSection />
       <PricingSection />
       <Qa />
     </>
