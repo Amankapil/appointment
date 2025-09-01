@@ -71,19 +71,32 @@ export default function Navbar() {
               </svg>
             </button>
             <div className="flex navbar  font-inter flex-col lg:flex-row space-y-4 lg:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
-              <Link href="/services" className="hover:text-gray-600 relative">
+              <Link
+                onClick={toggleMenu}
+                href="/services"
+                className="hover:text-gray-600 relative"
+              >
                 Services
               </Link>
-              <Link href="/work" className="hover:text-gray-600 relative">
+              <Link
+                onClick={toggleMenu}
+                href="/work"
+                className="hover:text-gray-600 relative"
+              >
                 How it Works
               </Link>
               <Link
+                onClick={toggleMenu}
                 href="/common-myths"
                 className="hover:text-gray-600 relative"
               >
                 Common Myths
               </Link>
-              <Link href="/remedies" className="hover:text-gray-600 relative">
+              <Link
+                onClick={toggleMenu}
+                href="/remedies"
+                className="hover:text-gray-600 relative"
+              >
                 Remedies
               </Link>
 
@@ -113,6 +126,7 @@ export default function Navbar() {
                 {isBlogHovered && (
                   <div className="absolute max-sm:relative top-4 pt-4  max-sm:left-0 max-sm:mb-4  -left-16 max-sm:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[260px] rounded-lg">
                     <Link
+                      onClick={toggleMenu}
                       href="/blog"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -151,6 +165,7 @@ export default function Navbar() {
                       </svg>
                     </div>
                     <Link
+                      onClick={toggleMenu}
                       href="/media"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -197,6 +212,7 @@ export default function Navbar() {
                 {isAboutHovered && (
                   <div className="absolute max-sm:mb-5 max-sm:relative top-4 pt-4 max-sm:left-0  -left-20 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[360px] rounded-lg">
                     <Link
+                      onClick={toggleMenu}
                       href="/unique"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -235,6 +251,7 @@ export default function Navbar() {
                       </svg>
                     </div>
                     <Link
+                      onClick={toggleMenu}
                       href="/biololgical"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -273,6 +290,7 @@ export default function Navbar() {
                       </svg>
                     </div>
                     <Link
+                      onClick={toggleMenu}
                       href="/What-can-be-done"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -312,6 +330,7 @@ export default function Navbar() {
                     </div>
 
                     <Link
+                      onClick={toggleMenu}
                       href="/Enthusiasts"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -351,6 +370,7 @@ export default function Navbar() {
                     </div>
 
                     <Link
+                      onClick={toggleMenu}
                       href="/books"
                       className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
                     >
@@ -372,6 +392,7 @@ export default function Navbar() {
                 )}
               </div>
               <Link
+                onClick={toggleMenu}
                 href="/booking"
                 className="bg-[#101010] text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
               >
