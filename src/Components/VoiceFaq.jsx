@@ -242,7 +242,7 @@ export default function FAQSection() {
             <video
               key={faqs[activeIndex].video} // 👈 key forces reload
               controls
-              className="w-full aspect-video object-contain rounded-lg"
+              className="w-full aspect-video h-[500px] object-contain rounded-lg"
             >
               <source src={faqs[activeIndex].video} type="video/mp4" />
             </video>

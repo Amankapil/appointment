@@ -34,6 +34,7 @@ export default function BookingModal() {
         <AboutMe />
         <ReviewSection />
         <Purpose />
+        <FAQSection />
       </div>
     </>
   );
