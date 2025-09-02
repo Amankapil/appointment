@@ -33,7 +33,7 @@ export default function AdminDashboard() {
           </button>
         </div>
 
-        {activeTab === "availability" && <AdminAvailability />}
+        {/* {activeTab === "availability" && <AdminAvailability />} */}
         {/* {activeTab === "appointments" && <Ad />} */}
       </div>
     </div>

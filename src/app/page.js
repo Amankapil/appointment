@@ -10,6 +10,7 @@ import AboutMe from "@/Components/pagesComponent/Homecomponent/AboutMe";
 import Purpose from "@/Components/pagesComponent/Homecomponent/Purpose";
 import Head from "next/head";
 import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
+import FAQSection from "@/Components/VoiceFaq";
 
 export default function BookingModal() {
   return (
@@ -26,9 +27,8 @@ export default function BookingModal() {
       </Head>
       <div className="k">
         <Hero />
-
+        {/* <FAQSection /> */}
         <Why />
-
         <FourCardsSection />
         <Platform />
         <AboutMe />

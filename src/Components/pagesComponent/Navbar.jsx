@@ -49,7 +49,7 @@ export default function Navbar() {
           </div>
           <div
             className={`fixed lg:relative top-0 right-0  h-full lg:h-auto  w-[100%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
-              isOpen ? "translate-x-0 pt-10 " : "translate-x-full "
+              isOpen ? "translate-x-0 pt-10 lg:pt-0" : "translate-x-full "
             } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start gap-7`}
           >
             <button
