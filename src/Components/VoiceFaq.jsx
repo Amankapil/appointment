@@ -209,9 +209,7 @@ export default function FAQSection() {
         </svg>
       </div>
 
-      {/* Desktop layout */}
       <div className="hidden md:grid grid-cols-2 gap-6 p-8 rounded-2xl">
-        {/* Left: Only Questions */}
         <div>
           {faqs.map((faq, i) => (
             <div
