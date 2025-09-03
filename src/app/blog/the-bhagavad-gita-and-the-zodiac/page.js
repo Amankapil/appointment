@@ -1,7 +1,21 @@
+"use client";
 import Head from "next/head";
 import Image from "next/image";
+import YouTube from "react-youtube";
 
 const GitaZodiacBlog = () => {
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1, // Auto play the video
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.pauseVideo(); // Pause the video when ready
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Head>
@@ -467,6 +481,9 @@ const GitaZodiacBlog = () => {
             visible in cosmic form.
           </p>
         </section>
+        <div className="bg-white flex items-center justify-center max-md:w-full">
+          <YouTube videoId="ONKqjEWvDIQ" opts={opts} onReady={onReady} />
+        </div>
 
         {/* Conclusion */}
         <section className="mb-8 bg-gray-50 p-6 rounded-xl">
