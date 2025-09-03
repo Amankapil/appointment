@@ -1,4 +1,5 @@
 "use client";
+import Script from "next/script";
 import { useState, useEffect, useRef, useMemo } from "react";
 
 const faqs = [
