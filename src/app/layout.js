@@ -61,22 +61,17 @@ export default function RootLayout({ children }) {
         </div>
         <NavbarSwitcher />
 
-        <Popup
-          heading="Still thinking?"
-          subtext="Why wait when guidance is just one step away? In just 7 minutes, you’ll find clarity and peace of mind."
-          ctaLabel="✨ Request your consultation today"
-          ctaLink="/boking"
-        />
+      
         {children}
         {/* ✅ WhatsApp Button */}
-        <div className="fixed bottom-20 right-4 z-50 rounded-full p-2 transition-transform duration-200 md:p-5">
+        {/* <div className="fixed bottom-20 right-4 z-50 rounded-full p-2 transition-transform duration-200 md:p-5">
           <iframe
             onLoad="iFrameResize(this)"
             src="https://a99f75cab04643caa32ea3e94b386be4.elf.site"
             // style="border:none;width:100%;"
             className="h-[550px] pt-0 w-full "
           ></iframe>
-        </div>
+        </div> */}
 
         <a
           href="https://wa.me/7259691375?text=Need%20any%20clarification,%20pls%20message."

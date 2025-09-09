@@ -1,3 +1,4 @@
+import BookPopup from "@/Components/bookPopup";
 import Choose from "@/Components/pagesComponent/unique/Choose";
 import HeroUn from "@/Components/pagesComponent/unique/HeroUn";
 import Honest from "@/Components/pagesComponent/unique/Honest";
@@ -19,6 +20,7 @@ const page = () => {
           content="Experience Prashna Siddhi's unique Vedic Prashna Jyotishya method, offering precise astrological insights without the need for birth details. Discover a divine approach to astrology."
         />
       </Head>
+      <BookPopup />
       <HeroUn />
       <Honest />
       <Shielded />

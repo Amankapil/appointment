@@ -34,7 +34,7 @@ export default function MindLabCard() {
           <Image loading="lazy" className="pb-10" src={img2} alt="j" />
         </div>
       </div>
-      <div className="flex mt-10 items-center gap-5 justify-center flex-wrap maxw-6xl mx-auto">
+      <div id="books" className="flex mt-10 items-center gap-5 justify-center flex-wrap maxw-6xl mx-auto">
         <div className="flex  w-[630px] gap-1  mt-3 imte rounded-[2rem] border border-[#BFA97A] bg-[#f5f1ea] p-2  shadow-md">
           <div className="w-1/3 p-2">
             <Image loading="lazy" src={img} alt="kljhlj" />

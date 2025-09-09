@@ -1,3 +1,4 @@
+import BookPopup from "@/Components/bookPopup";
 import Ascendant from "@/Components/pagesComponent/Enthusiasts/Ascendant";
 import Conclusion from "@/Components/pagesComponent/Enthusiasts/Conclusion";
 import HeroEn from "@/Components/pagesComponent/Enthusiasts/HeroEn";
@@ -20,6 +21,7 @@ const page = () => {
           content="Join Prashna Siddhi's community of astrology enthusiasts. Explore resources, discussions, and insights to enhance your understanding of Vedic astrology and Prashna Shastra."
         />
       </Head>
+      <BookPopup />
       <HeroEn />
       <Rashi />
       <Ascendant />

@@ -98,15 +98,15 @@ select {
     padding-left: 50px;
     text-align: left;
   }
-  .imte {
+  /* .imte {
     width: 1000px;
-  }
+  } */
   .imte img {
     width: 100%;
   }
-  .imte h1 {
+  /* .imte h1 {
     font-size: 55px;
-  }
+  } */
 
   .bor {
     display: none;

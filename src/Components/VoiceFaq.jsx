@@ -91,6 +91,11 @@ The real way forward is:
 Meditation costs nothing. Commercial remedies often cost much, but rarely change destiny.`,
     audio: "/Faq/N4.mp3",
   },
+  {
+    question: "Can I hear a detailed live consultation?",
+    answer: ` https://youtu.be/OOLBnTG6Jo0`,
+    // audio: "/Faq/N4.mp3",
+  },
 ];
 
 export default function FAQSection() {
@@ -257,8 +262,34 @@ export default function FAQSection() {
               {faqs[activeIndex].question}
             </h2>
             <p className="text-base text-[#000] whitespace-pre-line mb-4">
-              {faqs[activeIndex].answer}
+              {(() => {
+                const answer = faqs[activeIndex].answer;
+                const youtubeRegex =
+                  /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/;
+
+                const match = answer.match(youtubeRegex);
+
+                if (match) {
+                  const videoId = match[1];
+                  return (
+                    <iframe
+                      className="w-full h-64 rounded-lg"
+                      src={`https://www.youtube.com/embed/${videoId}`}
+                      title="YouTube video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  );
+                }
+
+                return answer; // if not a YouTube link, show as text
+              })()}
             </p>
+
+            {/* <p className="text-base text-[#000] whitespace-pre-line mb-4">
+              {faqs[activeIndex].answer}
+            </p> */}
             {faqs[activeIndex].audio && (
               <audio
                 ref={audioRef}

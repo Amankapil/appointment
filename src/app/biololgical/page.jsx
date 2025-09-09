@@ -1,4 +1,5 @@
 // import Blueprint from "@/Components/pagesComponent/Biololgical/blueprint";
+import BookPopup from "@/Components/bookPopup";
 import Cosmic from "@/Components/pagesComponent/Biololgical/Cosmic";
 import Faq from "@/Components/pagesComponent/Biololgical/Faq";
 import HeroBio from "@/Components/pagesComponent/Biololgical/HeroBio";
@@ -21,6 +22,7 @@ const page = () => {
           content="Delve into how the Ascendant (Lagna) at birth influences health and growth. Explore the astrological factors affecting biological development with Prashna Siddhi."
         />
       </Head>
+      <BookPopup />
       <HeroBio />
       <Medical />
       <Cosmic />

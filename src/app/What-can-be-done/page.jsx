@@ -1,3 +1,4 @@
+import BookPopup from "@/Components/bookPopup";
 import Consultation from "@/Components/pagesComponent/done/Consultation";
 import Herodone from "@/Components/pagesComponent/done/Herodone";
 import Head from "next/head";
@@ -16,6 +17,7 @@ const page = () => {
           content="Experience Prashna Siddhi's swift Vedic Prashna Jyotishya consultations. Obtain accurate astrological guidance in just 5 minutes without extensive birth information."
         />
       </Head>
+      <BookPopup />
       <Herodone />
       <Consultation />
     </>

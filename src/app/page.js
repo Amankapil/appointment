@@ -11,6 +11,7 @@ import Purpose from "@/Components/pagesComponent/Homecomponent/Purpose";
 import Head from "next/head";
 import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 import FAQSection from "@/Components/VoiceFaq";
+import Popup from "@/Components/Popup";
 
 export default function BookingModal() {
   return (
@@ -26,6 +27,12 @@ export default function BookingModal() {
         />
       </Head>
       <div className="k">
+        <Popup
+          heading="Still thinking?"
+          subtext="Why wait when guidance is just one step away? In just 7 minutes, you’ll find clarity and peace of mind."
+          ctaLabel="✨ Request your consultation today"
+          ctaLink="/boking"
+        />
         <Hero />
         {/* <FAQSection /> */}
         <Why />
