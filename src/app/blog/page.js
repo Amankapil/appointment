@@ -5,6 +5,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 15,
+    title: "Why Life Feels Tough — and How to Face......",
+    date: "September 11, 2025",
+    image: "/images/Image-07.png",
+    link: "/blog/why-life-feels-tough",
+    desc: "Life is full of twists and turns. For some, the ride is smooth, while.....",
+  },
+  {
     id: 14,
     title: "The Bhagavad Gita and The Zodiac......",
     date: "August 11, 2025",
