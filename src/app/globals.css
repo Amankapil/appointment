@@ -16,6 +16,21 @@
   height: 40px !important;
 }
 
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out forwards;
+}
+
 .flag-dropdown {
   height: 40px !important;
 }

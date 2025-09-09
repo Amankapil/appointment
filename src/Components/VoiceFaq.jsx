@@ -54,6 +54,43 @@ Your questions answered with divine clarity.`,
       "Consultations with Prashna Siddhi are kept simple and flexible. If you have 2 or 3 pointed questions, even a 7-minute Siddhi Seva is enough. We don’t disconnect the call the moment time ends, unless another appointment is waiting. To make the most of it, just note your questions in advance. Seeking guidance here is meant to be easy — so your focus remains on clarity, not formalities.",
     audio: "/Faq/Q7.mp3",
   },
+  {
+    question: "Is Prashna Siddhi a spiritual service?",
+    answer:
+      "Yes. Prashna Siddhi is rooted in spiritual principles — honesty, responsibility, and respect for Divine Will. We charge only what is needed to sustain the service, not to commercialize it.",
+    audio: "/Faq/N1.mp3",
+  },
+  {
+    question:
+      "Can just 7 minutes of Siddhi Seva really help with burning questions?",
+    answer: `Yes — if the question is clear.
+Astrology is not about long stories. What matters is:
+~ A focused question with definite purpose.
+~ The Astrologer’s complete concentration.
+~ Birth details already collected in the form (saves time).
+In 7 minutes, seekers often receive more clarity than in an hour of scattered
+discussion.`,
+    audio: "/Faq/N2.mp3",
+  },
+  {
+    question: "Can I hear a sample of a live consultation?",
+    answer:
+      "Yes. Watch this 1-minute demo video. The caller’s voice is muted, and the question is displayed on screen. Privacy is fully protecte",
+    audio: "/Faq/N3.mp3",
+    video: "/Faq/1MinDEMO.mp4",
+  },
+  {
+    question: "Do you suggest remedies?",
+    answer: ` No. Because this is not a marketplace of quick fixes. 
+    The Universe runs under the Doctrine of Karma. Each of us carry karmic baggage from past
+lives. If remedies could truly erase Karma, why does suffering still exist despite remedies
+being practiced for thousands of years?
+The real way forward is:
+  ~ Meditation – to calm the mind and strengthen inner balance.
+  ~ Divine Grace – to soften the effects of past actions.
+Meditation costs nothing. Commercial remedies often cost much, but rarely change destiny.`,
+    audio: "/Faq/N4.mp3",
+  },
 ];
 
 export default function FAQSection() {
@@ -80,42 +117,92 @@ export default function FAQSection() {
   );
 
   // Auto play when section comes into view
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           // play active video/audio
+  //           if (videoRef.current) videoRef.current.play().catch(() => {});
+  //           if (audioRef.current) audioRef.current.play().catch(() => {});
+  //         } else {
+  //           // pause when out of view
+  //           if (videoRef.current) videoRef.current.pause();
+  //           if (audioRef.current) audioRef.current.pause();
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 } // adjust when you consider it "in view"
+  //   );
+
+  //   if (sectionRef.current) observer.observe(sectionRef.current);
+
+  //   return () => {
+  //     if (sectionRef.current) observer.unobserve(sectionRef.current);
+  //   };
+  // }, []);
+
+  // // Auto play when activeIndex changes
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.currentTime = 0;
+  //     videoRef.current.play().catch(() => {});
+  //   }
+  //   if (audioRef.current) {
+  //     audioRef.current.currentTime = 0;
+  //     audioRef.current.play().catch(() => {});
+  //   }
+  // }, [activeIndex]);
+
+  // Auto play when activeIndex changes
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch(() => {});
+
+      // When audio ends, start video
+      audioRef.current.onended = () => {
+        if (videoRef.current) {
+          videoRef.current.currentTime = 0;
+          videoRef.current.play().catch(() => {});
+        }
+      };
+    } else if (videoRef.current) {
+      // If there's no audio, just play the video directly
+      videoRef.current.currentTime = 0;
+      videoRef.current.play().catch(() => {});
+    }
+
+    return () => {
+      if (audioRef.current) audioRef.current.onended = null; // cleanup
+    };
+  }, [activeIndex]);
+
+  // Auto play / pause when section is in view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            // play active video/audio
-            if (videoRef.current) videoRef.current.play().catch(() => {});
-            if (audioRef.current) audioRef.current.play().catch(() => {});
+            if (audioRef.current) {
+              audioRef.current.play().catch(() => {});
+            } else if (videoRef.current) {
+              videoRef.current.play().catch(() => {});
+            }
           } else {
-            // pause when out of view
-            if (videoRef.current) videoRef.current.pause();
             if (audioRef.current) audioRef.current.pause();
+            if (videoRef.current) videoRef.current.pause();
           }
         });
       },
-      { threshold: 0.5 } // adjust when you consider it "in view"
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
-
     return () => {
       if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
-
-  // Auto play when activeIndex changes
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
-    }
-    if (audioRef.current) {
-      audioRef.current.currentTime = 0;
-      audioRef.current.play().catch(() => {});
-    }
-  }, [activeIndex]);
 
   return (
     <>
@@ -165,13 +252,24 @@ export default function FAQSection() {
             ))}
           </div>
 
-          <div className="bg-[#fff] text-[#000] p-6 rounded-2xl flex flex-col">
+          <div className="bg-[#fff] text-[#000] p-6 rounded-2xl flex flex-col  sticky top-20 h-[500px]">
             <h2 className="text-xl font-semibold font-salernomi mb-4">
               {faqs[activeIndex].question}
             </h2>
             <p className="text-base text-[#000] whitespace-pre-line mb-4">
               {faqs[activeIndex].answer}
             </p>
+            {faqs[activeIndex].audio && (
+              <audio
+                ref={audioRef}
+                key={faqs[activeIndex].audio}
+                controls
+                className="w-full rounded-lg mb-10"
+              >
+                <source src={faqs[activeIndex].audio} type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            )}
 
             {faqs[activeIndex].video && (
               <video
@@ -182,18 +280,6 @@ export default function FAQSection() {
               >
                 <source src={faqs[activeIndex].video} type="video/mp4" />
               </video>
-            )}
-
-            {faqs[activeIndex].audio && (
-              <audio
-                ref={audioRef}
-                key={faqs[activeIndex].audio}
-                controls
-                className="w-full rounded-lg"
-              >
-                <source src={faqs[activeIndex].audio} type="audio/mpeg" />
-                Your browser does not support the audio element.
-              </audio>
             )}
           </div>
         </div>
