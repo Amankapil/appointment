@@ -1,5 +1,5 @@
 // import Blueprint from "@/Components/pagesComponent/Biololgical/blueprint";
-import BookPopup from "@/Components/bookPopup";
+import BookPopup from "@/Components/BookPopup";
 import Cosmic from "@/Components/pagesComponent/Biololgical/Cosmic";
 import Faq from "@/Components/pagesComponent/Biololgical/Faq";
 import HeroBio from "@/Components/pagesComponent/Biololgical/HeroBio";

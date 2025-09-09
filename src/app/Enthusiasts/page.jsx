@@ -1,4 +1,4 @@
-import BookPopup from "@/Components/bookPopup";
+import BookPopup from "@/Components/BookPopup";
 import Ascendant from "@/Components/pagesComponent/Enthusiasts/Ascendant";
 import Conclusion from "@/Components/pagesComponent/Enthusiasts/Conclusion";
 import HeroEn from "@/Components/pagesComponent/Enthusiasts/HeroEn";

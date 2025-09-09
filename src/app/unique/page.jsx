@@ -1,4 +1,4 @@
-import BookPopup from "@/Components/bookPopup";
+import BookPopup from "@/Components/BookPopup";
 import Choose from "@/Components/pagesComponent/unique/Choose";
 import HeroUn from "@/Components/pagesComponent/unique/HeroUn";
 import Honest from "@/Components/pagesComponent/unique/Honest";

@@ -1,4 +1,4 @@
-import BookPopup from "@/Components/bookPopup";
+import BookPopup from "@/Components/BookPopup";
 import Consultation from "@/Components/pagesComponent/done/Consultation";
 import Herodone from "@/Components/pagesComponent/done/Herodone";
 import Head from "next/head";
