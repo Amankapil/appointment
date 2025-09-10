@@ -1,5 +1,6 @@
 "use client";
 
+import BlogPopup from "@/Components/BlogPopup";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,7 +9,7 @@ const blogs = [
     id: 15,
     title: "Why Life Feels Tough — and How to Face......",
     date: "September 11, 2025",
-    image: "/images/Image-07.png",
+    image: "/images/blog15.png",
     link: "/blog/why-life-feels-tough",
     desc: "Life is full of twists and turns. For some, the ride is smooth, while.....",
   },
@@ -147,6 +148,8 @@ export default function BlogSection() {
       <h2 className="text-[48px] font-salernomi font-semibold mb-8">
         Explore our blogs to learn more
       </h2>
+
+      <BlogPopup />
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10">
           {blogs.map((blog) => (
