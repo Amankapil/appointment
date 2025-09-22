@@ -38,7 +38,7 @@ const ServiceSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto  mt-20">
           <Link
             href="/Marriage&Relationships"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h-[190px] bggray-300 max-md:h-full">
               {" "}
@@ -67,7 +67,7 @@ const ServiceSection = () => {
           </Link>
           <Link
             href="/Child-birth"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap0 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[171px] h[161px] bggray-300 ">
               {" "}
@@ -97,7 +97,7 @@ const ServiceSection = () => {
           </Link>
           <div
             // href="/Health"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -128,7 +128,7 @@ const ServiceSection = () => {
 
           <div
             // href="/Finance-Wealth-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -159,7 +159,7 @@ const ServiceSection = () => {
 
           <div
             // href="/Career-Profession-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -190,7 +190,7 @@ const ServiceSection = () => {
 
           <div
             // href="/Education-&-Studies"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -221,7 +221,7 @@ const ServiceSection = () => {
 
           <div
             // href="/Property-&-Real-Estate"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -252,7 +252,7 @@ const ServiceSection = () => {
 
           <div
             // href="/Litigation-And-Legal-Matters-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -282,7 +282,7 @@ const ServiceSection = () => {
           </div>
           <div
             // href="/Business-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}

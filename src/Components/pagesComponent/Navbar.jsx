@@ -88,6 +88,7 @@ export default function Navbar() {
                 <div className="relative flex items-center justify-center ">
                   <Link
                     href="/services"
+                    onClick={toggleMenu}
                     className="hover:text-gray-600 relative "
                   >
                     Services
