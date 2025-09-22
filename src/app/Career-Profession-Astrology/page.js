@@ -1,4 +1,4 @@
-import CareerFAQ from "@/Components/pagesComponent/Career-Profession-Astrology/careerFAQ";
+import CareerFAQ from "@/Components/pagesComponent/Career-Profession-Astrology/CareerFAQ";
 import CareerHero from "@/Components/pagesComponent/Career-Profession-Astrology/CareerHero";
 import Challenges from "@/Components/pagesComponent/Career-Profession-Astrology/Challenges";
 import Clarity from "@/Components/pagesComponent/Career-Profession-Astrology/Clarity";
