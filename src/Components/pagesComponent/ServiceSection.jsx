@@ -45,7 +45,7 @@ const ServiceSection = () => {
               <Image
                 width={172}
                 height={161}
-                className="w-[176px] h-[191px] max-md:h-full object-center"
+                className="w-[176px] h-[191px] max-md:h-full object-center "
                 src="/images/Group 204.png"
                 alt="j"
               />
@@ -55,7 +55,7 @@ const ServiceSection = () => {
                 Marriage & Relationships
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (2) copy.svg"
@@ -85,7 +85,7 @@ const ServiceSection = () => {
                 Children & Family Astrology{" "}
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (3) copy.svg"
@@ -115,7 +115,7 @@ const ServiceSection = () => {
                 Health & Wellness Astrology{" "}
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 copy.svg"
@@ -146,7 +146,7 @@ const ServiceSection = () => {
                 Finance & Wealth Astrology
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161.svg"
@@ -177,7 +177,7 @@ const ServiceSection = () => {
                 Career & Profession Astrology
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (1).svg"
@@ -208,7 +208,7 @@ const ServiceSection = () => {
                 Education & Study Astrology
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (2).svg"
@@ -239,7 +239,7 @@ const ServiceSection = () => {
                 Property & Real Estate Astrology
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (3).svg"
@@ -270,7 +270,7 @@ const ServiceSection = () => {
                 Litigation & Legal Matters Astrology{" "}
               </p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (4).svg"
@@ -298,7 +298,7 @@ const ServiceSection = () => {
             <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">Business Astrology</p>
             </div>
-            <div className="absolute bottom-0 right-0 text-[20px] font-semibold text-white bg[#D4B999]  w-[150px] h-[150px] flex items-center justify-center rounded-full">
+            <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
               <Image
                 loading="lazy"
                 src="/svg/Group 161 (5).svg"
