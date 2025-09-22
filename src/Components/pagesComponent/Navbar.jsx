@@ -9,6 +9,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isBlogHovered, setIsBloHovered] = useState(false);
+  const [isServiceHovered, setIsServiceHovered] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -50,7 +51,7 @@ export default function Navbar() {
           <div
             className={`fixed lg:relative top-0 right-0  h-full lg:h-auto  w-[100%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
               isOpen ? "translate-x-0 pt-10 lg:pt-0" : "translate-x-full "
-            } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start gap-7`}
+            } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start justify-center gap-7`}
           >
             <button
               className="lg:hidden absolute top-4 right-4"
@@ -71,13 +72,311 @@ export default function Navbar() {
               </svg>
             </button>
             <div className="flex navbar  font-inter flex-col lg:flex-row space-y-4 lg:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
-              <Link
+              {/* <Link
                 onClick={toggleMenu}
                 href="/services"
                 className="hover:text-gray-600 relative"
               >
                 Services
-              </Link>
+              </Link> */}
+
+              <div
+                className="relative flex items-center justify-center max-sm:flex-col"
+                onMouseEnter={() => setIsServiceHovered(true)}
+                onMouseLeave={() => setIsServiceHovered(false)}
+              >
+                <div className="relative flex items-center justify-center ">
+                  <Link
+                    href="/services"
+                    className="hover:text-gray-600 relative "
+                  >
+                    Services
+                  </Link>
+                  <svg
+                    className="w-4 h-4 ml-1 transition-transform transform group-hover:rotate-180"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </div>
+                {isServiceHovered && (
+                  <div className="absolute  w-[1050px] max-lg:w-full  max-sm:relative top-4 pt-4  max-sm:left-0 max-sm:mb-4  -left-40 max-sm:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
+                    <div className="flex justify-start items-start gap-10 flex-col p-7 max-lg:flex-wrap max-sm:gap-0">
+                      <div className="flex flexcol gap-7  max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                        <div className="w-[322px]">
+                          <Link
+                            onClick={toggleMenu}
+                            href="/Marriage&Relationships"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2 text-[16px]"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Marriage & Relationships
+                          </Link>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <Link
+                            onClick={toggleMenu}
+                            href="/Child-birth"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Children & Family Astrology
+                          </Link>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Health"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Health & Wellness Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Finance-Wealth-Astrology"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Finance & Wealth Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Career-Profession-Astrology"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Career & Profession Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Education-&-Studies"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2 "
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Education & Study Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Property-&-Real-Estate"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Property & Real Estate Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Litigation-And-Legal-Matters-Astrology"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Litigation & Legal Matters Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+
+                        <div className="w-[322px]">
+                          <div
+                            onClick={toggleMenu}
+                            // href="/Business-Astrology"
+                            className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
+                          >
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                                fill="#666666"
+                              />
+                            </svg>
+                            Business Astrology
+                          </div>
+                          <div className="flex items-center justify-start">
+                            <Image
+                              width={275}
+                              height={50}
+                              src="/svgs/Navbarline.svg"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link
                 onClick={toggleMenu}
                 href="/work"

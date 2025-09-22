@@ -23,6 +23,13 @@ export default function RootLayout({ children }) {
           content="PkolaIiMpfXA4n1MyV5YsHbcxnBvaODn5g53C8otKTE"
         />
       </Head>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+      />
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.min.js" />
 
       {/* ✅ Google Tag Manager - Script */}
@@ -61,7 +68,6 @@ export default function RootLayout({ children }) {
         </div>
         <NavbarSwitcher />
 
-      
         {children}
         {/* ✅ WhatsApp Button */}
         {/* <div className="fixed bottom-20 right-4 z-50 rounded-full p-2 transition-transform duration-200 md:p-5">

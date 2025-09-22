@@ -10,6 +10,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+body {
+  font-family: "Inter";
+}
 .react-tel-input .form-control {
   width: 260px !important;
   padding: 17px;
@@ -67,6 +71,12 @@ select {
     0px 26px 15px 0px #00000021, 0px 46px 18px 0px #0000000a,
     0px 71px 20px 0px #00000000;
 }
+
+@media (min-width: 1024px) and (max-width: 1150px) {
+  .shadow-button {
+    display: none;
+  }
+}
 @media (min-width: 320px) and (max-width: 600px) {
   .react-tel-input .form-control {
     width: 100% !important;
@@ -91,9 +101,9 @@ select {
   } */
 }
 @media (min-width: 1800px) and (max-width: 2000px) {
-  .big-text {
+  /* .big-text {
     font-size: 320px;
-  }
+  } */
   .done-page {
     padding-left: 50px;
     text-align: left;
@@ -244,7 +254,7 @@ select {
     height: 800px;
   }
   .lis {
-    max-width: 1300px;
+    /* max-width: 1300px; */
   }
   .max-w-826 {
     width: 100%;

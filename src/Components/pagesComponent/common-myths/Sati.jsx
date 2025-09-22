@@ -53,7 +53,7 @@ const Sati = () => {
         </div>
       </div>
       <div className="breaking mt-10">
-        <h1 className="text-[40px]  text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
+        <h1 className="text-[40px] max-md:text-[32px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Breaking the Myth
         </h1>
 

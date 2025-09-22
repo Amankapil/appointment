@@ -48,12 +48,12 @@ export default function BlogPopup() {
         </button>
 
         {/* Heading */}
-        <h2 className="text-[44px] text-[#4D4D4D] font-salernomi font-normal mb-6 lhd:text-[100px] max max-fhd:bg-red-500 qhd:bg-purple-500">
+        <h2 className="text-[44px] text-[#4D4D4D] max-md:text-[20px] font-salernomi font-normal mb-6 lhd:text-[100px] max max-fhd:bg-red-500 qhd:bg-purple-500">
           HOW TO FACE LIFE WITHOUT FEAR
         </h2>
 
         {/* Subtext */}
-        <p className="text-gray-600 text-[24px] leading-relaxed mb-6">
+        <p className="text-gray-600 text-[24px] max-md:text-[20px] leading-relaxed mb-6">
           Life is a roller-coaster of twists and turns. Bhagavad Gita shows us
           why challenges come and how to face them with calmness, courage, and
           clarity.
@@ -68,7 +68,7 @@ export default function BlogPopup() {
           READ THE FULL ARTICLE
         </Link>
 
-        <p className="text-gray-600 text-[24px] leading-relaxed my-6">
+        <p className="text-gray-600 text-[24px] max-md:text-[20px] leading-relaxed my-6">
           If you are still anxious, discover how Siddhi Seva - a 7-minute
           consultation - can offer clarity without commercial overtones.
         </p>

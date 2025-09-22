@@ -2,6 +2,7 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Consultation from "@/Components/pagesComponent/serviceComponent/Consultation";
 import PricingSection from "@/Components/pagesComponent/serviceComponent/PricingSection";
 import Qa from "@/Components/pagesComponent/serviceComponent/Qa";
+import ServiceSection from "@/Components/pagesComponent/ServiceSection";
 import Popup from "@/Components/Popup";
 import FAQSection from "@/Components/VoiceFaq";
 import Head from "next/head";
@@ -28,6 +29,7 @@ const page = () => {
         ctaLink="/booking"
       />
       <Consultation />
+      <ServiceSection />
       <FAQSection />
       <ReviewSection />
       <PricingSection />

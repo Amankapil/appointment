@@ -12,7 +12,7 @@ const ReviewSection = () => {
     <>
       <div className="bg-[#fff] py-10 max-md:py-10">
         <div className="heading flex flex-col items-center justify-center">
-          <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
+          <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             What Our Clients Say?
           </h1>
           <svg

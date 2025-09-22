@@ -54,7 +54,7 @@ export default function Choose() {
           {/* Price Display */}
           <div className="text-center flex items-center justify-center mt-4 gap-3">
             <Image loading="lazy" src={img} alt="j" />
-            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3 max-md:text-[18px]">
               No birth details required—Prashna Kundali is divinely accurate.
             </p>
           </div>
@@ -79,7 +79,7 @@ export default function Choose() {
           {/* Price Display */}
           <div className="text-center flex items-center justify-center mt-4 gap-3">
             <Image loading="lazy" src={img2} alt="j" />
-            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3 max-md:text-[18px]">
               Guidance beyond fear-based astrology—we empower, not frighten.
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function Choose() {
           {/* Price Display */}
           <div className="text-center flex items-center justify-center mt-4 gap-3">
             <Image loading="lazy" src={img3} alt="j" />
-            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3 max-md:text-[18px]">
               Accurate timing of events through real-time planetary transits.{" "}
             </p>
           </div>
@@ -129,7 +129,7 @@ export default function Choose() {
           {/* Price Display */}
           <div className="text-center flex items-center justify-center mt-4 gap-3">
             <Image loading="lazy" src={img4} alt="j" />
-            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3 max-md:text-[18px]">
               Divine insights & spiritual wisdom—not commercialized remedies.{" "}
             </p>
           </div>
@@ -154,7 +154,7 @@ export default function Choose() {
           {/* Price Display */}
           <div className="text-center flex items-center justify-center mt-4 gap-3">
             <Image loading="lazy" src={img5} alt="j" />
-            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3">
+            <p className="text-2xl font-normal text-[#4D4D4D] font-inter text-left gap-3 max-md:text-[18px]">
               A sincere and honest approach—seek answers with faith & devotion.{" "}
             </p>
           </div>

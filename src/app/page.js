@@ -12,6 +12,7 @@ import Head from "next/head";
 import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 import FAQSection from "@/Components/VoiceFaq";
 import Popup from "@/Components/Popup";
+import ServiceSection from "@/Components/pagesComponent/ServiceSection";
 
 export default function BookingModal() {
   return (
@@ -36,6 +37,8 @@ export default function BookingModal() {
         <Hero />
         {/* <FAQSection /> */}
         <Why />
+
+        <ServiceSection />
         <FourCardsSection />
         <Platform />
         <AboutMe />
