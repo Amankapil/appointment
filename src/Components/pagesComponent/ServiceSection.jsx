@@ -37,7 +37,7 @@ const ServiceSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto  mt-20">
           <Link
-            href="/Marriage&Relationships"
+            href="/services/Marriage&Relationships"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h-[190px] bggray-300 max-md:h-full">
@@ -66,7 +66,7 @@ const ServiceSection = () => {
             </div>
           </Link>
           <Link
-            href="/Child-birth"
+            href="/services/Child-birth"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[171px] h[161px] bggray-300 ">
@@ -95,8 +95,8 @@ const ServiceSection = () => {
               />
             </div>
           </Link>
-          <div
-            // href="/Health"
+          <Link
+            href="/services/Health"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -124,10 +124,10 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
-          <div
-            // href="/Finance-Wealth-Astrology"
+          <Link
+            href="/services/Finance-Wealth-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -155,10 +155,10 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
-          <div
-            // href="/Career-Profession-Astrology"
+          <Link
+            href="/services/Career-Profession-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -186,10 +186,10 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
           <div
-            // href="/Education-&-Studies"
+            // href="/services/Education-&-Studies"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -220,7 +220,7 @@ const ServiceSection = () => {
           </div>
 
           <div
-            // href="/Property-&-Real-Estate"
+            // href="/services/Property-&-Real-Estate"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -251,7 +251,7 @@ const ServiceSection = () => {
           </div>
 
           <div
-            // href="/Litigation-And-Legal-Matters-Astrology"
+            // href="/services/Litigation-And-Legal-Matters-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -281,7 +281,7 @@ const ServiceSection = () => {
             </div>
           </div>
           <div
-            // href="/Business-Astrology"
+            // href="/services/Business-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">

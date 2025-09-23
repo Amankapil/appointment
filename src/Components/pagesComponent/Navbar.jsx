@@ -114,7 +114,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/Marriage&Relationships"
+                            href="/services/Marriage&Relationships"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2 text-[16px]"
                           >
                             <svg
@@ -143,7 +143,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/Child-birth"
+                            href="/services/Child-birth"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -170,9 +170,9 @@ export default function Navbar() {
                         </div>
 
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Health"
+                            href="/services/Health"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -188,7 +188,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Health & Wellness Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}
@@ -200,9 +200,9 @@ export default function Navbar() {
                       </div>
                       <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Finance-Wealth-Astrology"
+                            href="/services/Finance-Wealth-Astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -218,7 +218,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Finance & Wealth Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}
@@ -229,9 +229,9 @@ export default function Navbar() {
                         </div>
 
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Career-Profession-Astrology"
+                            href="/services/Career-Profession-Astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -247,7 +247,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Career & Profession Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}

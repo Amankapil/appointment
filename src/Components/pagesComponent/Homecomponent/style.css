@@ -124,7 +124,7 @@
   left: 0;
   width: 100%;
   /* Adjust as needed */
-  height: 100%;
+  height: 50%;
   /* Adjust as needed */
   background-image: url("./assets/Group\ 24.svg");
   background-position: center left;
@@ -133,6 +133,7 @@
 
   /* Ensure the pseudo-element is behind the content */
 }
+
 .karma::after {
   content: "";
 
@@ -140,7 +141,7 @@
   left: 0;
   width: 100%;
   /* Adjust as needed */
-  height: 100%;
+  height: 50%;
   /* Adjust as needed */
   background-image: url("./assets/Group\ 23.svg");
   background-position: center right;
