@@ -44,7 +44,7 @@ export default function Challenges() {
         {/* <h1 className="text-[40px] max-md:text-[40px] py-5 text-[#4D4D4D] text-center font-salernomi w-[100%] max-md:w-full font-normal mb-6">
           What We Commonly Help Resolve
         </h1> */}
-        <div className="flex flex-wrap gap-15 max-md:gap-4 items-center justify-start py-10">
+        <div className="flex flex-wrap gap-15 max-md:gap-4 items-start justify-start py-10 max-w-[1280px] mx-auto">
           <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
