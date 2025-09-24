@@ -202,7 +202,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/finance-wealth-astrology"
+                            href="/services/Finance-Wealth-Astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg

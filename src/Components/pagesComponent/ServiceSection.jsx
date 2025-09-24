@@ -127,7 +127,7 @@ const ServiceSection = () => {
           </Link>
 
           <Link
-            href="/services/finance-wealth-astrology"
+            href="/services/Finance-Wealth-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -158,7 +158,7 @@ const ServiceSection = () => {
           </Link>
 
           <Link
-            href="/services/career-profession-astrology"
+            href="/services/Career-Profession-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -281,7 +281,7 @@ const ServiceSection = () => {
             </div>
           </Link>
           <Link
-            href="/services/business-astrology"
+            href="/services/Business-Astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
