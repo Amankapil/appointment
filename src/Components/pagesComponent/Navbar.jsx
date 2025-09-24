@@ -231,7 +231,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/career-profession-astrology"
+                            href="/services/Career-Profession-Astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -348,7 +348,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/business-astrology"
+                            href="/services/Business-Astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
