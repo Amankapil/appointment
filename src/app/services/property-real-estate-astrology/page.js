@@ -1,21 +1,27 @@
-import Benefit from "@/Components/pagesComponent/Business-Astrology/Benefit";
-import BHero from "@/Components/pagesComponent/Business-Astrology/BHero";
-import Choose from "@/Components/pagesComponent/Business-Astrology/Choose";
-import React from "react";
-import Howitworks from "@/Components/pagesComponent/Business-Astrology/Howitworks";
-import BusinessFAQ from "@/Components/pagesComponent/Business-Astrology/BusinessFAQ";
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
+import Decisions from "@/Components/pagesComponent/Property-&-Real-Estate/Decisions";
+import Guidance from "@/Components/pagesComponent/Property-&-Real-Estate/Guidance";
+import ProFAQ from "@/Components/pagesComponent/Property-&-Real-Estate/ProFAQ";
+import PropertyHero from "@/Components/pagesComponent/Property-&-Real-Estate/PropertyHero";
+import Situations from "@/Components/pagesComponent/Property-&-Real-Estate/Situations";
+import Solve from "@/Components/pagesComponent/Property-&-Real-Estate/Solve";
+import Unique from "@/Components/pagesComponent/Property-&-Real-Estate/Unique";
 import Script from "next/script";
+import React from "react";
 
 const page = () => {
   return (
     <>
-      <BHero />
-      <Choose />
-      <Benefit />
-      <Howitworks />
-      <BusinessFAQ />
+      <PropertyHero />
+      <Situations />
+      <Decisions />
+      <Guidance />
+      <Unique />
+      <ReviewSection />
+      <Solve />
+      <ProFAQ />
 
-      <Script id="ld-json-business" type="application/ld+json">
+      <Script id="ld-json-property" type="application/ld+json">
         {JSON.stringify(
           {
             "@context": "https://schema.org",
@@ -40,9 +46,9 @@ const page = () => {
               {
                 "@type": "WebPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#webpage",
-                url: "https://prashnasiddhi.com/services/business-astrology",
-                name: "Business Astrology",
+                  "https://prashnasiddhi.com/services/property-real-estate-astrology#webpage",
+                url: "https://prashnasiddhi.com/services/property-real-estate-astrology",
+                name: "Property & Real Estate Astrology",
                 isPartOf: { "@id": "https://prashnasiddhi.com#website" },
                 about: { "@id": "https://prashnasiddhi.com#organization" },
                 primaryImageOfPage: {
@@ -51,13 +57,13 @@ const page = () => {
                 },
                 breadcrumb: {
                   "@id":
-                    "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                    "https://prashnasiddhi.com/services/property-real-estate-astrology#breadcrumb",
                 },
               },
               {
                 "@type": "BreadcrumbList",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                  "https://prashnasiddhi.com/services/property-real-estate-astrology#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -74,22 +80,22 @@ const page = () => {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Business Astrology",
-                    item: "https://prashnasiddhi.com/services/business-astrology",
+                    name: "Property & Real Estate Astrology",
+                    item: "https://prashnasiddhi.com/services/property-real-estate-astrology",
                   },
                 ],
               },
               {
                 "@type": "Service",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#service",
-                serviceType: "Business Astrology",
-                name: "Business Astrology",
-                url: "https://prashnasiddhi.com/services/business-astrology",
+                  "https://prashnasiddhi.com/services/property-real-estate-astrology#service",
+                serviceType: "Property & Real Estate Astrology",
+                name: "Property & Real Estate Astrology",
+                url: "https://prashnasiddhi.com/services/property-real-estate-astrology",
                 areaServed: "IN",
                 provider: { "@id": "https://prashnasiddhi.com#organization" },
                 description:
-                  "Guidance and clarity for business astrology using Vedic Astrology and Prashna Kundali.",
+                  "Guidance and clarity for property & real estate astrology using Vedic Astrology and Prashna Kundali.",
                 offers: {
                   "@type": "Offer",
                   url: "https://prashnasiddhi.com/request-consultation",
@@ -99,30 +105,30 @@ const page = () => {
               {
                 "@type": "FAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#faq",
+                  "https://prashnasiddhi.com/services/property-real-estate-astrology#faq",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Is this the right time to start a business?",
+                    name: "Is this a good time to buy property?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna clarifies launch timing and partnership suitability.",
+                      text: "Prashna can clarify timing and stability around purchase.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I expand or consolidate?",
+                    name: "Should I sell or hold?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It indicates periods supportive of growth versus caution.",
+                      text: "It helps weigh timing, liquidity, and stress factors.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can astrology pick the right partner?",
+                    name: "Does Vastu matter?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It helps assess compatibility, trust, and shared direction.",
+                      text: "Astrology and Vastu can be considered together for harmony.",
                     },
                   },
                 ],

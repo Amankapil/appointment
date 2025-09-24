@@ -1,21 +1,27 @@
-import Benefit from "@/Components/pagesComponent/Business-Astrology/Benefit";
-import BHero from "@/Components/pagesComponent/Business-Astrology/BHero";
-import Choose from "@/Components/pagesComponent/Business-Astrology/Choose";
-import React from "react";
-import Howitworks from "@/Components/pagesComponent/Business-Astrology/Howitworks";
-import BusinessFAQ from "@/Components/pagesComponent/Business-Astrology/BusinessFAQ";
+import Challenges from "@/Components/pagesComponent/Health/Challenges";
+import Guidance from "@/Components/pagesComponent/Health/Guidance";
+import Healing from "@/Components/pagesComponent/Health/Healing";
+import HealthFaq from "@/Components/pagesComponent/Health/HealthFaq";
+import HealthHero from "@/Components/pagesComponent/Health/HealthHero";
+import Journey from "@/Components/pagesComponent/Health/Journey";
+import Trust from "@/Components/pagesComponent/Health/Trust";
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 import Script from "next/script";
+import React from "react";
 
 const page = () => {
   return (
     <>
-      <BHero />
-      <Choose />
-      <Benefit />
-      <Howitworks />
-      <BusinessFAQ />
+      <HealthHero />
+      <Challenges />
+      <Journey />
+      <Healing />
+      <Trust />
+      <ReviewSection />
+      <Guidance />
+      <HealthFaq />
 
-      <Script id="ld-json-business" type="application/ld+json">
+      <Script id="ld-json-health" type="application/ld+json">
         {JSON.stringify(
           {
             "@context": "https://schema.org",
@@ -40,9 +46,9 @@ const page = () => {
               {
                 "@type": "WebPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#webpage",
-                url: "https://prashnasiddhi.com/services/business-astrology",
-                name: "Business Astrology",
+                  "https://prashnasiddhi.com/services/health-wellness-astrology#webpage",
+                url: "https://prashnasiddhi.com/services/health-wellness-astrology",
+                name: "Health & Wellness Astrology",
                 isPartOf: { "@id": "https://prashnasiddhi.com#website" },
                 about: { "@id": "https://prashnasiddhi.com#organization" },
                 primaryImageOfPage: {
@@ -51,13 +57,13 @@ const page = () => {
                 },
                 breadcrumb: {
                   "@id":
-                    "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                    "https://prashnasiddhi.com/services/health-wellness-astrology#breadcrumb",
                 },
               },
               {
                 "@type": "BreadcrumbList",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                  "https://prashnasiddhi.com/services/health-wellness-astrology#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -74,22 +80,22 @@ const page = () => {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Business Astrology",
-                    item: "https://prashnasiddhi.com/services/business-astrology",
+                    name: "Health & Wellness Astrology",
+                    item: "https://prashnasiddhi.com/services/health-wellness-astrology",
                   },
                 ],
               },
               {
                 "@type": "Service",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#service",
-                serviceType: "Business Astrology",
-                name: "Business Astrology",
-                url: "https://prashnasiddhi.com/services/business-astrology",
+                  "https://prashnasiddhi.com/services/health-wellness-astrology#service",
+                serviceType: "Health & Wellness Astrology",
+                name: "Health & Wellness Astrology",
+                url: "https://prashnasiddhi.com/services/health-wellness-astrology",
                 areaServed: "IN",
                 provider: { "@id": "https://prashnasiddhi.com#organization" },
                 description:
-                  "Guidance and clarity for business astrology using Vedic Astrology and Prashna Kundali.",
+                  "Guidance and clarity for health & wellness astrology using Vedic Astrology and Prashna Kundali.",
                 offers: {
                   "@type": "Offer",
                   url: "https://prashnasiddhi.com/request-consultation",
@@ -99,30 +105,30 @@ const page = () => {
               {
                 "@type": "FAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#faq",
+                  "https://prashnasiddhi.com/services/health-wellness-astrology#faq",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Is this the right time to start a business?",
+                    name: "Can astrology indicate health-sensitive periods?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna clarifies launch timing and partnership suitability.",
+                      text: "Transit and Dasa periods can highlight times to prioritize wellbeing.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I expand or consolidate?",
+                    name: "Does Prashna help with lifestyle choices?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It indicates periods supportive of growth versus caution.",
+                      text: "It offers clarity on timing and focus areas to support medical advice.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can astrology pick the right partner?",
+                    name: "Is astrology a replacement for doctors?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It helps assess compatibility, trust, and shared direction.",
+                      text: "No. It complements—not replaces—professional medical care.",
                     },
                   },
                 ],

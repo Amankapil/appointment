@@ -81,7 +81,7 @@ export default function Navbar() {
               </Link> */}
 
               <div
-                className="relative flex items-center justify-center max-sm:flex-col"
+                className="relative flex items-center justify-center max-lg:flex-col"
                 onMouseEnter={() => setIsServiceHovered(true)}
                 onMouseLeave={() => setIsServiceHovered(false)}
               >
@@ -108,13 +108,13 @@ export default function Navbar() {
                   </svg>
                 </div>
                 {isServiceHovered && (
-                  <div className="absolute  w-[1050px] max-lg:w-full  max-sm:relative top-4 pt-4  max-sm:left-0 max-sm:mb-4  -left-40 max-sm:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
-                    <div className="flex justify-start items-start gap-10 flex-col p-7 max-lg:flex-wrap max-sm:gap-0">
-                      <div className="flex flexcol gap-7  max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                  <div className="absolute  w-[1050px] max-lg:w-full  max-lg:relative top-4 pt-4  max-lg:pt-0 max-sm:left-0 max-sm:mb-4  -left-40 max-lg:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
+                    <div className="flex justify-start items-start gap-10 flex-col p-7 max-lg:flex-wrap max-lg:gap-0">
+                      <div className="flex flexcol gap-7  max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/Marriage&Relationships"
+                            href="/services/marriage-relationships"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2 text-[16px]"
                           >
                             <svg
@@ -143,7 +143,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/Child-birth"
+                            href="/services/children-family-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -172,7 +172,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/Health"
+                            href="/services/health-wellness-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -198,11 +198,11 @@ export default function Navbar() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/Finance-Wealth-Astrology"
+                            href="/services/finance-wealth-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -231,7 +231,7 @@ export default function Navbar() {
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
-                            href="/services/Career-Profession-Astrology"
+                            href="/services/career-profession-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -258,9 +258,9 @@ export default function Navbar() {
                         </div>
 
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Education-&-Studies"
+                            href="/services/education-study-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2 "
                           >
                             <svg
@@ -276,7 +276,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Education & Study Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}
@@ -286,11 +286,11 @@ export default function Navbar() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-sm:gap-0">
+                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Property-&-Real-Estate"
+                            href="/services/property-real-estate-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -306,7 +306,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Property & Real Estate Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}
@@ -317,9 +317,9 @@ export default function Navbar() {
                         </div>
 
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Litigation-And-Legal-Matters-Astrology"
+                            href="/services/litigation-legal-matters"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -335,7 +335,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Litigation & Legal Matters Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}
@@ -346,9 +346,9 @@ export default function Navbar() {
                         </div>
 
                         <div className="w-[322px]">
-                          <div
+                          <Link
                             onClick={toggleMenu}
-                            // href="/Business-Astrology"
+                            href="/services/business-astrology"
                             className=" px-0 py-2 hoverbg-gray-100 flex items-center gap-2"
                           >
                             <svg
@@ -364,7 +364,7 @@ export default function Navbar() {
                               />
                             </svg>
                             Business Astrology
-                          </div>
+                          </Link>
                           <div className="flex items-center justify-start">
                             <Image
                               width={275}

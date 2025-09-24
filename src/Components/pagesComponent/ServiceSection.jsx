@@ -13,7 +13,7 @@ import Link from "next/link";
 const ServiceSection = () => {
   return (
     <>
-      <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 pb-20 max-md:p-4">
+      <div className="bg-[#fff] text-[#1E1E1E] micreen p-10 pb-20 max-md:p-4">
         {/* Top Consultation Section */}
 
         <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -37,7 +37,7 @@ const ServiceSection = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto  mt-20">
           <Link
-            href="/services/Marriage&Relationships"
+            href="/services/marriage-relationships"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h-[190px] bggray-300 max-md:h-full">
@@ -66,7 +66,7 @@ const ServiceSection = () => {
             </div>
           </Link>
           <Link
-            href="/services/Child-birth"
+            href="/services/children-family-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[171px] h[161px] bggray-300 ">
@@ -96,7 +96,7 @@ const ServiceSection = () => {
             </div>
           </Link>
           <Link
-            href="/services/Health"
+            href="/services/health-wellness-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -127,7 +127,7 @@ const ServiceSection = () => {
           </Link>
 
           <Link
-            href="/services/Finance-Wealth-Astrology"
+            href="/services/finance-wealth-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -158,7 +158,7 @@ const ServiceSection = () => {
           </Link>
 
           <Link
-            href="/services/Career-Profession-Astrology"
+            href="/services/career-profession-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -188,8 +188,8 @@ const ServiceSection = () => {
             </div>
           </Link>
 
-          <div
-            // href="/services/Education-&-Studies"
+          <Link
+            href="/services/education-study-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -217,10 +217,10 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
-          <div
-            // href="/services/Property-&-Real-Estate"
+          <Link
+            href="/services/property-real-estate-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -248,10 +248,10 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
-          <div
-            // href="/services/Litigation-And-Legal-Matters-Astrology"
+          <Link
+            href="/services/litigation-legal-matters"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -279,9 +279,9 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
-          <div
-            // href="/services/Business-Astrology"
+          </Link>
+          <Link
+            href="/services/business-astrology"
             className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
@@ -307,7 +307,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-          </div>
+          </Link>
 
           {/* ))} */}
         </div>

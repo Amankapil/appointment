@@ -1,21 +1,28 @@
-import Benefit from "@/Components/pagesComponent/Business-Astrology/Benefit";
-import BHero from "@/Components/pagesComponent/Business-Astrology/BHero";
-import Choose from "@/Components/pagesComponent/Business-Astrology/Choose";
-import React from "react";
-import Howitworks from "@/Components/pagesComponent/Business-Astrology/Howitworks";
-import BusinessFAQ from "@/Components/pagesComponent/Business-Astrology/BusinessFAQ";
+import Challenges from "@/Components/pagesComponent/Child-birth/Challenges";
+import ChildFAQ from "@/Components/pagesComponent/Child-birth/Child-FAQ";
+import ChildHero from "@/Components/pagesComponent/Child-birth/ChildHero";
+import Familiar from "@/Components/pagesComponent/Child-birth/Familiar";
+import Families from "@/Components/pagesComponent/Child-birth/Families";
+import Method from "@/Components/pagesComponent/Child-birth/Method";
+import Trust from "@/Components/pagesComponent/Child-birth/Trust";
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
 import Script from "next/script";
+import React from "react";
 
 const page = () => {
   return (
     <>
-      <BHero />
-      <Choose />
-      <Benefit />
-      <Howitworks />
-      <BusinessFAQ />
+      <ChildHero />
+      <Familiar />
+      <Families />
+      <Method />
+      <Trust />
+      <ReviewSection />
+      <Challenges />
 
-      <Script id="ld-json-business" type="application/ld+json">
+      <ChildFAQ />
+
+      <Script id="ld-json-children" type="application/ld+json">
         {JSON.stringify(
           {
             "@context": "https://schema.org",
@@ -40,9 +47,9 @@ const page = () => {
               {
                 "@type": "WebPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#webpage",
-                url: "https://prashnasiddhi.com/services/business-astrology",
-                name: "Business Astrology",
+                  "https://prashnasiddhi.com/services/children-family-astrology#webpage",
+                url: "https://prashnasiddhi.com/services/children-family-astrology",
+                name: "Children & Family Astrology",
                 isPartOf: { "@id": "https://prashnasiddhi.com#website" },
                 about: { "@id": "https://prashnasiddhi.com#organization" },
                 primaryImageOfPage: {
@@ -51,13 +58,13 @@ const page = () => {
                 },
                 breadcrumb: {
                   "@id":
-                    "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                    "https://prashnasiddhi.com/services/children-family-astrology#breadcrumb",
                 },
               },
               {
                 "@type": "BreadcrumbList",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                  "https://prashnasiddhi.com/services/children-family-astrology#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -74,22 +81,22 @@ const page = () => {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Business Astrology",
-                    item: "https://prashnasiddhi.com/services/business-astrology",
+                    name: "Children & Family Astrology",
+                    item: "https://prashnasiddhi.com/services/children-family-astrology",
                   },
                 ],
               },
               {
                 "@type": "Service",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#service",
-                serviceType: "Business Astrology",
-                name: "Business Astrology",
-                url: "https://prashnasiddhi.com/services/business-astrology",
+                  "https://prashnasiddhi.com/services/children-family-astrology#service",
+                serviceType: "Children & Family Astrology",
+                name: "Children & Family Astrology",
+                url: "https://prashnasiddhi.com/services/children-family-astrology",
                 areaServed: "IN",
                 provider: { "@id": "https://prashnasiddhi.com#organization" },
                 description:
-                  "Guidance and clarity for business astrology using Vedic Astrology and Prashna Kundali.",
+                  "Guidance and clarity for children & family astrology using Vedic Astrology and Prashna Kundali.",
                 offers: {
                   "@type": "Offer",
                   url: "https://prashnasiddhi.com/request-consultation",
@@ -99,30 +106,30 @@ const page = () => {
               {
                 "@type": "FAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#faq",
+                  "https://prashnasiddhi.com/services/children-family-astrology#faq",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Is this the right time to start a business?",
+                    name: "Can astrology show when we’ll have children?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna clarifies launch timing and partnership suitability.",
+                      text: "Planetary periods and Prashna Kundali can indicate supportive timing.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I expand or consolidate?",
+                    name: "Does astrology help with parenting styles?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It indicates periods supportive of growth versus caution.",
+                      text: "Yes. It clarifies temperament differences and suggests balanced approaches.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can astrology pick the right partner?",
+                    name: "Is adoption supported astrologically?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It helps assess compatibility, trust, and shared direction.",
+                      text: "Prashna can show alignment and timing for adoption if indicated.",
                     },
                   },
                 ],

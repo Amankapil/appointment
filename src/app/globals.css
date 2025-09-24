@@ -191,6 +191,15 @@ select {
   }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+  .twecircle::before {
+    width: 0% !important;
+  }
+  .fcircle::before {
+    width: 100% !important;
+  }
+  .tcircle::before {
+    width: 0% !important;
+  }
 }
 
 @media (min-width: 2100px) and (max-width: 2600px) {

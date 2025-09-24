@@ -1,21 +1,27 @@
-import Benefit from "@/Components/pagesComponent/Business-Astrology/Benefit";
-import BHero from "@/Components/pagesComponent/Business-Astrology/BHero";
-import Choose from "@/Components/pagesComponent/Business-Astrology/Choose";
-import React from "react";
-import Howitworks from "@/Components/pagesComponent/Business-Astrology/Howitworks";
-import BusinessFAQ from "@/Components/pagesComponent/Business-Astrology/BusinessFAQ";
+import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSection";
+import Guidance from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/Guidance";
+import LegalFaq from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/LegalFaq";
+import LegalHero from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/LegalHero";
+import Litigation from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/Litigation";
+import Solve from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/Solve";
+import Struggles from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/Struggles";
+import Unique from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Astrology/Unique";
 import Script from "next/script";
+import React from "react";
 
 const page = () => {
   return (
     <>
-      <BHero />
-      <Choose />
-      <Benefit />
-      <Howitworks />
-      <BusinessFAQ />
+      <LegalHero />
+      <Struggles />
+      <Litigation />
+      <Guidance />
+      <Unique />
+      <ReviewSection />
+      <Solve />
+      <LegalFaq />
 
-      <Script id="ld-json-business" type="application/ld+json">
+      <Script id="ld-json-litigation" type="application/ld+json">
         {JSON.stringify(
           {
             "@context": "https://schema.org",
@@ -40,9 +46,9 @@ const page = () => {
               {
                 "@type": "WebPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#webpage",
-                url: "https://prashnasiddhi.com/services/business-astrology",
-                name: "Business Astrology",
+                  "https://prashnasiddhi.com/services/litigation-legal-matters#webpage",
+                url: "https://prashnasiddhi.com/services/litigation-legal-matters",
+                name: "Litigation & Legal Matters",
                 isPartOf: { "@id": "https://prashnasiddhi.com#website" },
                 about: { "@id": "https://prashnasiddhi.com#organization" },
                 primaryImageOfPage: {
@@ -51,13 +57,13 @@ const page = () => {
                 },
                 breadcrumb: {
                   "@id":
-                    "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                    "https://prashnasiddhi.com/services/litigation-legal-matters#breadcrumb",
                 },
               },
               {
                 "@type": "BreadcrumbList",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#breadcrumb",
+                  "https://prashnasiddhi.com/services/litigation-legal-matters#breadcrumb",
                 itemListElement: [
                   {
                     "@type": "ListItem",
@@ -74,22 +80,22 @@ const page = () => {
                   {
                     "@type": "ListItem",
                     position: 3,
-                    name: "Business Astrology",
-                    item: "https://prashnasiddhi.com/services/business-astrology",
+                    name: "Litigation & Legal Matters",
+                    item: "https://prashnasiddhi.com/services/litigation-legal-matters",
                   },
                 ],
               },
               {
                 "@type": "Service",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#service",
-                serviceType: "Business Astrology",
-                name: "Business Astrology",
-                url: "https://prashnasiddhi.com/services/business-astrology",
+                  "https://prashnasiddhi.com/services/litigation-legal-matters#service",
+                serviceType: "Litigation & Legal Matters",
+                name: "Litigation & Legal Matters",
+                url: "https://prashnasiddhi.com/services/litigation-legal-matters",
                 areaServed: "IN",
                 provider: { "@id": "https://prashnasiddhi.com#organization" },
                 description:
-                  "Guidance and clarity for business astrology using Vedic Astrology and Prashna Kundali.",
+                  "Guidance and clarity for litigation & legal matters using Vedic Astrology and Prashna Kundali.",
                 offers: {
                   "@type": "Offer",
                   url: "https://prashnasiddhi.com/request-consultation",
@@ -99,30 +105,30 @@ const page = () => {
               {
                 "@type": "FAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#faq",
+                  "https://prashnasiddhi.com/services/litigation-legal-matters#faq",
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Is this the right time to start a business?",
+                    name: "Will this case resolve soon?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna clarifies launch timing and partnership suitability.",
+                      text: "Prashna can indicate momentum and likely timelines.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I expand or consolidate?",
+                    name: "Should I settle or proceed?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It indicates periods supportive of growth versus caution.",
+                      text: "It offers clarity on strategic direction and timing.",
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can astrology pick the right partner?",
+                    name: "Can astrology guarantee outcomes?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It helps assess compatibility, trust, and shared direction.",
+                      text: "No. It guides decisions; legal counsel remains essential.",
                     },
                   },
                 ],

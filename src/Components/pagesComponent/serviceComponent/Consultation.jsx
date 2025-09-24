@@ -35,16 +35,16 @@ export default function Consultation() {
         </svg>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-7xl mx-auto  mt-20">
-        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h-[296px] bggray-300 max-md:h-full">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] max-lg:flex-col p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className="w-[248px] h-[296px] max-lg:w-full bggray-300 max-md:h-full">
             {" "}
             <Image
-              className="w-[248px] h-[296px] max-md:h-full"
+              className="w-[248px] h-[296px] max-md:h-full  max-lg:w-full"
               src={img2}
               alt="j"
             />
           </div>
-          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w-[50%] max-lg:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <h3 className="text-[30px] font-normal font-salernomi text-gray-700 text-left m">
               Siddhi-7 Consultation
             </h3>
@@ -54,14 +54,14 @@ export default function Consultation() {
             </p>
           </div>
           <div className="absolute bottom-0 right-0 text-lg font-semibold text-white bg[#D4B999] w-[200px] max-sm:w-[80px] max-sm:h-[80px] h-[200px] flex items-center justify-center rounded-full">
-            <Image loading="lazy" src={img} alt="j" />
+            <Image className="max-md:w-full" loading="lazy" src={img} alt="j" />
           </div>
         </div>
-        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h-[296px] bggray-300 max-md:h-full">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] max-lg:flex-col p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className="w-[248px] h-[296px] max-lg:w-full bggray-300 max-md:h-full">
             {" "}
             <Image
-              className="w-[248px] h-[296px] max-md:h-full"
+              className="w-[248px] h-[296px] max-md:h-full  max-lg:w-full"
               loading="lazy"
               src={img3}
               alt="j"
@@ -76,6 +76,7 @@ export default function Consultation() {
               height="212"
               viewBox="0 0 212 212"
               fill="none"
+              className="max-md:w-full"
               xmlns="http://www.w3.org/2000/svg"
             >
               <rect
@@ -96,17 +97,17 @@ export default function Consultation() {
             </svg>
           </div>
         </div>
-        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className="w-[248px] h-[296px] bggray-300 max-md:h-full">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] max-lg:flex-col p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className="w-[248px] h-[296px] max-lg:w-full bggray-300 max-md:h-full">
             {" "}
             <Image
-              className="w-[248px] h-[296px] max-md:h-full"
+              className="w-[248px] h-[296px] max-md:h-full  max-lg:w-full"
               loading="lazy"
               src={img4}
               alt="j"
             />
           </div>
-          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w-[50%] max-lg:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg">
               Spiritual Counseling & Life Coaching
             </p>
@@ -118,6 +119,7 @@ export default function Consultation() {
               viewBox="0 0 212 212"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="max-md:w-full"
             >
               <rect
                 x="144"
@@ -137,17 +139,17 @@ export default function Consultation() {
             </svg>
           </div>
         </div>
-        <div className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap-10 font-inter bg-white shadow-md">
-          <div className=" w-[248px] h-[296px] max-md:h-full bggray-300 ">
+        <div className="border-[2px] border-[#D4B999] rounded-[24px] max-lg:flex-col p-4 flex relative gap-10 font-inter bg-white shadow-md">
+          <div className="w-[248px] h-[296px] max-lg:w-full bggray-300 max-md:h-full">
             {" "}
             <Image
-              className="w-[248px] h-[296px] max-md:h-full"
+              className="w-[248px] h-[296px] max-md:h-full  max-lg:w-full"
               width={248}
               src={img5}
               alt="j"
             />
           </div>
-          <div className="w-[50%] max-md:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
+          <div className="w-[50%] max-lg:w-full  pr-4 max-lg:flex-wrap flex flex-col justify-start">
             <p className="font-normal text-lg ">
               Personalized Astrological Insights (Optional expansion in future)
             </p>
@@ -159,6 +161,7 @@ export default function Consultation() {
               viewBox="0 0 212 212"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="max-md:w-full"
             >
               <rect
                 x="144"
