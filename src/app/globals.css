@@ -74,22 +74,10 @@ select {
 
 @media (min-width: 1024px) and (max-width: 1150px) {
   .shadow-button {
-    display: none;
+    /* display: none; */
   }
 }
-@media (min-width: 320px) and (max-width: 600px) {
-  .react-tel-input .form-control {
-    width: 100% !important;
-    padding: 17px;
-    height: 40px !important;
-  }
-  .imte img {
-    width: 100%;
-  }
-  iframe {
-    width: 100% !important;
-  }
-}
+
 @media (min-width: 750px) and (max-width: 1024px) {
   .react-tel-input .form-control {
     width: 100% !important;
@@ -174,9 +162,9 @@ select {
   a {
     font-size: 20px;
   } */
-  .ml-20 {
+  /* .ml-20 {
     margin-left: 0px;
-  }
+  } */
   .twecircle::before {
     width: 0%;
   }
@@ -195,7 +183,7 @@ select {
     width: 0% !important;
   }
   .fcircle::before {
-    width: 100% !important;
+    width: 0% !important;
   }
   .tcircle::before {
     width: 0% !important;
@@ -239,9 +227,9 @@ select {
   .review {
     font-size: 16px;
   } */
-  .ml-20 {
+  /* .ml-20 {
     margin-left: 0px;
-  }
+  } */
   .circleone {
     width: 700px;
     height: 700px;
@@ -281,4 +269,24 @@ select {
 
 .font-salernomi {
   font-family: "Salernomi J";
+}
+
+@media (min-width: 320px) and (max-width: 600px) {
+  .react-tel-input .form-control {
+    width: 100% !important;
+    padding: 17px;
+    height: 40px !important;
+  }
+  .imte img {
+    width: 100%;
+  }
+  iframe {
+    width: 100% !important;
+  }
+  /* .price {
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    height: 452px !important;
+    width: 100% !important;
+  } */
 }

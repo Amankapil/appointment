@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Why = () => {
   return (
-    <div className="relative flex flex-col gap-10 items-center justify-center bg-white py-20 max-lg:p-4 max-md:p-4 space-y-10 overflow-hidden">
+    <div className="relative flex flex-col gap-10 items-center justify-center bg-white py-20 max-lgp-4 max-md:p-4 space-y-10 overflow-hidden">
       {/* First Circle */}
 
       <div className="fcircle flex items-center justify-center w-[77%] max-md:w-full">

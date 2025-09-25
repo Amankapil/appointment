@@ -45,7 +45,7 @@ export default function Solve() {
         <h1 className="text-[40px] max-md:text-[40px] py-5 text-[#4D4D4D] text-center font-salernomi w-[100%] max-md:w-full font-normal mb-6">
           Real Estate Questions Astrology Can Answer
         </h1>
-        <div className="flex flex-wrap gap-15 max-md:gap-4 items-center justify-start py-10">
+        <div className="flex flex-wrap gap-15 max-md:gap-4 items-start justify-start py-10 max-w-[1280px] mx-auto">
           <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
@@ -64,13 +64,14 @@ export default function Solve() {
               Will I be able to buy my own house?{" "}
             </h1>
           </div>
-          <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
+          <div className="card1 gap-1 flex items-start w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
               height="25"
               viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="mt-2"
             >
               <path
                 d="M12.0015 24.168C12.0633 17.6017 17.3977 12.288 24 12.2065C17.3718 12.1248 12.0216 6.7697 12.001 0.167969H12.0007C11.9802 6.77031 6.62902 12.1257 0 12.2065C6.60319 12.2871 11.9385 17.6012 12.0003 24.168H12.0015Z"
@@ -82,13 +83,14 @@ export default function Solve() {
               When is the right time to purchase property?{" "}
             </h1>
           </div>
-          <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
+          <div className="card1 gap-1 flex items-start w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
               height="25"
               viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="mt-2"
             >
               <path
                 d="M12.0015 24.168C12.0633 17.6017 17.3977 12.288 24 12.2065C17.3718 12.1248 12.0216 6.7697 12.001 0.167969H12.0007C11.9802 6.77031 6.62902 12.1257 0 12.2065C6.60319 12.2871 11.9385 17.6012 12.0003 24.168H12.0015Z"
@@ -119,13 +121,14 @@ export default function Solve() {
             </h1>
           </div>
 
-          <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
+          <div className="card1 gap-1 flex items-start w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
               height="25"
               viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="mt-2"
             >
               <path
                 d="M12.0015 24.168C12.0633 17.6017 17.3977 12.288 24 12.2065C17.3718 12.1248 12.0216 6.7697 12.001 0.167969H12.0007C11.9802 6.77031 6.62902 12.1257 0 12.2065C6.60319 12.2871 11.9385 17.6012 12.0003 24.168H12.0015Z"
@@ -138,13 +141,14 @@ export default function Solve() {
             </h1>
           </div>
 
-          <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
+          <div className="card1 gap-1 flex items-start w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
               height="25"
               viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="mt-2"
             >
               <path
                 d="M12.0015 24.168C12.0633 17.6017 17.3977 12.288 24 12.2065C17.3718 12.1248 12.0216 6.7697 12.001 0.167969H12.0007C11.9802 6.77031 6.62902 12.1257 0 12.2065C6.60319 12.2871 11.9385 17.6012 12.0003 24.168H12.0015Z"
@@ -157,13 +161,14 @@ export default function Solve() {
             </h1>
           </div>
 
-          <div className="card1 gap-1 flex items-center w-[380px] max-md:w-full justify-start">
+          <div className="card1 gap-1 flex items-start w-[380px] max-md:w-full justify-start">
             <svg
               width="24"
               height="25"
               viewBox="0 0 24 25"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              className="mt-2"
             >
               <path
                 d="M12.0015 24.168C12.0633 17.6017 17.3977 12.288 24 12.2065C17.3718 12.1248 12.0216 6.7697 12.001 0.167969H12.0007C11.9802 6.77031 6.62902 12.1257 0 12.2065C6.60319 12.2871 11.9385 17.6012 12.0003 24.168H12.0015Z"

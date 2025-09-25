@@ -10,7 +10,7 @@ const ReviewSection = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-10 max-md:py-10">
+      <div className="bg-[#fff] py-10 max-md:py-10 max-xl:px-4">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             What Our Clients Say?

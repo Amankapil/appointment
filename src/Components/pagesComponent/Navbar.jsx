@@ -31,7 +31,7 @@ export default function Navbar() {
               </span>
             </Link>
           </div>
-          <div className="lg:hidden">
+          <div className="xl:hidden">
             <button onClick={toggleMenu}>
               <svg
                 className="w-6 h-6"
@@ -49,12 +49,12 @@ export default function Navbar() {
             </button>
           </div>
           <div
-            className={`fixed lg:relative top-0 right-0  h-full lg:h-auto  w-[100%] lg:w-auto bg-white lg:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
-              isOpen ? "translate-x-0 pt-10 lg:pt-0" : "translate-x-full "
-            } lg:translate-x-0 md:flex space-x-4 lg:items-start items-start justify-center gap-7`}
+            className={`fixed xl:relative top-0 right-0  h-full xl:h-auto  w-[100%] xl:w-auto bg-white xl:bg-transparent shadow-lg md:shadow-none transform transition-transform duration-300 ease-in-out ${
+              isOpen ? "translate-x-0 pt-10 xl:pt-0" : "translate-x-full "
+            } xl:translate-x-0 md:flex space-x-4 xl:items-start items-start justify-center gap-7`}
           >
             <button
-              className="lg:hidden absolute top-4 right-4"
+              className="xl:hidden absolute top-4 right-4"
               onClick={toggleMenu}
             >
               <svg
@@ -71,17 +71,9 @@ export default function Navbar() {
                 ></path>
               </svg>
             </button>
-            <div className="flex navbar  font-inter flex-col lg:flex-row space-y-4 lg:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
-              {/* <Link
-                onClick={toggleMenu}
-                href="/services"
-                className="hover:text-gray-600 relative"
-              >
-                Services
-              </Link> */}
-
+            <div className="flex navbar  font-inter flex-col xl:flex-row space-y-4 xl:space-y-0 text-[#666666] font-inter md:space-x-4 p-4 md:p-0 items-center">
               <div
-                className="relative flex items-center justify-center max-lg:flex-col"
+                className="relative flex items-center justify-center max-xl:flex-col"
                 onMouseEnter={() => setIsServiceHovered(true)}
                 onMouseLeave={() => setIsServiceHovered(false)}
               >
@@ -108,9 +100,9 @@ export default function Navbar() {
                   </svg>
                 </div>
                 {isServiceHovered && (
-                  <div className="absolute  w-[1050px] max-lg:w-full  max-lg:relative top-4 pt-4  max-lg:pt-0 max-sm:left-0 max-sm:mb-4  -left-40 max-lg:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
-                    <div className="flex justify-start items-start gap-10 flex-col p-7 max-lg:flex-wrap max-lg:gap-0">
-                      <div className="flex flexcol gap-7  max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
+                  <div className="absolute  w-[1050px] max-xl:w-full  max-xl:relative top-4 pt-4  max-xl:pt-0 max-sm:left-0 max-sm:mb-4  -left-40 max-xl:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
+                    <div className="flex justify-start items-start gap-10 flex-col p-7 max-xl:flex-wrap max-xl:gap-0">
+                      <div className="flex flexcol gap-7  max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:gap-0">
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
@@ -198,7 +190,7 @@ export default function Navbar() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
+                      <div className="flex flexcol gap-7 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:gap-0">
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}
@@ -286,7 +278,7 @@ export default function Navbar() {
                           </div>
                         </div>
                       </div>
-                      <div className="flex flexcol gap-7 max-lg:flex-col max-lg:justify-center max-lg:items-center max-lg:gap-0">
+                      <div className="flex flexcol gap-7 max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:gap-0">
                         <div className="w-[322px]">
                           <Link
                             onClick={toggleMenu}

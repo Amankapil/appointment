@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="bg-[#F0EDE9] pb20 hero h-[710px] max-md:h-full max-md:pt-10">
-      <div className="max-wxl  ml-20 max-lg:ml-5 mx-auto text-left items-center justify-center flex gap-20  max-md:ml-2 max-md:p-5  max-md:flex-wrap">
-        <div className="w-1/2 z-[999] max-lg:w-full -20 max-md:mt-0 max-md:w-full">
+    <div className="bg-[#F0EDE9] pb20 hero h-[710px] max-md:h-full max-md:pt-10 mx-auto ">
+      <div className="max-w-[1440px] w-full  pl-20 max-xl:pl-5 text-left items-center  mx-auto  justify-center flex gap-20  max-md:pl-2 max-md:p-5  max-md:flex-wrap">
+        <div className="w-1/2 z-[999] max-lg:w-full max-md:mt-0 max-md:w-full">
           <div className="m">
             <svg
               xmlns="http://www.w3.org/2000/svg"

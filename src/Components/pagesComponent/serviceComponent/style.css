@@ -9,8 +9,8 @@
 
 @media (min-width: 1800px) and (max-width: 2000px) {
   .price-section {
-    height: 700px;
-    flex-wrap: nowrap;
+    /* height: 700px; */
+    /* flex-wrap: nowrap; */
     gap: 20px;
   }
   .max-w-\[925px\] {
@@ -18,55 +18,54 @@
   }
 
   .text-12 {
-    font-size: 20px;
+    /* font-size: 20px; */
   }
   .price-section1 {
-    height: 700px;
+    /* height: 700px; */
     gap: 40px;
   }
 
-  .price {
+  /* .price {
     background-size: 100%;
-    /* height: 100%; */
+
     height: 552px;
     width: 440px;
-    /* width: 100%; */
-  }
-  .price1 {
+  } */
+  /* .price1 {
     background-size: 100%;
     height: 700px;
     width: 63%;
-  }
+  } */
   .price1.px-10 {
     padding: 0px 50px;
   }
 }
 @media (min-width: 2100px) and (max-width: 2600px) {
-  .price-section {
+  /* .price-section {
     height: 800px;
-  }
+  } */
   .text-12 {
-    font-size: 25px;
+    /* font-size: 25px; */
   }
   .price-section1 {
-    height: 850px;
+    /* height: 850px; */
     gap: 50px;
   }
-  .price {
+  /* .price {
     background-size: 100%;
     height: 100%;
     width: 100%;
-  }
-  .price1 {
+  } */
+  /* .price1 {
     background-size: 98%;
     width: 29%;
-  }
+  } */
 
   .terms {
     overflow: scroll;
     padding-top: 44%;
   }
   h5 {
-    font-size: 40px;
+    /* font-size: 40px; */
   }
 }

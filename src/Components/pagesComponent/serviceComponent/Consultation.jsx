@@ -12,7 +12,7 @@ export default function Consultation() {
   const [currency, setCurrency] = useState("INR");
 
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] miscreen p-10 max-md:p-4">
       {/* Top Consultation Section */}
 
       <div className="heading flex mb-10 flex-col items-center justify-center">

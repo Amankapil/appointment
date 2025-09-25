@@ -721,7 +721,7 @@ const PricingSection = () => {
         </>
       ) : (
         <>
-          <div className="space-y-4">
+          <div className="space-y-4 max-xl:px-4">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
               className="border-[1px] max-w-[1285px] mx-auto  border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"

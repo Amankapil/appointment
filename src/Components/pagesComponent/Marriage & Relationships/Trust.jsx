@@ -7,7 +7,7 @@ import Link from "next/link";
 import ReviewSection from "../Homecomponent/ReviewSection";
 export default function Trust() {
   return (
-    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#F5F0EB] text-[#1E1E1E] min-hscreen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] max-md:text-5xl text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           Why Couples Trust Prashna Siddhi{" "}

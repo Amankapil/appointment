@@ -9,7 +9,7 @@ const Platform = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20 max-md:py-10">
+      <div className="bg-[#fff] py-20 max-md:py-10 max-xl:px-4">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Who This Platform Is For?
@@ -28,7 +28,7 @@ const Platform = () => {
             />
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
-          <div className="img-home py-20 flex justify-center w-full">
+          <div className="img-home py-20  flex justify-center w-full">
             <Image loading="lazy" src={img} alt="jflas" />
           </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">

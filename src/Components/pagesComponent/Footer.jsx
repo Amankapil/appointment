@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#F0EDE9] text-black mt-16 pt-16 h[620px]">
       <div className="container mx-auto max-lg:p-4">
-        <div className="flex items-start justify-between text-center md:text-left   max-md:w-full  max-lg:flex-wrap  max-lg:items-center  max-lg:justify-center gap-10">
+        <div className="flex items-start justify-between text-center md:text-left max-xl:px-4   max-md:w-full  max-lg:flex-wrap  max-lg:items-center  max-lg:justify-center gap-10">
           {/* Left Section */}
           <div className="flex flex-col items-start max-lg:items-center  w-[35%] max-lg:w-full max-md:pb-10">
             <Link href="/" className="flex items-center justify-center gap-2">

@@ -7,7 +7,7 @@ import img2 from "./assets/Group 252.png";
 import Image from "next/image";
 export default function Rashi() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E] min-hscreen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[50%] max-lg:w-full font-normal mb-6">
           Moon Sign (Rashi) – A Commercial Myth?

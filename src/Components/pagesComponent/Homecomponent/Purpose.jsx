@@ -12,7 +12,7 @@ const Purpose = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20 max-md:pt-10 max-md:pb-0">
+      <div className="bg-[#fff] py-20 max-md:pt-10 max-md:pb-0 max-xl:px-4">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Our Purpose
@@ -31,7 +31,7 @@ const Purpose = () => {
             />
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
-          <div className="py-10 mt-20">
+          <div className="py-10 mt-20 ">
             <Image loading="lazy" src={img} alt="jflas" />
           </div>
           <div className="flex items-center flex-col w-1/2 max-lg:w-full mt-8  justify-center text-center max-md:w-full max-md:h-full max-md:p-10">

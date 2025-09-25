@@ -5,7 +5,7 @@ import img from "./assets/image 26.png";
 import Image from "next/image";
 export default function Shielded() {
   return (
-    <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
+    <div className="bg-[#fff] text-[#1E1E1E] min-hscreen p-10 max-md:p-4">
       {/* <div className="heading flex mb-10 flex-col items-center justify-center">
         <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
           What Makes PrashnaSiddhi Truly Unique?

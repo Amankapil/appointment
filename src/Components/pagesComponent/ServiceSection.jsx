@@ -38,7 +38,7 @@ const ServiceSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto  mt-20">
           <Link
             href="/services/marriage-relationships"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h-[190px] bggray-300 max-md:h-full">
               {" "}
@@ -50,7 +50,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w[50%] max-md:w-full  pr-0 ">
+            <div className="w[50%] max-xl:w-full  pr-0 ">
               <p className="font-normal text-[20px] pt-2">
                 Marriage & Relationships
               </p>
@@ -61,13 +61,14 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (2) copy.svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
           </Link>
           <Link
             href="/services/children-family-astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[171px] h[161px] bggray-300 ">
               {" "}
@@ -80,7 +81,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w3/4 max-md:w-full  pr-0 ">
+            <div className="w3/4 max-xl:w-[90%]  pr-0 ">
               <p className="font-normal text-[20px]">
                 Children & Family Astrology{" "}
               </p>
@@ -91,13 +92,14 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (3) copy.svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
           </Link>
           <Link
             href="/services/health-wellness-astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -110,7 +112,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Health & Wellness Astrology{" "}
               </p>
@@ -121,6 +123,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161 copy.svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
@@ -128,7 +131,7 @@ const ServiceSection = () => {
 
           <Link
             href="/services/Finance-Wealth-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -141,7 +144,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Finance & Wealth Astrology
               </p>
@@ -152,6 +155,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161.svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
@@ -159,7 +163,7 @@ const ServiceSection = () => {
 
           <Link
             href="/services/Career-Profession-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -172,7 +176,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Career & Profession Astrology
               </p>
@@ -183,6 +187,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (1).svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
@@ -190,7 +195,7 @@ const ServiceSection = () => {
 
           <Link
             href="/services/education-study-astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -203,7 +208,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Education & Study Astrology
               </p>
@@ -214,6 +219,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (2).svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
@@ -221,7 +227,7 @@ const ServiceSection = () => {
 
           <Link
             href="/services/property-real-estate-astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -234,7 +240,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Property & Real Estate Astrology
               </p>
@@ -245,6 +251,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (3).svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
@@ -252,7 +259,7 @@ const ServiceSection = () => {
 
           <Link
             href="/services/litigation-legal-matters"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -265,7 +272,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">
                 Litigation & Legal Matters Astrology{" "}
               </p>
@@ -276,13 +283,14 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (4).svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
           </Link>
           <Link
             href="/services/Business-Astrology"
-            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-lg:flex-col max-md:flex-row"
+            className="border-[2px] border-[#D4B999] rounded-[24px] p-4 flex relative gap10 font-inter bg-white shadow-md max-xl:flex-col max-md:flex-row max-xl:items-center"
           >
             <div className="w-[172px] h[296px] bggray-300 ">
               {" "}
@@ -295,7 +303,7 @@ const ServiceSection = () => {
                 alt="j"
               />
             </div>
-            <div className="w-[50%] max-md:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
+            <div className="w-[50%] max-xl:w-full  overflow-hidden pr-0 max-lg:flex-wrap flex flex-col justify-start">
               <p className="font-normal text-[20px]">Business Astrology</p>
             </div>
             <div className="absolute bottom-0 right-0 text-[20px] max-sm:w-[80px] max-sm:h-[80px] font-semibold text-white bg[#D4B999] w-[150px] h-[150px] flex items-center justify-center rounded-full">
@@ -304,6 +312,7 @@ const ServiceSection = () => {
                 src="/svg/Group 161 (5).svg"
                 width={150}
                 height={150}
+                className="max-lg:w-full"
                 alt="j"
               />
             </div>
