@@ -9,6 +9,41 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Children & Family Astrology – Insight & Harmony with Prashna Siddhi",
+  description:
+    "Receive guidance on childbirth timing, family harmony, parenting, and adoption through Vedic astrology. Navigate family life with spiritual insight at Prashna Siddhi.",
+  keywords: [
+    "children astrology",
+    "family harmony",
+    "parenting astrology",
+    "adoption astrology",
+    "childbirth insights",
+    "Prashna Siddhi family",
+    "vedic astrology for children",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/children-family-astrology",
+  },
+  openGraph: {
+    title:
+      "Children & Family Astrology – Insight & Harmony with Prashna Siddhi",
+    description:
+      "Receive guidance on childbirth timing, family harmony, parenting, and adoption through Vedic astrology. Navigate family life with spiritual insight at Prashna Siddhi.",
+    url: "https://prashnasiddhi.com/services/children-family-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/children-family.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Children & Family Astrology by Prashna Siddhi",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

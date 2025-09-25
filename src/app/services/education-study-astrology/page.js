@@ -9,6 +9,40 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Education & Study Astrology – Academic Clarity with Prashna Siddhi",
+  description:
+    "Align studies, exam timing, and foreign education with Vedic Astrology and Prashna Kundali. Discover clarity for academic success.",
+  keywords: [
+    "education astrology",
+    "study astrology",
+    "prashna kundali education",
+    "exam timing astrology",
+    "foreign studies astrology",
+    "academic success astrology",
+    "vedic astrology study",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/education-study-astrology",
+  },
+  openGraph: {
+    title: "Education & Study Astrology – Academic Clarity with Prashna Siddhi",
+    description:
+      "Clarity for studies, exams, and education planning with Prashna Kundali and Vedic Astrology.",
+    url: "https://prashnasiddhi.com/services/education-study-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/education-study.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Education & Study Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

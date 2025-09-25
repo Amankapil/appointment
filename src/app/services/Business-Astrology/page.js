@@ -5,6 +5,39 @@ import React from "react";
 import Howitworks from "@/Components/pagesComponent/Business-Astrology/Howitworks";
 import BusinessFAQ from "@/Components/pagesComponent/Business-Astrology/BusinessFAQ";
 import Script from "next/script";
+export const metadata = {
+  title: "Business Astrology – Growth & Partnerships with Prashna Siddhi",
+  description:
+    "Plan new ventures, expansions, and partnerships with clarity through Vedic Astrology and Prashna Kundali. Discover the right time for business moves.",
+  keywords: [
+    "business astrology",
+    "prashna kundali business",
+    "startup astrology",
+    "business timing astrology",
+    "partnership astrology",
+    "expansion astrology",
+    "growth astrology",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/business-astrology",
+  },
+  openGraph: {
+    title: "Business Astrology – Growth & Partnerships with Prashna Siddhi",
+    description:
+      "Clarity for ventures, partnerships, and business growth with Vedic Astrology and Prashna Kundali.",
+    url: "https://prashnasiddhi.com/services/business-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/business.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Business Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
 
 const page = () => {
   return (

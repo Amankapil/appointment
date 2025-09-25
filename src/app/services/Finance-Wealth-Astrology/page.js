@@ -9,6 +9,40 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Finance & Wealth Astrology – Stability with Prashna Siddhi",
+  description:
+    "Discover clarity for savings, investments, and financial stability with Vedic Astrology and Prashna Kundali. Avoid risks and find the right timing for wealth decisions.",
+  keywords: [
+    "finance astrology",
+    "wealth astrology",
+    "prashna kundali finance",
+    "investment timing astrology",
+    "savings astrology",
+    "financial stability astrology",
+    "money astrology",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/finance-wealth-astrology",
+  },
+  openGraph: {
+    title: "Finance & Wealth Astrology – Stability with Prashna Siddhi",
+    description:
+      "Financial clarity for investments, savings, and wealth timing with Vedic Astrology and Prashna Kundali.",
+    url: "https://prashnasiddhi.com/services/finance-wealth-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/finance-wealth.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Finance & Wealth Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

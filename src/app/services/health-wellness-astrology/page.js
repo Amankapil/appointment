@@ -9,6 +9,40 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Health & Wellness Astrology – Balance with Prashna Siddhi",
+  description:
+    "Explore health-sensitive periods and lifestyle guidance with Vedic Astrology and Prashna Kundali. Complement medical care with clarity on timing and wellbeing.",
+  keywords: [
+    "health astrology",
+    "wellness astrology",
+    "prashna kundali health",
+    "health timing astrology",
+    "lifestyle astrology",
+    "vedic astrology health",
+    "mental wellness astrology",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/health-wellness-astrology",
+  },
+  openGraph: {
+    title: "Health & Wellness Astrology – Balance with Prashna Siddhi",
+    description:
+      "Balance lifestyle and health timing with Vedic Astrology and Prashna Kundali for holistic wellbeing.",
+    url: "https://prashnasiddhi.com/services/health-wellness-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/health-wellness.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Health & Wellness Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

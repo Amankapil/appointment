@@ -9,6 +9,40 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Career & Profession Astrology – Growth with Prashna Siddhi",
+  description:
+    "Find clarity in job changes, promotions, and professional growth through Vedic Astrology and Prashna Kundali. Real-time guidance for career success.",
+  keywords: [
+    "career astrology",
+    "profession astrology",
+    "prashna kundali career",
+    "job change astrology",
+    "promotion astrology",
+    "career clarity astrology",
+    "professional growth astrology",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/career-profession-astrology",
+  },
+  openGraph: {
+    title: "Career & Profession Astrology – Growth with Prashna Siddhi",
+    description:
+      "Clarity for job changes, promotions, and professional growth with Prashna Kundali and Vedic Astrology.",
+    url: "https://prashnasiddhi.com/services/career-profession-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/career-profession.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Career & Profession Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

@@ -7,13 +7,59 @@ import Method from "@/Components/pagesComponent/Marriage & Relationships/Method"
 import Peace from "@/Components/pagesComponent/Marriage & Relationships/Peace";
 import Struggles from "@/Components/pagesComponent/Marriage & Relationships/Struggles";
 import Trust from "@/Components/pagesComponent/Marriage & Relationships/Trust";
+import Head from "next/head";
 import Script from "next/script";
 import React from "react";
+
+export const metadata = {
+  title: "Marriage & Relationships Astrology – Clarity through Prashna Siddhi",
+  description:
+    "Explore insights into love, marriage delays, and relationship challenges through Vedic astrology. Get clarity, harmony, and guidance with Prashna Siddhi.",
+  keywords: [
+    "marriage astrology",
+    "relationship clarity",
+    "delay in marriage",
+    "compatibility astrology",
+    "love guidance",
+    "Vedic astrology relationships",
+    "Prashna Siddhi marriage",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/marriage-relationships",
+  },
+  openGraph: {
+    title:
+      "Marriage & Relationships Astrology – Clarity through Prashna Siddhi",
+    description:
+      "Explore insights into love, marriage delays, and relationship challenges through Vedic astrology. Get clarity, harmony, and guidance with Prashna Siddhi.",
+    url: "https://prashnasiddhi.com/services/marriage-relationships",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/marriage-relationships.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Marriage & Relationships Astrology by Prashna Siddhi",
+      },
+    ],
+    type: "website",
+  },
+};
 
 const page = () => {
   return (
     <>
       <div>
+        <Head>
+          <meta
+            name="title"
+            content="Astrology Services – Prashna Siddhi for Accurate Insights"
+          />
+          <meta
+            name="description"
+            content="Explore Prashna Siddhi's expert astrology services for personalized guidance on love, career, health, and life challenges. Gain clarity with Vedic astrology insights."
+          />
+        </Head>
         <Script id="ld-json-marriage" type="application/ld+json">
           {JSON.stringify(
             {

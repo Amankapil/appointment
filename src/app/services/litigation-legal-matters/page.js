@@ -9,6 +9,40 @@ import Unique from "@/Components/pagesComponent/Litigation-And-Legal-Matters-Ast
 import Script from "next/script";
 import React from "react";
 
+export const metadata = {
+  title: "Litigation & Legal Astrology – Clarity with Prashna Siddhi",
+  description:
+    "Resolve disputes and gain clarity on legal matters with Vedic Astrology and Prashna Kundali. Understand timing, strategy, and outcomes better.",
+  keywords: [
+    "litigation astrology",
+    "legal astrology",
+    "prashna kundali legal",
+    "court case astrology",
+    "dispute resolution astrology",
+    "legal timing astrology",
+    "vedic astrology law",
+  ],
+  alternates: {
+    canonical: "https://prashnasiddhi.com/services/litigation-legal-astrology",
+  },
+  openGraph: {
+    title: "Litigation & Legal Astrology – Clarity with Prashna Siddhi",
+    description:
+      "Clarity for legal disputes, cases, and timing with Vedic Astrology and Prashna Kundali.",
+    url: "https://prashnasiddhi.com/services/litigation-legal-astrology",
+    siteName: "Prashna Siddhi",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/og-images/litigation-legal.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Litigation & Legal Astrology",
+      },
+    ],
+    type: "website",
+  },
+};
+
 const page = () => {
   return (
     <>

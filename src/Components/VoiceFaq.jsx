@@ -121,45 +121,6 @@ export default function FAQSection() {
     []
   );
 
-  // Auto play when section comes into view
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       entries.forEach((entry) => {
-  //         if (entry.isIntersecting) {
-  //           // play active video/audio
-  //           if (videoRef.current) videoRef.current.play().catch(() => {});
-  //           if (audioRef.current) audioRef.current.play().catch(() => {});
-  //         } else {
-  //           // pause when out of view
-  //           if (videoRef.current) videoRef.current.pause();
-  //           if (audioRef.current) audioRef.current.pause();
-  //         }
-  //       });
-  //     },
-  //     { threshold: 0.5 } // adjust when you consider it "in view"
-  //   );
-
-  //   if (sectionRef.current) observer.observe(sectionRef.current);
-
-  //   return () => {
-  //     if (sectionRef.current) observer.unobserve(sectionRef.current);
-  //   };
-  // }, []);
-
-  // // Auto play when activeIndex changes
-  // useEffect(() => {
-  //   if (videoRef.current) {
-  //     videoRef.current.currentTime = 0;
-  //     videoRef.current.play().catch(() => {});
-  //   }
-  //   if (audioRef.current) {
-  //     audioRef.current.currentTime = 0;
-  //     audioRef.current.play().catch(() => {});
-  //   }
-  // }, [activeIndex]);
-
-  // Auto play when activeIndex changes
   useEffect(() => {
     if (audioRef.current) {
       audioRef.current.currentTime = 0;

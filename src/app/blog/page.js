@@ -6,6 +6,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 16,
+    title: "Marriage and Astrology - Beyond kundali......",
+    date: "September 25, 2025",
+    image: "/images/blog16.png",
+    link: "/blog/marriage-astrology",
+    desc: "Marriage is often called a sacred bond — yet in reality.....",
+  },
+  {
     id: 15,
     title: "Why Life Feels Tough — and How to......",
     date: "September 11, 2025",
