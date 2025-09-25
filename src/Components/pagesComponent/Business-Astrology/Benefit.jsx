@@ -9,7 +9,7 @@ export default function Benefit() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-hcreen p-10 max-md:p-4 my-10">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] max-md:text-5xl text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-5xl text-[#4D4D4D] text-center font-salernomi w-[60%] max-xl:w-full font-normal mb-6">
           Who Can Benefit?{" "}
         </h1>
         <svg

@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <div className="bg-[#F5F0EB] text-[#1E1E1E] min-hscreen p-10 py-20 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-xl:w-full font-normal mb-6">
           Find Clarity in Your Marriage & Relationships{" "}
         </h1>
         <svg
@@ -44,7 +44,6 @@ export default function Hero() {
           divine timing, and solutions to your deepest relationship struggles.
           Confused about love, marriage, or family pressures? You don’t have to
           walk this journey alone.
-          
         </p>
         <Link
           href="/booking"

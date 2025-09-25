@@ -4,8 +4,8 @@ import React from "react";
 const Struggles = () => {
   return (
     <>
-      <div className="breaking my-10">
-        <h1 className="text-[56px]  text-[#4D4D4D] max-md:text-[40px] text-center font-salernomi w-[30%] max-lg:w-full mx-auto font-normal mb-6">
+      <div className="breaking my-10 max-xl:px-6">
+        <h1 className="text-[56px]  text-[#4D4D4D] max-md:text-[40px] text-center font-salernomi w-[30%] max-xl:w-full mx-auto font-normal mb-6">
           Do These Struggles Feel Familiar?
         </h1>
         <div className="flex items-center justify-center mb-10">
@@ -171,7 +171,7 @@ const Struggles = () => {
           </div>
         </div>
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-md:w-full ">
+          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-xl:w-full ">
             If this sound familiar, you’re not alone. Many couples face the same
             challenges and astrology can uncover why they happen and how to move
             past them.{" "}

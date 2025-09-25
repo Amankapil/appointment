@@ -3,7 +3,7 @@ import React from "react";
 const Method = () => {
   return (
     <>
-      <div className="bg-[#fff] text-[#1E1E1E] p-10 max-lg:p-4">
+      <div className="bg-[#fff] text-[#1E1E1E] p-10 max-xl:p-7">
         <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
           <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] max-lg:w-full font-normal mb-2">
             The Prashna Siddhi Method{" "}
@@ -114,7 +114,7 @@ const Method = () => {
             </div>
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[2px] max-w-[986px] max-w-986 done-page  max-lg:pl-8 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] max-w-[986px] max-w-986 done-page  max-lg:pl-12 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute  max-md:hidden  -left-[50px]">
                 <svg

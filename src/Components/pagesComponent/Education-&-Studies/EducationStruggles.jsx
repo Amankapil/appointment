@@ -4,7 +4,7 @@ import React from "react";
 const EducationStruggles = () => {
   return (
     <>
-      <div className="breaking mt-10">
+      <div className="breaking my-10 max-xl:px-6">
         <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Do These Struggles Sound Familiar?{" "}
         </h1>
@@ -169,7 +169,8 @@ const EducationStruggles = () => {
           </div>
         </div>
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-md:w-full ">
+          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-xl:w-full ">
+            {" "}
             These struggles are common. Astrology helps uncover why they happen
             and what steps can support learning success.
           </p>

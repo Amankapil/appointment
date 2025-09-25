@@ -4,7 +4,7 @@ import React from "react";
 const Challenges = () => {
   return (
     <>
-      <div className="breaking mt-10">
+      <div className="breaking my-10 max-xl:px-6">
         <h1 className="text-[40px] max-md:text-[32px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Are You Struggling With These Challenges?{" "}
         </h1>
@@ -170,7 +170,8 @@ const Challenges = () => {
           </div>
         </div>
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-md:w-full ">
+          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-xl:w-full ">
+            {" "}
             These are not just medical conditions — they often carry karmic and
             emotional roots. Astrology helps uncover them.
           </p>

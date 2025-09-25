@@ -18,7 +18,7 @@ const Message = () => {
 
   return (
     <>
-      <div className="manin bg max-w-7xl mx-auto py-20 max-md:py-5">
+      <div className="manin bg max-w-7xl mx-auto py-20 max-md:py-5 max-xl:px-7 max-md:px-0">
         <div className="head max-md:flex-wrap max-md:justify-center max-md:p-10 flex items-center justify-start gap-4">
           <div className="icon">
             <svg
@@ -62,7 +62,7 @@ const Message = () => {
             <Image loading="lazy" src={img} alt="l" />
           </div>
         </div>
-        <div className="breaking mt-10">
+        <div className="breaking my-10">
           <h1 className="text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
             The Deeper Meaning
           </h1>

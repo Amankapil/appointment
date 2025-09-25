@@ -3,7 +3,7 @@ import React from "react";
 const Guidance = () => {
   return (
     <>
-      <div className="bg-[#fff] text-[#1E1E1E] p-10 max-md:p-4">
+      <div className="bg-[#fff] text-[#1E1E1E] p-10 max-md:p-4 max-sm:py-20">
         <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter gap-10 justify-center items-center mt-4 ">
           <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] max-lg:w-full font-normal mb-2">
             The Prashna Siddhi Way in Real Estate Guidance{" "}
@@ -24,10 +24,10 @@ const Guidance = () => {
             <circle cx="45.5" cy="12" r="3" fill="#1E1E2C" />
           </svg>
           {/* <div className="w-1/2 max-lg:w-full"> */}
-          <div className="lis  max-sm:pl-0  max-w-[986px]  done-page  max-md:pl-8 w-full mx-auto space-y-4 pb-">
+          <div className="lis  max-sm:pl-0  max-w-[986px]  done-page  max-xl:pl-8 w-full mx-auto space-y-4 pb-">
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[2px] max-w-[986px] done-page  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 max flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] max-w-[986px] done-page max-xl:pl-12  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 max flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute  max-md:hidden  -left-[50px]">
                 <svg
@@ -115,7 +115,7 @@ const Guidance = () => {
             </div>
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[2px] max-w-[986px]  done-page  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] max-w-[986px]  done-page max-xl:pl-12  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute  max-md:hidden  -left-[50px]">
                 <svg
@@ -204,7 +204,7 @@ const Guidance = () => {
 
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[2px] max-w-[986px]  done-page  max-lg:pl-8 max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] max-w-[986px]  done-page max-xl:pl-12  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute  max-md:hidden  -left-[50px]">
                 <svg
@@ -293,7 +293,7 @@ const Guidance = () => {
 
             <div
               style={{ boxShadow: "0px 0px 24px 2px #AC8C6066 inset" }}
-              className="border-[2px] max-w-[986px]  done-page  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
+              className="border-[2px] max-w-[986px]  done-page max-xl:pl-12  max-sm:pl-0 border-[#AC8C60] items-center justify-center py-8 rounded-[24px] p-3 flex relative gap-10 font-inter bg-white shadow-md"
             >
               <div className="svg absolute  max-md:hidden  -left-[50px]">
                 <svg

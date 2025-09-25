@@ -5,7 +5,7 @@ import hero from "./assets/Group 228.png";
 export default function AboutHero() {
   return (
     <div className="bg-[#F0EDE9] pb-20">
-      <div className="max-wxl ml-20 mx-auto text-left items-start justify-center flex gap-20 max-md:flex-col max-md:items-center max-md:ml-2">
+      <div className="max-w-7xl mx-auto text-left items-start justify-center flex gap-20 max-md:flex-col max-md:items-center max-md:ml-2">
         <div className="w-1/2 max-lg:w-full h-[600px] max-md:h-full">
           <div className="flex flex-col justify-between h-full">
             <div>

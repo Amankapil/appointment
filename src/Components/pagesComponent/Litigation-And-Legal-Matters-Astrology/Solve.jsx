@@ -25,7 +25,7 @@ export default function Solve() {
         </svg>
       </div>
 
-      <div className="img h-[650px] max-md:h-full bgwhite flex items-center justify-center py-10">
+      <div className="img h-[650px] max-xl:h-full bgwhite flex items-center justify-center py-10">
         <Image
           width={1200}
           height={700}

@@ -19,7 +19,7 @@ export default function RemWorks() {
   return (
     <div className="bg-[#fff] text-[#1E1E1E] min-h-screen p-10 max-md:p-4">
       <div className="heading flex mb-10 flex-col items-center justify-center">
-        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-md:w-full font-normal mb-6">
+        <h1 className="text-[64px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[60%] max-xl:w-full font-normal mb-6">
           Do Remedies Really Work?
         </h1>
         <svg
@@ -38,7 +38,7 @@ export default function RemWorks() {
         </svg>
       </div>
 
-      <div className="img h-[500px] max-md:h-full flex items-center justify-center pb-10">
+      <div className="img h-[500px] max-xl:h-full flex items-center justify-center pb-10">
         <Image loading="lazy" className="pb-10" src={img} alt="j" />
       </div>
       <div className="pr-4 max-lg:flex-wrap max-md:flex-wrap flex flexcol font-inter gap-10 justify-center items-start mt-4 ">

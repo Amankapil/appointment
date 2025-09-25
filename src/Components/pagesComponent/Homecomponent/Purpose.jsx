@@ -12,7 +12,7 @@ const Purpose = () => {
 
   return (
     <>
-      <div className="bg-[#fff] py-20 max-md:pt-10 max-md:pb-0 max-xl:px-4">
+      <div className="bg-[#fff] py-20 max-md:pt-10 max-md:pb-0 max-xl:px-7">
         <div className="heading flex flex-col items-center justify-center">
           <h1 className="text-[64px] text-[#4D4D4D] text-center font-salernomi font-normal mb-6">
             Our Purpose

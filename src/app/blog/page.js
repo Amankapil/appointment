@@ -7,7 +7,7 @@ import Link from "next/link";
 const blogs = [
   {
     id: 15,
-    title: "Why Life Feels Tough — and How to Face......",
+    title: "Why Life Feels Tough — and How to......",
     date: "September 11, 2025",
     image: "/images/blog15.png",
     link: "/blog/why-life-feels-tough",
@@ -19,7 +19,7 @@ const blogs = [
     date: "August 11, 2025",
     image: "/images/blog14.png",
     link: "/blog/the-bhagavad-gita-and-the-zodiac",
-    desc: "Beyond Words — The Divine Pulse Behind Sacred Scriptures and Astrology.....",
+    desc: "Beyond Words — The Divine Pulse Behind Sacred Scriptures and .....",
   },
   {
     id: 13,
@@ -47,7 +47,7 @@ const blogs = [
   },
   {
     id: 10,
-    title: "Mystery of the Zodiac Sign.... ",
+    title: "Mystery of the Zodiac Sign, Libra and.... ",
     date: "April 28, 2025",
     image: "/images/blog10.png",
     link: "/blog/mystery-of-the-zodiac-sign",
@@ -151,7 +151,7 @@ export default function BlogSection() {
 
       <BlogPopup />
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid md:grid-cols-2  xl:grid-cols-3 gap-10">
           {blogs.map((blog) => (
             <div
               key={blog.id}
@@ -163,6 +163,7 @@ export default function BlogSection() {
                   alt={blog.title}
                   layout="fill"
                   objectFit="cover"
+                  className="max-xl:object-cover"
                 />
               </div>
               <div className="p-6 flex items-start  flex-col">

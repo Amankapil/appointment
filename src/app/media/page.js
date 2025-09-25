@@ -7,7 +7,7 @@ const page = () => {
         onLoad="iFrameResize(this)"
         src="https://a8f9b8233cdc40e188beedbe53a475ea.elf.site"
         // style="border:none;width:100%;"
-        className="h-[870px] max-w-[1280px] mx-auto pt-10 w-full flex items-center justify-center google-reviews"
+        className="h-[870px] max-w-[1280px] mx-auto pt-10 w-full flex items-center justify-center google-reviews max-xl:p-10"
       ></iframe>
     </>
   );

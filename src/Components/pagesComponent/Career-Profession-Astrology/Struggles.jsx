@@ -4,7 +4,7 @@ import React from "react";
 const Struggles = () => {
   return (
     <>
-      <div className="breaking mt-10">
+      <div className="breaking my-10 max-xl:px-6">
         <h1 className="text-[56px] max-md:text-[40px] text-[#4D4D4D] text-center font-salernomi w-[100%] font-normal mb-6">
           Do These Struggles Feel Familiar?{" "}
         </h1>
@@ -125,7 +125,8 @@ const Struggles = () => {
           </div>
         </div>
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-md:w-full ">
+          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-xl:w-full ">
+            {" "}
             If this sounds familiar, you’re not alone. Many face the same
             challenges and astrology can uncover why they happen and how to move
             past them.

@@ -100,7 +100,7 @@ export default function Navbar() {
                   </svg>
                 </div>
                 {isServiceHovered && (
-                  <div className="absolute  w-[1050px] max-xl:w-full  max-xl:relative top-4 pt-4  max-xl:pt-0 max-sm:left-0 max-sm:mb-4  -left-40 max-xl:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3rounded-lg">
+                  <div className="absolute  w-[1050px] max-xl:w-full  max-xl:relative top-4 pt-4  max-xl:pt-0 max-sm:left-0 max-sm:mb-4  -left-40 max-xl:left-0 max-sm:right-0 bg-[#F0EDE9] shadow-lg my-2 py-3rounded-lg">
                     <div className="flex justify-start items-start gap-10 flex-col p-7 max-xl:flex-wrap max-xl:gap-0">
                       <div className="flex flexcol gap-7  max-xl:flex-col max-xl:justify-center max-xl:items-center max-xl:gap-0">
                         <div className="w-[322px]">

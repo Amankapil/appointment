@@ -4,7 +4,7 @@ import React from "react";
 const Choose = () => {
   return (
     <>
-      <div className="breaking mt-10">
+      <div className="breaking my-10 max-xl:px-6">
         <h1 className="text-[56px] max-lg:text-[40px]  text-[#4D4D4D] text-center font-salernomi w-[60%] mx-auto max-lg:w-full font-normal mb-6">
           Why Choose Business Astrology with Prashna Siddhi?{" "}
         </h1>
@@ -27,7 +27,8 @@ const Choose = () => {
         </div>
 
         <div className="flex items-center flex-col w-[100%] mt-8  justify-center text-center">
-          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-md:w-full ">
+          <p className="text-xl font-inter text-[#4D4D4D] mb8 w-1/2 max-xl:w-full ">
+            {" "}
             These struggles can drain peace and resources astrology provides
             direction and remedies.
           </p>
