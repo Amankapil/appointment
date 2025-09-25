@@ -25,13 +25,13 @@ export default function Solve() {
         </svg>
       </div>
 
-      <div className="img h-[700px] max-md:h-full bgwhite flex items-center justify-center py-10">
+      <div className="img h-[900px] max-md:h-full bgwhite flex items-center justify-center py-10">
         <Image
           width={600}
           height={600}
           loading="lazy"
           src="/images/Frame 337 copy 7.png"
-          className="h-[650px]"
+          className="h-[850px] max-md:h-full"
           alt="j"
         />
       </div>

@@ -36,7 +36,7 @@ export default function Clarity() {
           loading="lazy"
           src="/images/Frame 337 copy 3.png"
           alt="j"
-          className="h-[650px]"
+          className="h-[650px] max-md:h-full"
         />
       </div>
       <div className="pr-4 max-lg:flex-wrap flex flex-col font-inter justify-center items-center mt-4 ">
