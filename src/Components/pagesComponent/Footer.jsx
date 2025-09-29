@@ -76,6 +76,14 @@ const Footer = () => {
               </ul>
               <ul className="space-y-2 text-left max-md:text-center">
                 <li>
+                  <Link
+                    href="/how-to-avail-prashna-piddhi-services"
+                    className="hover:underline"
+                  >
+                    Ask Prashna
+                  </Link>
+                </li>
+                <li>
                   <Link href="/unique" className="hover:underline">
                     What make Prashna Siddhi truly unique
                   </Link>

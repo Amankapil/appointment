@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F0EDE9] shadowmd h-[80px] border border-b border-[#D8D1C7] sticky top-0 z-[99999999999999999]">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-0">
         <div className="flex justify-between items-center py-4">
           <div className="text-lg font-semibold">
             <Link href="/" className="flex items-center justify-center gap-2">
@@ -370,13 +370,13 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
-              <Link
+              {/* <Link
                 onClick={toggleMenu}
                 href="/work"
                 className="hover:text-gray-600 relative"
               >
                 How it Works
-              </Link>
+              </Link> */}
               <Link
                 onClick={toggleMenu}
                 href="/common-myths"
@@ -503,6 +503,45 @@ export default function Navbar() {
                 </div>
                 {isAboutHovered && (
                   <div className="absolute max-sm:mb-5 max-sm:relative top-4 pt-4 max-sm:left-0  -left-20 max-sm:right-0 bg-[#F0EDE9] shadow-lg mt-2 py-3 w-[360px] rounded-lg">
+                    <Link
+                      onClick={toggleMenu}
+                      href="/work"
+                      className=" px-4 py-2 hoverbg-gray-100 flex items-center gap-2"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M8.00103 16C8.04222 11.6225 11.5984 8.08003 16 8.02572C11.5812 7.97119 8.01441 4.40116 8.00069 0H8.0005C7.98681 4.40156 4.41934 7.97184 0 8.02572C4.40212 8.07941 7.95897 11.6221 8.00019 16H8.00103Z"
+                          fill="#666666"
+                        />
+                      </svg>
+                      How it works
+                    </Link>
+                    <div className="flex items-center justify-center">
+                      <svg
+                        width="311"
+                        height="12"
+                        viewBox="0 0 311 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M156.001 12C156.032 8.71688 158.699 6.06002 162 6.01929C158.686 5.97839 156.011 3.30087 156.001 0H156C155.99 3.30117 153.315 5.97888 150 6.01929C153.302 6.05955 155.969 8.71659 156 12H156.001Z"
+                          fill="#D8D1C7"
+                        />
+                        <circle cx="146" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="309" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="2" cy="6" r="2" fill="#D8D1C7" />
+                        <circle cx="166" cy="6" r="2" fill="#D8D1C7" />
+                        <path d="M145 6.00001L3 6" stroke="#D8D1C7" />
+                        <path d="M308 6.00001L167 6" stroke="#D8D1C7" />
+                      </svg>
+                    </div>
                     <Link
                       onClick={toggleMenu}
                       href="/unique"
@@ -683,6 +722,13 @@ export default function Navbar() {
                   </div>
                 )}
               </div>
+              <Link
+                onClick={toggleMenu}
+                href="/how-to-avail-prashna-piddhi-services"
+                className="bg-[#101010] text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
+              >
+                Ask Prashna
+              </Link>
               <Link
                 onClick={toggleMenu}
                 href="/booking"
