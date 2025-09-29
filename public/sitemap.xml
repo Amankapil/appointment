@@ -1,224 +1,232 @@
-This XML file does not appear to have any style information associated with it. The document tree is shown below.
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://prashnasiddhi.com/</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://prashnasiddhi.com/</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/work</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/work</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/common-myths</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/common-myths</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/remedies</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/remedies</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/blog</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/about</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/about</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/booking</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/booking</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/marriage-relationships</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/marriage-relationships</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/children-family-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/children-family-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/health-wellness-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/health-wellness-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/Finance-Wealth-Astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/Finance-Wealth-Astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/Career-Profession-Astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/Career-Profession-Astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/education-study-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/education-study-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/property-real-estate-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/property-real-estate-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/litigation-legal-matters</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/litigation-legal-matters</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/services/Business-Astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/services/Business-Astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/how-to-avail-prashna-piddhi-services</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/Disclaimer</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/Disclaimer</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/how-to-avail-prashna-piddhi-services</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/media</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/media</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/unique</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/unique</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/biololgical</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/biololgical</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/What-can-be-done</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/What-can-be-done</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/Enthusiasts</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/Enthusiasts</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/books</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://prashnasiddhi.com/books</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/marriage-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/marriage-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/why-life-feels-tough</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/why-life-feels-tough</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/the-bhagavad-gita-and-the-zodiac</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/the-bhagavad-gita-and-the-zodiac</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/the-hidden-truth-of-ketu</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/the-hidden-truth-of-ketu</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/divine-timing-vs-muhurta</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/divine-timing-vs-muhurta</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/why-rahu-ketu-though-shadows</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/why-rahu-ketu-though-shadows</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/mystery-of-the-zodiac-sign</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/mystery-of-the-zodiac-sign</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/how-to-predict-child-birth-from-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/how-to-predict-child-birth-from-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/marriage-in-astrology</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/marriage-in-astrology</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/the-gap-between-hopes-and-reality</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/the-gap-between-hopes-and-reality</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/the-divine-logic-behind-planetary-dual-rulership</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/the-divine-logic-behind-planetary-dual-rulership</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/the-special-aspects-of-planets</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/the-special-aspects-of-planets</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/truth-behind-planetary-exaltation-and-debilitation</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/truth-behind-planetary-exaltation-and-debilitation</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/are-planets-watching-us</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/are-planets-watching-us</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/can-you-change-your-destiny</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/can-you-change-your-destiny</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/blog/dont-bargain-with-planets-appeal</loc>
-<lastmod>2025-09-29T11:29:04+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/blog/dont-bargain-with-planets-appeal</loc>
+  <lastmod>2025-09-29T11:29:04+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/pdf/Fasten%20your%20MIND%20to%20Excel.pdf</loc>
-<lastmod>2025-04-14T13:27:21+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/pdf/Fasten%20your%20MIND%20to%20Excel.pdf</loc>
+  <lastmod>2025-04-14T13:27:21+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/pdf/Mind_Building.pdf</loc>
-<lastmod>2025-04-14T13:27:21+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/pdf/Mind_Building.pdf</loc>
+  <lastmod>2025-04-14T13:27:21+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-<loc>https://prashnasiddhi.com/pdf/New%20Excel%20In%20life.pdf</loc>
-<lastmod>2025-04-14T13:27:21+00:00</lastmod>
-<priority>0.64</priority>
+  <loc>https://prashnasiddhi.com/pdf/New%20Excel%20In%20life.pdf</loc>
+  <lastmod>2025-04-14T13:27:21+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
+
+
 </urlset>
