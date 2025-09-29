@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <nav className="bg-[#F0EDE9] shadowmd h-[80px] border border-b border-[#D8D1C7] sticky top-0 z-[99999999999999999]">
-      <div className="max-w-7xl mx-auto px-0">
+      <div className="max-w-7xl mx-auto px-0 max-xl:px-4">
         <div className="flex justify-between items-center py-4">
           <div className="text-lg font-semibold">
             <Link href="/" className="flex items-center justify-center gap-2">
