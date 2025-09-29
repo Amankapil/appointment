@@ -137,7 +137,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "LitigationFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/litigation-legal-matters#faq",
                 mainEntity: [

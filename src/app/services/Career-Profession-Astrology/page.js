@@ -137,7 +137,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "CareerFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/career-profession-astrology#faq",
                 mainEntity: [

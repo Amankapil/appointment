@@ -137,7 +137,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "HealthFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/health-wellness-astrology#faq",
                 mainEntity: [

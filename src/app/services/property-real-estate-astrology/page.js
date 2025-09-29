@@ -17,9 +17,13 @@ const page = () => {
       <Decisions />
       <Guidance />
       <Unique />
+
       <ReviewSection />
+
       <Solve />
-      <ProFAQ />
+      <div id="property-faq">
+        <ProFAQ />
+      </div>
 
       <Script id="ld-json-property" type="application/ld+json">
         {JSON.stringify(
@@ -103,9 +107,9 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "PropertyFAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/property-real-estate-astrology#faq",
+                  "https://prashnasiddhi.com/services/property-real-estate-astrology#property-faq",
                 mainEntity: [
                   {
                     "@type": "Question",

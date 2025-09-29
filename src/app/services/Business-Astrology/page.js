@@ -46,7 +46,10 @@ const page = () => {
       <Choose />
       <Benefit />
       <Howitworks />
-      <BusinessFAQ />
+
+      <div id="bussiness-faq">
+        <BusinessFAQ />
+      </div>
 
       <Script id="ld-json-business" type="application/ld+json">
         {JSON.stringify(
@@ -130,9 +133,9 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "BusinessFAQPage",
                 "@id":
-                  "https://prashnasiddhi.com/services/business-astrology#faq",
+                  "https://prashnasiddhi.com/services/business-astrology#bussiness-faq",
                 mainEntity: [
                   {
                     "@type": "Question",

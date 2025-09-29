@@ -137,7 +137,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "EducationFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/education-study-astrology#faq",
                 mainEntity: [

@@ -137,7 +137,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "FinanceFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/finance-wealth-astrology#faq",
                 mainEntity: [

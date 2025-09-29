@@ -50,16 +50,18 @@ const page = () => {
   return (
     <>
       <div>
-        <Head>
-          <meta
-            name="title"
-            content="Astrology Services – Prashna Siddhi for Accurate Insights"
-          />
-          <meta
-            name="description"
-            content="Explore Prashna Siddhi's expert astrology services for personalized guidance on love, career, health, and life challenges. Gain clarity with Vedic astrology insights."
-          />
-        </Head>
+        <Hero />
+        <Struggles />
+        <Harmony />
+        <Method />
+        <Trust />
+        <Challenges />
+        <ReviewSection />
+        <div id="marriage-faq">
+          <MarriageFAQ />
+        </div>
+        <Peace />
+
         <Script id="ld-json-marriage" type="application/ld+json">
           {JSON.stringify(
             {
@@ -144,9 +146,9 @@ const page = () => {
                   },
                 },
                 {
-                  "@type": "FAQPage",
+                  "@type": "MarriageFAQPage",
                   "@id":
-                    "https://prashnasiddhi.com/services/marriage-relationships#faq",
+                    "https://prashnasiddhi.com/services/marriage-relationships#marriage-faq",
                   mainEntity: [
                     {
                       "@type": "Question",
@@ -180,16 +182,6 @@ const page = () => {
             2
           )}
         </Script>
-
-        <Hero />
-        <Struggles />
-        <Harmony />
-        <Method />
-        <Trust />
-        <Challenges />
-        <ReviewSection />
-        <MarriageFAQ />
-        <Peace />
       </div>
     </>
   );

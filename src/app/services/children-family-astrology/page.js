@@ -139,7 +139,7 @@ const page = () => {
                 },
               },
               {
-                "@type": "FAQPage",
+                "@type": "ChildrenFAQPage",
                 "@id":
                   "https://prashnasiddhi.com/services/children-family-astrology#faq",
                 mainEntity: [
