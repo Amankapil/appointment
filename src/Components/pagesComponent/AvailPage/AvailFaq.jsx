@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: "Are remedies included?",
-    answer: `Yes, zero-cost spiritual remedies only. Watch the Video in the link here: https://youtube.com/Mrs07MGvzFY`,
+    answer: `Yes, zero-cost spiritual remedies only. Watch the Video in the link here: https://www.youtube.com/watch?v=Mrs07MGvzFY`,
     audio: "/AvailFAQ/A5 (1).mp3",
   },
   {
@@ -168,7 +168,38 @@ export default function AvailFaq() {
               <h2 className="text-xl font-semibold font-salernomi mb-4">
                 {faqs[activeIndex].question}
               </h2>
+
               <p className="text-base text-[#000] whitespace-pre-line mb-4">
+                {(() => {
+                  const answer = faqs[activeIndex].answer;
+
+                  // Regex to detect any URL
+                  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+                  // Split the text by URLs
+                  const parts = answer.split(urlRegex);
+
+                  return parts.map((part, index) => {
+                    // If this part is a URL, render as clickable link
+                    if (part.match(urlRegex)) {
+                      return (
+                        <a
+                          key={index}
+                          href={part}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 underline"
+                        >
+                          {part}
+                        </a>
+                      );
+                    }
+                    // Otherwise, just render the text
+                    return part;
+                  });
+                })()}
+              </p>
+              {/* <p className="text-base text-[#000] whitespace-pre-line mb-4">
                 {(() => {
                   const answer = faqs[activeIndex].answer;
                   const youtubeRegex =
@@ -192,7 +223,7 @@ export default function AvailFaq() {
 
                   return answer; // if not a YouTube link, show as text
                 })()}
-              </p>
+              </p> */}
 
               {/* <p className="text-base text-[#000] whitespace-pre-line mb-4">
               {faqs[activeIndex].answer}
