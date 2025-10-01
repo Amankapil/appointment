@@ -156,6 +156,14 @@ const page = () => {
                       acceptedAnswer: {
                         "@type": "Answer",
                         text: "Marriage is an adjustment. Habits, expectations, and communication styles take time to align.",
+                        audio: {
+                          "@type": "AudioObject",
+                          contentUrl:
+                            "https://prashnasiddhi.com/marriageBlogFaq/A-1.mp3",
+                          encodingFormat: "audio/mpeg",
+                          description:
+                            "Audio answer about Why do newlyweds clash? by K. Jagadish.",
+                        },
                       },
                     },
                     {
@@ -164,6 +172,14 @@ const page = () => {
                       acceptedAnswer: {
                         "@type": "Answer",
                         text: "Not necessarily. Astrology helps distinguish delay from denial and indicates supportive timing.",
+                        audio: {
+                          "@type": "AudioObject",
+                          contentUrl:
+                            "https://prashnasiddhi.com/marriageBlogFaq/A-2.mp3",
+                          encodingFormat: "audio/mpeg",
+                          description:
+                            "Audio answer about Is delay in marriage a denial? by K. Jagadish.",
+                        },
                       },
                     },
                     {
@@ -172,6 +188,14 @@ const page = () => {
                       acceptedAnswer: {
                         "@type": "Answer",
                         text: "Yes. Prashna Kundali reveals root causes and guides practical steps toward harmony.",
+                      },
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Can astrology help resolve conflicts? by K. Jagadish.",
                       },
                     },
                   ],

@@ -35,6 +35,14 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Yes. Consultations are time-based, not person-based. In a 30-minute session, you can easily ask about multiple family members.",
+
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A1.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer Can I ask about more than one person in a consultation? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -43,6 +51,14 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Prashna Kundali does not require birth details, but you may share your name, date, time, and place of birth via WhatsApp for refined guidance.",
+
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A2.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer What details should I share before the consultation? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -51,6 +67,14 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "No. Clients unfamiliar with online scheduling can also book via WhatsApp at a mutually convenient time.",
+
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A3.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer Do you only go by the website scheduler? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -59,6 +83,13 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "A 7-minute slot is perfect for a single focused question, such as a job decision or timing-related clarity.",
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A4.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer How is a 7-minute consultation useful? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -67,6 +98,14 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "15 minutes covers 2–3 questions with remedies. 30 minutes allows family-related questions. 45 minutes is for complex, detailed situations.",
+
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A5.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer What happens in longer consultations? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -75,6 +114,14 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Yes, only zero-cost spiritual remedies are suggested. Video and article links are shared. No paid remedies or products are recommended.",
+
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A5.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer Are remedies included in the consultation? by K. Jagadish.",
+                  },
                 },
               },
               {
@@ -83,6 +130,13 @@ const page = () => {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Yes, you may record the audio call for your personal use. No written reports are provided.",
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A8.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer Can I record the consultation? by K. Jagadish.",
+                  },
                 },
               },
               {

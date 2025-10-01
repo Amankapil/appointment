@@ -117,6 +117,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna can clarify timing and stability around purchase.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Will this case resolve soon? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -125,6 +134,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It helps weigh timing, liquidity, and stress factors.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-2.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer should I sell or hold? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -133,6 +151,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Astrology and Vastu can be considered together for harmony.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Does Vastu matter? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

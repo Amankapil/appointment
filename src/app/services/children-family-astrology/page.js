@@ -150,6 +150,13 @@ const page = () => {
                       "@type": "Answer",
                       text: "Planetary periods and Prashna Kundali can indicate supportive timing.",
                     },
+                    audio: {
+                      "@type": "AudioObject",
+                      contentUrl: "https://prashnasiddhi.com/childFAQ/A-1.mp3",
+                      encodingFormat: "audio/mpeg",
+                      description:
+                        "Audio answer about Can astrology show when we’ll have children? by K. Jagadish.",
+                    },
                   },
                   {
                     "@type": "Question",
@@ -157,6 +164,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Yes. It clarifies temperament differences and suggests balanced approaches.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/childFAQ/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Does astrology help with parenting styles?by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -165,6 +180,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna can show alignment and timing for adoption if indicated.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/childFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Is adoption supported astrologically? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

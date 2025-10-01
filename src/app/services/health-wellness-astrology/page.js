@@ -147,6 +147,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Transit and Dasa periods can highlight times to prioritize wellbeing.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Can astrology indicate health-sensitive periods? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -155,6 +163,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It offers clarity on timing and focus areas to support medical advice.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Does Prashna help with lifestyle choices? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -163,6 +180,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "No. It complements—not replaces—professional medical care.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Is astrology a replacement for doctors? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

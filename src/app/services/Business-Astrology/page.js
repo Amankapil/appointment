@@ -143,6 +143,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna clarifies launch timing and partnership suitability.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/BussinessFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Is this the right time to start a business? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -151,6 +160,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It indicates periods supportive of growth versus caution.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/BussinessFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Should I expand or consolidate? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -159,6 +176,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It helps assess compatibility, trust, and shared direction.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/BussinessFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Can astrology pick the right partner? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

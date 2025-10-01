@@ -147,6 +147,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Astrology aligns natural aptitude with suitable study fields.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Which stream suits me best? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -155,6 +163,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna highlights periods to attempt or prepare strategically.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Can it help with exam timing? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -163,6 +180,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It can indicate alignment and timing for overseas education.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Foreign studies—right choice now? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

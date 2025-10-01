@@ -147,6 +147,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna can indicate momentum and likely timelines.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Will this case resolve soon? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -155,6 +164,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "It offers clarity on strategic direction and timing.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Should I settle or proceed? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -163,6 +180,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "No. It guides decisions; legal counsel remains essential.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-1.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Can astrology guarantee outcomes? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

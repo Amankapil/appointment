@@ -218,7 +218,7 @@ const MarriageAstrology = () => {
               </a>
             </li>
             <li>
-              Natal Saturn's influence on Mars (Lagna Lord) and Jupiter (9th
+              Natal Saturns influence on Mars (Lagna Lord) and Jupiter (9th
               Lord) indicating <strong>delayed marriage</strong>, not denial.
             </li>
             <li>

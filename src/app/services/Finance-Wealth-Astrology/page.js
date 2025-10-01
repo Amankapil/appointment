@@ -147,6 +147,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Yes. It helps with timing for savings, investments, or consolidating risk.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Can astrology guide financial stability? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -155,6 +163,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna indicates supportive windows and cautions for big decisions.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Can astrology guide financial stability? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -163,6 +180,15 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "We focus on clarity and prudence—not promises of guaranteed outcomes.",
+
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer Will astrology predict quick wealth? by K. Jagadish.",
+                      },
                     },
                   },
                 ],

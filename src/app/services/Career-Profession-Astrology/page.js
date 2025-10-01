@@ -147,6 +147,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Timing and planetary influence matter alongside preparation; Prashna reveals obstacles.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-2.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Why am I not getting selected despite qualifications? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -155,6 +163,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Prashna offers real-time clarity on whether to shift or stabilize.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Why am I not getting selected despite qualifications? by K. Jagadish.",
+                      },
                     },
                   },
                   {
@@ -163,6 +179,14 @@ const page = () => {
                     acceptedAnswer: {
                       "@type": "Answer",
                       text: "Supportive Dasa/transits can point to growth windows.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about Can astrology show promotion periods? by K. Jagadish.",
+                      },
                     },
                   },
                 ],
