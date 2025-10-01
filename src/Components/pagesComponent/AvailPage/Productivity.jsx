@@ -2,7 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import YouTube from "react-youtube";
 export default function Productivity() {
+  const opts = {
+    height: "390",
+    width: "640",
+    playerVars: {
+      autoplay: 1, // Auto play the video
+    },
+  };
+
+  const onReady = (event) => {
+    event.target.pauseVideo(); // Pause the video when ready
+  };
+
   return (
     <div className="bg-[#F0EDE9] text-[#1E1E1E] min-hscreen p-10 max-md:p-4 mt-20">
       <div className="heading flex mb-10 flex-col items-center justify-center">
@@ -74,13 +87,15 @@ export default function Productivity() {
       </div>
 
       <div className="img h-[450px] max-md:h-full bgwhite flex items-center justify-center py-10">
-        <Image
+        {/* <Image
           width={720}
           height={500}
           loading="lazy"
           src="/images/Group 105.png"
           alt="j"
-        />
+        /> */}
+
+        <YouTube videoId="OOLBnTG6Jo0" opts={opts} onReady={onReady} />
       </div>
     </div>
   );
