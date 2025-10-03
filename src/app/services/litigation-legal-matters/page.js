@@ -143,51 +143,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Will this case resolve soon?",
+                    name: "Can astrology predict if I will win my case?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna can indicate momentum and likely timelines.",
-
-                      audio: {
-                        "@type": "AudioObject",
-                        contentUrl:
-                          "https://prashnasiddhi.com/LegalFaq/A-8.mp3",
-                        encodingFormat: "audio/mpeg",
-                        description:
-                          "Audio answer Will this case resolve soon? by K. Jagadish.",
-                      },
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Should I settle or proceed?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "It offers clarity on strategic direction and timing.",
-                      audio: {
-                        "@type": "AudioObject",
-                        contentUrl:
-                          "https://prashnasiddhi.com/LegalFaq/A-6.mp3",
-                        encodingFormat: "audio/mpeg",
-                        description:
-                          "Audio answer Should I settle or proceed? by K. Jagadish.",
-                      },
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Can astrology guarantee outcomes?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. It guides decisions; legal counsel remains essential.",
-
+                      text: "Yes, astrology shows the likelihood of success and timing of judgment.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/LegalFaq/A-1.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Can astrology guarantee outcomes? by K. Jagadish.",
+                          "Audio answer about 'Can astrology predict if I will win my case?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can it reduce case delays?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Birth Chart analysed along with Vedic Prashna Kundali can help putting efforts in the right direction. Thus, delays can be minimised to some extent.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-2.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can it reduce case delays?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT10S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is astrology useful for ongoing cases?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, prashna kundali gives real-time guidance for hearings and settlements.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Is astrology useful for ongoing cases?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does karma affect legal battles?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, many disputes are karmic. Astrology reveals the spiritual lessons and puts you on the right track.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does karma affect legal battles?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology prevent false allegations?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "It can show tendencies and suggest the right path to minimize impact.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology prevent false allegations?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT04S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Will it tell me whether settlement is better?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, astrology highlights the path of least resistance and success.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Will it tell me whether settlement is better?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology help in criminal cases?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it provides clarity on chances of acquittal, bail, and relief.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology help in criminal cases?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Will my divorce case end soon?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, charts show timing and outcome of family-related disputes.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Will my divorce case end soon?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT04S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does it help in property/legal inheritance disputes?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Absolutely — astrology often guides families toward peaceful resolution.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does it help in property/legal inheritance disputes?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should I consult before filing a new case?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, timing is critical, and astrology helps avoid unnecessary battles.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/LegalFaq/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Should I consult before filing a new case?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
                       },
                     },
                   },

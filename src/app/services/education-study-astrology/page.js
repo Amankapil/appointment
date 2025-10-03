@@ -143,50 +143,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Which stream suits me best?",
+                    name: "Can astrology predict success in exams?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Astrology aligns natural aptitude with suitable study fields.",
+                      text: "Yes, astrology shows strong and weak periods for performance. It can’t replace hard work but guides preparation.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/EducationFAQ/A-10.mp3",
+                          "https://prashnasiddhi.com/EducationFAQ/A-1.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer about Which stream suits me best? by K. Jagadish.",
+                          "Audio answer about 'Can astrology predict success in exams?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can it help with exam timing?",
+                    name: "Why does my child study hard but still fail?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna highlights periods to attempt or prepare strategically.",
-
+                      text: "Sometimes karmic factors affect focus or timing. Astrology highlights these and shows when improvement comes.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/EducationFAQ/A-6.mp3",
+                          "https://prashnasiddhi.com/EducationFAQ/A-2.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer about Can it help with exam timing? by K. Jagadish.",
+                          "Audio answer about 'Why does my child study hard but still fail?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Foreign studies—right choice now?",
+                    name: "Can astrology help choose the right career?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It can indicate alignment and timing for overseas education.",
+                      text: "Absolutely. Charts reveal natural strengths, suitable subjects, and long-term career paths.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology help choose the right career?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is studying abroad shown in astrology?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, many charts clearly show opportunities for overseas education and settlement.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/EducationFAQ/A-4.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Foreign studies—right choice now? by K. Jagadish.",
+                          "Audio answer about 'Is studying abroad shown in astrology?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why is my child intelligent but distracted?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Distractions often come from planetary influences. Astrology helps understand and counter them.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why is my child intelligent but distracted?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology guide competitive exams?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it shows favorable exam periods and helps plan attempts wisely.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology guide competitive exams?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does astrology help with motivation?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it identifies mental blocks and periods of low energy. With awareness, effort becomes smoother.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does astrology help with motivation?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "My child is a slow learner. Can astrology help?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Astrology highlights learning style. With right support and timing, progress always comes.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'My child is a slow learner. Can astrology help?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should parents also be consulted along with students?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, because parental expectations and support deeply affect students.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Should parents also be consulted along with students?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology replace effort in studies?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Never. Astrology guides and supports — but discipline, focus, and effort are essential.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/EducationFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology replace effort in studies?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
                       },
                     },
                   },

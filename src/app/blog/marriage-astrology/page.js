@@ -2,6 +2,7 @@ import BlogFaq from "@/Components/pagesComponent/BlogFaq";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export default function MarriageAstrologyPage() {
   return (
@@ -543,6 +544,290 @@ export default function MarriageAstrologyPage() {
           </p>
         </section>
       </main>
+
+      <Script id="ld-json-health" type="application/ld+json">
+        {JSON.stringify(
+          {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": "https://prashnasiddhi.com#organization",
+                name: "Prashna Siddhi",
+                url: "https://prashnasiddhi.com",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://prashnasiddhi.com/static/logo.png",
+                },
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://prashnasiddhi.com#website",
+                url: "https://prashnasiddhi.com",
+                name: "Prashna Siddhi",
+                publisher: { "@id": "https://prashnasiddhi.com#organization" },
+              },
+              {
+                "@type": "WebPage",
+                "@id":
+                  "https://prashnasiddhi.com/services/marriage-astrology#webpage",
+                url: "https://prashnasiddhi.com/services/health-wellness-astrology",
+                name: "Health & Wellness Astrology",
+                isPartOf: { "@id": "https://prashnasiddhi.com#website" },
+                about: { "@id": "https://prashnasiddhi.com#organization" },
+                primaryImageOfPage: {
+                  "@type": "ImageObject",
+                  url: "https://prashnasiddhi.com/static/logo.png",
+                },
+                breadcrumb: {
+                  "@id":
+                    "https://prashnasiddhi.com/services/marriage-astrology#breadcrumb",
+                },
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id":
+                  "https://prashnasiddhi.com/services/marriage-astrology#breadcrumb",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://prashnasiddhi.com",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Services",
+                    item: "https://prashnasiddhi.com/blog",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 3,
+                    name: "Health & Wellness Astrology",
+                    item: "https://prashnasiddhi.com/blog/marriage-astrology",
+                  },
+                ],
+              },
+              {
+                "@type": "Service",
+                "@id":
+                  "https://prashnasiddhi.com/blog/marriage-astrology#service",
+                serviceType: "marriage astrology Astrology",
+                name: "marriage-astrology ",
+                url: "https://prashnasiddhi.com/blog/marriage-astrology",
+                areaServed: "IN",
+                provider: { "@id": "https://prashnasiddhi.com#organization" },
+                description:
+                  "Guidance and clarity for marriage-astrologyusing Vedic Astrology and Prashna Kundali.",
+                offers: {
+                  "@type": "Offer",
+                  url: "https://prashnasiddhi.com/request-consultation",
+                  availability: "https://schema.org/OnlineOnly",
+                },
+              },
+              {
+                "@type": "HealthFAQPage",
+                "@id": "https://prashnasiddhi.com/blog/marriage-astrology#faq",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Why do newlyweds often clash?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Because marriage is an adjustment. Different habits, expectations, and communication styles take time to align.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A-1.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do newlyweds often clash?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT18S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What happens when expectations are unrealistic?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Dreamy movie-style hopes crash into reality. Clear and practical expectations save disappointment.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A-2.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'What happens when expectations are unrealistic?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT11S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why does communication fail so fast?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Assumptions, silence, or mismatched styles (one talks, the other avoids) cause breakdowns.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why does communication fail so fast?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT19S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can small habits cause big fights?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes. Sleep, eating, cleaning, and money routines differ — if not discussed, they spark tension.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can small habits cause big fights?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How do couples handle intimacy issues?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Intimacy takes time. Respect, patience, and open talk bridge different needs — both emotional and physical.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'How do couples handle intimacy issues?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is money a marriage breaker?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Often. Different spending habits or hidden debts trigger stress. Honest talks keep trust intact.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Is money a marriage breaker?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How do independence and closeness clash?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "One may need space, the other closeness. Balance is key — too much of either causes friction.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'How do independence and closeness clash?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why do in-laws cause stress?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Time, influence, and boundaries. Unless agreed upon, family pressure seeps into the marriage.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do in-laws cause stress?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What if couples don’t know how to fight fair?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Arguments escalate. Yelling, shutdowns, or grudges destroy peace. Calm resolution and forgiveness are musts.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'What if couples don’t know how to fight fair?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can marriage make one lose identity?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, if personal growth stops. Supporting each other’s individuality strengthens both love and self-worth.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/marriageBlogFaq/A10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can marriage make one lose identity?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                ],
+              },
+            ],
+          },
+          null,
+          2
+        )}
+      </Script>
     </>
   );
 }

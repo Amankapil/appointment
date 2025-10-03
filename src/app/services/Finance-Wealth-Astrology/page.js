@@ -143,51 +143,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Can astrology guide financial stability?",
+                    name: "Can astrology make me rich?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Yes. It helps with timing for savings, investments, or consolidating risk.",
+                      text: "No one can guarantee riches. Astrology shows your wealth potential and karmic cycles. Your discipline and decisions matter.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/EducationFAQ/A-4.mp3",
+                          "https://prashnasiddhi.com/financeFAQ/A-1.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Can astrology guide financial stability? by K. Jagadish.",
+                          "Audio answer about 'Can astrology make me rich?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Is there a right time for major purchases?",
+                    name: "Why does money never stay with me?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna indicates supportive windows and cautions for big decisions.",
-
+                      text: "Some charts show strong earning but weak savings. Astrology reveals these patterns and helps correct attitudes.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/EducationFAQ/A-6.mp3",
+                          "https://prashnasiddhi.com/financeFAQ/A-2.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Can astrology guide financial stability? by K. Jagadish.",
+                          "Audio answer about 'Why does money never stay with me?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Will astrology predict quick wealth?",
+                    name: "Can astrology help me decide between job or business?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "We focus on clarity and prudence—not promises of guaranteed outcomes.",
-
+                      text: "Yes, charts clearly show where stability lies. Many gain clarity on career vs. entrepreneurship.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/EducationFAQ/A-9.mp3",
+                          "https://prashnasiddhi.com/financeFAQ/A-3.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Will astrology predict quick wealth? by K. Jagadish.",
+                          "Audio answer about 'Can astrology help me decide between job or business?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology guide investments?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, astrology indicates periods favorable for growth or risky for speculation. It helps avoid losses.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology guide investments?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does astrology predict financial losses?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "It shows vulnerable periods. Awareness helps you prepare and avoid big risks.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does astrology predict financial losses?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology resolve property or inheritance disputes?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Astrology shows the karmic pattern behind disputes, helping you manage with patience and strategy.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology resolve property or inheritance disputes?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why do some people get sudden wealth while others struggle?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "This depends on karmic destiny. Astrology reveals why such differences exist.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do some people get sudden wealth while others struggle?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology guide retirement planning?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, charts indicate stability periods and long-term financial security patterns.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology guide retirement planning?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Will astrology solve my debt problem?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Astrology won’t erase debt, but it can show when relief is possible and how to manage stress wisely.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Will astrology solve my debt problem?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is money purely material, or spiritual too?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Money is energy. Used rightly, it supports dharma (life’s purpose). Astrology guides you to see wealth as a blessing, not just a number.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/financeFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Is money purely material, or spiritual too?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT11S",
                       },
                     },
                   },

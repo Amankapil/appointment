@@ -113,51 +113,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Is this a good time to buy property?",
+                    name: "Can astrology predict when I will own a house?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna can clarify timing and stability around purchase.",
-
+                      text: "Yes, astrology clearly shows property ownership periods and favorable timings.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
-                          "https://prashnasiddhi.com/propertyFAQ/A-8.mp3",
+                          "https://prashnasiddhi.com/propertyFAQ/A-1.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Will this case resolve soon? by K. Jagadish.",
+                          "Audio answer about 'Can astrology predict when I will own a house?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I sell or hold?",
+                    name: "Can it resolve property disputes?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It helps weigh timing, liquidity, and stress factors.",
-
+                      text: "Yes, astrology highlights the cause and timing of resolution, along with practical actionable remedies.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/propertyFAQ/A-2.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer should I sell or hold? by K. Jagadish.",
+                          "Audio answer about 'Can it resolve property disputes?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Does Vastu matter?",
+                    name: "Does vastu really matter in property?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Astrology and Vastu can be considered together for harmony.",
+                      text: "Vaastu should not be viewed from faith or belief perspective. Look at from a practical point of view.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/propertyFAQ/A-3.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Does Vastu matter? by K. Jagadish.",
+                          "Audio answer about 'Does vastu really matter in property?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should I consult before registering property?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Though, every Muhurath is fixed right at our first breath, you can be practical in ascertaining several factors impacting your major decisions.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Should I consult before registering property?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology prevent fraud in property deals?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, charts often reveal hidden risks and help avoid wrong deals.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology prevent fraud in property deals?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT04S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "I live abroad. Can astrology guide my Indian property investments?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, many NRIs rely on astrology for safe and profitable decisions.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'I live abroad. Can astrology guide my Indian property investments?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does astrology suggest what type of property is suitable for me?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it can indicate whether land, house, or commercial space suits your destiny.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does astrology suggest what type of property is suitable for me?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why do my property deals always get delayed?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Delays are often karmic. Astrology shows the right time when blockages clear.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do my property deals always get delayed?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology help with loans for property purchase?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it shows financial stability and favorable periods for loans.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology help with loans for property purchase?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT04S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Does vastu correction really work without demolition?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Any remedy is subject to destiny only. You can rely on Vedic Prashna Kundali where several Bhavas can be analysed simultaneously to guide you.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/propertyFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Does vastu correction really work without demolition?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT10S",
                       },
                     },
                   },

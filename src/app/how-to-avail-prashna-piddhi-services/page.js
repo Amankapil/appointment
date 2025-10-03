@@ -31,96 +31,128 @@ const page = () => {
             mainEntity: [
               {
                 "@type": "Question",
-                name: "Can I ask about more than one person in a consultation?",
+                name: "Can I ask about multiple people?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes. Consultations are time-based, not person-based. In a 30-minute session, you can easily ask about multiple family members.",
-
+                  text: "Yes. Sessions are time-based, not person-based. In 30 minutes, you can ask about multiple family members.",
                   audio: {
                     "@type": "AudioObject",
                     contentUrl: "https://prashnasiddhi.com/AvailFAQ/A1.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer Can I ask about more than one person in a consultation? by K. Jagadish.",
+                      "Audio answer about 'Can I ask about multiple people?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT08S",
                   },
                 },
               },
               {
                 "@type": "Question",
-                name: "What details should I share before the consultation?",
+                name: "Do I need birth details?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Prashna Kundali does not require birth details, but you may share your name, date, time, and place of birth via WhatsApp for refined guidance.",
-
+                  text: "Not required for Prashna Kundali, but you may share Name, Date, Time, and Place for refined guidance.",
                   audio: {
                     "@type": "AudioObject",
                     contentUrl: "https://prashnasiddhi.com/AvailFAQ/A2.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer What details should I share before the consultation? by K. Jagadish.",
+                      "Audio answer about 'Do I need birth details?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT08S",
                   },
                 },
               },
               {
                 "@type": "Question",
-                name: "Do you only go by the website scheduler?",
+                name: "Can I request appointment without website scheduler?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "No. Clients unfamiliar with online scheduling can also book via WhatsApp at a mutually convenient time.",
-
+                  text: "Yes. You can book directly via WhatsApp.",
                   audio: {
                     "@type": "AudioObject",
                     contentUrl: "https://prashnasiddhi.com/AvailFAQ/A3.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer Do you only go by the website scheduler? by K. Jagadish.",
+                      "Audio answer about 'Can I request appointment without website scheduler?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT04S",
                   },
                 },
               },
               {
                 "@type": "Question",
-                name: "How is a 7-minute consultation useful?",
+                name: "What is covered in 7 minutes?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "A 7-minute slot is perfect for a single focused question, such as a job decision or timing-related clarity.",
+                  text: "A couple of focused questions. Ideal for urgent clarity.",
                   audio: {
                     "@type": "AudioObject",
                     contentUrl: "https://prashnasiddhi.com/AvailFAQ/A4.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer How is a 7-minute consultation useful? by K. Jagadish.",
+                      "Audio answer about 'What is covered in 7 minutes?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT04S",
                   },
                 },
               },
               {
                 "@type": "Question",
-                name: "What happens in longer consultations?",
+                name: "Are remedies included?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "15 minutes covers 2–3 questions with remedies. 30 minutes allows family-related questions. 45 minutes is for complex, detailed situations.",
-
+                  text: "Yes, zero-cost spiritual remedies only. Watch the Video in the link here: https://www.youtube.com/watch?v=Mrs07MGvzFY",
                   audio: {
                     "@type": "AudioObject",
-                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A5.mp3",
+                    contentUrl:
+                      "https://prashnasiddhi.com/AvailFAQ/A5%20(1).mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer What happens in longer consultations? by K. Jagadish.",
+                      "Audio answer about 'Are remedies included?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT05S",
                   },
                 },
               },
               {
                 "@type": "Question",
-                name: "Are remedies included in the consultation?",
+                name: "Can I reschedule?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, only zero-cost spiritual remedies are suggested. Video and article links are shared. No paid remedies or products are recommended.",
-
+                  text: "Yes, via WhatsApp. Appointments will be adjusted by mutual convenience.",
                   audio: {
                     "@type": "AudioObject",
-                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A5.mp3",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A6.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer Are remedies included in the consultation? by K. Jagadish.",
+                      "Audio answer about 'Can I reschedule?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT05S",
+                  },
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How do I pay?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Resident Indians: UPI, Net Banking, Cards. Overseas Clients: Money Transfer Agencies like Xoom Remitly etc/Bank Transfer.",
+                  audio: {
+                    "@type": "AudioObject",
+                    contentUrl: "https://prashnasiddhi.com/AvailFAQ/A7.mp3",
+                    encodingFormat: "audio/mpeg",
+                    description:
+                      "Audio answer about 'How do I pay?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT12S",
                   },
                 },
               },
@@ -129,30 +161,17 @@ const page = () => {
                 name: "Can I record the consultation?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, you may record the audio call for your personal use. No written reports are provided.",
+                  text: "Yes, you may record the audio call.",
                   audio: {
                     "@type": "AudioObject",
                     contentUrl: "https://prashnasiddhi.com/AvailFAQ/A8.mp3",
                     encodingFormat: "audio/mpeg",
                     description:
-                      "Audio answer Can I record the consultation? by K. Jagadish.",
+                      "Audio answer about 'Can I record the consultation?' by K. Jagadish.",
+                    uploadDate: "2025-10-03",
+                    inLanguage: "en",
+                    duration: "PT02S",
                   },
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What if I need to reschedule?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Rescheduling can be requested via WhatsApp and will be adjusted by mutual convenience.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How do I pay?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Resident Indians: UPI, Net Banking, Cards. Overseas: Credit Card, PayPal, or supported gateways.",
                 },
               },
             ],

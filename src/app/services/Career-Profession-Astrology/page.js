@@ -143,49 +143,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Why am I not getting selected despite qualifications?",
+                    name: "What is the right timing for improvement in this area of life?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Timing and planetary influence matter alongside preparation; Prashna reveals obstacles.",
+                      text: "Timing is governed by your Karmic cycle. Astrology can reveal when conditions are most favorable.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-1.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'What is the right timing for improvement in this area of life?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT06S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why do I face repeated obstacles?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Obstacles often arise from Karmic imbalances which are mapped by transit of planets. With clarity, you can learn how to respond effectively.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/careerFAQ/A-2.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer about Why am I not getting selected despite qualifications? by K. Jagadish.",
+                          "Audio answer about 'Why do I face repeated obstacles?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Should I change jobs now?",
+                    name: "Should I consult an astrologer regularly?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Prashna offers real-time clarity on whether to shift or stabilize.",
+                      text: "Astrology is guidance, not dependency. Consult when you seek clarity, but focus on applying wisdom in daily life.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-3.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Should I consult an astrologer regularly?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology predict the exact future?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Astrology reveals tendencies and timings, but your free will and attitude shape the outcome. Astrology is a subject of estimating possibilities and probabilities.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-4.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology predict the exact future?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT11S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Are remedies necessary?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Remedies are secondary. The first remedy is awareness and self-improvement. We emphasize wisdom over costly rituals. Watch this short Video: https://youtu.be/Mrs07MGvzFY",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Are remedies necessary?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should I change my job or wait for a better opportunity?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "A change of job is not only about salary. It’s about karmic timing, environment, and growth. Astrology can show when the right opportunity will arise and whether waiting brings more stability than rushing into change.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/careerFAQ/A-6.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer about Why am I not getting selected despite qualifications? by K. Jagadish.",
+                          "Audio answer about 'Should I change my job or wait for a better opportunity?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT15S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Can astrology show promotion periods?",
+                    name: "Why do I face constant obstacles at work despite working hard?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Supportive Dasa/transits can point to growth windows.",
+                      text: "Hard work is necessary but not always sufficient. Sometimes, planetary influences bring delays to test patience and strengthen character. Astrology reveals these cycles and guides you on how to turn obstacles into stepping-stones.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do I face constant obstacles at work despite working hard?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT16S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Will I get recognition for my efforts at work?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Recognition comes not only from performance but also from the alignment of karmic timing and environment. Astrology can show when your contributions will shine and how to navigate politics or indifference at the workplace.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Will I get recognition for my efforts at work?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT14S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Should I start my own business or stay in a job?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Business requires courage and risk-taking, while jobs give stability. Astrology can help compare both paths, showing your strengths, karmic suitability, and the divine timing for taking such a leap.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/careerFAQ/A-9.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer about Can astrology show promotion periods? by K. Jagadish.",
+                          "Audio answer about 'Should I start my own business or stay in a job?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT14S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology help with office politics and difficult bosses?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes. While you cannot change others, astrology shows you the tendencies of people around you and guides you in managing relationships wisely. With the right approach, even a difficult environment can be handled with balance.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/careerFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology help with office politics and difficult bosses?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT15S",
                       },
                     },
                   },

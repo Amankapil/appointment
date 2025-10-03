@@ -81,6 +81,12 @@ export default function BusinessFAQ() {
         acceptedAnswer: {
           "@type": "Answer",
           text: faq.answer,
+          audio: {
+            "@type": "AudioObject",
+            contentUrl: `https://prashnasiddhi.com${faq.audio}`, // full URL
+            encodingFormat: "audio/mpeg",
+            description: `Audio answer for "${faq.question}" by K. Jagadish.`,
+          },
         },
       })),
     }),

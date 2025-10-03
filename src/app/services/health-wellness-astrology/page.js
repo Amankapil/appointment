@@ -143,50 +143,191 @@ const page = () => {
                 mainEntity: [
                   {
                     "@type": "Question",
-                    name: "Can astrology indicate health-sensitive periods?",
+                    name: "Can astrology cure diseases?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Transit and Dasa periods can highlight times to prioritize wellbeing.",
+                      text: "No. Astrology does not cure. It reveals karmic patterns behind health issues, helping you combine medical care with inner balance.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-1.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology cure diseases?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Why do illnesses keep recurring?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Often due to karmic lessons. Astrology shows when and why such cycles appear, so you can prepare and manage them better.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-2.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Why do illnesses keep recurring?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology predict health problems in advance?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, astrology highlights vulnerable periods. Awareness helps in prevention and lifestyle adjustments.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/healthFAQ/A-3.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Can astrology indicate health-sensitive periods? by K. Jagadish.",
+                          "Audio answer about 'Can astrology predict health problems in advance?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT07S",
                       },
                     },
                   },
                   {
                     "@type": "Question",
-                    name: "Does Prashna help with lifestyle choices?",
+                    name: "Should I stop medical treatment and only follow astrology?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "It offers clarity on timing and focus areas to support medical advice.",
-
-                      audio: {
-                        "@type": "AudioObject",
-                        contentUrl:
-                          "https://prashnasiddhi.com/healthFAQ/A-7.mp3",
-                        encodingFormat: "audio/mpeg",
-                        description:
-                          "Audio answer Does Prashna help with lifestyle choices? by K. Jagadish.",
-                      },
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is astrology a replacement for doctors?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "No. It complements—not replaces—professional medical care.",
+                      text: "Never. Astrology supports healing but does not replace doctors. Both work together for your well-being.",
                       audio: {
                         "@type": "AudioObject",
                         contentUrl:
                           "https://prashnasiddhi.com/healthFAQ/A-4.mp3",
                         encodingFormat: "audio/mpeg",
                         description:
-                          "Audio answer Is astrology a replacement for doctors? by K. Jagadish.",
+                          "Audio answer about 'Should I stop medical treatment and only follow astrology?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology guide mental health struggles like anxiety or depression?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes, it reveals planetary influences on the mind and suggests spiritual practices for stability. Medical support is equally important.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-5.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology guide mental health struggles like anxiety or depression?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "How does Prashna help in sudden health issues?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Prashna Kundali gives immediate insight into urgent health questions — like recovery, timing, or hidden causes.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-6.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'How does Prashna help in sudden health issues?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology help with diet or lifestyle?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Yes. Charts reveal tendencies that support or weaken health. Aligning habits with planetary strengths promotes balance.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-7.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology help with diet or lifestyle?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Is illness always a punishment for past karma?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Not punishment — but often karmic lessons for growth. Astrology helps you see illness as a teacher, not an enemy.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-8.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Is illness always a punishment for past karma?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT08S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "What if hereditary diseases are shown in charts?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Awareness is power. Astrology prepares you with preventive care and resilience.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-9.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'What if hereditary diseases are shown in charts?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT05S",
+                      },
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Can astrology ensure a long, healthy life?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "No guarantees. Astrology shows tendencies and timings. Living with balance, faith, and discipline ensures the best outcome.",
+                      audio: {
+                        "@type": "AudioObject",
+                        contentUrl:
+                          "https://prashnasiddhi.com/healthFAQ/A-10.mp3",
+                        encodingFormat: "audio/mpeg",
+                        description:
+                          "Audio answer about 'Can astrology ensure a long, healthy life?' by K. Jagadish.",
+                        uploadDate: "2025-10-03",
+                        inLanguage: "en",
+                        duration: "PT09S",
                       },
                     },
                   },
