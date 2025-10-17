@@ -6,6 +6,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 17,
+    title: "Stress & Anxiety – Why Worry Never......",
+    date: "October 17, 2025",
+    image: "/images/Image-06.png",
+    link: "/blog/stress-anxiety-astrology",
+    desc: "The rapid rise of technology, digitisation, and artificial.....",
+  },
+  {
     id: 16,
     title: "Marriage and Astrology - Beyond kundali......",
     date: "September 25, 2025",
