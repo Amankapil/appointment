@@ -6,6 +6,14 @@ import Link from "next/link";
 
 const blogs = [
   {
+    id: 18,
+    title: "The Dance of the 8th House — Truth Beyond......",
+    date: "October 21, 2025",
+    image: "/images/blogone.png",
+    link: "/blog/dance-of-destiny",
+    desc: "Everything happening in the world has a reason and we are ignorant.....",
+  },
+  {
     id: 17,
     title: "Stress & Anxiety – Why Worry Never......",
     date: "October 17, 2025",
