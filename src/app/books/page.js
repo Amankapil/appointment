@@ -5,6 +5,7 @@ import img from "./assets/img.png";
 import img2 from "./assets/Group 260.png";
 import img3 from "./assets/img2.png";
 import img4 from "./assets/im3.png";
+import { pushToDataLayer } from "@/lib/gtm";
 
 export default function MindLabCard() {
   return (
