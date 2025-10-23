@@ -65,6 +65,11 @@ export default function MindLabCard() {
                 href="/pdf/Fasten your MIND to Excel.pdf" // replace with your actual file path
                 download
                 className="bg-black text-white py-3 font-salernomi px-8 rounded-xl text-lg hover:bg-gray-800 inline-block"
+                onClick={() =>
+                  pushToDataLayer("book_download", {
+                    book_name: "Fasten your MIND to Excel",
+                  })
+                }
               >
                 Download For Free
               </a>
@@ -97,6 +102,11 @@ export default function MindLabCard() {
               <a
                 href="/pdf/Mind_Building.pdf" // replace with your actual file path
                 download
+                onClick={() =>
+                  pushToDataLayer("book_download", {
+                    book_name: "Mind_Building",
+                  })
+                }
                 className="bg-black text-white py-3 font-salernomi px-8 rounded-xl text-lg hover:bg-gray-800 inline-block"
               >
                 Download For Free
@@ -130,6 +140,11 @@ export default function MindLabCard() {
               <a
                 href="/pdf/New Excel In life.pdf" // replace with your actual file path
                 download
+                onClick={() =>
+                  pushToDataLayer("book_download", {
+                    book_name: "New Excel In life",
+                  })
+                }
                 className="bg-black text-white py-3 font-salernomi px-8 rounded-xl text-lg hover:bg-gray-800 inline-block"
               >
                 Download For Free
