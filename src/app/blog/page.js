@@ -1,6 +1,7 @@
 "use client";
 
 import BlogPopup from "@/Components/BlogPopup";
+import { pushToDataLayer } from "@/lib/gtm";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -167,11 +168,13 @@ const blogs = [
 ];
 
 export default function BlogSection() {
+
   return (
     <section className="py-12 bg-white text-center">
       <h2 className="text-[48px] font-salernomi font-semibold mb-8">
         Explore our blogs to learn more
       </h2>
+
 
       <BlogPopup />
       <div className="container mx-auto px-4">

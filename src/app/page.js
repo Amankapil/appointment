@@ -15,6 +15,7 @@ import Popup from "@/Components/Popup";
 import ServiceSection from "@/Components/pagesComponent/ServiceSection";
 
 export default function BookingModal() {
+ 
   return (
     <>
       <Head>
