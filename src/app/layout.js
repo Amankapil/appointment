@@ -7,6 +7,7 @@ import Script from "next/script";
 import Image from "next/image";
 import whatsapp from "../../public/whatsapp.svg";
 import Popup from "@/Components/Popup";
+import LiveChatButton from "@/Components/LiveChat/LiveChatButton";
 
 export const metadata = {
   title: "Prashna Siddhi",
@@ -69,8 +70,10 @@ export default function RootLayout({ children }) {
         <NavbarSwitcher />
 
         {children}
+
+        <LiveChatButton />
         {/* ✅ WhatsApp Button */}
-   
+
         <a
           href="https://wa.me/7259691375?text=Need%20any%20clarification,%20pls%20message."
           target="_blank"

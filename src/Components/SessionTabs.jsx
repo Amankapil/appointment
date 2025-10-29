@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import Image from "next/image";
+import LiveChatPaymentsPage from "./bookingcomp/dashboard/LiveChatPayment";
 
 const SessionTabs = ({ data }) => {
   const [activeTab, setActiveTab] = useState("Upcoming");
@@ -111,7 +112,7 @@ const SessionTabs = ({ data }) => {
     <div className="p-4">
       {/* Tabs */}
       <div className="flex space-x-4 border-b">
-        {["Upcoming", "Ongoing", "Completed"].map((tab) => (
+        {["Upcoming", "Ongoing", "Completed", "Live"].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -141,6 +142,7 @@ const SessionTabs = ({ data }) => {
         {activeTab === "Completed" && (
           <SessionList sessions={completedSessions} label="Completed" />
         )}
+        {activeTab === "Live" && <LiveChatPaymentsPage />}
       </div>
     </div>
   );

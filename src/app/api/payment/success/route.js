@@ -116,27 +116,6 @@ export async function POST(request) {
       await transaction.save();
     }
 
-    // const transaction = new Transaction({
-    //   transactionId: txnid,
-    //   name,
-    //   email,
-    //   phone,
-    //   amount,
-    //   country,
-    //   state,
-    //   gender,
-    //   dob,
-    //   tob,
-    //   selectedDate,
-    //   selectedTime,
-    //   city,
-    //   filePath,
-    //   session: 1,
-    //   status: "Paid",
-    //   paymentMethod: "PayU", // Save additional data to the database
-    // });
-    // await transaction.save();
-
     // Prepare WhatsApp message
     const message = `Hey Jagdish You have an Paid Appointment at ${selectedTime} Please see the details below !\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
     // const message2 = `Hey ${name}, You booked an Urgent Appointment with us Please check the details below and horoscope.\nName: ${name}\nEmail: ${email}\nPhone:${phone}\nAmount: ${amount}\nSession Time: ${selectedTime}\nSession Date: ${selectedDate}\nHoroscope URL: ${filePath}`;
@@ -174,12 +153,6 @@ K Jagadish
 Vedic Astrologer – Prashna Siddhi  
 [www.PrashnaSiddhi.com](http://www.PrashnaSiddhi.com)  
 `;
-
-    // const res = await client.messages.create({
-    //   body: message,
-    //   from: `whatsapp:${twilioPhoneNumber}`,
-    //   to: `whatsapp:+917259691375`,
-    // });
 
     const res = await client.messages.create({
       from: "whatsapp:+917022239292", // Twilio WhatsApp Number
@@ -265,12 +238,6 @@ Vedic Astrologer – Prashna Siddhi
         await availability.save();
       }
     }
-
-    // Redirect to the payment success page
-    // return NextResponse.redirect(`https://prashnasiddhi.com/payment`);
-    // return NextResponse.redirect("https://prashnasiddhi.com/payment", {
-    //   status: 302,
-    // }); // Use 303 for safer redirection
 
     return NextResponse.redirect(
       `https://prashnasiddhi.com/payment`,
