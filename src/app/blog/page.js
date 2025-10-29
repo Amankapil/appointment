@@ -1,9 +1,9 @@
 "use client";
 
 import BlogPopup from "@/Components/BlogPopup";
-import { pushToDataLayer } from "@/lib/gtm";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
 
 const blogs = [
   {
@@ -168,56 +168,56 @@ const blogs = [
 ];
 
 export default function BlogSection() {
-
   return (
-    <section className="py-12 bg-white text-center">
-      <h2 className="text-[48px] font-salernomi font-semibold mb-8">
-        Explore our blogs to learn more
-      </h2>
+    <Suspense fallback={<div>Loading...</div>}>
+      <section className="py-12 bg-white text-center">
+        <h2 className="text-[48px] font-salernomi font-semibold mb-8">
+          Explore our blogs to learn more
+        </h2>
 
+        <BlogPopup />
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2  xl:grid-cols-3 gap-10">
+            {blogs.map((blog) => (
+              <div
+                key={blog.id}
+                className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-center items-start"
+              >
+                <div className="relative w-full h-56">
+                  <Image
+                    src={blog.image}
+                    alt={blog.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="max-xl:object-cover"
+                  />
+                </div>
+                <div className="p-6 flex items-start  flex-col">
+                  <Link
+                    href={blog.link}
+                    className="text-[24px] blog-heading text-left font-salernomi font-semibold mb-2"
+                  >
+                    {blog.title}
+                  </Link>
 
-      <BlogPopup />
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-2  xl:grid-cols-3 gap-10">
-          {blogs.map((blog) => (
-            <div
-              key={blog.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col justify-center items-start"
-            >
-              <div className="relative w-full h-56">
-                <Image
-                  src={blog.image}
-                  alt={blog.title}
-                  layout="fill"
-                  objectFit="cover"
-                  className="max-xl:object-cover"
-                />
+                  <p className="text-gray-500 text-left text-[16px] mb-4">
+                    {blog.date}
+                  </p>
+                  <p className="text-gray-500 text-left  text-[16px] mb-4">
+                    {blog.desc}
+                  </p>
+                  <Link
+                    href={blog.link}
+                    className="bg-[#101010] w-full text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
+                  >
+                    Read More
+                  </Link>
+                </div>
               </div>
-              <div className="p-6 flex items-start  flex-col">
-                <Link
-                  href={blog.link}
-                  className="text-[24px] blog-heading text-left font-salernomi font-semibold mb-2"
-                >
-                  {blog.title}
-                </Link>
-
-                <p className="text-gray-500 text-left text-[16px] mb-4">
-                  {blog.date}
-                </p>
-                <p className="text-gray-500 text-left  text-[16px] mb-4">
-                  {blog.desc}
-                </p>
-                <Link
-                  href={blog.link}
-                  className="bg-[#101010] w-full text-[16px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
-                >
-                  Read More
-                </Link>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Suspense>
   );
 }

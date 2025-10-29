@@ -8,6 +8,7 @@ import Image from "next/image";
 import whatsapp from "../../public/whatsapp.svg";
 import Popup from "@/Components/Popup";
 import LiveChatButton from "@/Components/LiveChat/LiveChatButton";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Prashna Siddhi",
@@ -70,8 +71,9 @@ export default function RootLayout({ children }) {
         <NavbarSwitcher />
 
         {children}
-
-        <LiveChatButton />
+        <Suspense fallback={<div>Loading live chat...</div>}>
+          <LiveChatButton />
+        </Suspense>
         {/* ✅ WhatsApp Button */}
 
         <a

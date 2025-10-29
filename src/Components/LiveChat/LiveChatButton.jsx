@@ -1,33 +1,5 @@
-// "use client";
-// import { useState } from "react";
-// import LiveChatModal from "./LiveChatModal";
-
-// export default function LiveChatButton() {
-//   const [showModal, setShowModal] = useState(false);
-
-//   return (
-//     <>
-//       {/* Floating Button */}
-//       <button
-//         onClick={() => setShowModal(true)}
-//         className="fixed bottom-[40%] right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all"
-//       >
-//         💬 Live Chat with K Jagadish
-//       </button>
-
-//       {/* Availability note */}
-//       <p className="fixed bottom-[35%] right-6 text-xs text-gray-600 bg-white px-3 py-1 rounded-md shadow">
-//         Available between 1 PM – 2 PM IST
-//       </p>
-
-//       {/* Modal */}
-//       {showModal && <LiveChatModal onClose={() => setShowModal(false)} />}
-//     </>
-//   );
-// }
-
 "use client";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import LiveChatModal from "./LiveChatModal";
 import StepSuccess from "./StepSuccess";
 import { useSearchParams } from "next/navigation";

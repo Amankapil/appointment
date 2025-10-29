@@ -118,7 +118,7 @@ const LibraMystery = () => {
             the mind and surrendering to the Creator.
           </p>
           <p className="text-lg leading-relaxed text-gray-800">
-            Tragically, today's rule-book astrology adds insult to injury by{" "}
+            Tragically, todays rule-book astrology adds insult to injury by{" "}
             <strong>hyping predictions for money, fame, and desires</strong>,
             while ignoring the{" "}
             <strong>
@@ -220,7 +220,7 @@ const LibraMystery = () => {
             <li>What does this cosmic architecture signify?</li>
           </ul>
           <blockquote className="border-l-4 border-gray-300 pl-4 italic text-gray-700 mb-6">
-            "Move from Adharma to Dharma to unite with the Creator."
+            Move from Adharma to Dharma to unite with the Creator.
           </blockquote>
           <p className="text-lg leading-relaxed mb-6 text-gray-800">
             The 11th house (Bhava) in Astrology is traditionally associated with{" "}
@@ -317,7 +317,7 @@ const LibraMystery = () => {
               <span className="text-green-600 mr-2">✅</span>
               <span className="text-gray-800">
                 <strong>Righteousness</strong> is not optional — it is mandatory
-                as per the Creator's law.
+                as per the Creators law.
               </span>
             </li>
             <li className="flex items-start">
@@ -358,9 +358,9 @@ const LibraMystery = () => {
               <span className="text-green-600 mr-2">✅</span>
               <span className="text-gray-800">
                 The <strong>symbol of the weighing balance</strong> is the
-                Creator's direct warning:
+                Creators direct warning:
                 <br />
-                "Every action is weighed; every karma has consequences."
+                Every action is weighed; every karma has consequences.
               </span>
             </li>
           </ul>
@@ -396,7 +396,7 @@ const LibraMystery = () => {
             )
           </p>
           <p className="text-lg leading-relaxed mb-6 text-gray-800">
-            Astrology's <strong>origin is spiritual</strong> — not a tool for
+            Astrologys <strong>origin is spiritual</strong> — not a tool for
             promoting ambitions.
             <br />
             True astrology was meant to{" "}
