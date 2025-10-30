@@ -13,9 +13,9 @@ import ReviewSection from "@/Components/pagesComponent/Homecomponent/ReviewSecti
 import FAQSection from "@/Components/VoiceFaq";
 import Popup from "@/Components/Popup";
 import ServiceSection from "@/Components/pagesComponent/ServiceSection";
+import LiveVideo from "@/Components/pagesComponent/Homecomponent/LiveVideo";
 
 export default function BookingModal() {
- 
   return (
     <>
       <Head>
@@ -38,6 +38,8 @@ export default function BookingModal() {
         <Hero />
         {/* <FAQSection /> */}
         <Why />
+
+        <LiveVideo />
 
         <ServiceSection />
         <FourCardsSection />
