@@ -3,6 +3,7 @@ import { Suspense, useEffect, useState } from "react";
 import LiveChatModal from "./LiveChatModal";
 import StepSuccess from "./StepSuccess";
 import { useSearchParams } from "next/navigation";
+import { pushToDataLayer } from "@/lib/gtm";
 
 export default function LiveChatButton() {
   const [showModal, setShowModal] = useState(false);
@@ -11,6 +12,7 @@ export default function LiveChatButton() {
   const searchParams = useSearchParams();
 
   const handleClick = () => {
+    pushToDataLayer("live_siddhi_popup_open");
     // Get current time in IST
     const now = new Date();
     const options = {

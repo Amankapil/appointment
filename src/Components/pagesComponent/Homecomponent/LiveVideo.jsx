@@ -43,6 +43,15 @@ const LiveVideo = () => {
               onReady={onReady}
             />
           </div>
+          <div className="flex items-center mt-10 flex-col w1/2 max-lg:w-full max-md:w-full max-md:h-full max-md:p-10  justify-center text-center">
+            <p className="text-xl font-inter text-[#4D4D4D] mb-8">
+              Note -{" "}
+              <i>
+                If you miss the Live Hour, you can still use the scheduler to
+                book your slot.{" "}
+              </i>
+            </p>
+          </div>
         </div>
       </div>
     </>
