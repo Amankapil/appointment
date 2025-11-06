@@ -26,18 +26,9 @@ export default function LiveChatButton() {
 
     // setShowModal(true);
     // Check if time is between 13:00 (1 PM) and 14:00 (2 PM)
-    if ((hour >= 13 && hour < 14) || (hour >= 20 && hour < 22)) {
+    if (hour >= 13 && hour < 14) {
       setShowModal(true);
     } else {
-      if (
-        (hour >= 13 && hour < 14) ||
-        (hour >= 20 && hour < 22) ||
-        (hour === 20 && minutes >= 30)
-      ) {
-        setShowModal(true);
-      } else {
-        alert("Live chat is available only between 1 PM and 2 PM IST.");
-      }
       alert("Live chat is available only between 1 PM and 2 PM IST.");
     }
   };
