@@ -26,9 +26,18 @@ export default function LiveChatButton() {
 
     // setShowModal(true);
     // Check if time is between 13:00 (1 PM) and 14:00 (2 PM)
-    if (hour >= 13 && hour < 14) {
+    if ((hour >= 13 && hour < 14) || (hour >= 20 && hour < 22)) {
       setShowModal(true);
     } else {
+      if (
+        (hour >= 13 && hour < 14) ||
+        (hour >= 20 && hour < 22) ||
+        (hour === 20 && minutes >= 30)
+      ) {
+        setShowModal(true);
+      } else {
+        alert("Live chat is available only between 1 PM and 2 PM IST.");
+      }
       alert("Live chat is available only between 1 PM and 2 PM IST.");
     }
   };
@@ -52,15 +61,15 @@ export default function LiveChatButton() {
     <>
       {/* Floating Button */}
 
-      <div className="fixed bottom-[40%] right-6 bg-blue-600 text-white px-10 py-3 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all">
+      <div className="fixed bottom-[40%] right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all">
         <button
           onClick={handleClick}
           // className="fixed bottom-[40%] right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg z-50 hover:bg-blue-700 transition-all"
         >
           💬 Live Chat with K Jagadish
           {/* Availability Note */}
-          <p className=" text-xs text-white bgwhite px-3 py-1 rounded-md ">
-            Available between 1 PM – 2 PM IST
+          <p className=" text-xs text-white bgwhite px-1 py-1 rounded-md ">
+            Available between 1 PM - 2 PM and 8:30 PM to 10 PM IST.
           </p>
         </button>
       </div>
