@@ -65,20 +65,20 @@ export default function Popup({ heading, subtext, ctaLabel, ctaLink }) {
         <p className="text-gray-600 text-[24px] leading-relaxed mb-6">
           {/* Why wait when guidance is just one step away? <br />
           In just 7 minutes, you’ll find clarity and peace of mind. */}
-          24 × 7 Voice Message Line Responses within 24 hours
+          24 × 7 Voice Message Line. Responses within 24 hours.
           <br />
           🇮🇳 India: 080 4374 5292
           <br /> 🌎 Outside India: +91 80 4374 5292
         </p>
 
         {/* CTA Button */}
-        <Link
+        {/* <Link
           onClick={closePopup}
           href="/booking"
           className="bg-[#101010] text-[20px] font-salernomi text-white px-[24px] py-[12px] rounded hover:bg-[#333333] transition-all duration-300 shadow-button"
         >
           ✨ Request your consultation
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
