@@ -30,7 +30,7 @@ export default function BookingModal() {
       </Head>
       <div className="k">
         <Popup
-          heading="Still thinking?"
+          heading="Siddhi Seva Assurance Suppor"
           subtext="Why wait when guidance is just one step away? In just 7 minutes, you’ll find clarity and peace of mind."
           ctaLabel="✨ Request your consultation today"
           ctaLink="/boking"

@@ -57,15 +57,18 @@ export default function Popup({ heading, subtext, ctaLabel, ctaLink }) {
         </button>
 
         {/* Heading */}
-        <h2 className="text-[64px] text-[#4D4D4D] font-salernomi font-normal mb-6 lhd:text-[100px] max max-fhd:bg-red-500 qhd:bg-purple-500">
-          Still thinking?
+        <h2 className="text-[56px] text-[#4D4D4D] font-salernomi font-normal mb-6 lhd:text-[100px] max max-fhd:bg-red-500 qhd:bg-purple-500">
+          Siddhi Seva Assurance Support
         </h2>
 
         {/* Subtext */}
         <p className="text-gray-600 text-[24px] leading-relaxed mb-6">
           {/* Why wait when guidance is just one step away? <br />
           In just 7 minutes, you’ll find clarity and peace of mind. */}
-          {subtext}
+          24 × 7 Voice Message Line Responses within 24 hours
+          <br />
+          🇮🇳 India: 080 4374 5292
+          <br /> 🌎 Outside India: +91 80 4374 5292
         </p>
 
         {/* CTA Button */}
