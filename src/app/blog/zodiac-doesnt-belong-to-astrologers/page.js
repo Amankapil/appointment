@@ -564,7 +564,13 @@ export default function ZodiacHijacked() {
 
             <p>
               The same has happened with aspects, exaltations, and
-              debilitations. (My articles in the Knowledge Centre: link xxxxx
+              debilitations. (My articles in the Knowledge Centre: link{" "}
+              <Link
+                className="text-indigo-600 underline"
+                href="https://youtube.com/shorts/AebWNbSUbuw"
+              >
+                https://youtube.com/shorts/AebWNbSUbuw{" "}
+              </Link>
               discuss this in detail.)
             </p>
 
