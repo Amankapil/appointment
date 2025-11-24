@@ -7,6 +7,14 @@ import { Suspense } from "react";
 
 const blogs = [
   {
+    id: 20,
+    title: "The Zodiac Doesn’t Belong to Astrologers......",
+    date: "November 24, 2025",
+    image: "/images/blog20.png",
+    link: "/blog/black-box-of-the-soul-human-birth-karma-spiritual-zodiac",
+    desc: "Reclaiming the Cosmic Blueprint as the Universe’s QR .....",
+  },
+  {
     id: 19,
     title: "The Zodiac Doesn’t Belong to Astrologers......",
     date: "November 11, 2025",
@@ -14,6 +22,7 @@ const blogs = [
     link: "/blog/zodiac-doesnt-belong-to-astrologers",
     desc: "Reclaiming the Cosmic Blueprint as the Universe’s QR .....",
   },
+
   {
     id: 18,
     title: "The Dance of the 8th House — Truth Beyond......",
