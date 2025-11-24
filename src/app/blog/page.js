@@ -8,11 +8,11 @@ import { Suspense } from "react";
 const blogs = [
   {
     id: 20,
-    title: "The Zodiac Doesn’t Belong to Astrologers......",
+    title: "The Black Box of the Soul — Human......",
     date: "November 24, 2025",
     image: "/images/blog20.png",
     link: "/blog/black-box-of-the-soul-human-birth-karma-spiritual-zodiac",
-    desc: "Reclaiming the Cosmic Blueprint as the Universe’s QR .....",
+    desc: "Understanding Human Birth, Aakash Tatwa, Mind Purification & the Sun-Centric.....",
   },
   {
     id: 19,
@@ -20,7 +20,7 @@ const blogs = [
     date: "November 11, 2025",
     image: "/images/blog19.png",
     link: "/blog/zodiac-doesnt-belong-to-astrologers",
-    desc: "Reclaiming the Cosmic Blueprint as the Universe’s QR .....",
+    desc: "Reclaiming the Cosmic Blueprint as the Universe’s QR.....",
   },
 
   {
