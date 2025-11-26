@@ -3,7 +3,44 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+const metadata = {
+  title: "The Black Box of the Soul – Human Birth & Karma Explained",
+  description:
+    "Discover how human birth, karma, Aakash Tatwa, and mind purification reveal the soul’s Black Box and the true spiritual purpose of the zodiac.",
+  alternates: {
+    canonical:
+      "https://prashnasiddhi.com/blog/black-box-of-the-soul-human-birth-karma-spiritual-zodiac",
+  },
+  openGraph: {
+    title:
+      "The Black Box of the Soul — A Spiritual Guide to Human Birth & Karma",
+    description:
+      "A profound exploration of karma, destiny, Aakash Tatwa, and the Sun-centric zodiac guiding the soul toward liberation beyond predictive astrology.",
+    type: "article",
+    url: "https://prashnasiddhi.com/blog/black-box-of-the-soul-human-birth-karma-spiritual-zodiac",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/images/blog20.png",
+        width: 1200,
+        height: 630,
+        alt: "The Black Box of the Soul",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "The Black Box of the Soul — A Spiritual Guide to Human Birth & Karma",
+    description:
+      "A profound exploration of karma, destiny, Aakash Tatwa, and the Sun-centric zodiac guiding the soul toward liberation beyond predictive astrology.",
+    images: ["https://prashnasiddhi.com/images/blog20.png"],
+  },
+};
+
+
 export default function BlackBoxOfTheSoul() {
+
+
   // JSON-LD schema from SEO FILE.docx (unminified)
   const jsonLd = {
     "@context": "https://schema.org",

@@ -1,11 +1,54 @@
-"use client";
+// "use client";
 
 import BlogPopup from "@/Components/BlogPopup";
 import Image from "next/image";
 import Link from "next/link";
 import { Suspense } from "react";
 
+
+export const metadata = {
+  title: "PrashnaSiddhi Blogs",
+  description:
+    "Discover how human birth, karma, Aakash Tatwa, and mind purification reveal the soul’s Black Box and the true spiritual purpose of the zodiac.",
+  alternates: {
+    canonical:
+      "https://prashnasiddhi.com/blog",
+  },
+  openGraph: {
+    title:
+      "The Black Box of the Soul — A Spiritual Guide to Human Birth & Karma",
+    description:
+      "A profound exploration of karma, destiny, Aakash Tatwa, and the Sun-centric zodiac guiding the soul toward liberation beyond predictive astrology.",
+    type: "article",
+    url: "https://prashnasiddhi.com/blog/",
+    images: [
+      {
+        url: "https://prashnasiddhi.com/images/blog20.png",
+        width: 1200,
+        height: 630,
+        alt: "The Black Box of the Soul",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "The Black Box of the Soul — A Spiritual Guide to Human Birth & Karma",
+    description:
+      "A profound exploration of karma, destiny, Aakash Tatwa, and the Sun-centric zodiac guiding the soul toward liberation beyond predictive astrology.",
+    images: ["https://prashnasiddhi.com/images/blog20.png"],
+  },
+};
+
 const blogs = [
+  {
+    id: 21,
+    title: "Zodiac — The University of Creation......",
+    date: "November 26, 2025",
+    image: "/images/University.png",
+    link: "/blog/the-zodiac-university-of-creation",
+    desc: "A profound spiritual exploration of the zodiac as the University.....",
+  },
   {
     id: 20,
     title: "The Black Box of the Soul — Human......",
